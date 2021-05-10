@@ -1,2 +1,2 @@
-# ogc-api-testbed
+# ogc-api-srv
 Testing OGC API Implementations
