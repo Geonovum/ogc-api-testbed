@@ -4,9 +4,6 @@
 __pycache__/
 *.py[cod]
 
-# C extensions
-*.so
-
 # Translations
 *.mo
 
@@ -18,9 +15,6 @@ __pycache__/
 # Django stuff:
 *.log
 *.pot
-
-# Ansible
-vars.yml
 
 # Flask
 instance
