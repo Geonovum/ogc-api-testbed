@@ -7,38 +7,38 @@
   vars_files:
     - vars/vars.yml
 
-#  roles:
-#    # https://github.com/sansible/users_and_groups
-#    - name: sansible.users_and_groups
-#      tags: users
-#      sansible_users_and_groups_users:
-#        - name: "{{ my_admin_user }}"
-#          system: yes
-#          shell: /bin/bash
-#          ssh_key: "{{ my_ssh_pubkey_file }}"
-#          append: yes
-#      sansible_users_and_groups_sudoers:
-#         - name: "{{ my_admin_user }}"
-#           user: "%{{ my_admin_user }}"
-#           runas: "ALL=(ALL)"
-#           commands: "NOPASSWD: ALL"
-#           append: yes
-#
-#    - name: justb4.ubuntu-base
-#      tags: ubuntu-base
-#
-#    - name: justb4.ubuntu-ntp
-#      tags: ubuntu-ntp
-#
-#    - name: geerlingguy.pip
-#      tags: pip
-#
-#    # https://github.com/geerlingguy/ansible-role-docker
-#    # defaults: https://github.com/geerlingguy/ansible-role-docker/blob/master/defaults/main.yml
-#    - name: geerlingguy.docker
-#      tags: docker
-#      docker_users:
-#        - "{{ my_admin_user }}"
+  roles:
+    # https://github.com/sansible/users_and_groups
+    - name: sansible.users_and_groups
+      tags: users
+      sansible_users_and_groups_users:
+        - name: "{{ my_admin_user }}"
+          system: yes
+          shell: /bin/bash
+          ssh_key: "{{ my_ssh_pubkey_file }}"
+          append: yes
+      sansible_users_and_groups_sudoers:
+         - name: "{{ my_admin_user }}"
+           user: "%{{ my_admin_user }}"
+           runas: "ALL=(ALL)"
+           commands: "NOPASSWD: ALL"
+           append: yes
+
+    - name: justb4.ubuntu-base
+      tags: ubuntu-base
+
+    - name: justb4.ubuntu-ntp
+      tags: ubuntu-ntp
+
+    - name: geerlingguy.pip
+      tags: pip
+
+    # https://github.com/geerlingguy/ansible-role-docker
+    # defaults: https://github.com/geerlingguy/ansible-role-docker/blob/master/defaults/main.yml
+    - name: geerlingguy.docker
+      tags: docker
+      docker_users:
+        - "{{ my_admin_user }}"
 
   tasks:
 
@@ -63,14 +63,11 @@
       shell: "cd {{ services_home }} && ./build.sh"
 
     # https://stackoverflow.com/questions/35984151/how-to-create-new-system-service-by-ansible-playbook
-    - name: Service | Create Unit file
+    - name: "Service | Create Unit file"
       template: src=templates/systemd.service.j2 dest=/lib/systemd/system/ogcapi.service mode=644
-      notify:
-        - reload systemctl
-    
-    - name: Service | Start ogcapi
-      service: name=ogcapi.service state=started enabled=yes
 
-  handlers:
-     - name: reload systemctl
-       command: systemctl daemon-reload
+    - name: "reload systemctl"
+      shell: "systemctl daemon-reload"
+    
+    - name: "Service | Start ogcapi"
+      service: name=ogcapi.service state=started enabled=yes

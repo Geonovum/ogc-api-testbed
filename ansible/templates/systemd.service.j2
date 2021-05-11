@@ -1,17 +1,15 @@
 [Unit]
 Description=OgcApiSrv
-Requires=network.target
-After=syslog.target network.target
+Requires=docker.service
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-EnvironmentFile=/etc/sysconfig/ogcapi
 ExecStart={{services_home}}/start.sh
 ExecStop={{services_home}}/stop.sh
-User=ogcapi
-PIDFile={{services_home}}/ogcapi.pid
-Environment="OGCAPI_PID_FILE_PATH={{services_home}}/ogcapi.pid"
+User={{ my_admin_user }}
+TimeoutStartSec=600
+TimeoutStopSec=600
 
 [Install]
 WantedBy=multi-user.target
