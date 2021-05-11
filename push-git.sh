@@ -17,4 +17,4 @@ printf "\033[0;32mCommit msg = ${COMMIT_MSG}\033[0m\n"
 git commit -m "${COMMIT_MSG}"
 
 # Push source and build repos.
-git push origin master
+git push origin main

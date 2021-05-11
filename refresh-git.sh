@@ -4,4 +4,4 @@
 # except for files not in Git
 
 git fetch --all
-git reset --hard origin/master
+git reset --hard origin/main
