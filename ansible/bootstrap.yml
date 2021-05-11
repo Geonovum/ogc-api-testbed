@@ -7,38 +7,38 @@
   vars_files:
     - vars/vars.yml
 
-  roles:
-    # https://github.com/sansible/users_and_groups
-    - name: sansible.users_and_groups
-      tags: users
-      sansible_users_and_groups_users:
-        - name: "{{ my_admin_user }}"
-          system: yes
-          shell: /bin/bash
-          ssh_key: "{{ my_ssh_pubkey_file }}"
-          append: yes
-      sansible_users_and_groups_sudoers:
-         - name: "{{ my_admin_user }}"
-           user: "%{{ my_admin_user }}"
-           runas: "ALL=(ALL)"
-           commands: "NOPASSWD: ALL"
-           append: yes
-
-    - name: justb4.ubuntu-base
-      tags: ubuntu-base
-
-    - name: justb4.ubuntu-ntp
-      tags: ubuntu-ntp
-
-    - name: geerlingguy.pip
-      tags: pip
-
-    # https://github.com/geerlingguy/ansible-role-docker
-    # defaults: https://github.com/geerlingguy/ansible-role-docker/blob/master/defaults/main.yml
-    - name: geerlingguy.docker
-      tags: docker
-      docker_users:
-        - "{{ my_admin_user }}"
+#  roles:
+#    # https://github.com/sansible/users_and_groups
+#    - name: sansible.users_and_groups
+#      tags: users
+#      sansible_users_and_groups_users:
+#        - name: "{{ my_admin_user }}"
+#          system: yes
+#          shell: /bin/bash
+#          ssh_key: "{{ my_ssh_pubkey_file }}"
+#          append: yes
+#      sansible_users_and_groups_sudoers:
+#         - name: "{{ my_admin_user }}"
+#           user: "%{{ my_admin_user }}"
+#           runas: "ALL=(ALL)"
+#           commands: "NOPASSWD: ALL"
+#           append: yes
+#
+#    - name: justb4.ubuntu-base
+#      tags: ubuntu-base
+#
+#    - name: justb4.ubuntu-ntp
+#      tags: ubuntu-ntp
+#
+#    - name: geerlingguy.pip
+#      tags: pip
+#
+#    # https://github.com/geerlingguy/ansible-role-docker
+#    # defaults: https://github.com/geerlingguy/ansible-role-docker/blob/master/defaults/main.yml
+#    - name: geerlingguy.docker
+#      tags: docker
+#      docker_users:
+#        - "{{ my_admin_user }}"
 
   tasks:
 
@@ -54,8 +54,11 @@
 
 
     - name: "Ensure ownership to admin user of git dir"
-      shell: "chown -R {{ my_admin_user }}:{{ my_admin_user }} {{ my_git_home }}"
-
+      ansible.builtin.file:
+        path: "{{ my_git_home }}"
+        owner: "{{ my_admin_user }}"
+        group: "{{ my_admin_user }}"
+ 
     - name: "Build Docker Images"
       shell: "cd {{ services_home }} && ./build.sh"
 
@@ -67,3 +70,7 @@
     
     - name: Service | Start ogcapi
       service: name=ogcapi.service state=started enabled=yes
+
+  handlers:
+     - name: reload systemctl
+       command: systemctl daemon-reload
