@@ -1,0 +1,36 @@
+*.sqlite3
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Translations
+*.mo
+
+.DS_Store
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Ansible
+vars.yml
+
+# Flask
+instance
+tmp/
+
+# etc
+_build/
+
+# LetsEncrypt Key files
+acme.json
+
+ansible/roles/*
+!ansible/roles/.gitkeep
