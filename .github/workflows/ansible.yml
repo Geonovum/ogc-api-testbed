@@ -1,0 +1,28 @@
+# Ansible workflow.
+# Uses: https://github.com/dawidd6/action-ansible-playbook
+# Author: Just van den Broecke - 2021
+#
+name: Ansible CI ⚙️
+
+on: [ push ]
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout ✅
+      uses: actions/checkout@v2
+
+    - name: Run playbook ⚙
+      uses: dawidd6/action-ansible-playbook@v2
+      with:
+        playbook: test.yml
+        directory: ./ansible
+        key: ${{secrets.ANSIBLE_SSH_PRIVATE_KEY}}
+        inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
+        vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
+        options: |
+          --limit ogcapi
+          --extra-vars hello=there
+          --verbose

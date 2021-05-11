@@ -1,0 +1,10 @@
+- name: "Test Ansible"
+  hosts: all
+  gather_facts: yes
+
+  vars_files:
+    - vars/vars.yml
+  tasks:
+    - name: "test"
+      shell: "docker ps"
+      tags: test

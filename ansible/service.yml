@@ -1,0 +1,24 @@
+- name: "Start/Stop Service"
+  hosts: all
+  gather_facts: yes
+
+  vars_files:
+    - vars/vars.yml
+  # systemctl start|stop ogcapi.service
+  tasks:
+    - name: "stop"
+      shell: "systemctl stop ogcapi.service ; docker ps"
+      tags: stop
+
+    - name: "start"
+      shell: "systemctl start ogcapi.service ; docker ps"
+      tags: start
+
+    - name: "status"
+      shell: "systemctl status ogcapi.service ; docker ps"
+      tags: status
+
+    # https://docs.ansible.com/ansible/latest/modules/reboot_module.html
+    - name: "reboot"
+      shell: "shutdown -r now"
+      tags: reboot

@@ -1,0 +1,18 @@
+# Installs from Ansible galaxy
+- src: sansible.users_and_groups
+  version: v2.0.5
+
+# from GitHub
+- src: https://github.com/justb4/ansible-ubuntu-base
+  name: justb4.ubuntu-base
+  version: v1.4
+
+- src: https://github.com/justb4/ansible-ubuntu-ntp
+  name: justb4.ubuntu-ntp
+  version: v1.0
+
+- src: geerlingguy.pip
+  version: 2.0.0
+
+- src: geerlingguy.docker
+  version: 3.1.2
