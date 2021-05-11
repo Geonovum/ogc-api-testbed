@@ -42,5 +42,28 @@
 
   tasks:
 
-    - name: "Setup dirs and ownerships"
-      shell: mkdir -p {{ var_dir }}; chown -R {{ my_admin_user }}:{{ my_admin_user }} {{ var_dir }}
+    # https://www.jeffgeerling.com/blog/2018/cloning-private-github-repositories-ansible-on-remote-server-through-ssh
+    - name: "Clone Git Repo"
+      git:
+        dest: "{{ my_git_home }}"
+        repo: "{{ my_github_repo }}"
+        clone: "yes"
+        update: "yes"
+        accept_hostkey: "yes"
+        force: "yes"
+
+
+    - name: "Ensure ownership to admin user of git dir"
+      shell: "chown -R {{ my_admin_user }}:{{ my_admin_user }} {{ my_git_home }}"
+
+    - name: "Build Docker Images"
+      shell: "cd {{ services_home }} && ./build.sh"
+
+    # https://stackoverflow.com/questions/35984151/how-to-create-new-system-service-by-ansible-playbook
+    - name: Service | Create Unit file
+      template: src=templates/systemd.service.j2 dest=/lib/systemd/system/ogcapi.service mode=644
+      notify:
+        - reload systemctl
+    
+    - name: Service | Start ogcapi
+      service: name=ogcapi.service state=started enabled=yes

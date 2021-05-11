@@ -1,5 +1,6 @@
 # Ansible workflow.
 # Uses: https://github.com/dawidd6/action-ansible-playbook
+# Options: https://github.com/dawidd6/action-ansible-playbook/blob/master/main.js
 # Author: Just van den Broecke - 2021
 #
 name: Ansible CI ⚙️

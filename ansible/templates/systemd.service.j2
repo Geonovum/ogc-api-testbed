@@ -1,0 +1,17 @@
+[Unit]
+Description=OgcApiSrv
+Requires=network.target
+After=syslog.target network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+EnvironmentFile=/etc/sysconfig/ogcapi
+ExecStart={{services_home}}/start.sh
+ExecStop={{services_home}}/stop.sh
+User=ogcapi
+PIDFile={{services_home}}/ogcapi.pid
+Environment="OGCAPI_PID_FILE_PATH={{services_home}}/ogcapi.pid"
+
+[Install]
+WantedBy=multi-user.target
