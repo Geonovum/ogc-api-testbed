@@ -1,6 +1,8 @@
 [Unit]
 Description=OgcApiSrv
-Requires=docker.service
+After=docker.service
+BindsTo=docker.service
+ReloadPropagatedFrom=docker.service
 
 [Service]
 Type=oneshot

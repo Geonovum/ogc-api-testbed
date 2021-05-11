@@ -44,7 +44,7 @@ ansible-galaxy install --roles-path ./roles -r requirements.yml
 ```
 
 # Installs entire system PROD
-ansible-playbook -vv bootstrap.yml -i hosts/prod.yml
+ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-srv.txt bootstrap.yml -i hosts/prod.yml
 
 ```
 

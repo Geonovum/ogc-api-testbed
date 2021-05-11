@@ -52,7 +52,6 @@
         accept_hostkey: "yes"
         force: "yes"
 
-
     - name: "Ensure ownership to admin user of git dir"
       ansible.builtin.file:
         path: "{{ my_git_home }}"
