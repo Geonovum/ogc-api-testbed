@@ -19,9 +19,17 @@ services:
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.http.rule=Host(`local.map5.nl`) || Host(`localhost`) && PathPrefix(`/pygeoapi_test`)"
-      - "traefik.http.routers.http.entrypoints=http"
+      # local http router
+      - "traefik.http.routers.pygeoapi_test_lhttp.rule=Host(`local.map5.nl`) || Host(`localhost`) && PathPrefix(`/pygeoapi_test`)"
+      - "traefik.http.routers.pygeoapi_test_lhttp.entrypoints=http"
       - "traefik.http.routers.pygeoapi_test_lhttp.middlewares=secure-headers@file"
+      # https router
+      - "traefik.http.routers.pygeoapi_test_https.rule=Host(`oapi.map5.nl`) && PathPrefix(`/pygeoapi_test`)"
+      - "traefik.http.routers.pygeoapi_test_https.entrypoints=https"
+      - "traefik.http.routers.pygeoapi_test_https.tls=true"
+      - "traefik.http.routers.pygeoapi_test_https.tls.certresolver=le"
+      - "traefik.http.routers.pygeoapi_test_https.tls.options=my_default@file"
+      - "traefik.http.routers.pygeoapi_test_https.middlewares=secure-headers@file"
 
       - "traefik.frontend.priority=100"
       - "traefik.docker.network=service-network"
