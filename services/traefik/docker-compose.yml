@@ -1,0 +1,74 @@
+version: '3.3'
+
+services:
+  proxy:
+    image: traefik:v2.4.8
+
+    container_name: traefik
+
+    command:
+      # Create an entrypoint "http" listening on port 80
+      - --entrypoints.http.address=:80
+      # Create an entrypoint "https" listening on port 443
+      - --entrypoints.https.address=:443
+      # Enable Docker in Traefik, so that it reads labels from Docker services
+      - --providers.docker
+      # Do not expose all Docker services, only the ones explicitly exposed
+      - --providers.docker.exposedbydefault=false
+      # Enable Docker Swarm mode
+      - --providers.docker.swarmmode=false
+      # Enable Dynamic file providers
+      - --providers.file
+      - --providers.file.directory=/etc/traefikdyn
+      # Create the certificate resolver "le" for Let's Encrypt, uses the environment variable CERT_EMAIL
+      - --certificatesresolvers.le.acme.email=${CERT_EMAIL?Variable not set}
+      # Store the Let's Encrypt certificates in the mounted volume
+      - --certificatesresolvers.le.acme.storage=/certificates/acme.json
+      # Use the TLS Challenge for Let's Encrypt
+      - --certificatesresolvers.le.acme.tlschallenge=true
+      # Enable the access log, with HTTP requests
+      - --accesslog
+      # Enable the Traefik log, for configurations and errors
+      - --log
+      - --log.level=DEBUG
+      # No Dashboard and API for now
+      # - --api
+
+    ports:
+      - "${HTTP_PORT_HOST}:80"
+      - "443:443"
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.regex=^http://oapi.map5.nl/(.*)"
+      - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.replacement=https:/oapi.map5.nl/$${1}"
+      - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.permanent=true"
+
+      - "traefik.http.routers.traefik_http.rule=Host(`oapi.map5.nl`)"
+      - "traefik.http.routers.traefik_http.entrypoints=http"
+      - "traefik.http.routers.traefik_http.middlewares=traefik_redirect_to_https@docker"
+
+      - "traefik.http.routers.traefik_https.rule=Host(`oapi.map5.nl`)"
+      - "traefik.http.routers.traefik_https.entrypoints=https"
+      - "traefik.http.routers.traefik_https.tls=true"
+      # - "traefik.http.routers.traefik_https.tls.certresolver=default"
+      - "traefik.http.routers.traefik_https.tls.options=my_default@file"
+      - "traefik.http.routers.traefik_https.middlewares=secure-headers@file"
+
+      # admin-auth middleware with HTTP Basic auth
+      # Using the environment variables USERNAME and HASHED_PASSWORD - maybe later
+      # - traefik.http.middlewares.admin-auth.basicauth.users=${USERNAME?Variable not set}:${HASHED_PASSWORD?Variable not set}
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Mount the volume to store the certificates
+      - traefik_certificates:/certificates
+      - ./dynconfig/:/etc/traefikdyn/
+
+volumes:
+  traefik_certificates:
+
+networks:
+  default:
+    external:
+      name: service-network

@@ -6,8 +6,7 @@
 #
 
 SCRIPT_DIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
-
-SERVICES=""
+source ${SCRIPT_DIR}/env.sh
 
 for SERVICE in ${SERVICES}
 do

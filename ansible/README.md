@@ -51,3 +51,28 @@ ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-srv.txt b
 ### Post on server
 
 * add key.rsa.pub to authorized_keys
+
+## Deploy
+
+Deploy individual services:
+
+```
+ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-srv.txt deploy.yml -i hosts/prod.yml --tags traefik
+
+ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-srv.txt deploy.yml -i hosts/prod.yml --tags pygeoapi_test
+
+
+```
+
+## System
+
+Manage ogcapi `systemd` service:
+
+```
+ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-srv.txt service.yml -i hosts/prod.yml --tags status
+
+ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-srv.txt service.yml -i hosts/prod.yml --tags stop
+
+ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-srv.txt service.yml -i hosts/prod.yml --tags start
+
+```

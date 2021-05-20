@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+
+  pygeoapi_test:
+    
+    image: geopython/pygeoapi_test:latest
+
+    container_name: pygeoapi_test
+
+    expose:
+      - "80"
+
+#    ports:
+#     - "5000:80"
+
+    environment:
+     - SCRIPT_NAME=/pygeoapi_test
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.http.rule=Host(`local.map5.nl`) || Host(`localhost`) && PathPrefix(`/pygeoapi_test`)"
+      - "traefik.http.routers.http.entrypoints=http"
+      - "traefik.http.routers.pygeoapi_test_lhttp.middlewares=secure-headers@file"
+
+      - "traefik.frontend.priority=100"
+      - "traefik.docker.network=service-network"
+
+networks:
+  default:
+    external:
+      name: service-network

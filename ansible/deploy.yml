@@ -14,20 +14,11 @@
       git: "repo={{ my_github_repo }} dest={{ my_git_home }} version=master clone=yes force=yes accept_hostkey=True"
       tags: update
 
-    - name: copy DockerHub env file
-      copy:
-        src: ./../services/dockerhub/dockerhub.env
-        dest: /home/{{ my_admin_user }}/git/services/dockerhub
-        owner: "{{ my_admin_user }}"
-        group: "{{ my_admin_user }}"
-        mode: 0644
-      tags: update
-
   tasks:
-    - name: "admin_refresh"
-      shell: "cd {{ services_home }}/admin && ./stop.sh && ../../refresh-git.sh && ./start.sh"
-      tags: admin_refresh
-
     - name: "traefik"
       shell: "cd {{ services_home }}/traefik && ./start.sh"
+      tags: traefik
+
+    - name: "pygeoapi_test"
+      shell: "cd {{ services_home }}/pygeoapi_test && ./stop.sh && ./clean.sh && ./build.sh && ./start.sh"
       tags: traefik

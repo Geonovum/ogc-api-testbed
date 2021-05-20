@@ -42,6 +42,13 @@
 
   tasks:
 
+    - name: "Set global env vars"
+      lineinfile:
+        dest: /etc/environment
+        state: present
+        regexp: '^EMAIL'
+        line: 'EMAIL={{ my_email }}'
+
     # https://www.jeffgeerling.com/blog/2018/cloning-private-github-repositories-ansible-on-remote-server-through-ssh
     - name: "Clone Git Repo"
       git:

@@ -7,11 +7,10 @@
 #
 
 SCRIPT_DIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+source ${SCRIPT_DIR}/env.sh
 
 # first create the Docker network
 docker network create --driver bridge service-network
-
-SERVICES=""
 
 for SERVICE in ${SERVICES}
 do

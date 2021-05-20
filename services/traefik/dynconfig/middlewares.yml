@@ -1,0 +1,32 @@
+# https://www.djpic.net/articles/traefik-v2-secure-tls-and-header-configuration-with-docker-provider/
+# was: in service compose files
+# - "traefik.http.middlewares.shop_cors.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
+# - "traefik.http.middlewares.shop_cors.headers.accesscontrolalloworigin=*"
+# - "traefik.http.middlewares.shop_cors.headers.accessControlallowheaders=Authorization"
+# - "traefik.http.middlewares.shop_cors.headers.accesscontrolmaxage=100"
+# - "traefik.http.middlewares.shop_cors.headers.addvaryheader=true"
+# ff niet:
+# accessControlAllowHeaders: Authorization
+#        accessControlAllowOriginList:
+#          - https://foobar.net
+#          - https://www.foobar.net
+# contentSecurityPolicy: script-src 'self'
+#         frameDeny: true
+http:
+  middlewares:
+    secure-headers:
+      headers:
+        sslRedirect: true
+        stsIncludeSubdomains: true
+        stsPreload: true
+        stsSeconds: 63072000
+        contentTypeNosniff: true
+        accessControlAllowMethods:
+          - GET
+          - POST
+          - PUT
+        accessControlAllowOriginList: '*'
+        accessControlMaxAge: 100
+        addVaryheader: true
+        accessControlAllowHeaders: Authorization
+        # referrerPolicy: origin-when-cross-origin
