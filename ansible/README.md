@@ -52,6 +52,17 @@ ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-srv.txt b
 
 * add key.rsa.pub to authorized_keys
 
+
+## Test if working
+
+Basic sanity test:
+
+```
+ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-srv.txt test.yml -i hosts/prod.yml
+
+
+```
+
 ## Deploy
 
 Deploy individual services:

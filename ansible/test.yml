@@ -1,6 +1,7 @@
 - name: "Test Ansible"
   hosts: all
   gather_facts: yes
+  become_user: "{{ my_admin_user }}"
 
   vars_files:
     - vars/vars.yml

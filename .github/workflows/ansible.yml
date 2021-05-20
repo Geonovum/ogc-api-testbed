@@ -18,7 +18,7 @@ jobs:
     - name: Run playbook ⚙
       uses: dawidd6/action-ansible-playbook@v2
       with:
-        playbook: test.yml
+        playbook: deploy.yml
         directory: ./ansible
         key: ${{secrets.ANSIBLE_SSH_PRIVATE_KEY}}
         inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}

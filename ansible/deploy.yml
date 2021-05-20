@@ -2,6 +2,7 @@
 - name: "Update and (Re)Deploy Services"
   hosts: all
   gather_facts: yes
+  become_user: "{{ my_admin_user }}"
 
   vars_files:
     - vars/vars.yml
@@ -11,14 +12,14 @@
 
   pre_tasks:
     - name: "Clone or Update Git Repo"
-      git: "repo={{ my_github_repo }} dest={{ my_git_home }} version=master clone=yes force=yes accept_hostkey=True"
+      git: "repo={{ my_github_repo }} dest={{ my_git_home }} version=main clone=yes force=yes accept_hostkey=True"
       tags: update
 
   tasks:
     - name: "traefik"
-      shell: "cd {{ services_home }}/traefik && ./start.sh"
+      shell: "cd {{ services_home }}/traefik && ./start.sh && docker ps"
       tags: traefik
 
     - name: "pygeoapi_test"
-      shell: "cd {{ services_home }}/pygeoapi_test && ./stop.sh && ./clean.sh && ./build.sh && ./start.sh"
+      shell: "cd {{ services_home }}/pygeoapi_test && ./stop.sh && ./../clean.sh && ./build.sh && ./start.sh && docker ps"
       tags: traefik
