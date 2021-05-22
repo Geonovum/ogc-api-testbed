@@ -11,7 +11,7 @@ The main design principles are:
 * any action on the server/VM is performed remotely
 * i.e. no direct access/login to/on the server/VM is required, only maybe for problem solving
 * remote actions can be performed manually or triggered by GitHub Workflows
-* all credentials (passwords, SSH-keys, etc) should be secured 
+* all credentials (passwords, SSH-keys, etc) are secured 
 * both a "stable" and "experimental" stack should be available
 
 The (DevOps-) components for this setup are:
@@ -56,7 +56,8 @@ Main requirements are that server/VM runs an LTS Ubuntu (20.4 or better) and tha
 
 ### Step 2 - Bootstrap the server/VM
 "Bootstrap" here implies the complete provisioning of a remote server/VM that runs the operational service stack.
-This is a one-time manual action.
+This is a one-time manual action, but can be executed at any time as Ansible actions are idempotent.
+By its nature, Ansible tasks will only change the system if there is something to do.
 
 Startpoint is a fresh Ubuntu-server or VM with root access via SSH-keys (no passwords).
 The Ansible playbook [bootstrap.yml](ansible/bootstrap.yml) installs the neccessary software, and hardens
