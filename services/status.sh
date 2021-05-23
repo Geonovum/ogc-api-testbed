@@ -15,7 +15,7 @@ docker ps
 #echo "Networks"
 #echo "========"
 #docker network ls
-
-echo "Volumes"
-echo "======="
-docker volume ls
+#
+# echo "Volumes"
+# echo "======="
+# docker volume ls

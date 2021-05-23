@@ -7,7 +7,7 @@
 
 SCRIPT_DIR=${0%/*}
 
-SERVICES="pygeoapi_test"
+SERVICES=""
 
 for SERVICE in ${SERVICES}
 do

@@ -4,7 +4,7 @@ services:
 
   pygeoapi_test:
     
-    image: geopython/pygeoapi_test:latest
+    image: geopython/pygeoapi:latest
 
     container_name: pygeoapi_test
 
@@ -17,22 +17,27 @@ services:
     environment:
      - SCRIPT_NAME=/pygeoapi_test
 
+    volumes:
+      # Map data and config into pygeoapi container
+      - ./local.config.yml:/pygeoapi/local.config.yml
+      - ./data:/pygeoapi/data
+
     labels:
+      # Enable Traefik routing on overlay service network
       - "traefik.enable=true"
-      # local http router
-      - "traefik.http.routers.pygeoapi_test_lhttp.rule=Host(`local.map5.nl`) || Host(`localhost`) && PathPrefix(`/pygeoapi_test`)"
-      - "traefik.http.routers.pygeoapi_test_lhttp.entrypoints=http"
-      - "traefik.http.routers.pygeoapi_test_lhttp.middlewares=secure-headers@file"
-      # https router
-      - "traefik.http.routers.pygeoapi_test_https.rule=Host(`oapi.map5.nl`) && PathPrefix(`/pygeoapi_test`)"
+      - "traefik.docker.network=service-network"
+
+      # SSL/https router
+      - "traefik.http.routers.pygeoapi_test_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/pygeoapi_test`)"
       - "traefik.http.routers.pygeoapi_test_https.entrypoints=https"
-      - "traefik.http.routers.pygeoapi_test_https.tls=true"
-      - "traefik.http.routers.pygeoapi_test_https.tls.certresolver=le"
+      - "traefik.http.routers.pygeoapi_test_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.pygeoapi_test_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
       - "traefik.http.routers.pygeoapi_test_https.tls.options=my_default@file"
       - "traefik.http.routers.pygeoapi_test_https.middlewares=secure-headers@file"
 
-      - "traefik.frontend.priority=100"
-      - "traefik.docker.network=service-network"
+      # local http router
+      - "traefik.http.routers.pygeoapi_test_http.rule=Host(`localhost`) && PathPrefix(`/pygeoapi_test`)"
+      - "traefik.http.routers.pygeoapi_test_http.entrypoints=http"
 
 networks:
   default:

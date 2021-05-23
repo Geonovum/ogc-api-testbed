@@ -40,11 +40,13 @@ services:
 
     labels:
       - "traefik.enable=true"
+      # Define redirect middleware for main domain
       - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.regex=^http://oapi.map5.nl/(.*)"
       - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.replacement=https://oapi.map5.nl/$${1}"
       - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.permanent=true"
 
-      - "traefik.http.routers.traefik_http.rule=Host(`oapi.map5.nl`)"
+      # Always redirect our domain from http to https
+      - "traefik.http.routers.traefik_http.rule=Host(`${TRAEFIK_SSL_DOMAIN}`)"
       - "traefik.http.routers.traefik_http.entrypoints=http"
       - "traefik.http.routers.traefik_http.middlewares=traefik_redirect_to_https@docker"
 

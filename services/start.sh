@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This starts all service components for geoqos stack
+# This starts all service components.
 # You must first have done ./build.sh
 #
 # Just van den Broecke - 2021
@@ -11,10 +11,11 @@ source ${SCRIPT_DIR}/env.sh
 
 # first create the Docker network
 docker network create --driver bridge service-network
+SERVICES="$(find ${SCRIPT_DIR} -type d -depth 1)"
 
 for SERVICE in ${SERVICES}
 do
-	pushd ${SCRIPT_DIR}/${SERVICE}
+	pushd ${SERVICE}
 		./start.sh
 	popd
 done
