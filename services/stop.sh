@@ -8,7 +8,7 @@
 SCRIPT_DIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 source ${SCRIPT_DIR}/env.sh
 
-SERVICES="$(find ${SCRIPT_DIR} -type d -depth 1)"
+SERVICES="$(find ${SCRIPT_DIR} -maxdepth 1 -mindepth 1)"
 
 for SERVICE in ${SERVICES}
 do

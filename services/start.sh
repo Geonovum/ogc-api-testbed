@@ -11,7 +11,7 @@ source ${SCRIPT_DIR}/env.sh
 
 # first create the Docker network
 docker network create --driver bridge service-network
-SERVICES="$(find ${SCRIPT_DIR} -type d -depth 1)"
+SERVICES="$(find ${SCRIPT_DIR} -maxdepth 1 -mindepth 1)"
 
 for SERVICE in ${SERVICES}
 do
