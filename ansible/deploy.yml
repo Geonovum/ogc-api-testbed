@@ -23,3 +23,7 @@
     - name: "pygeoapi_test"
       shell: "cd {{ services_home }}/pygeoapi_test && ./stop.sh && docker pull geopython/pygeoapi:latest && ./start.sh && docker ps"
       tags: pygeoapi_test
+
+    - name: "docs"
+      shell: "cd {{ services_home }}/docs && ./deploy.sh && docker ps"
+      tags: docs

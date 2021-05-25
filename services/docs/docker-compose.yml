@@ -20,7 +20,7 @@ services:
       - "traefik.docker.network=service-network"
 
       # SSL/https router
-      - "traefik.http.routers.docs_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/docs`)"
+      - "traefik.http.routers.docs_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`)"
       - "traefik.http.routers.docs_https.entrypoints=https"
       - "traefik.http.routers.docs_https.tls=${TRAEFIK_USE_TLS}"
       - "traefik.http.routers.docs_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
@@ -28,7 +28,7 @@ services:
       - "traefik.http.routers.docs_https.middlewares=secure-headers@file"
 
       # local http router
-      - "traefik.http.routers.docs_http.rule=Host(`localhost`) && PathPrefixStrip(`/docs`)"
+      - "traefik.http.routers.docs_http.rule=Host(`localhost`)"
       - "traefik.http.routers.docs_http.entrypoints=http"
 
 networks:

@@ -3,13 +3,13 @@
 # Options: https://github.com/dawidd6/action-ansible-playbook/blob/master/main.js
 # Author: Just van den Broecke - 2021
 #
-name: Traefik Deploy ⚙️
+name: Docs Deploy ⚙️
 
-# Trigger only when services/traefik subdir changed
+# Trigger only when services/docs subdir changed
 on:
   push:
     paths:
-      - 'services/traefik/**'
+      - 'services/docs/**'
 
 jobs:
   main:
@@ -28,5 +28,5 @@ jobs:
         inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
         vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
         options: |
-          --tags traefik
+          --tags docs
           --verbose

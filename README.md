@@ -1,5 +1,6 @@
 [![Traefik Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.traefik.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.traefik.yml)
 [![pygeoapi_test Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi_test.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi_test.yml)
+[![docs Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.docs.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.docs.yml)
 [![Gitter](https://img.shields.io/gitter/room/Geonovum/ogc-api-testbed.svg?style=flat-square)](https://gitter.im/Geonovum/ogc-api-testbed)
 
 # OGC API Testbed
@@ -39,7 +40,7 @@ The operational stack is composed with the following components:
 * [Traefik](https://traefik.io/) a frontend proxy/load-balancer and SSL (HTTPS) endpoint.
 * [pygeoapi](https://pygeoapi.io/) a Python server implementation of the OGC API suite of standards.
 * to be determined: [GeoServer](http://geoserver.org/), [ldproxy](https://interactive-instruments.github.io/ldproxy/), ...
-* [mkdocs](https://www.mkdocs.org/) for live documentation
+* [mkdocs](https://www.mkdocs.org/) for website and live documentation
 * both an experimental and stable stack instance is available
 
 The above setup has been used with success in several projects like 

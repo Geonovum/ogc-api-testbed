@@ -5,7 +5,7 @@
 #
 name: pygeoapi test Deploy ⚙️
 
-# Trigger only when service/traefik subdir changed
+# Trigger only when services/pygeoapi_test subdir changed
 on:
   push:
     paths:
