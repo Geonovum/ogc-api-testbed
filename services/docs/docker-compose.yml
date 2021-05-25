@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+
+  docs:
+    
+    build: ./
+
+    container_name: docs
+
+    expose:
+      - "8000"
+
+    ports:
+     - "5000:8000"
+
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      # SSL/https router
+      - "traefik.http.routers.docs_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/docs`)"
+      - "traefik.http.routers.docs_https.entrypoints=https"
+      - "traefik.http.routers.docs_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.docs_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.docs_https.tls.options=my_default@file"
+      - "traefik.http.routers.docs_https.middlewares=secure-headers@file"
+
+      # local http router
+      - "traefik.http.routers.docs_http.rule=Host(`localhost`) && PathPrefixStrip(`/docs`)"
+      - "traefik.http.routers.docs_http.entrypoints=http"
+
+networks:
+  default:
+    external:
+      name: service-network
