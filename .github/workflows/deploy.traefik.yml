@@ -9,7 +9,7 @@ name: Traefik Deploy ⚙️
 on:
   push:
     paths:
-      - 'services/traefik'
+      - 'services/traefik/**'
 
 jobs:
   main:

@@ -9,7 +9,7 @@ name: pygeoapi test Deploy ⚙️
 on:
   push:
     paths:
-      - 'services/pygeoapi_test'
+      - 'services/pygeoapi_test/**'
 
 jobs:
   main:
