@@ -1,4 +1,4 @@
-[![CI Build](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/ansible.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/ansible.yml)
+[![Traefik Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy/traefik.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy/traefik.yml)
 [![Gitter](https://img.shields.io/gitter/room/Geonovum/ogc-api-testbed.svg?style=flat-square)](https://gitter.im/Geonovum/ogc-api-testbed)
 
 # OGC API Testbed

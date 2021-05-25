@@ -1,11 +1,15 @@
-# Ansible workflow.
+# Ansible workflow for single service deployment.
 # Uses: https://github.com/dawidd6/action-ansible-playbook
 # Options: https://github.com/dawidd6/action-ansible-playbook/blob/master/main.js
 # Author: Just van den Broecke - 2021
 #
-name: Ansible CI ⚙️
+name: pygeoapi test Deploy ⚙️
 
-on: [ push ]
+# Trigger only when service/traefik subdir changed
+on:
+  push:
+    paths:
+      - 'services/pygeoapi_test'
 
 jobs:
   main:
@@ -24,6 +28,5 @@ jobs:
         inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
         vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
         options: |
-          --limit ogcapi
-          --extra-vars hello=there
+          --tags pygeoapi_test
           --verbose

@@ -1,7 +1,6 @@
 #!/bin/bash
 #
-# This lists status all service components for geoqos stack
-# You must first have done ./build.sh
+# This lists status all service components.
 #
 # Just van den Broecke - 2021
 #
