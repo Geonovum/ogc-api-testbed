@@ -24,6 +24,10 @@
       shell: "cd {{ services_home }}/pygeoapi_test && ./stop.sh && docker pull geopython/pygeoapi:latest && ./start.sh && docker ps"
       tags: pygeoapi_test
 
+    - name: "ldproxy"
+      shell: "cd {{ services_home }}/ldproxy && ./stop.sh && docker pull iide/ldproxy:latest && ./start.sh && docker ps"
+      tags: ldproxy
+
     - name: "docs"
       shell: "cd {{ services_home }}/docs && ./deploy.sh && docker ps"
       tags: docs
