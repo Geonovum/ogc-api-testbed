@@ -1,4 +1,5 @@
-[![Traefik Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy/traefik.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy/traefik.yml)
+[![Traefik Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.traefik.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.traefik.yml)
+[![pygeoapi_test Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi_test.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi_test.yml)
 [![Gitter](https://img.shields.io/gitter/room/Geonovum/ogc-api-testbed.svg?style=flat-square)](https://gitter.im/Geonovum/ogc-api-testbed)
 
 # OGC API Testbed
