@@ -13,7 +13,7 @@
   pre_tasks:
     - name: "Clone or Update Git Repo"
       git: "repo={{ my_github_repo }} dest={{ my_git_home }} version=main clone=yes force=yes accept_hostkey=True"
-      tags: update
+      tags: always
 
   tasks:
     - name: "traefik"

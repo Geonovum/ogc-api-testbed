@@ -1,0 +1,15 @@
+---
+my_ssh_pubkey_file: ~/.ssh/id_rsa.pub
+my_email: me@ergens.nl
+my_admin_user: adminuser
+my_admin_home: "/home/{{ my_admin_user }}"
+my_git_home: "{{ my_admin_home }}/git"
+my_github_repo: https://github.com/Geonovum/ogc-api-testbed.git
+var_dir: /var/ogcapi
+logs_dir: "{{ var_dir }}/log"
+services_home: "{{ my_git_home }}/services"
+platform_home: "{{ my_git_home }}/platform"
+pip_install_packages:
+  - name: docker
+timezone: Europe/Amsterdam
+ufw_open_ports: ['22', '80', '443']
