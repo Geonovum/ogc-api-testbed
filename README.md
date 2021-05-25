@@ -45,6 +45,22 @@ The operational stack is composed with the following components:
 The above setup has been used with success in several projects like 
 the [pygeoapi demo server](https://demo.pygeoapi.io/).
 
+## Selective Redeploy
+When changes are pushed to this repo only the affected services are redeployed.
+This is effected by a combination of GitHub Actions and Ansible Playbooks as follows:
+
+* each Service has a dedicated GitHub Action "deploy" file, e.g. [deploy.pygeoapi_test.yml](.github/workflows/deploy.pygeoapi_test.yml)
+* the GitHub Action "deploy" file contains a trigger for a `push` with a `paths` constraint, in this example:
+```  
+    on:
+      push:
+        paths:
+          - 'services/pygeoapi_test/**'
+```   
+* the GH Action then calls the Ansible Playbook [deploy.yml](ansible/deploy.yml) with a `--tags` option related to the Service, e.g. `--tags pygeoapi_test`
+* the [deploy.yml](ansible/deploy.yml) will always update the GH repo on the server VM via the `pre_tasks`
+* the Ansible task indicated by the `tags` is then executed
+
 ## Steps and Workflows
 
 These can be used to setup a running server from zero.
@@ -56,7 +72,7 @@ Main requirements are that server/VM runs an LTS Ubuntu (20.4 or better) and tha
 
 ### Step 1 - Clone this repo
 
-`git clone https://github.com/justb4/ogc-api-srv.git`.
+`git clone https://github.com/Geonovum/ogc-api-testbed.git`.
 
 ### Step 2 - Bootstrap the server/VM
 "Bootstrap" here implies the complete provisioning of a remote server/VM that runs the operational service stack.
