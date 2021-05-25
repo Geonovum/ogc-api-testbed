@@ -22,4 +22,4 @@
 
     - name: "pygeoapi_test"
       shell: "cd {{ services_home }}/pygeoapi_test && ./stop.sh && docker pull geopython/pygeoapi:latest && ./start.sh && docker ps"
-      tags: traefik
+      tags: pygeoapi_test
