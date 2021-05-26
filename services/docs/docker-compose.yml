@@ -11,8 +11,8 @@ services:
     expose:
       - "8000"
 
-    ports:
-     - "5000:8000"
+#    ports:
+#     - "5000:8000"
 
     labels:
       # Enable Traefik routing on overlay service network

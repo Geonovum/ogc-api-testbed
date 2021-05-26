@@ -1,17 +1,18 @@
-# Welcome to MkDocs
+# Welcome to Geonovum's OGC API Testbed
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is a placeholder for upcoming full documentation.
 
-## Commands
+See the [project README on GitHub](https://github.com/Geonovum/ogc-api-testbed/blob/main/README.md) 
+for how this testbed is setup.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Services
 
-## Project layout
+These are the services running on this domain.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* [pygeoapi test](/pygeoapi_test) - `pygeoapi` experimental
+* [ldproxy](/ldproxy) - `ldproxy` (in progress...)
+
+## Links
+
+* [Geonovum](https://geonovum.nl) - Geonovum home
+* [pygeoapi](https://pygeoapi.io) - `pygeoapi` project home
