@@ -1,0 +1,16 @@
+<layer>
+  <name>schiedam</name>
+  <id>LayerInfoImpl-7431bcf9:179af7e30b7:-7fe5</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4ec7cd51:179af275415:-8000</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-7431bcf9:179af7e30b7:-7fe6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-05-27 20:24:39.648 UTC</dateCreated>
+</layer>

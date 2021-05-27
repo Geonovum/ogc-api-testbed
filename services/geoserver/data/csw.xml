@@ -1,0 +1,23 @@
+<csw>
+  <id>csw</id>
+  <enabled>true</enabled>
+  <name>GeoServer OGC API Experiment GeoNovum CSW</name>
+  <title>GeoServer OGC API Experiment GeoNovum Catalogue Service</title>
+  <maintainer>https://www.geonovum.nl/</maintainer>
+  <abstrct>Catalogue Services (CSW) describing server contents as records.</abstrct>
+  <accessConstraints>NONE</accessConstraints>
+  <fees>NONE</fees>
+  <versions>
+    <org.geotools.util.Version>
+      <version>2.0.2</version>
+    </org.geotools.util.Version>
+  </versions>
+  <keywords>
+    <string>CSW</string>
+    <string>GeoServer</string>
+  </keywords>
+  <citeCompliant>false</citeCompliant>
+  <onlineResource>https://www.geonovum.nl/geoserver/</onlineResource>
+  <schemaBaseURL>http://schemas.opengis.net</schemaBaseURL>
+  <verbose>false</verbose>  
+</csw>
