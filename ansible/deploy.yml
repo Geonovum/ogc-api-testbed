@@ -25,7 +25,7 @@
       tags: pygeoapi_test
 
     - name: "ldproxy"
-      shell: "cd {{ services_home }}/ldproxy && ./stop.sh && docker pull iide/ldproxy:latest && ./start.sh && docker ps"
+      shell: "cd {{ services_home }}/ldproxy && ./deploy.sh && docker ps"
       tags: ldproxy
 
     - name: "docs"

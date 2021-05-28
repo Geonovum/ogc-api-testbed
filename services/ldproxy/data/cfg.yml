@@ -1,5 +1,5 @@
 server:
-  externalUrl: http://localhost:8000/ldproxy/
+  externalUrl: https://oapi.map5.nl/ldproxy/
 logging:
   level: DEBUG
   appenders:

@@ -10,9 +10,11 @@ for how this testbed is setup.
 These are the services running on this domain.
 
 * [pygeoapi test](/pygeoapi_test) - `pygeoapi` experimental
-* [ldproxy](/ldproxy) - `ldproxy` (in progress...)
+* [ldproxy](/ldproxy) - `ldproxy` 
 
 ## Links
 
+* [Project GitHub Repo](https://github.com/Geonovum/ogc-api-testbed)
 * [Geonovum](https://geonovum.nl) - Geonovum home
 * [pygeoapi](https://pygeoapi.io) - `pygeoapi` project home
+* [ldproxy](https://github.com/interactive-instruments/ldproxy) - `ldproxy` project home
