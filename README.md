@@ -38,13 +38,16 @@ and [GitHub Encrypted Secrets](https://docs.github.com/en/actions/reference/encr
 The operational stack is composed with the following components:
 
 * [Traefik](https://traefik.io/) a frontend proxy/load-balancer and SSL (HTTPS) endpoint.
-* [pygeoapi](https://pygeoapi.io/) a Python server implementation of the OGC API suite of standards.
-* to be determined: [GeoServer](http://geoserver.org/), [ldproxy](https://interactive-instruments.github.io/ldproxy/), ...
-* [mkdocs](https://www.mkdocs.org/) for website and live documentation
-* both an experimental and stable stack instance is available
+* [mkdocs](https://www.mkdocs.org/) for live documentation
 
-The above setup has been used with success in several projects like 
-the [pygeoapi demo server](https://demo.pygeoapi.io/).
+* both an experimental and stable stack instance is available
+* [GeoHealthCheck]() is a component to monitor the availability and complience of the implementations 
+
+# Services
+
+* [pygeoapi](https://pygeoapi.io/) a Python server implementation of the OGC API suite of standards.
+* [GeoServer](http://geoserver.org/) a Java server implementation of the OGC API suite of standards.
+* [ldproxy](https://interactive-instruments.github.io/ldproxy/) a Java server implementation of the OGC API suite of standards.
 
 ## Selective Redeploy
 When changes are pushed to this repo only the affected services are redeployed.

@@ -1,0 +1,11 @@
+server:
+  externalUrl: http://localhost:8000/ldproxy/
+logging:
+  level: DEBUG
+  appenders:
+    - type: file
+      currentLogFilename: /ldproxy/data/ldproxy.log
+      archive: true
+      archivedLogFilenamePattern: /ldproxy/data/ldproxy-%d.zip
+      archivedFileCount: 30
+      timeZone: Europe/Berlin
