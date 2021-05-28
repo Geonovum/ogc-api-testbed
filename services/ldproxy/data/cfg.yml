@@ -1,5 +1,5 @@
 server:
-  externalUrl: https://oapi.map5.nl/ldproxy/
+  externalUrl: https://oapi.map5.nl/ldproxy
 logging:
   level: DEBUG
   appenders:

@@ -3,6 +3,8 @@ Runs latest [ldproxy](https://github.com/interactive-instruments/ldproxy) using
 its [LDProxy Docker Image from DockerHub](https://hub.docker.com/r/iide/ldproxy).
 with a [local config file](data/cfg.yml).
 
+Note that the [proxy path is replaced](docker-compose.yml) by Traefik during routing.
+
 ## Deployment
 
 This service is automatically (re)deployed if anything within this directory or its subdirs changes
