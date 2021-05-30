@@ -1,5 +1,5 @@
 [![Traefik Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.traefik.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.traefik.yml)
-[![pygeoapi_test Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi_test.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi_test.yml)
+[![pygeoapi Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi.yml)
 [![docs Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.docs.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.docs.yml)
 [![Gitter](https://img.shields.io/gitter/room/Geonovum/ogc-api-testbed.svg?style=flat-square)](https://gitter.im/Geonovum/ogc-api-testbed)
 
@@ -53,15 +53,15 @@ The operational stack is composed with the following components:
 When changes are pushed to this repo only the affected services are redeployed.
 This is effected by a combination of GitHub Actions and Ansible Playbooks as follows:
 
-* each Service has a dedicated GitHub Action "deploy" file, e.g. [deploy.pygeoapi_test.yml](.github/workflows/deploy.pygeoapi_test.yml)
+* each Service has a dedicated GitHub Action "deploy" file, e.g. [deploy.pygeoapi.yml](.github/workflows/deploy.pygeoapi.yml)
 * the GitHub Action "deploy" file contains a trigger for a `push` with a `paths` constraint, in this example:
 ```  
     on:
       push:
         paths:
-          - 'services/pygeoapi_test/**'
+          - 'services/pygeoapi/**'
 ```   
-* the GH Action then calls the Ansible Playbook [deploy.yml](ansible/deploy.yml) with a `--tags` option related to the Service, e.g. `--tags pygeoapi_test`
+* the GH Action then calls the Ansible Playbook [deploy.yml](ansible/deploy.yml) with a `--tags` option related to the Service, e.g. `--tags pygeoapi`
 * the [deploy.yml](ansible/deploy.yml) will always update the GH repo on the server VM via the `pre_tasks`
 * the Ansible task indicated by the `tags` is then executed
 

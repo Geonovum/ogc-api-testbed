@@ -11,9 +11,6 @@ services:
     expose:
       - "7080"
 
-    environment:
-     - SCRIPT_NAME=/ldproxy
-
     volumes:
       - ./data:/ldproxy/data
     

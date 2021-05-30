@@ -5,11 +5,11 @@
 #
 name: pygeoapi test Deploy ⚙️
 
-# Trigger only when services/pygeoapi_test subdir changed
+# Trigger only when services/pygeoapi subdir changed
 on:
   push:
     paths:
-      - 'services/pygeoapi_test/**'
+      - 'services/pygeoapi/**'
 
 jobs:
   main:
@@ -28,5 +28,5 @@ jobs:
         inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
         vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
         options: |
-          --tags pygeoapi_test
+          --tags pygeoapi
           --verbose

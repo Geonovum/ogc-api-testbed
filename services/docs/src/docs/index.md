@@ -9,7 +9,7 @@ for how this testbed is setup.
 
 These are the services running on this domain.
 
-* [pygeoapi test](/pygeoapi_test) - `pygeoapi` experimental
+* [pygeoapi test](/pygeoapi) - `pygeoapi` experimental
 * [ldproxy](/ldproxy) - `ldproxy` 
 
 ## Links

@@ -70,7 +70,7 @@ Deploy individual services:
 ```
 ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-testbed.txt deploy.yml -i hosts/prod.yml --tags traefik
 
-ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-testbed.txt deploy.yml -i hosts/prod.yml --tags pygeoapi_test
+ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-testbed.txt deploy.yml -i hosts/prod.yml --tags pygeoapi
 
 
 ```
