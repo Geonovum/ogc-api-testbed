@@ -3,7 +3,7 @@
 # Options: https://github.com/dawidd6/action-ansible-playbook/blob/master/main.js
 # Author: Just van den Broecke - 2021
 #
-name: pygeoapi test Deploy ⚙️
+name: pygeoapi Deploy ⚙️
 
 # Trigger only when services/pygeoapi subdir changed
 on:
