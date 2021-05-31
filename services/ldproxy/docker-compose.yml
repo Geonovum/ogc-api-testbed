@@ -3,7 +3,7 @@ version: "3.3"
 services:
 
   ldproxy:
-    
+    # Seems 'latest' is another version
     image: iide/ldproxy:latest
 
     container_name: ldproxy
