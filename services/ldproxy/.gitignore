@@ -1,5 +1,4 @@
-data/api-resources
 data/cache
 data/ldproxy.log
-data/store
+data/ldproxy.log.*
 data/tmp

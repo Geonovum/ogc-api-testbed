@@ -1,0 +1,3326 @@
+---
+id: RCE_Landschapsatlas_WFS
+createdAt: 1622452943028
+lastModified: 1622452943028
+entityStorageVersion: 2
+providerType: FEATURE
+featureProviderType: WFS
+nativeCrs:
+  code: 28992
+  forceAxisOrder: NONE
+typeValidation: NONE
+connectionInfo:
+  version: 2.0.0
+  namespaces:
+    xsi: http://www.w3.org/2001/XMLSchema-instance
+    ? ""
+    : http://www.opengis.net/wfs/2.0
+    ows: http://www.opengis.net/ows/1.1
+    gml: http://www.opengis.net/gml/3.2
+    fes: http://www.opengis.net/fes/2.0
+    xlink: http://www.w3.org/1999/xlink
+    xs: http://www.w3.org/2001/XMLSchema
+    xml: http://www.w3.org/XML/1998/namespace
+    inspire_dls: http://inspire.ec.europa.eu/schemas/inspire_dls/1.0
+    inspire_common: http://inspire.ec.europa.eu/schemas/common/1.0
+    landschapsatlas: http://services.rce.geovoorziening.nl/landschapsatlas
+  connectorType: HTTP
+  uri: https://services.rce.geovoorziening.nl/landschapsatlas/wfs?service=WFS&request=GetCapabilities&version=2.0.0
+types:
+  bevloeiingssystemen_lijn:
+    sourcePath: /landschapsatlas:bevloeiingssystemen_lijn
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      Legenda_ee:
+        sourcePath: landschapsatlas:Legenda_ee
+        type: STRING
+      Omschrijvi:
+        sourcePath: landschapsatlas:Omschrijvi
+        type: STRING
+      bron_geo:
+        sourcePath: landschapsatlas:bron_geo
+        type: STRING
+      SHAPE_Leng:
+        sourcePath: landschapsatlas:SHAPE_Leng
+        type: FLOAT
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: LINE_STRING
+  bevloeiingssystemen_punt:
+    sourcePath: /landschapsatlas:bevloeiingssystemen_punt
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      Legenda_ee:
+        sourcePath: landschapsatlas:Legenda_ee
+        type: STRING
+      Omschrijvi:
+        sourcePath: landschapsatlas:Omschrijvi
+        type: STRING
+      bron_geo:
+        sourcePath: landschapsatlas:bron_geo
+        type: STRING
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: POINT
+  bevloeiingssystemen_vlak:
+    sourcePath: /landschapsatlas:bevloeiingssystemen_vlak
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      Legenda_ee:
+        sourcePath: landschapsatlas:Legenda_ee
+        type: STRING
+      Omschrijvi:
+        sourcePath: landschapsatlas:Omschrijvi
+        type: STRING
+      bron_geo:
+        sourcePath: landschapsatlas:bron_geo
+        type: STRING
+      SHAPE_Leng:
+        sourcePath: landschapsatlas:SHAPE_Leng
+        type: FLOAT
+      SHAPE_Area:
+        sourcePath: landschapsatlas:SHAPE_Area
+        type: FLOAT
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: ANY
+  boerderijen:
+    sourcePath: /landschapsatlas:Boerderijen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      subcatoms:
+        sourcePath: landschapsatlas:subcatoms
+        type: STRING
+      extractdat:
+        sourcePath: landschapsatlas:extractdat
+        type: STRING
+      monumentnr:
+        sourcePath: landschapsatlas:monumentnr
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      omschrijving:
+        sourcePath: landschapsatlas:omschrijving
+        type: STRING
+      url:
+        sourcePath: landschapsatlas:url
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      verspreiding:
+        sourcePath: landschapsatlas:verspreiding
+        type: STRING
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: ANY
+  boerderijtypen:
+    sourcePath: /landschapsatlas:Boerderijtypen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: ANY
+      area:
+        sourcePath: landschapsatlas:area
+        type: FLOAT
+  eendenkooien:
+    sourcePath: /landschapsatlas:Eendenkooien
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      rce_id:
+        sourcePath: landschapsatlas:rce_id
+        type: STRING
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      fotolink:
+        sourcePath: landschapsatlas:fotolink
+        type: STRING
+      infolink:
+        sourcePath: landschapsatlas:infolink
+        type: STRING
+      bouwjaar:
+        sourcePath: landschapsatlas:bouwjaar
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      eigenaar:
+        sourcePath: landschapsatlas:eigenaar
+        type: STRING
+      bron_geo:
+        sourcePath: landschapsatlas:bron_geo
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  essen:
+    sourcePath: /landschapsatlas:essen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  geesten:
+    sourcePath: /landschapsatlas:Geesten
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      OBJECTID:
+        sourcePath: landschapsatlas:OBJECTID
+        type: FLOAT
+      Cat_a:
+        sourcePath: landschapsatlas:Cat_a
+        type: STRING
+      Cat_b:
+        sourcePath: landschapsatlas:Cat_b
+        type: STRING
+      Cat_c:
+        sourcePath: landschapsatlas:Cat_c
+        type: STRING
+      Naam:
+        sourcePath: landschapsatlas:Naam
+        type: STRING
+      Cat_d:
+        sourcePath: landschapsatlas:Cat_d
+        type: STRING
+      Kerk:
+        sourcePath: landschapsatlas:Kerk
+        type: FLOAT
+      Laagland:
+        sourcePath: landschapsatlas:Laagland
+        type: FLOAT
+      Nol_grond:
+        sourcePath: landschapsatlas:Nol_grond
+        type: FLOAT
+      Nr_Zeiler:
+        sourcePath: landschapsatlas:Nr_Zeiler
+        type: FLOAT
+      Ambacht_Parochie:
+        sourcePath: landschapsatlas:Ambacht_Parochie
+        type: STRING
+      Shape_Length:
+        sourcePath: landschapsatlas:Shape_Length
+        type: FLOAT
+      Shape_Area:
+        sourcePath: landschapsatlas:Shape_Area
+        type: FLOAT
+      Infolink:
+        sourcePath: landschapsatlas:Infolink
+        type: STRING
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: ANY
+  hunebedden:
+    sourcePath: /landschapsatlas:Hunebedden
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: MULTI_POLYGON
+      Nummer:
+        sourcePath: landschapsatlas:Nummer
+        type: STRING
+      Naam:
+        sourcePath: landschapsatlas:Naam
+        type: STRING
+      Archis_nr:
+        sourcePath: landschapsatlas:Archis_nr
+        type: FLOAT
+      Rijksmonnr:
+        sourcePath: landschapsatlas:Rijksmonnr
+        type: FLOAT
+      Infolink:
+        sourcePath: landschapsatlas:Infolink
+        type: STRING
+      Foto_thumb:
+        sourcePath: landschapsatlas:Foto_thumb
+        type: STRING
+      Foto_groot:
+        sourcePath: landschapsatlas:Foto_groot
+        type: STRING
+      Inwinning:
+        sourcePath: landschapsatlas:Inwinning
+        type: STRING
+      Shape_Leng:
+        sourcePath: landschapsatlas:Shape_Leng
+        type: FLOAT
+      Shape_Area:
+        sourcePath: landschapsatlas:Shape_Area
+        type: FLOAT
+  landinrichtingnl:
+    sourcePath: /landschapsatlas:LandinrichtingNL
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      proj_num:
+        sourcePath: landschapsatlas:proj_num
+        type: FLOAT
+      crnummer:
+        sourcePath: landschapsatlas:crnummer
+        type: FLOAT
+      labelnaam:
+        sourcePath: landschapsatlas:labelnaam
+        type: STRING
+      projnaam:
+        sourcePath: landschapsatlas:projnaam
+        type: STRING
+      bropperv:
+        sourcePath: landschapsatlas:bropperv
+        type: FLOAT
+      livorm:
+        sourcePath: landschapsatlas:livorm
+        type: STRING
+      klassiek:
+        sourcePath: landschapsatlas:klassiek
+        type: STRING
+      modulair:
+        sourcePath: landschapsatlas:modulair
+        type: STRING
+      jaarvoor:
+        sourcePath: landschapsatlas:jaarvoor
+        type: FLOAT
+      jaargoed:
+        sourcePath: landschapsatlas:jaargoed
+        type: FLOAT
+      jaaruitv:
+        sourcePath: landschapsatlas:jaaruitv
+        type: FLOAT
+      jaarakte:
+        sourcePath: landschapsatlas:jaarakte
+        type: FLOAT
+      jaarafsl:
+        sourcePath: landschapsatlas:jaarafsl
+        type: FLOAT
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      livorm_oms:
+        sourcePath: landschapsatlas:livorm_oms
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  groenerfgoed:
+    sourcePath: /landschapsatlas:groenerfgoed
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: FLOAT
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      toponiem:
+        sourcePath: landschapsatlas:toponiem
+        type: STRING
+      woonplaats:
+        sourcePath: landschapsatlas:woonplaats
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      methodiek:
+        sourcePath: landschapsatlas:methodiek
+        type: STRING
+      hist_onder:
+        sourcePath: landschapsatlas:hist_onder
+        type: STRING
+      landschap:
+        sourcePath: landschapsatlas:landschap
+        type: STRING
+      hist_behee:
+        sourcePath: landschapsatlas:hist_behee
+        type: STRING
+      waardering:
+        sourcePath: landschapsatlas:waardering
+        type: STRING
+      volledighe:
+        sourcePath: landschapsatlas:volledighe
+        type: STRING
+      bomen:
+        sourcePath: landschapsatlas:bomen
+        type: STRING
+      struiken_1:
+        sourcePath: landschapsatlas:struiken_1
+        type: STRING
+      struiken_2:
+        sourcePath: landschapsatlas:struiken_2
+        type: STRING
+      lianen:
+        sourcePath: landschapsatlas:lianen
+        type: STRING
+      soorten:
+        sourcePath: landschapsatlas:soorten
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      versie:
+        sourcePath: landschapsatlas:versie
+        type: STRING
+      shape:
+        sourcePath: landschapsatlas:shape
+        type: GEOMETRY
+        geometryType: ANY
+  groenerfgoed_bomenstruiken_pnt:
+    sourcePath: /landschapsatlas:groenerfgoed_bomenstruiken_pnt
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      wetnaam:
+        sourcePath: landschapsatlas:wetnaam
+        type: STRING
+      nednaam:
+        sourcePath: landschapsatlas:nednaam
+        type: STRING
+      versie:
+        sourcePath: landschapsatlas:versie
+        type: STRING
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: POINT
+  groenerfgoed_veldopnamen:
+    sourcePath: /landschapsatlas:groenerfgoed_veldopnamen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      versie:
+        sourcePath: landschapsatlas:versie
+        type: STRING
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: ANY
+  molens:
+    sourcePath: /landschapsatlas:Molens
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      NAAM:
+        sourcePath: landschapsatlas:NAAM
+        type: STRING
+      PLAATS:
+        sourcePath: landschapsatlas:PLAATS
+        type: STRING
+      CATEGORIE:
+        sourcePath: landschapsatlas:CATEGORIE
+        type: STRING
+      FUNCTIE:
+        sourcePath: landschapsatlas:FUNCTIE
+        type: STRING
+      TYPE:
+        sourcePath: landschapsatlas:TYPE
+        type: STRING
+      STAAT:
+        sourcePath: landschapsatlas:STAAT
+        type: STRING
+      RMONNUMMER:
+        sourcePath: landschapsatlas:RMONNUMMER
+        type: STRING
+      TBGCNUMMER:
+        sourcePath: landschapsatlas:TBGCNUMMER
+        type: STRING
+      INFOLINK:
+        sourcePath: landschapsatlas:INFOLINK
+        type: STRING
+      THUMBNAIL:
+        sourcePath: landschapsatlas:THUMBNAIL
+        type: STRING
+      HFDFUNCTIE:
+        sourcePath: landschapsatlas:HFDFUNCTIE
+        type: STRING
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: POINT
+      FOTOGRAAF:
+        sourcePath: landschapsatlas:FOTOGRAAF
+        type: STRING
+      FOTO_GROOT:
+        sourcePath: landschapsatlas:FOTO_GROOT
+        type: STRING
+      BOUWJAAR:
+        sourcePath: landschapsatlas:BOUWJAAR
+        type: STRING
+  nlog_velden_rd_20170829:
+    sourcePath: /landschapsatlas:nlog_velden_rd_20170829
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      leg_status:
+        sourcePath: landschapsatlas:leg_status
+        type: STRING
+      field_na_1:
+        sourcePath: landschapsatlas:field_na_1
+        type: STRING
+      field_co_1:
+        sourcePath: landschapsatlas:field_co_1
+        type: STRING
+      hydrocarbo:
+        sourcePath: landschapsatlas:hydrocarbo
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      operator:
+        sourcePath: landschapsatlas:operator
+        type: STRING
+      production:
+        sourcePath: landschapsatlas:production
+        type: DATETIME
+      discovery_:
+        sourcePath: landschapsatlas:discovery_
+        type: STRING
+      discovery1:
+        sourcePath: landschapsatlas:discovery1
+        type: STRING
+      stratigrap:
+        sourcePath: landschapsatlas:stratigrap
+        type: STRING
+      land_sea:
+        sourcePath: landschapsatlas:land_sea
+        type: STRING
+      licence_ar:
+        sourcePath: landschapsatlas:licence_ar
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  landschapskarakterisering:
+    sourcePath: /landschapsatlas:landschapskarakterisering
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      OBJECTID:
+        sourcePath: landschapsatlas:OBJECTID
+        type: FLOAT
+      regio_ID:
+        sourcePath: landschapsatlas:regio_ID
+        type: STRING
+      regionaam:
+        sourcePath: landschapsatlas:regionaam
+        type: STRING
+      INFOLINK:
+        sourcePath: landschapsatlas:INFOLINK
+        type: STRING
+      THUMBNAIL:
+        sourcePath: landschapsatlas:THUMBNAIL
+        type: STRING
+      Fotograaf:
+        sourcePath: landschapsatlas:Fotograaf
+        type: STRING
+      Fotobijsch:
+        sourcePath: landschapsatlas:Fotobijsch
+        type: STRING
+      Shape_Leng:
+        sourcePath: landschapsatlas:Shape_Leng
+        type: FLOAT
+      Shape_Area:
+        sourcePath: landschapsatlas:Shape_Area
+        type: FLOAT
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: ANY
+      korte_omsc:
+        sourcePath: landschapsatlas:korte_omsc
+        type: STRING
+  tiendwegen:
+    sourcePath: /landschapsatlas:tiendwegen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      minkjan_nummer:
+        sourcePath: landschapsatlas:minkjan_nummer
+        type: FLOAT
+      fotothumb:
+        sourcePath: landschapsatlas:fotothumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      huidige_naam:
+        sourcePath: landschapsatlas:huidige_naam
+        type: STRING
+      nadere_aanduiding:
+        sourcePath: landschapsatlas:nadere_aanduiding
+        type: STRING
+      gemeente:
+        sourcePath: landschapsatlas:gemeente
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      oudst_bekende_historische_vermelding:
+        sourcePath: landschapsatlas:oudst_bekende_historische_vermelding
+        type: FLOAT
+      bron:
+        sourcePath: landschapsatlas:bron
+        type: STRING
+      vermoedelijke_lengte:
+        sourcePath: landschapsatlas:vermoedelijke_lengte
+        type: STRING
+      huidige_staat:
+        sourcePath: landschapsatlas:huidige_staat
+        type: STRING
+      foto_bijschrift:
+        sourcePath: landschapsatlas:foto_bijschrift
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  autosnelwegen:
+    sourcePath: /landschapsatlas:autosnelwegen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      awegnummer:
+        sourcePath: landschapsatlas:awegnummer
+        type: STRING
+      ewegnummer:
+        sourcePath: landschapsatlas:ewegnummer
+        type: STRING
+      nwegnummer:
+        sourcePath: landschapsatlas:nwegnummer
+        type: STRING
+      afritnumme:
+        sourcePath: landschapsatlas:afritnumme
+        type: STRING
+      knooppuntn:
+        sourcePath: landschapsatlas:knooppuntn
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: FLOAT
+      datum_open:
+        sourcePath: landschapsatlas:datum_open
+        type: DATETIME
+      in_gebruik:
+        sourcePath: landschapsatlas:in_gebruik
+        type: DATETIME
+      infolink_m:
+        sourcePath: landschapsatlas:infolink_m
+        type: STRING
+      foto_gr_m:
+        sourcePath: landschapsatlas:foto_gr_m
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      infolink_i:
+        sourcePath: landschapsatlas:infolink_i
+        type: STRING
+      foto_gr_i:
+        sourcePath: landschapsatlas:foto_gr_i
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  begraafplaatsen:
+    sourcePath: /landschapsatlas:begraafplaatsen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: FLOAT
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      fotograaf:
+        sourcePath: landschapsatlas:fotograaf
+        type: STRING
+      signatuur:
+        sourcePath: landschapsatlas:signatuur
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      gemeente:
+        sourcePath: landschapsatlas:gemeente
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      beschermd:
+        sourcePath: landschapsatlas:beschermd
+        type: STRING
+      rmonnr:
+        sourcePath: landschapsatlas:rmonnr
+        type: STRING
+      link:
+        sourcePath: landschapsatlas:link
+        type: STRING
+      dl_bschrmd:
+        sourcePath: landschapsatlas:dl_bschrmd
+        type: STRING
+      jaartal:
+        sourcePath: landschapsatlas:jaartal
+        type: FLOAT
+      circa:
+        sourcePath: landschapsatlas:circa
+        type: STRING
+      periode:
+        sourcePath: landschapsatlas:periode
+        type: STRING
+      ontwerp:
+        sourcePath: landschapsatlas:ontwerp
+        type: STRING
+      grondvorm:
+        sourcePath: landschapsatlas:grondvorm
+        type: STRING
+      opmerking:
+        sourcePath: landschapsatlas:opmerking
+        type: STRING
+      legenda:
+        sourcePath: landschapsatlas:legenda
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  bekenkaart:
+    sourcePath: /landschapsatlas:bekenkaart
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      owdident:
+        sourcePath: landschapsatlas:owdident
+        type: STRING
+      owdnaam:
+        sourcePath: landschapsatlas:owdnaam
+        type: STRING
+      owmnaam:
+        sourcePath: landschapsatlas:owmnaam
+        type: STRING
+      naambw:
+        sourcePath: landschapsatlas:naambw
+        type: STRING
+      omschrijvi:
+        sourcePath: landschapsatlas:omschrijvi
+        type: STRING
+      bron:
+        sourcePath: landschapsatlas:bron
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  bruinkoolgroeves:
+    sourcePath: /landschapsatlas:bruinkoolgroeves
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: FLOAT
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      label:
+        sourcePath: landschapsatlas:label
+        type: STRING
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  cultuurhistorischebosjesgroenehart:
+    sourcePath: /landschapsatlas:cultuurhistorischebosjesgroenehart
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      volgnr:
+        sourcePath: landschapsatlas:volgnr
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      boomsoort1:
+        sourcePath: landschapsatlas:boomsoort1
+        type: STRING
+      boomsoort2:
+        sourcePath: landschapsatlas:boomsoort2
+        type: STRING
+      boomsoort3:
+        sourcePath: landschapsatlas:boomsoort3
+        type: STRING
+      opkaartin:
+        sourcePath: landschapsatlas:opkaartin
+        type: FLOAT
+      opnamedag:
+        sourcePath: landschapsatlas:opnamedag
+        type: DATETIME
+      notitie:
+        sourcePath: landschapsatlas:notitie
+        type: STRING
+      fotothumb:
+        sourcePath: landschapsatlas:fotothumb
+        type: STRING
+      fotogroot:
+        sourcePath: landschapsatlas:fotogroot
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      boomsoorten:
+        sourcePath: landschapsatlas:boomsoorten
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  cultuurhistorischebosjesmiddendelfland:
+    sourcePath: /landschapsatlas:cultuurhistorischebosjesmiddendelfland
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      volgnr:
+        sourcePath: landschapsatlas:volgnr
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      boomsoort1:
+        sourcePath: landschapsatlas:boomsoort1
+        type: STRING
+      boomsoort2:
+        sourcePath: landschapsatlas:boomsoort2
+        type: STRING
+      boomsoort3:
+        sourcePath: landschapsatlas:boomsoort3
+        type: STRING
+      opkaartin:
+        sourcePath: landschapsatlas:opkaartin
+        type: FLOAT
+      opnamedag:
+        sourcePath: landschapsatlas:opnamedag
+        type: DATETIME
+      notitie:
+        sourcePath: landschapsatlas:notitie
+        type: STRING
+      fotothumb:
+        sourcePath: landschapsatlas:fotothumb
+        type: STRING
+      fotogroot:
+        sourcePath: landschapsatlas:fotogroot
+        type: STRING
+      boomsoorten:
+        sourcePath: landschapsatlas:boomsoorten
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  droogmakerijen:
+    sourcePath: /landschapsatlas:droogmakerijen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: STRING
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: MULTI_POLYGON
+      poldernaam:
+        sourcePath: landschapsatlas:poldernaam
+        type: STRING
+      nai_polder:
+        sourcePath: landschapsatlas:nai_polder
+        type: STRING
+      periodeid:
+        sourcePath: landschapsatlas:periodeid
+        type: FLOAT
+      periode:
+        sourcePath: landschapsatlas:periode
+        type: STRING
+      datum_droo:
+        sourcePath: landschapsatlas:datum_droo
+        type: FLOAT
+      polderpeil:
+        sourcePath: landschapsatlas:polderpeil
+        type: STRING
+      bron_data:
+        sourcePath: landschapsatlas:bron_data
+        type: STRING
+      bron_geo:
+        sourcePath: landschapsatlas:bron_geo
+        type: STRING
+      shape_leng:
+        sourcePath: landschapsatlas:shape_leng
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+  fabrieksschoorstenen:
+    sourcePath: /landschapsatlas:fabrieksschoorstenen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: FLOAT
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: POINT
+      stif_numme:
+        sourcePath: landschapsatlas:stif_numme
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      fotograaf:
+        sourcePath: landschapsatlas:fotograaf
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      bouwer:
+        sourcePath: landschapsatlas:bouwer
+        type: STRING
+      hoogte_m:
+        sourcePath: landschapsatlas:hoogte_m
+        type: STRING
+      bouwjaar:
+        sourcePath: landschapsatlas:bouwjaar
+        type: STRING
+      monumentnu:
+        sourcePath: landschapsatlas:monumentnu
+        type: STRING
+      sc_nummer:
+        sourcePath: landschapsatlas:sc_nummer
+        type: STRING
+  gebiedsbiografieen:
+    sourcePath: /landschapsatlas:gebiedsbiografieen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      categorie:
+        sourcePath: landschapsatlas:categorie
+        type: STRING
+      subcategorie:
+        sourcePath: landschapsatlas:subcategorie
+        type: STRING
+      biografie:
+        sourcePath: landschapsatlas:biografie
+        type: STRING
+      url:
+        sourcePath: landschapsatlas:url
+        type: STRING
+      gebiedstype:
+        sourcePath: landschapsatlas:gebiedstype
+        type: STRING
+      gebiedsnaam:
+        sourcePath: landschapsatlas:gebiedsnaam
+        type: STRING
+      jaartal:
+        sourcePath: landschapsatlas:jaartal
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      shape:
+        sourcePath: landschapsatlas:shape
+        type: GEOMETRY
+        geometryType: ANY
+  gemalen:
+    sourcePath: /landschapsatlas:gemalen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: FLOAT
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      naam_gemaal:
+        sourcePath: landschapsatlas:naam_gemaal
+        type: STRING
+      fotograaf:
+        sourcePath: landschapsatlas:fotograaf
+        type: STRING
+      categorie:
+        sourcePath: landschapsatlas:categorie
+        type: STRING
+      stichtingsjaar:
+        sourcePath: landschapsatlas:stichtingsjaar
+        type: STRING
+      oorspr_aandrijving:
+        sourcePath: landschapsatlas:oorspr_aandrijving
+        type: STRING
+      bescherming:
+        sourcePath: landschapsatlas:bescherming
+        type: STRING
+      monumentnr:
+        sourcePath: landschapsatlas:monumentnr
+        type: STRING
+      infolink:
+        sourcePath: landschapsatlas:infolink
+        type: STRING
+      soortgemaal:
+        sourcePath: landschapsatlas:soortgemaal
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  gesloten_stations:
+    sourcePath: /landschapsatlas:gesloten_stations
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: STRING
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      popup:
+        sourcePath: landschapsatlas:popup
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: STRING
+      sluiting:
+        sourcePath: landschapsatlas:sluiting
+        type: STRING
+      info_link:
+        sourcePath: landschapsatlas:info_link
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      bijschrift:
+        sourcePath: landschapsatlas:bijschrift
+        type: STRING
+      bron:
+        sourcePath: landschapsatlas:bron
+        type: STRING
+      infolink_m:
+        sourcePath: landschapsatlas:infolink_m
+        type: STRING
+      foto_gr_m:
+        sourcePath: landschapsatlas:foto_gr_m
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      infolink_i:
+        sourcePath: landschapsatlas:infolink_i
+        type: STRING
+      foto_gr_i:
+        sourcePath: landschapsatlas:foto_gr_i
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  grafheuvels:
+    sourcePath: /landschapsatlas:grafheuvels
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      waarde:
+        sourcePath: landschapsatlas:waarde
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      toponiem:
+        sourcePath: landschapsatlas:toponiem
+        type: STRING
+      amk:
+        sourcePath: landschapsatlas:amk
+        type: FLOAT
+      opmerking:
+        sourcePath: landschapsatlas:opmerking
+        type: STRING
+      complex_id:
+        sourcePath: landschapsatlas:complex_id
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      inwinning:
+        sourcePath: landschapsatlas:inwinning
+        type: STRING
+      mon_nr:
+        sourcePath: landschapsatlas:mon_nr
+        type: FLOAT
+      mrs_nummer:
+        sourcePath: landschapsatlas:mrs_nummer
+        type: STRING
+      bron:
+        sourcePath: landschapsatlas:bron
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  grintwegen_tmk_1850_aggn:
+    sourcePath: /landschapsatlas:grintwegen_tmk_1850_aggn
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      typeweg:
+        sourcePath: landschapsatlas:typeweg
+        type: FLOAT
+      tramaanwez:
+        sourcePath: landschapsatlas:tramaanwez
+        type: FLOAT
+      bomenaanwe:
+        sourcePath: landschapsatlas:bomenaanwe
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      fysiekvoor:
+        sourcePath: landschapsatlas:fysiekvoor
+        type: FLOAT
+      hoogtenive:
+        sourcePath: landschapsatlas:hoogtenive
+        type: FLOAT
+      creationda:
+        sourcePath: landschapsatlas:creationda
+        type: DATETIME
+      creator:
+        sourcePath: landschapsatlas:creator
+        type: STRING
+      editdate:
+        sourcePath: landschapsatlas:editdate
+        type: DATETIME
+      editor:
+        sourcePath: landschapsatlas:editor
+        type: STRING
+      globalid:
+        sourcePath: landschapsatlas:globalid
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  haltes_en_depots_museumspoorlijnen:
+    sourcePath: /landschapsatlas:haltes_en_depots_museumspoorlijnen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: STRING
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      popup:
+        sourcePath: landschapsatlas:popup
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: STRING
+      sluiting:
+        sourcePath: landschapsatlas:sluiting
+        type: STRING
+      info_link:
+        sourcePath: landschapsatlas:info_link
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      bijschrift:
+        sourcePath: landschapsatlas:bijschrift
+        type: STRING
+      bron:
+        sourcePath: landschapsatlas:bron
+        type: STRING
+      infolink_m:
+        sourcePath: landschapsatlas:infolink_m
+        type: STRING
+      foto_gr_m:
+        sourcePath: landschapsatlas:foto_gr_m
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      infolink_i:
+        sourcePath: landschapsatlas:infolink_i
+        type: STRING
+      foto_gr_i:
+        sourcePath: landschapsatlas:foto_gr_i
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  haltes_oorlogsspoorlijnen:
+    sourcePath: /landschapsatlas:haltes_oorlogsspoorlijnen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: STRING
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      popup:
+        sourcePath: landschapsatlas:popup
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: STRING
+      sluiting:
+        sourcePath: landschapsatlas:sluiting
+        type: STRING
+      info_link:
+        sourcePath: landschapsatlas:info_link
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      bijschrift:
+        sourcePath: landschapsatlas:bijschrift
+        type: STRING
+      bron:
+        sourcePath: landschapsatlas:bron
+        type: STRING
+      infolink_m:
+        sourcePath: landschapsatlas:infolink_m
+        type: STRING
+      foto_gr_m:
+        sourcePath: landschapsatlas:foto_gr_m
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      foto_gr_i:
+        sourcePath: landschapsatlas:foto_gr_i
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  hertenkampen:
+    sourcePath: /landschapsatlas:hertenkampen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: STRING
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      adres:
+        sourcePath: landschapsatlas:adres
+        type: STRING
+      ligging:
+        sourcePath: landschapsatlas:ligging
+        type: STRING
+      rijksmonnr:
+        sourcePath: landschapsatlas:rijksmonnr
+        type: STRING
+      ouderdom:
+        sourcePath: landschapsatlas:ouderdom
+        type: STRING
+      hertenhuis:
+        sourcePath: landschapsatlas:hertenhuis
+        type: STRING
+      vijver:
+        sourcePath: landschapsatlas:vijver
+        type: STRING
+      hek:
+        sourcePath: landschapsatlas:hek
+        type: STRING
+      losse_ruif:
+        sourcePath: landschapsatlas:losse_ruif
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      fotograaf:
+        sourcePath: landschapsatlas:fotograaf
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  historische_spoorwegen:
+    sourcePath: /landschapsatlas:historische_spoorwegen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      beginpunt:
+        sourcePath: landschapsatlas:beginpunt
+        type: STRING
+      eindpunt:
+        sourcePath: landschapsatlas:eindpunt
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: DATETIME
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      opmerking:
+        sourcePath: landschapsatlas:opmerking
+        type: STRING
+      staking_personen_vervoer:
+        sourcePath: landschapsatlas:staking_personen_vervoer
+        type: DATETIME
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  historische_tramwegen:
+    sourcePath: /landschapsatlas:historische_tramwegen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      beginpunt:
+        sourcePath: landschapsatlas:beginpunt
+        type: STRING
+      eindpunt:
+        sourcePath: landschapsatlas:eindpunt
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: DATETIME
+      spw_mm:
+        sourcePath: landschapsatlas:spw_mm
+        type: FLOAT
+      tramwegbedrijf:
+        sourcePath: landschapsatlas:tramwegbedrijf
+        type: STRING
+      staking_personenvervoer:
+        sourcePath: landschapsatlas:staking_personenvervoer
+        type: DATETIME
+      opheffing_exploitatie:
+        sourcePath: landschapsatlas:opheffing_exploitatie
+        type: DATETIME
+      tramwegbedrijf_2:
+        sourcePath: landschapsatlas:tramwegbedrijf_2
+        type: STRING
+      spw_mm2:
+        sourcePath: landschapsatlas:spw_mm2
+        type: FLOAT
+      spw_mm3:
+        sourcePath: landschapsatlas:spw_mm3
+        type: FLOAT
+      spw_mm4:
+        sourcePath: landschapsatlas:spw_mm4
+        type: FLOAT
+      stop_spw2:
+        sourcePath: landschapsatlas:stop_spw2
+        type: DATETIME
+      begin_spw2:
+        sourcePath: landschapsatlas:begin_spw2
+        type: DATETIME
+      begin_spw3:
+        sourcePath: landschapsatlas:begin_spw3
+        type: DATETIME
+      stop_spw3:
+        sourcePath: landschapsatlas:stop_spw3
+        type: DATETIME
+      stop_spw1:
+        sourcePath: landschapsatlas:stop_spw1
+        type: DATETIME
+      begin_spw4:
+        sourcePath: landschapsatlas:begin_spw4
+        type: DATETIME
+      expl_overname_bedrijf2:
+        sourcePath: landschapsatlas:expl_overname_bedrijf2
+        type: DATETIME
+      eig_overname_bedrijf2:
+        sourcePath: landschapsatlas:eig_overname_bedrijf2
+        type: DATETIME
+      tramwegbedrijf_3:
+        sourcePath: landschapsatlas:tramwegbedrijf_3
+        type: STRING
+      eig_overname_bedrijf3:
+        sourcePath: landschapsatlas:eig_overname_bedrijf3
+        type: DATETIME
+      expl_overname_bedrijf3:
+        sourcePath: landschapsatlas:expl_overname_bedrijf3
+        type: DATETIME
+      tramwegbedrijf_4:
+        sourcePath: landschapsatlas:tramwegbedrijf_4
+        type: STRING
+      eig_overname_bedrijf4:
+        sourcePath: landschapsatlas:eig_overname_bedrijf4
+        type: DATETIME
+      expl_overname_bedrijf4:
+        sourcePath: landschapsatlas:expl_overname_bedrijf4
+        type: DATETIME
+      tractie1:
+        sourcePath: landschapsatlas:tractie1
+        type: STRING
+      tractie1_stop:
+        sourcePath: landschapsatlas:tractie1_stop
+        type: DATETIME
+      tractie2:
+        sourcePath: landschapsatlas:tractie2
+        type: STRING
+      tractie2_begin:
+        sourcePath: landschapsatlas:tractie2_begin
+        type: DATETIME
+      alleen_goederen:
+        sourcePath: landschapsatlas:alleen_goederen
+        type: STRING
+      gescheiden_eig_expl:
+        sourcePath: landschapsatlas:gescheiden_eig_expl
+        type: STRING
+      opmerkingen:
+        sourcePath: landschapsatlas:opmerkingen
+        type: STRING
+      tractie3:
+        sourcePath: landschapsatlas:tractie3
+        type: STRING
+      tractie2_stop:
+        sourcePath: landschapsatlas:tractie2_stop
+        type: DATETIME
+      tractie3_begin:
+        sourcePath: landschapsatlas:tractie3_begin
+        type: DATETIME
+      tramwegbedrijf_5:
+        sourcePath: landschapsatlas:tramwegbedrijf_5
+        type: STRING
+      eig_overname_bedrijf5:
+        sourcePath: landschapsatlas:eig_overname_bedrijf5
+        type: DATETIME
+      expl_overname_bedrijf5:
+        sourcePath: landschapsatlas:expl_overname_bedrijf5
+        type: DATETIME
+      tramwegbedrijf_6:
+        sourcePath: landschapsatlas:tramwegbedrijf_6
+        type: STRING
+      eig_overname_bedrijf6:
+        sourcePath: landschapsatlas:eig_overname_bedrijf6
+        type: DATETIME
+      expl_overname_bedrijf6:
+        sourcePath: landschapsatlas:expl_overname_bedrijf6
+        type: DATETIME
+      in_sluiter:
+        sourcePath: landschapsatlas:in_sluiter
+        type: STRING
+      op_bonne:
+        sourcePath: landschapsatlas:op_bonne
+        type: STRING
+      select_:
+        sourcePath: landschapsatlas:select_
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  hoogstamboomgaarden:
+    sourcePath: /landschapsatlas:hoogstamboomgaarden
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      nr:
+        sourcePath: landschapsatlas:nr
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      aantal:
+        sourcePath: landschapsatlas:aantal
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  kastelen:
+    sourcePath: /landschapsatlas:kastelen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: POINT
+      cchin:
+        sourcePath: landschapsatlas:cchin
+        type: STRING
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      info_link:
+        sourcePath: landschapsatlas:info_link
+        type: STRING
+      datering:
+        sourcePath: landschapsatlas:datering
+        type: STRING
+      rijksmonnr:
+        sourcePath: landschapsatlas:rijksmonnr
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      bijschrift:
+        sourcePath: landschapsatlas:bijschrift
+        type: STRING
+      zichtbaar:
+        sourcePath: landschapsatlas:zichtbaar
+        type: STRING
+      legenda:
+        sourcePath: landschapsatlas:legenda
+        type: STRING
+      typering:
+        sourcePath: landschapsatlas:typering
+        type: STRING
+  knooppunten_asw:
+    sourcePath: /landschapsatlas:knooppunten_asw
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      gml_id:
+        sourcePath: landschapsatlas:gml_id
+        type: STRING
+      namespace:
+        sourcePath: landschapsatlas:namespace
+        type: STRING
+      lokaalid:
+        sourcePath: landschapsatlas:lokaalid
+        type: STRING
+      brontype:
+        sourcePath: landschapsatlas:brontype
+        type: STRING
+      bronactual:
+        sourcePath: landschapsatlas:bronactual
+        type: STRING
+      bronbeschr:
+        sourcePath: landschapsatlas:bronbeschr
+        type: STRING
+      bronnauwke:
+        sourcePath: landschapsatlas:bronnauwke
+        type: FLOAT
+      objectbegi:
+        sourcePath: landschapsatlas:objectbegi
+        type: STRING
+      visualisat:
+        sourcePath: landschapsatlas:visualisat
+        type: FLOAT
+      typeinfras:
+        sourcePath: landschapsatlas:typeinfras
+        type: STRING
+      typeweg:
+        sourcePath: landschapsatlas:typeweg
+        type: STRING
+      hoofdverke:
+        sourcePath: landschapsatlas:hoofdverke
+        type: STRING
+      fysiekvoor:
+        sourcePath: landschapsatlas:fysiekvoor
+        type: STRING
+      gescheiden:
+        sourcePath: landschapsatlas:gescheiden
+        type: STRING
+      verharding:
+        sourcePath: landschapsatlas:verharding
+        type: STRING
+      aantalrijs:
+        sourcePath: landschapsatlas:aantalrijs
+        type: FLOAT
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      awegnummer:
+        sourcePath: landschapsatlas:awegnummer
+        type: STRING
+      ewegnummer:
+        sourcePath: landschapsatlas:ewegnummer
+        type: STRING
+      nwegnummer:
+        sourcePath: landschapsatlas:nwegnummer
+        type: STRING
+      afritnumme:
+        sourcePath: landschapsatlas:afritnumme
+        type: STRING
+      knooppuntn:
+        sourcePath: landschapsatlas:knooppuntn
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: FLOAT
+      datum_open:
+        sourcePath: landschapsatlas:datum_open
+        type: DATETIME
+      actief:
+        sourcePath: landschapsatlas:actief
+        type: STRING
+      sluiting:
+        sourcePath: landschapsatlas:sluiting
+        type: DATETIME
+      infolink_m:
+        sourcePath: landschapsatlas:infolink_m
+        type: STRING
+      foto_gr_m:
+        sourcePath: landschapsatlas:foto_gr_m
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      infolink_i:
+        sourcePath: landschapsatlas:infolink_i
+        type: STRING
+      foto_gr_i:
+        sourcePath: landschapsatlas:foto_gr_i
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  landweren:
+    sourcePath: /landschapsatlas:landweren
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+      omschrijving:
+        sourcePath: landschapsatlas:omschrijving
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      bron:
+        sourcePath: landschapsatlas:bron
+        type: STRING
+      toestand_plaats:
+        sourcePath: landschapsatlas:toestand_plaats
+        type: STRING
+      datering:
+        sourcePath: landschapsatlas:datering
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      hoofdklasse:
+        sourcePath: landschapsatlas:hoofdklasse
+        type: STRING
+      url:
+        sourcePath: landschapsatlas:url
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+  landweren_pnt:
+    sourcePath: /landschapsatlas:landweren_pnt
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      omschrijving:
+        sourcePath: landschapsatlas:omschrijving
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      toestand_plaats:
+        sourcePath: landschapsatlas:toestand_plaats
+        type: STRING
+      datering:
+        sourcePath: landschapsatlas:datering
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      hoofdklasse:
+        sourcePath: landschapsatlas:hoofdklasse
+        type: STRING
+      url:
+        sourcePath: landschapsatlas:url
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  luchtwachttorens:
+    sourcePath: /landschapsatlas:luchtwachttorens
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: FLOAT
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: POINT
+      lwpost:
+        sourcePath: landschapsatlas:lwpost
+        type: STRING
+      lwsector:
+        sourcePath: landschapsatlas:lwsector
+        type: STRING
+      lwkring:
+        sourcePath: landschapsatlas:lwkring
+        type: STRING
+      postnummer:
+        sourcePath: landschapsatlas:postnummer
+        type: STRING
+      naam_post:
+        sourcePath: landschapsatlas:naam_post
+        type: STRING
+      bouwjaar:
+        sourcePath: landschapsatlas:bouwjaar
+        type: STRING
+      gebouwtype:
+        sourcePath: landschapsatlas:gebouwtype
+        type: STRING
+      bestaand:
+        sourcePath: landschapsatlas:bestaand
+        type: STRING
+      typering:
+        sourcePath: landschapsatlas:typering
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      rijksmonnr:
+        sourcePath: landschapsatlas:rijksmonnr
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      fotograaf:
+        sourcePath: landschapsatlas:fotograaf
+        type: STRING
+      info_link:
+        sourcePath: landschapsatlas:info_link
+        type: STRING
+  drgmk_molens_gemalen:
+    sourcePath: /landschapsatlas:drgmk_molens_gemalen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      MolGemID:
+        sourcePath: landschapsatlas:MolGemID
+        type: STRING
+      monument_n:
+        sourcePath: landschapsatlas:monument_n
+        type: STRING
+      tenBruggec:
+        sourcePath: landschapsatlas:tenBruggec
+        type: STRING
+      ID_gemalen:
+        sourcePath: landschapsatlas:ID_gemalen
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      polderID:
+        sourcePath: landschapsatlas:polderID
+        type: STRING
+      poldernaam:
+        sourcePath: landschapsatlas:poldernaam
+        type: STRING
+      poldertype:
+        sourcePath: landschapsatlas:poldertype
+        type: STRING
+      periode:
+        sourcePath: landschapsatlas:periode
+        type: STRING
+      periodeID:
+        sourcePath: landschapsatlas:periodeID
+        type: FLOAT
+      datum_droo:
+        sourcePath: landschapsatlas:datum_droo
+        type: FLOAT
+      bron_geo:
+        sourcePath: landschapsatlas:bron_geo
+        type: STRING
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: POINT
+  museumspoorlijnen:
+    sourcePath: /landschapsatlas:museumspoorlijnen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: STRING
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      popup:
+        sourcePath: landschapsatlas:popup
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: STRING
+      sluiting:
+        sourcePath: landschapsatlas:sluiting
+        type: STRING
+      info_link:
+        sourcePath: landschapsatlas:info_link
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      bijschrift:
+        sourcePath: landschapsatlas:bijschrift
+        type: STRING
+      bron:
+        sourcePath: landschapsatlas:bron
+        type: STRING
+      infolink_m:
+        sourcePath: landschapsatlas:infolink_m
+        type: STRING
+      foto_gr_m:
+        sourcePath: landschapsatlas:foto_gr_m
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      infolink_i:
+        sourcePath: landschapsatlas:infolink_i
+        type: STRING
+      foto_gr_i:
+        sourcePath: landschapsatlas:foto_gr_i
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  overlaten:
+    sourcePath: /landschapsatlas:overlaten
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      nr:
+        sourcePath: landschapsatlas:nr
+        type: FLOAT
+      Overlaat:
+        sourcePath: landschapsatlas:Overlaat
+        type: STRING
+      bronnen:
+        sourcePath: landschapsatlas:bronnen
+        type: STRING
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: POINT
+  provinciale_wegen:
+    sourcePath: /landschapsatlas:provinciale_wegen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      nwegnummer:
+        sourcePath: landschapsatlas:nwegnummer
+        type: STRING
+      info_link:
+        sourcePath: landschapsatlas:info_link
+        type: STRING
+      weg_comple:
+        sourcePath: landschapsatlas:weg_comple
+        type: FLOAT
+      aanduiding:
+        sourcePath: landschapsatlas:aanduiding
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  rijksmonumentaal_groen:
+    sourcePath: /landschapsatlas:rijksmonumentaal_groen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      monumentnr:
+        sourcePath: landschapsatlas:monumentnr
+        type: FLOAT
+      complex:
+        sourcePath: landschapsatlas:complex
+        type: FLOAT
+      categorie:
+        sourcePath: landschapsatlas:categorie
+        type: STRING
+      cat_legenda:
+        sourcePath: landschapsatlas:cat_legenda
+        type: STRING
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      type_aanleg:
+        sourcePath: landschapsatlas:type_aanleg
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      fotograaf:
+        sourcePath: landschapsatlas:fotograaf
+        type: STRING
+      adres:
+        sourcePath: landschapsatlas:adres
+        type: STRING
+      postcode:
+        sourcePath: landschapsatlas:postcode
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      provincie:
+        sourcePath: landschapsatlas:provincie
+        type: STRING
+      contour:
+        sourcePath: landschapsatlas:contour
+        type: STRING
+      bron_contour:
+        sourcePath: landschapsatlas:bron_contour
+        type: STRING
+      versie:
+        sourcePath: landschapsatlas:versie
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  stations_en_haltes:
+    sourcePath: /landschapsatlas:stations_en_haltes
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: STRING
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam_csv:
+        sourcePath: landschapsatlas:naam_csv
+        type: STRING
+      soortnaam:
+        sourcePath: landschapsatlas:soortnaam
+        type: STRING
+      typeinrich:
+        sourcePath: landschapsatlas:typeinrich
+        type: STRING
+      visualisat:
+        sourcePath: landschapsatlas:visualisat
+        type: FLOAT
+      infolink:
+        sourcePath: landschapsatlas:infolink
+        type: STRING
+      foto_m:
+        sourcePath: landschapsatlas:foto_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      foto_i:
+        sourcePath: landschapsatlas:foto_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      jaar_open:
+        sourcePath: landschapsatlas:jaar_open
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  steenkoolmijnen:
+    sourcePath: /landschapsatlas:steenkoolmijnen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      wgs_n:
+        sourcePath: landschapsatlas:wgs_n
+        type: FLOAT
+      wgs_e:
+        sourcePath: landschapsatlas:wgs_e
+        type: FLOAT
+      rd_x:
+        sourcePath: landschapsatlas:rd_x
+        type: FLOAT
+      rd_y:
+        sourcePath: landschapsatlas:rd_y
+        type: FLOAT
+      openstel:
+        sourcePath: landschapsatlas:openstel
+        type: FLOAT
+      sluiting:
+        sourcePath: landschapsatlas:sluiting
+        type: STRING
+      tot_produc:
+        sourcePath: landschapsatlas:tot_produc
+        type: FLOAT
+      schachten:
+        sourcePath: landschapsatlas:schachten
+        type: FLOAT
+      diepste_s:
+        sourcePath: landschapsatlas:diepste_s
+        type: FLOAT
+      info_link:
+        sourcePath: landschapsatlas:info_link
+        type: STRING
+      foto_link:
+        sourcePath: landschapsatlas:foto_link
+        type: STRING
+      fotobijsch:
+        sourcePath: landschapsatlas:fotobijsch
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  straatwegen_tmk_1850_aggn:
+    sourcePath: /landschapsatlas:straatwegen_tmk_1850_aggn
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      typeweg:
+        sourcePath: landschapsatlas:typeweg
+        type: FLOAT
+      tramaanwez:
+        sourcePath: landschapsatlas:tramaanwez
+        type: FLOAT
+      bomenaanwe:
+        sourcePath: landschapsatlas:bomenaanwe
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      fysiekvoor:
+        sourcePath: landschapsatlas:fysiekvoor
+        type: FLOAT
+      hoogtenive:
+        sourcePath: landschapsatlas:hoogtenive
+        type: FLOAT
+      creationda:
+        sourcePath: landschapsatlas:creationda
+        type: DATETIME
+      creator:
+        sourcePath: landschapsatlas:creator
+        type: STRING
+      editdate:
+        sourcePath: landschapsatlas:editdate
+        type: DATETIME
+      editor:
+        sourcePath: landschapsatlas:editor
+        type: STRING
+      globalid:
+        sourcePath: landschapsatlas:globalid
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  structuurdragers_landschap:
+    sourcePath: /landschapsatlas:structuurdragers_landschap
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      landschap:
+        sourcePath: landschapsatlas:landschap
+        type: STRING
+      toelichting_dl1:
+        sourcePath: landschapsatlas:toelichting_dl1
+        type: STRING
+      toelichting_dl2:
+        sourcePath: landschapsatlas:toelichting_dl2
+        type: STRING
+      toelichting_dl3:
+        sourcePath: landschapsatlas:toelichting_dl3
+        type: STRING
+      toelichting_dl4:
+        sourcePath: landschapsatlas:toelichting_dl4
+        type: STRING
+      url:
+        sourcePath: landschapsatlas:url
+        type: STRING
+      foto:
+        sourcePath: landschapsatlas:foto
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      shape:
+        sourcePath: landschapsatlas:shape
+        type: GEOMETRY
+        geometryType: ANY
+  terpen:
+    sourcePath: /landschapsatlas:terpen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      NAAM:
+        sourcePath: landschapsatlas:NAAM
+        type: STRING
+      OPP_HECT:
+        sourcePath: landschapsatlas:OPP_HECT
+        type: FLOAT
+      BRON:
+        sourcePath: landschapsatlas:BRON
+        type: STRING
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: POLYGON
+  transformatorhuisjes:
+    sourcePath: /landschapsatlas:transformatorhuisjes
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      rijksmonnr:
+        sourcePath: landschapsatlas:rijksmonnr
+        type: FLOAT
+      begbouwjr:
+        sourcePath: landschapsatlas:begbouwjr
+        type: FLOAT
+      eindbouwjr:
+        sourcePath: landschapsatlas:eindbouwjr
+        type: FLOAT
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      extractdat:
+        sourcePath: landschapsatlas:extractdat
+        type: STRING
+      fotograaf:
+        sourcePath: landschapsatlas:fotograaf
+        type: STRING
+      url:
+        sourcePath: landschapsatlas:url
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  turfwinning:
+    sourcePath: /landschapsatlas:turfwinning
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: FLOAT
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: MULTI_POLYGON
+      bron:
+        sourcePath: landschapsatlas:bron
+        type: STRING
+      leg_bron:
+        sourcePath: landschapsatlas:leg_bron
+        type: STRING
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      legenda:
+        sourcePath: landschapsatlas:legenda
+        type: STRING
+  veerverbindingen_1850:
+    sourcePath: /landschapsatlas:veerverbindingen_1850
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      fid:
+        sourcePath: landschapsatlas:fid
+        type: FLOAT
+      nummer:
+        sourcePath: landschapsatlas:nummer
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      van:
+        sourcePath: landschapsatlas:van
+        type: STRING
+      naar:
+        sourcePath: landschapsatlas:naar
+        type: STRING
+      tot:
+        sourcePath: landschapsatlas:tot
+        type: STRING
+      typologie:
+        sourcePath: landschapsatlas:typologie
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  verdwenenmolens:
+    sourcePath: /landschapsatlas:verdwenenmolens
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      molen_dbnr:
+        sourcePath: landschapsatlas:molen_dbnr
+        type: STRING
+      ten_brugge:
+        sourcePath: landschapsatlas:ten_brugge
+        type: STRING
+      molen_naam:
+        sourcePath: landschapsatlas:molen_naam
+        type: STRING
+      bouwjaar_1:
+        sourcePath: landschapsatlas:bouwjaar_1
+        type: FLOAT
+      bouwjaar_2:
+        sourcePath: landschapsatlas:bouwjaar_2
+        type: STRING
+      verdwenen1:
+        sourcePath: landschapsatlas:verdwenen1
+        type: FLOAT
+      verdwenen2:
+        sourcePath: landschapsatlas:verdwenen2
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      functie:
+        sourcePath: landschapsatlas:functie
+        type: STRING
+      aandrijvin:
+        sourcePath: landschapsatlas:aandrijvin
+        type: STRING
+      infolink:
+        sourcePath: landschapsatlas:infolink
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+      hoofdcat:
+        sourcePath: landschapsatlas:hoofdcat
+        type: STRING
+  vliedbergen:
+    sourcePath: /landschapsatlas:vliedbergen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      fid:
+        sourcePath: landschapsatlas:fid
+        type: FLOAT
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: MULTI_POLYGON
+      Volgnr:
+        sourcePath: landschapsatlas:Volgnr
+        type: STRING
+      Plaats:
+        sourcePath: landschapsatlas:Plaats
+        type: STRING
+      Naam:
+        sourcePath: landschapsatlas:Naam
+        type: STRING
+      Bijzonderh:
+        sourcePath: landschapsatlas:Bijzonderh
+        type: STRING
+      ARCHIS:
+        sourcePath: landschapsatlas:ARCHIS
+        type: FLOAT
+      ODB:
+        sourcePath: landschapsatlas:ODB
+        type: FLOAT
+      CMA:
+        sourcePath: landschapsatlas:CMA
+        type: STRING
+      CAA:
+        sourcePath: landschapsatlas:CAA
+        type: STRING
+      Infolink:
+        sourcePath: landschapsatlas:Infolink
+        type: STRING
+      Fotothumb:
+        sourcePath: landschapsatlas:Fotothumb
+        type: STRING
+      Fotofull:
+        sourcePath: landschapsatlas:Fotofull
+        type: STRING
+      Fotobijsch:
+        sourcePath: landschapsatlas:Fotobijsch
+        type: STRING
+      Hoogte__m_:
+        sourcePath: landschapsatlas:Hoogte__m_
+        type: FLOAT
+  vliegvelden:
+    sourcePath: /landschapsatlas:vliegvelden
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      icao_code:
+        sourcePath: landschapsatlas:icao_code
+        type: STRING
+      iata_code:
+        sourcePath: landschapsatlas:iata_code
+        type: STRING
+      gebruik:
+        sourcePath: landschapsatlas:gebruik
+        type: STRING
+      abbr_type:
+        sourcePath: landschapsatlas:abbr_type
+        type: STRING
+      actief_van:
+        sourcePath: landschapsatlas:actief_van
+        type: FLOAT
+      actief_tot:
+        sourcePath: landschapsatlas:actief_tot
+        type: FLOAT
+      type_baan:
+        sourcePath: landschapsatlas:type_baan
+        type: STRING
+      infolink_m:
+        sourcePath: landschapsatlas:infolink_m
+        type: STRING
+      foto_gr_m:
+        sourcePath: landschapsatlas:foto_gr_m
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      infolink_i:
+        sourcePath: landschapsatlas:infolink_i
+        type: STRING
+      foto_gr_i:
+        sourcePath: landschapsatlas:foto_gr_i
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      gebr_doel:
+        sourcePath: landschapsatlas:gebr_doel
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  vuurtorens:
+    sourcePath: /landschapsatlas:vuurtorens
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: POINT
+      ID:
+        sourcePath: landschapsatlas:ID
+        type: FLOAT
+      Vuurtoren:
+        sourcePath: landschapsatlas:Vuurtoren
+        type: STRING
+      Status:
+        sourcePath: landschapsatlas:Status
+        type: STRING
+      Plaats:
+        sourcePath: landschapsatlas:Plaats
+        type: STRING
+      Provincie:
+        sourcePath: landschapsatlas:Provincie
+        type: STRING
+      End_act_st:
+        sourcePath: landschapsatlas:End_act_st
+        type: STRING
+      Toren_hgt:
+        sourcePath: landschapsatlas:Toren_hgt
+        type: FLOAT
+      Hgt_NAP:
+        sourcePath: landschapsatlas:Hgt_NAP
+        type: FLOAT
+      Licht:
+        sourcePath: landschapsatlas:Licht
+        type: STRING
+      L_bereik:
+        sourcePath: landschapsatlas:L_bereik
+        type: FLOAT
+      Bouwjaar:
+        sourcePath: landschapsatlas:Bouwjaar
+        type: STRING
+      Architect:
+        sourcePath: landschapsatlas:Architect
+        type: STRING
+      northing:
+        sourcePath: landschapsatlas:northing
+        type: FLOAT
+      easting:
+        sourcePath: landschapsatlas:easting
+        type: FLOAT
+      RD_X:
+        sourcePath: landschapsatlas:RD_X
+        type: FLOAT
+      RD_Y:
+        sourcePath: landschapsatlas:RD_Y
+        type: FLOAT
+      Monumentnr:
+        sourcePath: landschapsatlas:Monumentnr
+        type: FLOAT
+      Foto_thumb:
+        sourcePath: landschapsatlas:Foto_thumb
+        type: STRING
+      Foto_groot:
+        sourcePath: landschapsatlas:Foto_groot
+        type: STRING
+      Foto_bijsc:
+        sourcePath: landschapsatlas:Foto_bijsc
+        type: STRING
+      Infolink:
+        sourcePath: landschapsatlas:Infolink
+        type: STRING
+  waterstaatskaart1_bladwijzer:
+    sourcePath: /landschapsatlas:waterstaatskaart1_bladwijzer
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      objectid:
+        sourcePath: landschapsatlas:objectid
+        type: FLOAT
+      bladnummer:
+        sourcePath: landschapsatlas:bladnummer
+        type: STRING
+      bladnaam:
+        sourcePath: landschapsatlas:bladnaam
+        type: STRING
+      jaar_bewerking:
+        sourcePath: landschapsatlas:jaar_bewerking
+        type: FLOAT
+      editie:
+        sourcePath: landschapsatlas:editie
+        type: FLOAT
+      url:
+        sourcePath: landschapsatlas:url
+        type: STRING
+      shape_length:
+        sourcePath: landschapsatlas:shape_length
+        type: FLOAT
+      shape_area:
+        sourcePath: landschapsatlas:shape_area
+        type: FLOAT
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  watertorens:
+    sourcePath: /landschapsatlas:watertorens
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      OBJECTID:
+        sourcePath: landschapsatlas:OBJECTID
+        type: FLOAT
+      Monumentnr:
+        sourcePath: landschapsatlas:Monumentnr
+        type: FLOAT
+      WOONPLAATS:
+        sourcePath: landschapsatlas:WOONPLAATS
+        type: STRING
+      Bouwjaar:
+        sourcePath: landschapsatlas:Bouwjaar
+        type: FLOAT
+      Foto_bron:
+        sourcePath: landschapsatlas:Foto_bron
+        type: STRING
+      Foto_thumb:
+        sourcePath: landschapsatlas:Foto_thumb
+        type: STRING
+      Foto_groot:
+        sourcePath: landschapsatlas:Foto_groot
+        type: STRING
+      Infolink:
+        sourcePath: landschapsatlas:Infolink
+        type: STRING
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: POINT
+  waterwegen_mcn:
+    sourcePath: /landschapsatlas:waterwegen_mcn
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      infolink:
+        sourcePath: landschapsatlas:infolink
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      foto_gr_m:
+        sourcePath: landschapsatlas:foto_gr_m
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      foto_gr_i:
+        sourcePath: landschapsatlas:foto_gr_i
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: FLOAT
+      sluiting:
+        sourcePath: landschapsatlas:sluiting
+        type: STRING
+      rechten:
+        sourcePath: landschapsatlas:rechten
+        type: STRING
+      opmerking:
+        sourcePath: landschapsatlas:opmerking
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  wegtransport_geschiedenis:
+    sourcePath: /landschapsatlas:wegtransport_geschiedenis
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      ogc_fid:
+        sourcePath: landschapsatlas:ogc_fid
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      objectnaam:
+        sourcePath: landschapsatlas:objectnaam
+        type: STRING
+      coordinate:
+        sourcePath: landschapsatlas:coordinate
+        type: STRING
+      x:
+        sourcePath: landschapsatlas:x
+        type: FLOAT
+      y:
+        sourcePath: landschapsatlas:y
+        type: FLOAT
+      infolink:
+        sourcePath: landschapsatlas:infolink
+        type: STRING
+      foto_gr_m:
+        sourcePath: landschapsatlas:foto_gr_m
+        type: STRING
+      foto_th_m:
+        sourcePath: landschapsatlas:foto_th_m
+        type: STRING
+      bron_m:
+        sourcePath: landschapsatlas:bron_m
+        type: STRING
+      bijschr_m:
+        sourcePath: landschapsatlas:bijschr_m
+        type: STRING
+      foto_gr_i:
+        sourcePath: landschapsatlas:foto_gr_i
+        type: STRING
+      foto_th_i:
+        sourcePath: landschapsatlas:foto_th_i
+        type: STRING
+      bron_i:
+        sourcePath: landschapsatlas:bron_i
+        type: STRING
+      bijschr_i:
+        sourcePath: landschapsatlas:bijschr_i
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      opening:
+        sourcePath: landschapsatlas:opening
+        type: FLOAT
+      sluiting:
+        sourcePath: landschapsatlas:sluiting
+        type: STRING
+      rechten:
+        sourcePath: landschapsatlas:rechten
+        type: STRING
+      opmerkinge:
+        sourcePath: landschapsatlas:opmerkinge
+        type: STRING
+      opmerkin_1:
+        sourcePath: landschapsatlas:opmerkin_1
+        type: STRING
+      wkb_geometry:
+        sourcePath: landschapsatlas:wkb_geometry
+        type: GEOMETRY
+        geometryType: ANY
+  weidemolens_en_windmotoren:
+    sourcePath: /landschapsatlas:weidemolens_en_windmotoren
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: gml:@id
+        type: STRING
+        role: ID
+      gid:
+        sourcePath: landschapsatlas:gid
+        type: FLOAT
+      dbnr_:
+        sourcePath: landschapsatlas:dbnr_
+        type: FLOAT
+      RDX:
+        sourcePath: landschapsatlas:RDX
+        type: FLOAT
+      RDY:
+        sourcePath: landschapsatlas:RDY
+        type: FLOAT
+      naam:
+        sourcePath: landschapsatlas:naam
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      prov_:
+        sourcePath: landschapsatlas:prov_
+        type: STRING
+      bouwjaar:
+        sourcePath: landschapsatlas:bouwjaar
+        type: STRING
+      status:
+        sourcePath: landschapsatlas:status
+        type: STRING
+      omschrijvi:
+        sourcePath: landschapsatlas:omschrijvi
+        type: STRING
+      hoofdcateg:
+        sourcePath: landschapsatlas:hoofdcateg
+        type: STRING
+      TBGCNUMMER:
+        sourcePath: landschapsatlas:TBGCNUMMER
+        type: STRING
+      Infolink:
+        sourcePath: landschapsatlas:Infolink
+        type: STRING
+      foto:
+        sourcePath: landschapsatlas:foto
+        type: STRING
+      Fotolink:
+        sourcePath: landschapsatlas:Fotolink
+        type: STRING
+      the_geom:
+        sourcePath: landschapsatlas:the_geom
+        type: GEOMETRY
+        geometryType: POINT
+      rmonnummer:
+        sourcePath: landschapsatlas:rmonnummer
+        type: STRING
+  wielen:
+    sourcePath: /landschapsatlas:wielen
+    type: OBJECT
+    properties:
+      id:
+        sourcePath: landschapsatlas:id
+        type: FLOAT
+      geom:
+        sourcePath: landschapsatlas:geom
+        type: GEOMETRY
+        geometryType: POINT
+      id_wiel:
+        sourcePath: landschapsatlas:id_wiel
+        type: FLOAT
+      hfdstrgeb:
+        sourcePath: landschapsatlas:hfdstrgeb
+        type: STRING
+      id_hfdstr:
+        sourcePath: landschapsatlas:id_hfdstr
+        type: STRING
+      hoofdstr:
+        sourcePath: landschapsatlas:hoofdstr
+        type: STRING
+      id_dwarsd:
+        sourcePath: landschapsatlas:id_dwarsd
+        type: STRING
+      dwarsdijk:
+        sourcePath: landschapsatlas:dwarsdijk
+        type: STRING
+      oever:
+        sourcePath: landschapsatlas:oever
+        type: STRING
+      plaats:
+        sourcePath: landschapsatlas:plaats
+        type: STRING
+      volgorde:
+        sourcePath: landschapsatlas:volgorde
+        type: FLOAT
+      naamwiel:
+        sourcePath: landschapsatlas:naamwiel
+        type: STRING
+      altnmwiel:
+        sourcePath: landschapsatlas:altnmwiel
+        type: STRING
+      type:
+        sourcePath: landschapsatlas:type
+        type: STRING
+      ontstwijze:
+        sourcePath: landschapsatlas:ontstwijze
+        type: STRING
+      ontstjaar:
+        sourcePath: landschapsatlas:ontstjaar
+        type: FLOAT
+      bijzheid:
+        sourcePath: landschapsatlas:bijzheid
+        type: STRING
+      datbezoek:
+        sourcePath: landschapsatlas:datbezoek
+        type: DATETIME
+      uniekeid:
+        sourcePath: landschapsatlas:uniekeid
+        type: STRING
+      foto_thumb:
+        sourcePath: landschapsatlas:foto_thumb
+        type: STRING
+      foto_groot:
+        sourcePath: landschapsatlas:foto_groot
+        type: STRING
+      foto:
+        sourcePath: landschapsatlas:foto
+        type: STRING

@@ -1,0 +1,604 @@
+---
+id: RCE_Landschapsatlas_WFS
+createdAt: 1622452993294
+lastModified: 1622452993294
+entityStorageVersion: 2
+label: RCE_Landschapsatlas_WFS
+serviceType: OGC_API
+collections:
+  bevloeiingssystemen_lijn:
+    id: bevloeiingssystemen_lijn
+    label: bevloeiingssystemen_lijn
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  bevloeiingssystemen_punt:
+    id: bevloeiingssystemen_punt
+    label: bevloeiingssystemen_punt
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  bevloeiingssystemen_vlak:
+    id: bevloeiingssystemen_vlak
+    label: bevloeiingssystemen_vlak
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  boerderijen:
+    id: boerderijen
+    label: boerderijen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+  boerderijtypen:
+    id: boerderijtypen
+    label: boerderijtypen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+  eendenkooien:
+    id: eendenkooien
+    label: eendenkooien
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  essen:
+    id: essen
+    label: essen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  geesten:
+    id: geesten
+    label: geesten
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+  hunebedden:
+    id: hunebedden
+    label: hunebedden
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  landinrichtingnl:
+    id: landinrichtingnl
+    label: landinrichtingnl
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  groenerfgoed:
+    id: groenerfgoed
+    label: groenerfgoed
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - shape
+  groenerfgoed_bomenstruiken_pnt:
+    id: groenerfgoed_bomenstruiken_pnt
+    label: groenerfgoed_bomenstruiken_pnt
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+  groenerfgoed_veldopnamen:
+    id: groenerfgoed_veldopnamen
+    label: groenerfgoed_veldopnamen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  molens:
+    id: molens
+    label: molens
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  nlog_velden_rd_20170829:
+    id: nlog_velden_rd_20170829
+    label: nlog_velden_rd_20170829
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+        temporal:
+        - production
+  landschapskarakterisering:
+    id: landschapskarakterisering
+    label: landschapskarakterisering
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  tiendwegen:
+    id: tiendwegen
+    label: tiendwegen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  autosnelwegen:
+    id: autosnelwegen
+    label: autosnelwegen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+        temporal:
+        - datum_open
+  begraafplaatsen:
+    id: begraafplaatsen
+    label: begraafplaatsen
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  bekenkaart:
+    id: bekenkaart
+    label: bekenkaart
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  bruinkoolgroeves:
+    id: bruinkoolgroeves
+    label: bruinkoolgroeves
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  cultuurhistorischebosjesgroenehart:
+    id: cultuurhistorischebosjesgroenehart
+    label: cultuurhistorischebosjesgroenehart
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+        temporal:
+        - opnamedag
+  cultuurhistorischebosjesmiddendelfland:
+    id: cultuurhistorischebosjesmiddendelfland
+    label: cultuurhistorischebosjesmiddendelfland
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+        temporal:
+        - opnamedag
+  droogmakerijen:
+    id: droogmakerijen
+    label: droogmakerijen
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+  fabrieksschoorstenen:
+    id: fabrieksschoorstenen
+    label: fabrieksschoorstenen
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+  gebiedsbiografieen:
+    id: gebiedsbiografieen
+    label: gebiedsbiografieen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - shape
+  gemalen:
+    id: gemalen
+    label: gemalen
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  gesloten_stations:
+    id: gesloten_stations
+    label: gesloten_stations
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  grafheuvels:
+    id: grafheuvels
+    label: grafheuvels
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  grintwegen_tmk_1850_aggn:
+    id: grintwegen_tmk_1850_aggn
+    label: grintwegen_tmk_1850_aggn
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+        temporal:
+        - creationda
+  haltes_en_depots_museumspoorlijnen:
+    id: haltes_en_depots_museumspoorlijnen
+    label: haltes_en_depots_museumspoorlijnen
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  haltes_oorlogsspoorlijnen:
+    id: haltes_oorlogsspoorlijnen
+    label: haltes_oorlogsspoorlijnen
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  hertenkampen:
+    id: hertenkampen
+    label: hertenkampen
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  historische_spoorwegen:
+    id: historische_spoorwegen
+    label: historische_spoorwegen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+        temporal:
+        - opening
+  historische_tramwegen:
+    id: historische_tramwegen
+    label: historische_tramwegen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+        temporal:
+        - opening
+  hoogstamboomgaarden:
+    id: hoogstamboomgaarden
+    label: hoogstamboomgaarden
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  kastelen:
+    id: kastelen
+    label: kastelen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+  knooppunten_asw:
+    id: knooppunten_asw
+    label: knooppunten_asw
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+        temporal:
+        - datum_open
+  landweren:
+    id: landweren
+    label: landweren
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  landweren_pnt:
+    id: landweren_pnt
+    label: landweren_pnt
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  luchtwachttorens:
+    id: luchtwachttorens
+    label: luchtwachttorens
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+  drgmk_molens_gemalen:
+    id: drgmk_molens_gemalen
+    label: drgmk_molens_gemalen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  museumspoorlijnen:
+    id: museumspoorlijnen
+    label: museumspoorlijnen
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  overlaten:
+    id: overlaten
+    label: overlaten
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  provinciale_wegen:
+    id: provinciale_wegen
+    label: provinciale_wegen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  rijksmonumentaal_groen:
+    id: rijksmonumentaal_groen
+    label: rijksmonumentaal_groen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  stations_en_haltes:
+    id: stations_en_haltes
+    label: stations_en_haltes
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  steenkoolmijnen:
+    id: steenkoolmijnen
+    label: steenkoolmijnen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  straatwegen_tmk_1850_aggn:
+    id: straatwegen_tmk_1850_aggn
+    label: straatwegen_tmk_1850_aggn
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+        temporal:
+        - creationda
+  structuurdragers_landschap:
+    id: structuurdragers_landschap
+    label: structuurdragers_landschap
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - shape
+  terpen:
+    id: terpen
+    label: terpen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  transformatorhuisjes:
+    id: transformatorhuisjes
+    label: transformatorhuisjes
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  turfwinning:
+    id: turfwinning
+    label: turfwinning
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+  veerverbindingen_1850:
+    id: veerverbindingen_1850
+    label: veerverbindingen_1850
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  verdwenenmolens:
+    id: verdwenenmolens
+    label: verdwenenmolens
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  vliedbergen:
+    id: vliedbergen
+    label: vliedbergen
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  vliegvelden:
+    id: vliegvelden
+    label: vliegvelden
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  vuurtorens:
+    id: vuurtorens
+    label: vuurtorens
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  waterstaatskaart1_bladwijzer:
+    id: waterstaatskaart1_bladwijzer
+    label: waterstaatskaart1_bladwijzer
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  watertorens:
+    id: watertorens
+    label: watertorens
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  waterwegen_mcn:
+    id: waterwegen_mcn
+    label: waterwegen_mcn
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  wegtransport_geschiedenis:
+    id: wegtransport_geschiedenis
+    label: wegtransport_geschiedenis
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - wkb_geometry
+  weidemolens_en_windmotoren:
+    id: weidemolens_en_windmotoren
+    label: weidemolens_en_windmotoren
+    enabled: true
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - the_geom
+  wielen:
+    id: wielen
+    label: wielen
+    enabled: false
+    api:
+    - buildingBlock: FEATURES_CORE
+      queryables:
+        spatial:
+        - geom
+        temporal:
+        - datbezoek
