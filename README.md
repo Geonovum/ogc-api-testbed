@@ -14,11 +14,11 @@ deployment of an OGC API web-service stack using modern "DevOps" tooling.
 
 The main design principles are:
 
-* any action on the server/VM is performed remotely
+* any action on the server/VM host is performed from a client host
 * i.e. no direct access/login to/on the server/VM is required, only maybe for problem solving
 * remote actions can be performed manually or triggered by GitHub Workflows
 * all credentials (passwords, SSH-keys, etc) are secured 
-* both a "stable" and "experimental" stack should be available
+* operational stack instances for "production" (stable) and "sandbox" (playground)
 
 The (DevOps-) components for this setup are:
 
@@ -50,6 +50,18 @@ The operational stack is composed with the following components:
 * [GeoServer](http://geoserver.org/) a Java server implementation of the OGC API suite of standards.
 * [ldproxy](https://interactive-instruments.github.io/ldproxy/) a Java server implementation of the OGC API suite of standards.
 
+## Production and Sandbox Instances
+
+Two separate server/CM-instances are managed to provide stable/production and 
+sandbox/playground environments. As to control changes these instances are mapped to two GitHub branches:
+
+* `main` for the stable/production instance
+* `sandbox` for the playground
+
+[GitHub Protected Branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches) are
+used to provide for selective access and deployment.
+
+
 ## Selective Redeploy
 When changes are pushed to this repo only the affected services are redeployed.
 This is effected by a combination of GitHub Actions and Ansible Playbooks as follows:
@@ -65,6 +77,10 @@ This is effected by a combination of GitHub Actions and Ansible Playbooks as fol
 * the GH Action then calls the Ansible Playbook [deploy.yml](ansible/deploy.yml) with a `--tags` option related to the Service, e.g. `--tags pygeoapi`
 * the [deploy.yml](ansible/deploy.yml) will always update the GH repo on the server VM via the `pre_tasks`
 * the Ansible task indicated by the `tags` is then executed
+       
+TODO: this will be extended with 
+[GitHub Protected Branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches)
+to map the branch pushed to a server (host) instance via Ansible Inventory settings.
 
 ## Steps and Workflows
 
