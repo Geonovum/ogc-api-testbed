@@ -1,6 +1,7 @@
 [![Traefik Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.traefik.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.traefik.yml)
 [![pygeoapi Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi.yml)
 [![ldproxy Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.ldproxy.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.ldproxy.yml)
+[![admin Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.admin.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.admin.yml)
 [![docs Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.docs.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.docs.yml)
 [![Gitter](https://img.shields.io/gitter/room/Geonovum/ogc-api-testbed.svg?style=flat-square)](https://gitter.im/Geonovum/ogc-api-testbed)
 

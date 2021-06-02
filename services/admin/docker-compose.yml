@@ -1,0 +1,53 @@
+version: '3.3'
+
+services:
+
+  portainer:
+
+    image: portainer/portainer-ce:latest
+
+    container_name: portainer
+
+    expose:
+      - "9000"
+
+    ports:
+      - "9001:9000"
+
+    command:
+      - --admin-password=$$2y$$05$$VCjhk4z8mhi8V0DpXHX56.W1jy0sNWHOwSQbXVCYPyLs/WanBODPq
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      - "traefik.http.middlewares.portainer-stripprefix.stripprefix.prefixes=/portainer"
+      - "traefik.http.services.frontend.loadbalancer.server.port=9000"
+
+      # SSL/https router
+      - "traefik.http.routers.portainer_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/portainer`)"
+      - "traefik.http.routers.portainer_https.service=frontend"
+      - "traefik.http.routers.portainer_https.entrypoints=https"
+      - "traefik.http.routers.portainer_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.portainer_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.portainer_https.tls.options=my_default@file"
+      - "traefik.http.routers.portainer_https.middlewares=portainer-stripprefix,secure-headers@file"
+
+      # local http router
+      - "traefik.http.routers.portainer_http.service=frontend"
+      - "traefik.http.routers.portainer_http.rule=Host(`localhost`) && PathPrefix(`/portainer`)"
+      - "traefik.http.routers.portainer_http.entrypoints=http"
+      - "traefik.http.routers.portainer_http.middlewares=portainer-stripprefix"
+
+volumes:
+  portainer_data:
+
+networks:
+  default:
+    external:
+      name: service-network

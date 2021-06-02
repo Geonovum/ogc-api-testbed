@@ -35,3 +35,7 @@
     - name: "docs"
       shell: "cd {{ services_home }}/docs && ./deploy.sh && docker ps"
       tags: docs
+
+    - name: "admin"
+      shell: "cd {{ services_home }}/admin && ./deploy.sh && docker ps"
+      tags: docs
