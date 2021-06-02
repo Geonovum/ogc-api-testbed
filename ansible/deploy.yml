@@ -32,9 +32,9 @@
       shell: "cd {{ services_home }}/ldproxy && ./deploy.sh && docker ps"
       tags: ldproxy
 
-    - name: "geoserver_test"
-      shell: "cd {{ services_home }}/geoserver_test && ./stop.sh && docker pull oscarfonts/geoserver:latest && ./start.sh && docker ps"
-      tags: geoserver_test
+    - name: "geoserver"
+      shell: "cd {{ services_home }}/geoserver && ./deploy.sh && docker ps"
+      tags: geoserver
 
     - name: "docs"
       shell: "cd {{ services_home }}/docs && ./deploy.sh && docker ps"
