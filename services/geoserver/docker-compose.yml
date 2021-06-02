@@ -1,0 +1,46 @@
+version: '3.3'
+
+services:
+
+  geoserver:
+    
+    image: oscarfonts/geoserver:latest
+
+    container_name: geoserver
+
+    expose:
+      - "8080"
+
+#    ports:
+#      - "8080:80"
+
+#    environment:
+#     - SCRIPT_NAME=/geoserver
+
+    volumes:
+      # Map data and config into pygeoapi container
+      - ./data:/var/local/geoserver
+      - ./exts:/var/local/geoserver-exts
+      # - ./data:/pygeoapi/data
+
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      # SSL/https router
+      - "traefik.http.routers.geoserver_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/geoserver`)"
+      - "traefik.http.routers.geoserver_https.entrypoints=https"
+      - "traefik.http.routers.geoserver_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.geoserver_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.geoserver_https.tls.options=my_default@file"
+      - "traefik.http.routers.geoserver_https.middlewares=secure-headers@file"
+
+      # local http router
+      - "traefik.http.routers.geoserver_http.rule=Host(`localhost`) && PathPrefix(`/geoserver`)"
+      - "traefik.http.routers.geoserver_http.entrypoints=http"
+
+networks:
+  default:
+    external:
+      name: service-network
