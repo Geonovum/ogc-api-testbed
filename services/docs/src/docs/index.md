@@ -29,8 +29,21 @@ See [installation_findings.md](installation_findings.md)
 
 These are the services running on this domain.
 
-* [pygeoapi](/pygeoapi) - `pygeoapi` experimental
-* [ldproxy](/ldproxy) - `ldproxy` 
+* [pygeoapi](/pygeoapi) is a python implementation of OGC API. 
+  * Read the [documentation](https://docs.pygeoapi.io/en/latest/). 
+  * Read our [deployment experiences](pygeoapi.md).
+* [ldproxy](/ldproxy) is a java implementation of OGC API by Interactive Instruments. 
+  * Read the [documentation](https://interactive-instruments.github.io/ldproxy/). 
+  * Read our [deployment experiences](ldproxy.md).
+* [geoserver](/geoserver/geoserver/ogc/features) is a java implementation of OGC API by the geoserver community.
+  * Read the [documentation](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html). 
+  * Read our [deployment experiences](geoserver.md).
+
+### Supporting services
+
+* PostGreSQL is a database with the PostGIS extension. You can manage and upload data via the [PGAdmin web application](/pgadmin)
+* [portainer](/portainer/) is a Docker monitoring user interface to restart containers and view container logs.
+* [GeoHealthCheck](/GeoHealthCheck) is an availability monitoring application which is able to run basic validations on the OGC API's. 
 
 ## Tech docs environment
 See the [GitHub repo](https://github.com/Geonovum/ogc-api-testbed) for code and docs about the setup of the environment itself.
