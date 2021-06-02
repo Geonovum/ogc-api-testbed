@@ -70,6 +70,7 @@
   <updateSequence>128</updateSequence>
   <featureTypeCacheSize>0</featureTypeCacheSize>
   <globalServices>true</globalServices>
+  <useHeadersProxyURL>true</useHeadersProxyURL>
   <xmlPostRequestLogBufferSize>1024</xmlPostRequestLogBufferSize>
   <xmlExternalEntitiesEnabled>false</xmlExternalEntitiesEnabled>
   <lockProviderName>memoryLockProvider</lockProviderName>
