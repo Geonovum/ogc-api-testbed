@@ -28,3 +28,5 @@ acme.json
 
 ansible/roles/*
 !ansible/roles/.gitkeep
+
+services/geoserver/data/security
