@@ -14,14 +14,11 @@ services:
 #    ports:
 #      - "8080:80"
 
-#    environment:
-#     - SCRIPT_NAME=/geoserver
 
     volumes:
-      # Map data and config into pygeoapi container
+      # Map data and config into GeoServer container
       - ./data:/var/local/geoserver
       - ./exts:/var/local/geoserver-exts
-      # - ./data:/pygeoapi/data
 
     labels:
       # Enable Traefik routing on overlay service network
