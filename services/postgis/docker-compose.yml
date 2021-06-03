@@ -1,0 +1,58 @@
+version: '3.3'
+
+services:
+
+  postgis:
+    image: postgis/postgis:13-3.1-alpine
+
+    container_name: postgis
+
+    volumes:
+      - ./pg_config/pg-init.sh:/docker-entrypoint-initdb.d/55-pg-init.sh
+      - ./pg_config/postgresql.conf:/etc/postgresql.conf
+      - postgis_db:/var/lib/postgresql/data
+
+    env_file:
+      - pg.env
+
+    labels:
+      - "traefik.enable=false"
+      - "pgbackup.enable=true"
+
+  pgadmin:
+
+    image: dpage/pgadmin4:5.3
+
+    container_name: pgadmin
+
+    env_file:
+      - pgadmin.env
+
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      # SSL/https router
+      - "traefik.http.routers.postgis_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/pgadmin`)"
+      - "traefik.http.routers.postgis_https.entrypoints=https"
+      - "traefik.http.routers.postgis_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.postgis_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.postgis_https.tls.options=my_default@file"
+      - "traefik.http.routers.postgis_https.middlewares=secure-headers@file"
+
+      # local http router
+      - "traefik.http.routers.postgis_http.rule=Host(`localhost`) && PathPrefix(`/pgadmin`)"
+      - "traefik.http.routers.postgis_http.entrypoints=http"
+
+volumes:
+  postgis_db:
+  pgadmin:
+
+networks:
+  default:
+    external:
+      name: service-network

@@ -36,6 +36,10 @@
       shell: "cd {{ services_home }}/geoserver && ./deploy.sh && docker ps"
       tags: geoserver
 
+    - name: "postgis"
+      shell: "cd {{ services_home }}/postgis && ./deploy.sh && docker ps"
+      tags: postgis
+
     - name: "docs"
       shell: "cd {{ services_home }}/docs && ./deploy.sh && docker ps"
       tags: docs

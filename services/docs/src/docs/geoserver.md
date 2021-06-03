@@ -22,4 +22,4 @@ To be continued.
 Some issues found during deployment (and solutions where found)
 
 * [Issue #22](https://github.com/Geonovum/ogc-api-testbed/issues/22) - Permission Issue for mounted dirs: the GeoServer Container permanently changes the ownership of mounted dirs
-* OGC API Plugin: running on subpath with https does not render linked resources correctly
+* [Issue #21](https://github.com/Geonovum/ogc-api-testbed/issues/21) - OGC API Plugin: running on subpath with https does not render linked resources correctly

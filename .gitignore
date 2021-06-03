@@ -30,3 +30,5 @@ ansible/roles/*
 !ansible/roles/.gitkeep
 
 services/geoserver/data/security
+services/postgis/pg.env
+services/postgis/pgadmin.env
