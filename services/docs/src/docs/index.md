@@ -6,9 +6,15 @@ See the [project README on GitHub](https://github.com/Geonovum/ogc-api-testbed/b
 for how this testbed is setup.
 
 ## Sandbox and stable environment
-The sandbox environment is intended to play with the services: create and deploy an API. For example, to create and deploy an API with pygeoapi. Deployed services on the sandbox are not intended to be used by others for other purposes than testing. They could be removed or changed any time, without notice.
+The sandbox environment is intended to play with the services: 
+create and deploy an API. For example, to create and deploy an API with pygeoapi. 
+Deployed services on the sandbox are not intended to be used by others for other 
+purposes than testing. They could be removed or changed any time, without notice.
 
-The stable environment is intended for demo APIs (and other services) that should be available for the public. For example to show results, or for third parties to use in other tests. Still no full production environment, or guaranteed availability. But onlye a few maintainers are able to change or remove services deployed to this environment.
+The stable environment is intended for demo APIs (and other services) that should be 
+available for the public. For example to show results, or for third parties to use in other tests. 
+Still no full production environment, or guaranteed availability. But only a few maintainers 
+are able to change or remove services deployed to this environment.
 
 ## HowTos
 
