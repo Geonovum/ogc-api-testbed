@@ -3,4 +3,4 @@
 source ../env.sh
 
 
-./stop.sh && docker pull iide/ldproxy:latest && ./start.sh
+./stop.sh && docker pull iide/ldproxy:master && ./start.sh
