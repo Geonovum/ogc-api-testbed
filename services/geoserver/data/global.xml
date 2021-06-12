@@ -2,11 +2,12 @@
   <settings>
     <id>SettingsInfoImpl-14e8eba4:171a545ba94:-8000</id>
     <contact>
-      <contactOrganization>GeoCat</contactOrganization>
+      <contactOrganization>GeoNovum</contactOrganization>
     </contact>
     <charset>UTF-8</charset>
     <numDecimals>8</numDecimals>
-    <onlineResource>http://geoserver.org</onlineResource>
+    <onlineResource>http://geonovum.nl</onlineResource>
+    <proxyBaseUrl>https://oapi.map5.nl/geoserver</proxyBaseUrl>
     <verbose>true</verbose>
     <verboseExceptions>false</verboseExceptions>
     <metadata>
@@ -67,7 +68,7 @@
     <queueType>UNBOUNDED</queueType>
     <imageIOCacheThreshold>10240</imageIOCacheThreshold>
   </coverageAccess>
-  <updateSequence>129</updateSequence>
+  <updateSequence>130</updateSequence>
   <featureTypeCacheSize>0</featureTypeCacheSize>
   <globalServices>true</globalServices>
   <useHeadersProxyURL>true</useHeadersProxyURL>
