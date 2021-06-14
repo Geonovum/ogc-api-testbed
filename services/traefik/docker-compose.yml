@@ -41,8 +41,8 @@ services:
     labels:
       - "traefik.enable=true"
       # Define redirect middleware for main domain
-      - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.regex=^http://oapi.map5.nl/(.*)"
-      - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.replacement=https://oapi.map5.nl/$${1}"
+      - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.regex=^http://apitestbed.geonovum.nl/(.*)"
+      - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.replacement=https://apitestbed.geonovum.nl/$${1}"
       - "traefik.http.middlewares.traefik_redirect_to_https.redirectregex.permanent=true"
 
       # Always redirect our domain from http to https

@@ -7,7 +7,7 @@
 # Assume a local deployment
 export DEPLOY_ENV="local"
 export TRAEFIK_SSL_ENDPOINT=
-export TRAEFIK_SSL_DOMAIN="oapi.map5.nl"
+export TRAEFIK_SSL_DOMAIN="apitestbed.geonovum.nl"
 export TRAEFIK_SSL_CERT_RESOLVER=
 export TRAEFIK_USE_TLS="false"
 

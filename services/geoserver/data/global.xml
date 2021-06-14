@@ -7,7 +7,7 @@
     <charset>UTF-8</charset>
     <numDecimals>8</numDecimals>
     <onlineResource>http://geonovum.nl</onlineResource>
-    <proxyBaseUrl>https://oapi.map5.nl/geoserver</proxyBaseUrl>
+    <proxyBaseUrl>https://apitestbed.geonovum.nl/geoserver</proxyBaseUrl>
     <verbose>true</verbose>
     <verboseExceptions>false</verboseExceptions>
     <metadata>

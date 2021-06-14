@@ -1,0 +1,7 @@
+# EXAMPLE: fill in with real credentials in prod.yml
+ogcapi:
+  hosts:
+    THE_HOSTNAME:
+       ansible_port: 22
+       ansible_host: domain.example.com
+       ansible_user: the_ansible_user
