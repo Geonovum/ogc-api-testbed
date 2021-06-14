@@ -19,6 +19,12 @@ case "${HOSTNAME}" in
         TRAEFIK_SSL_CERT_RESOLVER="le"
         TRAEFIK_USE_TLS="true"
         ;;
+    "vps11118.alm01.cloud")
+        DEPLOY_ENV="prod"
+        TRAEFIK_SSL_ENDPOINT="https"
+        TRAEFIK_SSL_CERT_RESOLVER="le"
+        TRAEFIK_USE_TLS="true"
+        ;;
     *)
         echo "Default Local Host ${HOSTNAME}"
 esac
