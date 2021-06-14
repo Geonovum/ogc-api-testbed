@@ -1,3 +1,7 @@
+---
+title: Home
+---
+
 # Home
 
 This is a placeholder for upcoming full documentation.
@@ -18,18 +22,18 @@ are able to change or remove services deployed to this environment.
 
 ## HowTos
 
-There are several how to's, for the sandbox environment:
+There are several howto's, for the sandbox environment:
 
-1. [create and deploy a base API](howtos_sandbox.md)
-1. [create and deploy INSPIRE compliant API (pygeoapi)](howtos_sandbox.md)
-1. [removing an API from the sandbox](management_services.md)
+1. [create and deploy a base API](howto/index.md)
+1. [create and deploy INSPIRE compliant API (pygeoapi)](howto/index.md)
+1. [removing an API from the sandbox](howto/index.md)
 
 Specific for administrators of the stable environment:
 
-1. [management of the stable environment](management_services.md)
+1. [management of the stable environment](setup/admin.md)
 
 ## Findings on installation
-See [installation_findings.md](installation_findings.md)
+See [installation_findings.md](results/installation_findings.md)
 
 ## Services
 
@@ -37,16 +41,16 @@ These are the services running on this domain.
 
 * [pygeoapi](/pygeoapi) is a Python implementation of OGC API. 
     * Read the [documentation](https://docs.pygeoapi.io/en/latest/). 
-    * Read the [pygeoapi how to](howto_pygeoapi.md)
-    * Read our [deployment experiences](pygeoapi.md).
+    * Read the [pygeoapi how to](howto/howto_pygeoapi.md)
+    * Read our [deployment experiences](setup/pygeoapi.md).
 * [ldproxy](/ldproxy) is a java implementation of OGC API by Interactive Instruments. 
     * Read the [documentation](https://interactive-instruments.github.io/ldproxy/). 
-    * Read the [ldproxy how to](howto_ldproxy.md)
-    * Read our [deployment experiences](ldproxy.md).
+    * Read the [ldproxy how to](howto/howto_ldproxy.md)
+    * Read our [deployment experiences](setup/ldproxy.md).
 * [geoserver](/geoserver) is a java implementation of OGC API by the geoserver community.
     * Read the [documentation](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html). 
-    * Read the [geoserver how to](howto_geoserver.md)
-    * Read our [deployment experiences](geoserver.md).
+    * Read the [geoserver how to](howto/howto_geoserver.md)
+    * Read our [deployment experiences](setup/geoserver.md).
 
 ### Supporting services
 

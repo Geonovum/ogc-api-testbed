@@ -1,11 +1,16 @@
-# How To's
+---
+title: Howto
+---
+
+# Howto's
 
 2 sections of How To's exist. This section describes the general aspect of How To manage services in the sandbox and production environment.
 
 The other section describes product specific How To Aspects:
-- [How To pygeoapi](howto_pygeoapi.md)
-- [How To GeoServer](howto_geoserver.md)
-- [How To LDProxy](howto_ldproxy.md)
+
+* [How To pygeoapi](howto_pygeoapi.md)
+* [How To GeoServer](howto_geoserver.md)
+* [How To LDProxy](howto_ldproxy.md)
 
 ## Service deployment
 
