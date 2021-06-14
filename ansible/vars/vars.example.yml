@@ -1,3 +1,4 @@
+# EXAMPLE FILE - your encrypted vars.yml should cotnain the following vars
 ---
 my_ssh_pubkey_file: ~/.ssh/id_rsa.pub
 my_email: me@ergens.nl
@@ -13,3 +14,9 @@ pip_install_packages:
   - name: docker
 timezone: Europe/Amsterdam
 ufw_open_ports: ['22', '80', '443']
+postgis_env:
+  PG_DB: the_db_name
+  PG_USER: the_db_user
+  PG_PASSWORD: the_db_password
+  PGADMIN_EMAIL: gis@gis.gis
+  PGADMIN_PASSWORD: the_pgadmin_password

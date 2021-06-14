@@ -38,6 +38,7 @@
 
     - name: "postgis"
       shell: "cd {{ services_home }}/postgis && ./deploy.sh && docker ps"
+      environment: "{{ postgis_env }}"
       tags: postgis
 
     - name: "docs"

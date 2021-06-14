@@ -12,8 +12,13 @@ services:
       - ./pg_config/postgresql.conf:/etc/postgresql.conf
       - postgis_db:/var/lib/postgresql/data
 
-    env_file:
-      - pg.env
+    environment:
+      # See also ansible/vars/vars.yml
+      - POSTGRES_HOST=postgis
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=${PG_DB:-gis}
+      - POSTGRES_USER=${PG_USER:-gis}
+      - POSTGRES_PASSWORD=${PG_PASSWORD:-gis}
 
     labels:
       - "traefik.enable=false"
@@ -25,8 +30,11 @@ services:
 
     container_name: pgadmin
 
-    env_file:
-      - pgadmin.env
+    environment:
+      # See also ansible/vars/vars.yml
+      - SCRIPT_NAME=/pgadmin
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL:-gis@gis.gis}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD:-gis}
 
     volumes:
       - pgadmin:/var/lib/pgadmin
