@@ -13,7 +13,7 @@ platform_home: "{{ my_git_home }}/platform"
 pip_install_packages:
   - name: docker
 timezone: Europe/Amsterdam
-ufw_open_ports: ['22', '80', '443']
+ufw_open_ports: ['22', '80', '443', ...]
 postgis_env:
   PG_DB: the_db_name
   PG_USER: the_db_user
