@@ -15,6 +15,12 @@ services:
 #      - "8080:80"
 
 
+    environment:
+      # Use custom uid's, otherwise Tomcat uid from container is taken
+      # See issue: https://github.com/Geonovum/ogc-api-testbed/issues/25
+      - CUSTOM_UID=${HOST_UID}
+      - CUSTOM_GID=${HOST_GID}
+
     volumes:
       # Map data and config into GeoServer container
       - ./data:/var/local/geoserver
