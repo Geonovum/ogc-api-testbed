@@ -1,0 +1,57 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--5aa50211:17a007a58ce:-7fe7</id>
+  <name>bridges</name>
+  <nativeName>bridges</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--5aa50211:17a007a58ce:-7fed</id>
+  </namespace>
+  <title>Bridges</title>
+  <keywords>
+    <string>features</string>
+    <string>bridges</string>
+  </keywords>
+  <nativeCRS class="org.geotools.referencing.crs.DefaultEngineeringCRS">LOCAL_CS[&quot;Generic cartesian 2D&quot;, 
+  LOCAL_DATUM[&quot;Unknown&quot;, 0], 
+  UNIT[&quot;m&quot;, 1.0], 
+  AXIS[&quot;x&quot;, EAST], 
+  AXIS[&quot;y&quot;, NORTH]]</nativeCRS>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>2.0E-4</minx>
+    <maxx>6.73111</maxx>
+    <miny>7.0E-4</miny>
+    <maxy>53.19471</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>2.0E-4</minx>
+    <maxx>6.73111</maxx>
+    <miny>7.0E-4</miny>
+    <maxy>53.19471</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>NONE</projectionPolicy>
+  <enabled>true</enabled>
+  <advertised>true</advertised>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--5aa50211:17a007a58ce:-7fe8</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <attributes>
+    <attribute>
+      <name>geom</name>
+      <minOccurs>0</minOccurs>
+      <maxOccurs>1</maxOccurs>
+      <nillable>true</nillable>
+      <binding>org.locationtech.jts.geom.Point</binding>
+    </attribute>
+  </attributes>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+  <encodeMeasures>false</encodeMeasures>
+</featureType>

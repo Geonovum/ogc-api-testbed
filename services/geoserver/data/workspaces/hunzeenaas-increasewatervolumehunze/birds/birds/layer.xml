@@ -1,0 +1,19 @@
+<layer>
+  <name>birds</name>
+  <id>LayerInfoImpl--5aa50211:17a007a58ce:-7fe2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--5aa50211:17a007a58ce:-7fe5</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--5aa50211:17a007a58ce:-7fe3</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-06-14 08:32:07.447 UTC</dateCreated>
+  <dateModified>2021-06-14 08:32:08.398 UTC</dateModified>
+</layer>

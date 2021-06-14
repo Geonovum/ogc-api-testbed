@@ -1,0 +1,16 @@
+<dataStore>
+  <id>DataStoreInfoImpl--5aa50211:17a007a58ce:-7fe8</id>
+  <name>bridges</name>
+  <type>GeoPackage</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--5aa50211:17a007a58ce:-7fee</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="database">/var/local/geoserver/data/hunzeenaas-increasewatervolumehunze/bridges/bridges.gpkg</entry>
+    <entry key="dbtype">geopkg</entry>
+    <entry key="namespace">http://hunzeenaas-increasewatervolumehunze</entry>
+  </connectionParameters>
+  <__default>false</__default>
+  <dateCreated>2021-06-14 08:31:52.889 UTC</dateCreated>
+</dataStore>

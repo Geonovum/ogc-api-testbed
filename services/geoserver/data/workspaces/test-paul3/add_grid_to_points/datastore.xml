@@ -1,0 +1,16 @@
+<dataStore>
+  <id>DataStoreInfoImpl--5aa50211:17a007a58ce:-7fda</id>
+  <name>add_grid_to_points</name>
+  <type>GeoPackage</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--5aa50211:17a007a58ce:-7fdd</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="database">/var/local/geoserver/data/test-paul3/add_grid_to_points/add_grid_to_points.gpkg</entry>
+    <entry key="dbtype">geopkg</entry>
+    <entry key="namespace">http://test-paul3</entry>
+  </connectionParameters>
+  <__default>false</__default>
+  <dateCreated>2021-06-14 08:39:52.783 UTC</dateCreated>
+</dataStore>

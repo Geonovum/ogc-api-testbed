@@ -1,0 +1,19 @@
+<layer>
+  <name>bmv_meetpunten_(grondwater)</name>
+  <id>LayerInfoImpl--5aa50211:17a007a58ce:-7fde</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--5aa50211:17a007a58ce:-7fe1</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--5aa50211:17a007a58ce:-7fdf</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-06-14 08:32:09.570 UTC</dateCreated>
+  <dateModified>2021-06-14 08:32:10.651 UTC</dateModified>
+</layer>

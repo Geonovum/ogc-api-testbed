@@ -1,0 +1,19 @@
+<layer>
+  <name>50m_coastline</name>
+  <id>LayerInfoImpl--5aa50211:17a007a58ce:-7fd4</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--5aa50211:17a007a58ce:-7fd7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--5aa50211:17a007a58ce:-7fd5</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-06-14 08:39:55.401 UTC</dateCreated>
+  <dateModified>2021-06-14 08:39:56.325 UTC</dateModified>
+</layer>
