@@ -35,18 +35,18 @@ See [installation_findings.md](installation_findings.md)
 
 These are the services running on this domain.
 
-* [pygeoapi](/pygeoapi) is a python implementation of OGC API. 
-  * Read the [documentation](https://docs.pygeoapi.io/en/latest/). 
-  * Read the [pygeoapi how to](howto_pygeoapi.md)
-  * Read our [deployment experiences](pygeoapi.md).
+* [pygeoapi](/pygeoapi) is a Python implementation of OGC API. 
+    * Read the [documentation](https://docs.pygeoapi.io/en/latest/). 
+    * Read the [pygeoapi how to](howto_pygeoapi.md)
+    * Read our [deployment experiences](pygeoapi.md).
 * [ldproxy](/ldproxy) is a java implementation of OGC API by Interactive Instruments. 
-  * Read the [documentation](https://interactive-instruments.github.io/ldproxy/). 
-  * Read the [ldproxy how to](howto_ldproxy.md)
-  * Read our [deployment experiences](ldproxy.md).
-* [geoserver](/geoserver/geoserver/ogc/features) is a java implementation of OGC API by the geoserver community.
-  * Read the [documentation](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html). 
-  * Read the [geoserver how to](howto_geoserver.md)
-  * Read our [deployment experiences](geoserver.md).
+    * Read the [documentation](https://interactive-instruments.github.io/ldproxy/). 
+    * Read the [ldproxy how to](howto_ldproxy.md)
+    * Read our [deployment experiences](ldproxy.md).
+* [geoserver](/geoserver) is a java implementation of OGC API by the geoserver community.
+    * Read the [documentation](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html). 
+    * Read the [geoserver how to](howto_geoserver.md)
+    * Read our [deployment experiences](geoserver.md).
 
 ### Supporting services
 
