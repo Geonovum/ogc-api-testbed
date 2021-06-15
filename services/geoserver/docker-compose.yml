@@ -20,6 +20,8 @@ services:
       # See issue: https://github.com/Geonovum/ogc-api-testbed/issues/25
       - CUSTOM_UID=${HOST_UID}
       - CUSTOM_GID=${HOST_GID}
+      - GEOSERVER_CSRF_DISABLED=true
+      - GEOSERVER_CSRF_WHITELIST=apitestbed.geonovum.nl
 
     volumes:
       # Map data and config into GeoServer container
