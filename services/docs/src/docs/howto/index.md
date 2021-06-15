@@ -1,10 +1,11 @@
 ---
-title: Howto
+title: HOWTOs
 ---
 
-# Howto's
+# HOWTOs
 
-2 sections of How To's exist. This section describes the general aspect of How To manage services in the sandbox and production environment.
+2 sections of HOWTOs exist. 
+This section describes the general aspect of How To manage services in the sandbox and production environment.
 
 The other section describes product specific How To Aspects:
 
