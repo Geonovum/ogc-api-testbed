@@ -6,8 +6,12 @@ title: Home
 
 Placeholder for upcoming full documentation.
 
-See the [project README on GitHub](https://github.com/Geonovum/ogc-api-testbed/blob/main/README.md)
+See the [Project README on GitHub](https://github.com/Geonovum/ogc-api-testbed/blob/main/README.md)
 for how this testbed is setup.
+
+## Get in Touch
+
+[![Gitter](https://img.shields.io/gitter/room/Geonovum/ogc-api-testbed.svg?style=flat-square)](https://gitter.im/Geonovum/ogc-api-testbed)
 
 ## Sandbox and Stable Environment
 The **Sandbox environment** (URL TBS) is intended to play with the services: 
@@ -15,7 +19,7 @@ create and deploy an API. For example, to create and deploy an API with pygeoapi
 Deployed services on the sandbox server are not intended to be used by others for other 
 purposes than testing. They could be removed or changed any time, without notice.
 
-The **Stable environment** is accessible via https://apitestbed.geonovum.nl and 
+The **Stable environment** is accessible via [https://apitestbed.geonovum.nl](https://apitestbed.geonovum.nl) and 
 intended to demo APIs (and other services) that should be 
 available for the public. For example to show results, or for third parties to use in other tests. 
 Still no full production environment, or guaranteed availability. A few maintainers 
@@ -27,9 +31,9 @@ Below the (web-) services running on this domain. Click links to view and intera
 
 ### OGC API Features
 
-Interactive endpoints of OGC API Feature Open Source products.
+Interactive endpoints of [OGC API Features](https://ogcapi.ogc.org/features/) Open Source products.
 
-* [/pygeoapi](/pygeoapi) - Python implementation by GeoPython community
+* [/pygeoapi](/pygeoapi) - Python implementation by the GeoPython community
     * Read the [documentation](https://docs.pygeoapi.io/en/latest/). 
     * Read the [pygeoapi how to](howto/howto_pygeoapi.md)
     * Read our [deployment experiences](setup/pygeoapi.md).
@@ -83,3 +87,4 @@ See the [Setup Documents](setup/index.md) for code and docs about the setup of t
 * [Geonovum](https://geonovum.nl) - Geonovum home
 * [pygeoapi](https://pygeoapi.io) - `pygeoapi` project home
 * [ldproxy](https://github.com/interactive-instruments/ldproxy) - `ldproxy` project home
+* [OGC API Features](https://ogcapi.ogc.org/features/) - OGC Home OAFeat
