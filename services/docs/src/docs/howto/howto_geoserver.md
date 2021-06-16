@@ -1,8 +1,27 @@
-# How To GeoServer
+---
+title: HOWTO GeoServer
+---
 
-A docker hub image is provided by [oscarfonts](https://github.com/oscarfonts/docker-geoserver) is extended with OGC API plugin. The binaries of the plugin, as well as the data folder are mounted into the container.
+# HOWTO GeoServer
 
-The data folder is created by deploying geoserver locally, setting up the required services and commit the changes to github. You can either embed a data file inside the data folder, alternatively you can upload data to the PostGreSQL database and configure a layer on data from the database.
+[GeoServer](https://geoserver.org) is a commonly used application server providing webservices based on OGC standards. GeoServer provides a web interface to set up new services, including extended authorisation options. This HOWTO indicates 2 approaches to set up OGC API Features services in GeoServer. Both approaches can not be combined in a single GeoServer instance.
 
-The OGC API is available from the geoserver homepage at /ogc/features, or on the workspace endpoint /{workspace}/agc/features.
+## Dynamical setup
 
+GeoServer can be dynamically configured to add new services. 2 approaches are described:
+
+### Via Web Administrator
+
+This HOWTO describes how you can upload data and set up a new layer on GeoServer via the Web Administrator.
+
+
+
+### Via GeoCat Bridge
+
+This HOWTO describes how you can use QGIS to setup a new layer on GeoServer. For QGIS a plugin called GeoCat Bridge is available which 
+can publish a GQIS project as a workspace on GeoServer.
+
+We prepared a small [video about the steps involved](https://drive.geocat.net/s/PtNWacEFfP9AN7Z). 
+
+
+## Scripted setup

@@ -4,7 +4,7 @@ title: INSPIRE findings
 
 # INSPIRE findings
 
-The INSPIRE community has described an approach to provide [INSPIRE Download services using OG API Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.md). This document reviews this approach for various products used in the testbed.
+The INSPIRE community has described an approach to provide [INSPIRE Download services using OGC API Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.md). This document reviews this approach for various products used in the testbed.
 
 Similar to Atom the 
 [Main principles](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.md#71-main-principles-) of the approach indicate to set up a single api endpoint for this dataset. Both GeoServer and LDProxy offer capabilitiy to set up multiple endpoint within a single service, for pygeoapi we have to set up a new service.
@@ -41,6 +41,26 @@ M Mandatory, C Conditional, R Recommended, O Optional
 
 | MRCO | Aspect | pygeoapi | GeoServer | LDProxy | Comment |
 | --- | --- | --- | --- | --- | --- |
-| C | 
+| R | document encoding rules to geojson | ? | ? | ? | no efforts yet |
 
 M Mandatory, C Conditional, R Recommended, O Optional
+
+## Requirements class “INSPIRE-bulk-download”
+
+| MRCO | Aspect | pygeoapi | GeoServer | LDProxy | Comment |
+| --- | --- | --- | --- | --- | --- |
+| M | link to entire dataset | + | - | - | |
+| M | link has type from inspire mediatypes | + | - | - | |
+| R | link has length attribute | + | - | - | |
+| R | link has title attribute | + | - | - | |
+
+M Mandatory, C Conditional, R Recommended, O Optional
+
+## Requirements class “INSPIRE-CRS”
+
+| MRCO | Aspect | pygeoapi | GeoServer | LDProxy | Comment |
+| --- | --- | --- | --- | --- | --- |
+| R | at least 1 supported CRS from list  | + | + | + | |
+
+M Mandatory, C Conditional, R Recommended, O Optional
+
