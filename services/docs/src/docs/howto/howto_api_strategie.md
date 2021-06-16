@@ -1,3 +1,7 @@
+---
+title: HOWTO GeoHealthCheck
+---
+
 # How To API Strategie
 
 The knowledge Platform API's has published a normative document on [REST-API design rules](https://publicatie.centrumvoorstandaarden.nl/api/adr/). This document explains how you can set up an OGC API service respecting these rules.
