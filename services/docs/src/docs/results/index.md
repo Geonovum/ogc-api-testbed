@@ -1,9 +1,9 @@
 ---
-title: Results
+title: Findings
 ---
 
-# Results
-
-## Installation Findings
+# Findings
 
 - [Installation Findings](installation_findings.md)
+- [Inspire Findings](INSPIRE.md)
+- [API Strategie Findings](api_rules.md)

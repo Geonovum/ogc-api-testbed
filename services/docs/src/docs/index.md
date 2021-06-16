@@ -63,18 +63,14 @@ These are services for administration and maintenance.
 
 ## HOWTOs
 
-There are several HOWTOs, for the sandbox environment:
-
-1. [create and deploy a base API](howto/index.md)
-1. [create and deploy INSPIRE compliant API (pygeoapi)](howto/index.md)
-1. [removing an API from the sandbox](howto/index.md)
+The [HOWTOs](howto/index.md) section describes various maintenance and deployment activities within the infrastructure as actionable items.
 
 Specific for administrators of the stable environment:
 
 1. [management of the stable environment](setup/admin.md)
 
 ## Findings on installation
-See [installation_findings.md](results/installation_findings.md)
+The [findings](results/installation_findings.md) section describes various findings related to installation, development, INSPIRE and API strategie.
 
 
 ## Tech docs environment
