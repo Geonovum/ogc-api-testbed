@@ -4,7 +4,7 @@ title: Findings GeoServer
 
 # Findings GeoServer
 
-A docker hub image is provided by [oscarfonts](https://github.com/oscarfonts/docker-geoserver) is extended with OGC API plugin. The binaries of the plugin, as well as the data folder are mounted into the container.
+A docker hub image is provided by [oscarfonts](https://github.com/oscarfonts/docker-geoserver) is extended with OGC API plugin. The binaries of the plugin, as well as the data folder are mounted into the container. The `Oscar Fonts` image runs as a tomcat user, which by itself is a good practice from security prespective, but files are created on the data folder by a user unknown to the docker host, which causes problems at redeployment. We have overridden this behaviour and run as root user.
 
 The data folder is created by deploying geoserver locally, setting up the required services and commit the changes to github. You can either embed a data file inside the data folder, alternatively you can upload data to the PostGreSQL database and configure a layer on data from the database.
 
