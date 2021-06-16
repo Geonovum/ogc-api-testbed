@@ -3,27 +3,30 @@ title: Installation findings
 ---
 
 # Installation findings
-Results of the installation and creation of the software, for example:
+This document lists some of the experiences during installation and creation of the software, for example:
 
 * what is easy to do, what not?
 * what is supported by which software?
 * configuration setup
 
-## Findings Docker
+## Docker
+
+Docker (and related technologies such as kubernetes, cloud foundry) are replacing traditional web servers following the [pet vs cattle](https://www.hava.io/blog/cattle-vs-pets-devops-explained) paradigm. Many pro's and con's are documented. We list a number of them which came up during the project.
 
 Pro's
 
-* For setups of pygeoapi and geoserver with OGR support (used in wfs and geopackage backend) the use of Docker is very attractive, due to complexity of managing dedicated depemdencies.
+* For setups of pygeoapi and geoserver with OGR support (used in wfs and geopackage backend) the use of Docker is attractive, due to complexity of managing dedicated dependencies.
+* Running the full platform locally doesn't require any effort. Traefik manages the change from https://domain to http://localhost transparently. But docker is the main driver of this capability.
 
 Con's
 
-* In the field there is a growing awareness that docker also has limitations. Docker images do not receieve similar efforts to keep them updated as the traditional pet-systems ([pet vs cattle](https://www.hava.io/blog/cattle-vs-pets-devops-explained)). The risk of non patched vulnarabilities is higher when running a docker infrastructue.
+* In the field there is a growing awareness that docker also has limitations. Docker images do not receieve similar efforts to keep them updated as the traditional systems. The risk of non patched vulnarabilities is higher when running a docker infrastructue. 
 
 ## Data management
 
 A typical use case will be that a geonovum employee arrives with some shapefiles to be published. The shapefile can be deployed as part of the deployment (via github). An alternative route is to import the data into postgres. The data can then be used in various applications. Importing a shapefile into postgres requires direct connection to postgres or use the PGAdmin dump import. GeoServer (via GeoCat Bridge) has an option to upload a shapefile and import it to Postgres. See [HOWTO data](../howto/howto_database.md) on how to use both approaches.
 
-## Run infro locally
+## Run infra locally
 
 The current deployment can be run locally on Linux and Mac easily, which is helpfull to test a new development before creating the Pull Request. However it may be the case that this does not easily work on Windows. On the other hand, maybe this is not a scenario, because the GeoNovum employee might update the configuration in git, and deploy it to the test environment, and use that as a test prior to moving the configuration to the production system.
 

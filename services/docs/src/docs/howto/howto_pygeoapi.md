@@ -1,3 +1,8 @@
+---
+title: HOWTO pygeoapi
+---
+
+
 # HOWTO pygeoapi
 
 The pygeoapi config is the place to start when configuring a new service. The file starts with some general server configuration and then presents a list of collections. Each collection has a data store configuration referencing one of the available data backends. A common data provider is the OGR/GDAL provider which gives access to a multitude of file formats.

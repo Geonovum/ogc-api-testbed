@@ -8,7 +8,7 @@ The infrastructure has a central [PostGreSQL](https://www.postgresql.org/) datab
 
 ## Managing tables
 
-A Webbased database manager (pgAdmin) has been installed at https://apitestbed.geonovum.nl/pgadmin, which can be used to verify content in tables and administed tables and users. You can also create new tables and populate it using SQL queries (generated from a local database).
+A Webbased database manager (pgAdmin) has been installed at [https://apitestbed.geonovum.nl/pgadmin](https://apitestbed.geonovum.nl/pgadmin), which can be used to verify content in tables and administed tables and users. You can also create new tables and populate it using SQL queries (generated from a local database).
 
 ## Uploading data to PostGreSQL from QGIS
 
@@ -24,7 +24,7 @@ The testbed database exposes its port to the web for conveniance purposes, this 
 | database | GIS |
 | SSL | allow |
 | user | geopost |
-| pw | ***** |
+| pw | xxxxx |
 
 - Open DB Manager and select the testbed database
 - Click the 'Import Layer/File' button and complete the wizard
@@ -43,7 +43,7 @@ From GeoServer admin you can create a `store` which connects to the central data
 | database | gis |
 | schema | public |
 | user | geopost |
-| pw | ***** |
+| pw | xxxxx |
 
 - From the layers screen, create a new layer.
 - Select the PostGreSQL store
@@ -54,6 +54,7 @@ From GeoServer admin you can create a `store` which connects to the central data
 ## Uploading data to PostGreSQL from QGIS Bridge
 
 As part of the data publication process of QGIS Bridge, you can configure the data to be stored on PostGreSQL. Two options exist (as configuration on a server connection):
+
 - Bridge will send the data to GeoServer. And GeoServer will insert the data in PostGres.
 - Bridge will connect directly to the remote PostGreSQL and insert the data
 

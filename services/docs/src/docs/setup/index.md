@@ -3,18 +3,26 @@ title: Setup
 ---
 
 # Setup
-   
-How the server and services are setup.
-See the [project README on GitHub](https://github.com/Geonovum/ogc-api-testbed/blob/main/README.md) for now.
+
+This section describes the setup details of the platform.
+
+##  Platform setup
+
+* [Platform setup](platform.md) discusses the setup and components used on the lowest level of the platform.
+* [deployment experiences](findings.md) mentions some of our findings and choices during implementation. 
 
 ## Operational Services
+
+A number of services is deployed on the platform:
 
 * [pygeoapi](pygeoapi.md)
 * [geoserver](geoserver.md)
 * [ldproxy](ldproxy.md)
-* [traefik](traefik.md)
-* postgis
+* [postgis / pgadmin](postgis.md)
 
-## Admin
+## Admin tools
 
-* [admin](admin.md)
+Some admin tools are made available to monitor the platform. 
+
+* [portainer](portainer.md)
+* [GeoHealthCheck](ghc.md)
