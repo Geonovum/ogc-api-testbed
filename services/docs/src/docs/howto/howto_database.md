@@ -23,7 +23,8 @@ The testbed database exposes its port to the web for conveniance purposes, this 
 | port | 5432 |
 | database | GIS |
 | SSL | allow |
-| user |  |
+| user | geopost |
+| pw | ***** |
 
 - Open DB Manager and select the testbed database
 - Click the 'Import Layer/File' button and complete the wizard
@@ -39,8 +40,10 @@ From GeoServer admin you can create a `store` which connects to the central data
 | --- | --- |
 | host | postgis |
 | port | 5432 |
-| database | GIS |
+| database | gis |
 | schema | public |
+| user | geopost |
+| pw | ***** |
 
 - From the layers screen, create a new layer.
 - Select the PostGreSQL store

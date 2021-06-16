@@ -7,7 +7,8 @@ title: HOWTOs
 3 sections of HOWTOs exist.
 
 The deployment section describes how to deploy services
-* [HOWTO Depoly](howto_deploy.md)
+
+* [HOWTO Deploy](howto_deploy.md)
 * [HOWTO deploy pygeoapi](howto_pygeoapi.md)
 * [HOWTO deploy GeoServer](howto_geoserver.md)
 * [HOWTO deploy LDProxy](howto_ldproxy.md)

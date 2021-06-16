@@ -21,7 +21,6 @@ Similar to Atom the
 | M | /colections has link to license | + | - | ? |  |
 | R | License information in accordance with openapi | [+](https://apitestbed.geonovum.nl/pygeoapi/openapi?f=json) | [-](https://apitestbed.geonovum.nl/geoserver/ogc/features/api?f=application%2Fvnd.oai.openapi%2Bjson%3Bversion%3D3.0) | [-](https://apitestbed.geonovum.nl/ldproxy/RCE_Landschapsatlas_WFS/api/?f=json) | OpenAPI fields info/termsOfService or info/license are mentioned |
 
-
 M Mandatory, C Conditional, R Recommended, O Optional
 
 ## Requirements class INSPIRE-multilinguality
@@ -36,6 +35,12 @@ All aspects are conditional, in case the dataset is multilingual. pygeoapi lande
 | R | Language support at all paths | + | - | - | |
 | M | hreflang on enclosure links | + | - | - | |
 
+M Mandatory, C Conditional, R Recommended, O Optional
+
 ## Requirements class “INSPIRE-OAPIF-GeoJSON”
 
+| MRCO | Aspect | pygeoapi | GeoServer | LDProxy | Comment |
+| --- | --- | --- | --- | --- | --- |
+| C | 
 
+M Mandatory, C Conditional, R Recommended, O Optional
