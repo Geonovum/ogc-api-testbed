@@ -47,4 +47,5 @@
 
     - name: "admin"
       shell: "cd {{ services_home }}/admin && ./deploy.sh && docker ps"
-      tags: docs
+      environment: "{{ geohealthcheck_env }}"
+      tags: admin

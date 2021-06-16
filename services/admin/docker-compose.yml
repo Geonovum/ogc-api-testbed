@@ -1,6 +1,78 @@
 version: '3.3'
+# See also ansible/vars/vars.yml how settings are configured
 
 services:
+
+  ghc_web:
+    image: geopython/geohealthcheck:latest
+    container_name: ghc_web
+
+    expose:
+      - 80
+
+#    ports:
+#      - 8003:80
+
+    # restart: unless-stopped
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      # SSL/https router
+      - "traefik.http.routers.ghc_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/ghc`)"
+      - "traefik.http.routers.ghc_https.entrypoints=https"
+      - "traefik.http.routers.ghc_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.ghc_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.ghc_https.tls.options=my_default@file"
+      - "traefik.http.routers.ghc_https.middlewares=secure-headers@file"
+
+      # local http router
+      - "traefik.http.routers.ghc_http.rule=Host(`localhost`) && PathPrefix(`/ghc`)"
+      - "traefik.http.routers.ghc_http.entrypoints=http"
+
+    # volumes:
+      # Optional Plugins, using Path on the host, relative to this Compose file
+      # To activate: 2 steps for runner and GHC webapp:
+      # - configure in ghc.env
+      # - mount these as docker volume on host
+      # See https://docs.docker.com/compose/compose-file/#volumes
+      # - ./../GeoHealthCheck/plugins:/plugins:ro
+
+  ghc_runner:
+    image: geopython/geohealthcheck:latest
+
+    container_name: ghc_runner
+
+    labels:
+      - "traefik.enable=false"
+
+    entrypoint:
+      - /run-runner.sh
+
+  ghc_db:
+    image: postgis/postgis:13-3.1-alpine
+    container_name: ghc_db
+
+    volumes:
+      - ghc_db_data:/var/lib/postgresql/data
+      - ./pg_config/pg-init.sh:/docker-entrypoint-initdb.d/55-pg-init.sh
+      - ./pg_config/postgresql.conf:/etc/postgresql.conf
+
+    expose:
+      - 5432
+
+    environment:
+      # See also ansible/vars/vars.yml
+      - POSTGRES_HOST=ghc_db
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=${PG_GHC_DB:-ghc}
+      - POSTGRES_USER=${PG_GHC_USER:-ghc}
+      - POSTGRES_PASSWORD=${PG_GHC_PASSWORD:-ghc}
+
+    labels:
+      - "traefik.enable=false"
+      - "pgbackup.enable=true"
 
   portainer:
 
@@ -46,6 +118,7 @@ services:
 
 volumes:
   portainer_data:
+  ghc_db_data:
 
 networks:
   default:
