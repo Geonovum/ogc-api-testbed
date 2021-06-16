@@ -4,14 +4,20 @@ title: HOWTOs
 
 # HOWTOs
 
-2 sections of HOWTOs exist. 
-This section describes the general aspect of How To manage services in the sandbox and production environment.
 
-The other section describes product specific How To Aspects:
+3 sections of HOWTOs exist.
+This document describes the general aspect of How to manage services in the sandbox and production environment.
 
-* [How To pygeoapi](howto_pygeoapi.md)
-* [How To GeoServer](howto_geoserver.md)
-* [How To LDProxy](howto_ldproxy.md)
+The product section describes product specific aspects:
+
+* [HOWTO pygeoapi](howto_pygeoapi.md)
+* [HOWTO GeoServer](howto_geoserver.md)
+* [HOWTO LDProxy](howto_ldproxy.md)
+
+The cases section describes how to manage certain use cases.
+
+* [HOWTO INSPIRE](howto_inspire.md)
+* [HOWTO API Strategie](howto_api_strategie.md)
 
 ## Service deployment
 
