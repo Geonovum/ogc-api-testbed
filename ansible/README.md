@@ -74,6 +74,8 @@ ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-testbed.t
 
 ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-testbed.txt deploy.yml -i hosts/prod.yml --tags postgis
 
+ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-testbed.txt deploy.yml -i hosts/prod.yml --tags admin
+
 ```
 
 ## System

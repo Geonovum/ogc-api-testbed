@@ -13,7 +13,9 @@ services:
 #    ports:
 #      - 8003:80
 
-    # restart: unless-stopped
+    env_file:
+      - ghc.env
+
     labels:
       # Enable Traefik routing on overlay service network
       - "traefik.enable=true"
@@ -46,6 +48,9 @@ services:
 
     labels:
       - "traefik.enable=false"
+
+    env_file:
+      - ghc.env
 
     entrypoint:
       - /run-runner.sh
