@@ -1,0 +1,48 @@
+version: '3.3'
+
+services:
+
+  qgis:
+    
+    image: camptocamp/qgis-server:latest
+
+    container_name: qgis
+
+    expose:
+      - "80"
+
+#    ports:
+#     - "5000:80"
+
+     #environment:
+     #- QGIS_SERVER_LOG_LEVEL:0
+     #- PGSERVICEFILE:If you want to change the default of /etc/qgisserver/pg_service.conf
+     #- QGIS_PROJECT_FILE:If you want to change the default of /etc/qgisserver/project.qgs
+     #- MAX_REQUESTS_PER_PROCESS:The number of requests a QGIS server will serve before being restarted by apache
+     #- QGIS_CATCH_SEGV:1
+
+    volumes:
+      # Map data and config into  container
+      - ./data:/etc/qgisserver
+
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      # SSL/https router
+      - "traefik.http.routers.qgis_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/qgis`)"
+      - "traefik.http.routers.qgis_https.entrypoints=https"
+      - "traefik.http.routers.qgis_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.qgis_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.qgis_https.tls.options=my_default@file"
+      - "traefik.http.routers.qgis_https.middlewares=secure-headers@file"
+
+      # local http router
+      - "traefik.http.routers.qgis_http.rule=Host(`localhost`) && PathPrefix(`/qgis`)"
+      - "traefik.http.routers.qgis_http.entrypoints=http"
+
+networks:
+  default:
+    external:
+      name: service-network

@@ -18,6 +18,7 @@ A number of services is deployed on the platform:
 * [pygeoapi](pygeoapi.md)
 * [geoserver](geoserver.md)
 * [ldproxy](ldproxy.md)
+* [qgis](qgis.md)
 * [postgis / pgadmin](postgis.md)
 
 ## Admin tools
