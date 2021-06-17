@@ -14,16 +14,18 @@ services:
 #    ports:
 #     - "5000:80"
 
-     #environment:
-     #- QGIS_SERVER_LOG_LEVEL:0
-     #- PGSERVICEFILE:If you want to change the default of /etc/qgisserver/pg_service.conf
-     #- QGIS_PROJECT_FILE:If you want to change the default of /etc/qgisserver/project.qgs
-     #- MAX_REQUESTS_PER_PROCESS:The number of requests a QGIS server will serve before being restarted by apache
-     #- QGIS_CATCH_SEGV:1
+    environment:
+      # Must override default to allow write access e.g. GPKG WALs for www-data user
+      - QGIS_PROJECT_FILE:/myqgisserver/project.qgs
+      #- QGIS_SERVER_LOG_LEVEL:0
+      #- PGSERVICEFILE:If you want to change the default of /etc/qgisserver/pg_service.conf
+      #- QGIS_PROJECT_FILE:If you want to change the default of /etc/qgisserver/project.qgs
+      #- MAX_REQUESTS_PER_PROCESS:The number of requests a QGIS server will serve before being restarted by apache
+      #- QGIS_CATCH_SEGV:1
 
     volumes:
-      # Map data and config into  container
-      - ./data:/etc/qgisserver
+      # Map data and config into container
+      - ./data:/myqgisserver
 
     labels:
       # Enable Traefik routing on overlay service network
