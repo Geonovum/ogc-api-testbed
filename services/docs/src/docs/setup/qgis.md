@@ -8,7 +8,8 @@ title: Setup QGIS Server
 
 Deployed docker image from
 https://hub.docker.com/r/camptocamp/qgis-server.
-Following the hints from  https://www.qcooperative.net/blog/ogcapif/ and https://docs.qgis.org/testing/en/docs/server_manual/services.html#wfs3-ogc-api-features
+Following the hints from  
+https://www.qcooperative.net/blog/ogcapif/ and https://docs.qgis.org/testing/en/docs/server_manual/services.html#wfs3-ogc-api-features
 
 ## Issues
 
