@@ -31,8 +31,8 @@ Open Source products running in this instance. Links to documentation and HOWTOs
 | --- | --- | --- | --- 
 | [/pygeoapi](/pygeoapi) | [GeoPython Community](https://geopython.github.io/) | [link](https://docs.pygeoapi.io/en/latest/) | [link](howto/howto_pygeoapi.md)  
 | [/ldproxy](/ldproxy) | Interactive Instruments | [link](https://interactive-instruments.github.io/ldproxy/) | [link](howto/howto_ldproxy.md)  
-| [/geoserver](/geoserver) | GeoServer Community | [link](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) | [link](howto/howto_geoserver.md)  
-| [/qgis*](/qgis) | QGIS Community | [link](https://www.qgis.org/) | [link](howto/howto_qgis.md)  
+| [/geoserver](/geoserver/ogc/features) | GeoServer Community | [link](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) | [link](howto/howto_geoserver.md)  
+| [/qgis*](/qgis/wfs3) | QGIS Community | [link](https://www.qgis.org/) | [link](howto/howto_qgis.md)  
  
 * *"QGIS" is the QGIS Server Application.*
 
@@ -50,7 +50,7 @@ These are services for administration and maintenance.
 | Endpoint | What / Author | Docs | HOWTO
 | --- | --- | --- | --- 
 | [PGAdmin](/pgadmin) | Manage PostgreSQL Data | PGAdmin Community | [link](https://www.pgadmin.org/) | [link](howto/howto_pgadmin.md)  
-| [Portainer](/portainer) | Visual Docker Manager | Docker | [link](https://www.portainer.io/) | [link](howto/howto_portainer.md)  
+| [Portainer](/portainer/) | Visual Docker Manager | Docker | [link](https://www.portainer.io/) | [link](howto/howto_portainer.md)  
 | [GeoHealthCheck](/ghc) | OGC Services Monitor | [GeoPython Community](https://geopython.github.io)  | [link](https://geohealthcheck.org) | [link](howto/howto_ghc.md)  
 
 ## Links
