@@ -20,3 +20,21 @@ postgis_env:
   PG_PASSWORD: the_db_password
   PGADMIN_EMAIL: gis@gis.gis
   PGADMIN_PASSWORD: the_pgadmin_password
+geohealthcheck_env:
+  POSTGRES_HOST: ghc_db
+  POSTGRES_PORT: 5432
+  PG_GHC_DB: the_info
+  PG_GHC_USER: the_info
+  PG_GHC_PASSWORD: the_info
+  GHC_ADMIN_EMAIL: the_info@the_info.com
+  GHC_SMTP_SERVER: the_info.com
+  GHC_SMTP_PORT: the_info
+  GHC_SMTP_TLS: the_info
+  GHC_SMTP_SSL: the_info
+  GHC_SMTP_USERNAME: the_info
+  GHC_SMTP_PASSWORD: the_info
+  SQLALCHEMY_DATABASE_URI: postgresql://the_info:the_info@the_info:5432/the_info
+  ADMIN_NAME: the_info
+  ADMIN_PWD: the_info
+  ADMIN_EMAIL: the_info@the_info.nl
+  GHC_NOTIFICATIONS_EMAIL: the_info@the_info.com
