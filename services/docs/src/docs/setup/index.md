@@ -16,6 +16,7 @@ This section describes the setup details of the platform.
 A number of services is deployed on the platform:
 
 * [pygeoapi](pygeoapi.md)
+* [pycsw](pycsw.md)
 * [geoserver](geoserver.md)
 * [ldproxy](ldproxy.md)
 * [qgis](qgis.md)
