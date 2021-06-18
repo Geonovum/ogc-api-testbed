@@ -24,7 +24,7 @@ although the [WMS](/qgis?request=getcapabilities&service=WMS) is able to display
 ### Container Write Permission
 Could not use the default `/etc/qgisserver/project.qgs` Docker volume mapping, as the
 referenced GPKG files needed write access (for WAL files) in that dir.
-The solutions was to set `QGIS_PROJECT_FILE` explicitly:
+The solutions was to set `QGIS_PROJECT_FILE` explicitly. However it resulted in a working situation, but the project file could not be located by the service. So I restored the situation. It means we still have no write privileges in the data folder.
 
 ```
     environment:
@@ -41,3 +41,7 @@ The solutions was to set `QGIS_PROJECT_FILE` explicitly:
       # Map data and config into container
       - ./data:/myqgisserver
 ```
+
+### Publish layers as WFS on the project
+
+I ran into the problem that the layers were displayed on the WMS capabilities, but not as collections on ogc api features. I requested help from the qgis mailinglist, but no direct solution. Until Allesandro Pasotti pointed me on the fact that I have to activate WFS on layers before they are available via WFS and OGC API Features. You can set WFS access via project properties > QGIS Server > WFS.
