@@ -10,8 +10,9 @@ testbed with OGC API web-services to be run by Geonovum.
 
 The documentation is split up in three parts:
 
-* [Setup](setup/index.md) describes the platform, design choices and identified challenges.
-* [HOWTO](howto/index.md) has a number of tutorials on how to operate the system
+* [Setup](setup/index.md) describes the platform (administator manual)
+* [HOWTO](howto/index.md) has a number of tutorials on how to operate the system (user manual)
+* [Findings](findings/index.md) design choices, identified challenges and solutions
 * [Cases](cases/index.md) contains some experiments performed on the platform, and may be extended to capture future outcomes of the testbed
 
 ## Get in Touch
@@ -33,7 +34,9 @@ Open Source products running in this instance. Links to documentation and HOWTOs
 | [/ldproxy](/ldproxy) | Interactive Instruments | [link](https://interactive-instruments.github.io/ldproxy/) | [link](howto/howto_ldproxy.md)  
 | [/geoserver](/geoserver/ogc/features) | GeoServer Community | [link](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) | [link](howto/howto_geoserver.md)  
 | [/qgis*](/qgis/wfs3) | QGIS Community | [link](https://www.qgis.org/) | [link](howto/howto_qgis.md)  
- 
+| [/pycsw/csw.py](/pycsw/csw.py/collections/metadata:main) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pycsw.org/en/latest/index.html) | [HOWTO](howto/howto_pycsw.md) 
+
+
 * *"QGIS" is the QGIS Server Application.*
 
 ### Storage Services
