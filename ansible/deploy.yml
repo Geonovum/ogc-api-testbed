@@ -28,6 +28,10 @@
       shell: "cd {{ services_home }}/pygeoapi && ./deploy.sh && docker ps"
       tags: pygeoapi
 
+    - name: "pycsw"
+      shell: "cd {{ services_home }}/pycsw && ./deploy.sh && docker ps"
+      tags: pycsw
+
     - name: "ldproxy"
       shell: "cd {{ services_home }}/ldproxy && ./deploy.sh && docker ps"
       tags: ldproxy

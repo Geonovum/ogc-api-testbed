@@ -1,0 +1,32 @@
+# Ansible workflow for single service deployment.
+# Uses: https://github.com/dawidd6/action-ansible-playbook
+# Options: https://github.com/dawidd6/action-ansible-playbook/blob/master/main.js
+# Author: Just van den Broecke - 2021
+#
+name: pycsw Deploy ⚙️
+
+# Trigger only when services/pycsw subdir changed
+on:
+  push:
+    paths:
+      - 'services/pycsw/**'
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout ✅
+      uses: actions/checkout@v2
+
+    - name: Run playbook ⚙
+      uses: dawidd6/action-ansible-playbook@v2
+      with:
+        playbook: deploy.yml
+        directory: ./ansible
+        key: ${{secrets.ANSIBLE_SSH_PRIVATE_KEY}}
+        inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
+        vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
+        options: |
+          --tags pycsw
+          --verbose
