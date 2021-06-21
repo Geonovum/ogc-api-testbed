@@ -1,5 +1,5 @@
 ---
-title: OGC-API-Testbed documentation
+title: OGC-API-Testbed Documentation
 ---
 
 # OGC-API-Testbed documentation
