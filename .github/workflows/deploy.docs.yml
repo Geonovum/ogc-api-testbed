@@ -9,6 +9,10 @@ on:
     paths:
       - 'docs/**'
 
+defaults:
+  run:
+    working-directory: docs
+
 jobs:
   build:
     name: Build and Deploy Documentation
@@ -24,8 +28,7 @@ jobs:
       - name: Install requirements 📦
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs
+          pip install -r requirements.txt
 
       - name: Deploy 📦
-        working-directory: ./docs
         run: mkdocs gh-deploy --force -m 'update website'
