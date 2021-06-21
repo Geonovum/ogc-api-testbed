@@ -9,7 +9,7 @@ nav:
     - Home: index.md
     - Howto: howto/index.md
     - Setup: setup/index.md
-    - Results: results/index.md
+    - Results: findings/index.md
     - Code: https://github.com/Geonovum/ogc-api-testbed
 
 # use_directory_urls: true
