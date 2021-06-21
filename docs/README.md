@@ -21,7 +21,7 @@ mkdocs build
 mkdocs serve  # website is made available on http://localhost:8000/
 ```
 
-## Content management workflow
+## Content Management Workflow
 
 ### Overview
 
