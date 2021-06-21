@@ -1,0 +1,4 @@
+site_name: Geonovum OGC API Testbed
+nav:
+    - Home: index.md
+    - Code: https://github.com/Geonovum/ogc-api-testbed

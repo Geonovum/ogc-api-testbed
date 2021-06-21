@@ -49,8 +49,12 @@
       environment: "{{ postgis_env }}"
       tags: postgis
 
+    - name: "home"
+      shell: "cd {{ services_home }}/home && ./deploy.sh && docker ps"
+      tags: home
+
     - name: "docs"
-      shell: "cd {{ services_home }}/docs && ./deploy.sh && docker ps"
+      shell: "cd {{ my_git_home }}/docs && ./deploy.sh && docker ps"
       tags: docs
 
     - name: "admin"

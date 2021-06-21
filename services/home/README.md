@@ -10,7 +10,7 @@ when committed/pushed.
 A GitHub Action invokes an Ansible Playbook.
 See the following deployment files:
 
-* [GitHub Action](../../.github/workflows/deploy.docs.yml)
+* [GitHub Action](../../.github/workflows/deploy.home.yml)
 * [Ansible Playbook](../../ansible/deploy.yml)
 
 The Ansible Playbook can also be invoked directly.

@@ -3,13 +3,13 @@
 # Options: https://github.com/dawidd6/action-ansible-playbook/blob/master/main.js
 # Author: Just van den Broecke - 2021
 #
-name: Docs Deploy ⚙️
+name: Home Deploy ⚙️
 
-# Trigger only when services/docs subdir changed
+# Trigger only when services/home subdir changed
 on:
   push:
     paths:
-      - 'docs/**'
+      - 'services/home/**'
 
 jobs:
   main:
@@ -28,5 +28,5 @@ jobs:
         inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
         vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
         options: |
-          --tags docs
+          --tags home
           --verbose
