@@ -16,10 +16,10 @@ Open Source products running in this instance. Links to documentation and HOWTOs
 
 | Endpoint | Author | Docs | HOWTO
 | --- | --- | --- | --- 
-| [/pygeoapi](/pygeoapi) | [GeoPython Community](https://geopython.github.io/) | [link](https://docs.pygeoapi.io/en/latest/) | [link](howto/howto_pygeoapi.md)  
-| [/ldproxy](/ldproxy) | Interactive Instruments | [link](https://interactive-instruments.github.io/ldproxy/) | [link](howto/howto_ldproxy.md)  
-| [/geoserver](/geoserver/ogc/features) | GeoServer Community | [link](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) | [link](howto/howto_geoserver.md)  
-| [/qgis*](/qgis/wfs3) | QGIS Community | [link](https://www.qgis.org/) | [link](howto/howto_qgis.md)  
+| [/pygeoapi](/pygeoapi) | [GeoPython Community](https://geopython.github.io/) | [link](https://docs.pygeoapi.io/en/latest/) | [link](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi.md)  
+| [/ldproxy](/ldproxy) | Interactive Instruments | [link](https://interactive-instruments.github.io/ldproxy/) | [link](https://apitestdocs.geonovum.nl/howto/howto_ldproxy.md)  
+| [/geoserver](/geoserver/ogc/features) | GeoServer Community | [link](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) | [link](https://apitestdocs.geonovum.nl/howto/howto_geoserver.md)  
+| [/qgis*](/qgis/wfs3) | QGIS Community | [link](https://www.qgis.org/) | [link](https://apitestdocs.geonovum.nl/howto/howto_qgis.md)  
 | [/pycsw/csw.py](/pycsw/csw.py/collections/metadata:main) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pycsw.org/en/latest/index.html) | [HOWTO](howto/howto_pycsw.md) 
 
 
@@ -38,9 +38,9 @@ These are services for administration and maintenance.
 
 | Endpoint | What / Author | Docs | HOWTO
 | --- | --- | --- | --- 
-| [PGAdmin](/pgadmin) | Manage PostgreSQL Data | PGAdmin Community | [link](https://www.pgadmin.org/) | [link](howto/howto_pgadmin.md)  
-| [Portainer](/portainer/) | Visual Docker Manager | Docker | [link](https://www.portainer.io/) | [link](howto/howto_portainer.md)  
-| [GeoHealthCheck](/ghc) | OGC Services Monitor | [GeoPython Community](https://geopython.github.io)  | [link](https://geohealthcheck.org) | [link](howto/howto_ghc.md)  
+| [PGAdmin](/pgadmin) | Manage PostgreSQL Data | PGAdmin Community | [link](https://www.pgadmin.org/) | [link](https://apitestdocs.geonovum.nl/howto/howto_pgadmin.md)  
+| [Portainer](/portainer/) | Visual Docker Manager | Docker | [link](https://www.portainer.io/) | [link](https://apitestdocs.geonovum.nl/howto/howto_portainer.md)  
+| [GeoHealthCheck](/ghc) | OGC Services Monitor | [GeoPython Community](https://geopython.github.io)  | [link](https://geohealthcheck.org) | [link](https://apitestdocs.geonovum.nl/howto/howto_ghc.md)  
 
 # Links
 
