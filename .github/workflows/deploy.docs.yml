@@ -27,4 +27,5 @@ jobs:
           pip install mkdocs
 
       - name: Deploy 📦
+        working-directory: ./docs
         run: mkdocs gh-deploy --force -m 'update website'
