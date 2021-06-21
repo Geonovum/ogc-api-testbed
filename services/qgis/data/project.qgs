@@ -20,7 +20,7 @@
   </projectCrs>
   <layer-tree-group>
     <customproperties/>
-    <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" id="ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3" name="ProtectedSite" legend_exp="" patch_size="-1,-1" providerKey="postgres" expanded="0" source="dbname='gis' host=postgis port=5432 sslmode=allow authcfg=7149dg3 key='id' srid=0 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;ProtectedSite&quot; (geom)">
+    <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" id="ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3" name="ProtectedSite" legend_exp="" patch_size="-1,-1" providerKey="postgres" expanded="0" source="dbname='gis' host=apitestbed.geonovum.nl port=5432 sslmode=allow authcfg=7149dg3 key='id' srid=0 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;ProtectedSite&quot; (geom)">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" id="OpenStreetMap_11c5af9e_6efe_4f48_b4ff_bfd188963d00" name="OpenStreetMap" legend_exp="" patch_size="-1,-1" providerKey="wms" expanded="1" source="crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=http://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png">
