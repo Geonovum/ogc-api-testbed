@@ -1,7 +1,22 @@
 site_name: Geonovum OGC API Testbed
+site_description: "Geonovum OGC API Testbed"
+site_author: Geonovum
+copyright: "&copy; 2021 Geonovum"
+site_url: https://apitestdocs.geonovum.nl
+repo_url: https://github.com/Geonovum/ogc-api-testbed
+docs_dir: docs
 nav:
     - Home: index.md
     - Howto: howto/index.md
     - Setup: setup/index.md
     - Results: results/index.md
     - Code: https://github.com/Geonovum/ogc-api-testbed
+
+use_directory_urls: true
+
+#theme:
+#    name: null
+#    custom_dir: pygeoapi.io-theme
+
+plugins:
+    - search

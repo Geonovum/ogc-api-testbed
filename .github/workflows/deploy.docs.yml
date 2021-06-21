@@ -1,6 +1,4 @@
-# Ansible workflow for single service deployment.
-# Uses: https://github.com/dawidd6/action-ansible-playbook
-# Options: https://github.com/dawidd6/action-ansible-playbook/blob/master/main.js
+# Workflow to build and deploy docs on GitHub Pages.
 # Author: Just van den Broecke - 2021
 #
 name: Docs Deploy ⚙️
@@ -12,21 +10,21 @@ on:
       - 'docs/**'
 
 jobs:
-  main:
-    runs-on: ubuntu-20.04
-
+  build:
+    name: Build and Deploy Documentation
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout ✅
-      uses: actions/checkout@v2
+      - name: Checkout ✅
+         uses: actions/checkout@v2
 
-    - name: Run playbook ⚙
-      uses: dawidd6/action-ansible-playbook@v2
-      with:
-        playbook: deploy.yml
-        directory: ./ansible
-        key: ${{secrets.ANSIBLE_SSH_PRIVATE_KEY}}
-        inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
-        vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
-        options: |
-          --tags docs
-          --verbose
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install requirements 📦
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs
+
+      - name: Deploy 📦
+        run: mkdocs gh-deploy --force -m 'update website'

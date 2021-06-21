@@ -53,10 +53,6 @@
       shell: "cd {{ services_home }}/home && ./deploy.sh && docker ps"
       tags: home
 
-    - name: "docs"
-      shell: "cd {{ my_git_home }}/docs && ./deploy.sh && docker ps"
-      tags: docs
-
     - name: "admin"
       shell: "cd {{ services_home }}/admin && ./deploy.sh && docker ps"
       environment: "{{ geohealthcheck_env }}"
