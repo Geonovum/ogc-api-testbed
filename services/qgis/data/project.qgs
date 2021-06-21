@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="3.18.1-Zürich" saveUser="geocat" saveDateTime="2021-06-21T00:39:55" saveUserFull="Paul">
+<qgis saveDateTime="2021-06-21T23:40:13" projectname="" saveUserFull="Paul" version="3.18.1-Zürich" saveUser="geocat">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -20,20 +20,19 @@
   </projectCrs>
   <layer-tree-group>
     <customproperties/>
-    <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" id="ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3" name="ProtectedSite" legend_exp="" patch_size="-1,-1" providerKey="postgres" expanded="0" source="dbname='gis' host=apitestbed.geonovum.nl port=5432 sslmode=allow authcfg=7149dg3 key='id' srid=0 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;ProtectedSite&quot; (geom)">
+    <layer-tree-group checked="Qt::Checked" expanded="1" name="foo">
       <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer checked="Qt::Checked" legend_split_behavior="0" id="OpenStreetMap_11c5af9e_6efe_4f48_b4ff_bfd188963d00" name="OpenStreetMap" legend_exp="" patch_size="-1,-1" providerKey="wms" expanded="1" source="crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=http://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png">
-      <customproperties/>
-    </layer-tree-layer>
+      <layer-tree-layer checked="Qt::Checked" expanded="0" legend_split_behavior="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" name="cbs-grenzen" source="./vlak.gpkg|layername=vlak" id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
     <custom-order enabled="0">
-      <item>OpenStreetMap_11c5af9e_6efe_4f48_b4ff_bfd188963d00</item>
-      <item>ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3</item>
+      <item>vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73</item>
     </custom-order>
   </layer-tree-group>
-  <snapping-settings enabled="0" unit="1" self-snapping="0" tolerance="12" type="1" intersection-snapping="0" mode="2" minScale="0" maxScale="0" scaleDependencyMode="0">
+  <snapping-settings maxScale="0" mode="2" self-snapping="0" minScale="0" enabled="0" type="1" unit="1" intersection-snapping="0" tolerance="12" scaleDependencyMode="0">
     <individual-layer-settings>
-      <layer-setting enabled="0" id="ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3" tolerance="12" type="1" units="1" minScale="0" maxScale="0"/>
+      <layer-setting maxScale="0" minScale="0" enabled="0" type="1" units="1" tolerance="12" id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
@@ -41,10 +40,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>5.38435397909956404</xmin>
-      <ymin>52.06874883583149938</ymin>
-      <xmax>5.42755753190291568</xmax>
-      <ymax>52.11192134565997947</ymax>
+      <xmin>4.58231235927709246</xmin>
+      <ymin>52.36874683780235529</ymin>
+      <xmax>4.60904055939135926</xmax>
+      <ymax>52.38809919917972735</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -65,26 +64,23 @@
   </mapcanvas>
   <projectModels/>
   <legend updateDrawingOrder="true">
-    <legendlayer checked="Qt::Checked" drawingOrder="-1" showFeatureCount="0" name="ProtectedSite" open="false">
-      <filegroup hidden="false" open="false">
-        <legendlayerfile isInOverview="0" layerid="ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3" visible="1"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer checked="Qt::Checked" drawingOrder="-1" showFeatureCount="0" name="OpenStreetMap" open="true">
-      <filegroup hidden="false" open="true">
-        <legendlayerfile isInOverview="0" layerid="OpenStreetMap_11c5af9e_6efe_4f48_b4ff_bfd188963d00" visible="1"/>
-      </filegroup>
-    </legendlayer>
+    <legendgroup open="true" checked="Qt::Checked" name="foo">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" showFeatureCount="0" name="cbs-grenzen">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile visible="1" isInOverview="0" layerid="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
   </legend>
   <mapViewDocks/>
   <mapViewDocks3D/>
   <mapcanvas annotationsVisible="1" name="mAreaCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>2.13383330188257503</xmin>
-      <ymin>2.10685534114968576</ymin>
-      <xmax>54.73401564636854744</xmax>
-      <ymax>54.66924296662286054</ymax>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -103,7 +99,7 @@
     <rendermaptile>0</rendermaptile>
     <expressionContextScope/>
   </mapcanvas>
-  <main-annotation-layer autoRefreshEnabled="0" refreshOnNotifyEnabled="0" autoRefreshTime="0" refreshOnNotifyMessage="" type="annotation">
+  <main-annotation-layer autoRefreshEnabled="0" type="annotation" refreshOnNotifyMessage="" autoRefreshTime="0" refreshOnNotifyEnabled="0">
     <id>Annotations_3ca50bc4_fc6d_4b31_9a4f_8d046196d5ec</id>
     <datasource></datasource>
     <keywordList>
@@ -120,7 +116,7 @@
         <description></description>
         <projectionacronym></projectionacronym>
         <ellipsoidacronym></ellipsoidacronym>
-        <geographicflag>true</geographicflag>
+        <geographicflag>false</geographicflag>
       </spatialrefsys>
     </srs>
     <resourceMetadata>
@@ -143,7 +139,7 @@
           <description></description>
           <projectionacronym></projectionacronym>
           <ellipsoidacronym></ellipsoidacronym>
-          <geographicflag>true</geographicflag>
+          <geographicflag>false</geographicflag>
         </spatialrefsys>
       </crs>
       <extent/>
@@ -153,132 +149,29 @@
     <blendMode>0</blendMode>
   </main-annotation-layer>
   <projectlayers>
-    <maplayer autoRefreshEnabled="0" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" autoRefreshTime="0" refreshOnNotifyMessage="" type="raster" styleCategories="AllStyleCategories" maxScale="0" minScale="1e+08">
+    <maplayer type="vector" readOnly="0" simplifyLocal="1" autoRefreshEnabled="0" geometry="Polygon" simplifyAlgorithm="0" styleCategories="AllStyleCategories" simplifyDrawingHints="1" labelsEnabled="0" wkbType="MultiPolygon" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" simplifyDrawingTol="1" minScale="100000000" refreshOnNotifyEnabled="0" simplifyMaxScale="1" refreshOnNotifyMessage="" maxScale="0">
       <extent>
-        <xmin>-20037508.34278924390673637</xmin>
-        <ymin>-20037508.34278925508260727</ymin>
-        <xmax>20037508.34278924390673637</xmax>
-        <ymax>20037508.34278924390673637</ymax>
+        <xmin>10425.15602849909919314</xmin>
+        <ymin>306846.19803570199292153</ymin>
+        <xmax>278026.09002850198885426</xmax>
+        <ymax>621876.30003569996915758</ymax>
       </extent>
-      <id>OpenStreetMap_11c5af9e_6efe_4f48_b4ff_bfd188963d00</id>
-      <datasource>crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=http://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png</datasource>
+      <id>vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73</id>
+      <datasource>./vlak.gpkg|layername=vlak</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>OpenStreetMap</layername>
+      <layername>cbs-grenzen</layername>
       <srs>
         <spatialrefsys>
-          <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["unknown"],AREA["World - 85°S to 85°N"],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
-          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs</proj4>
-          <srsid>3857</srsid>
-          <srid>3857</srid>
-          <authid>EPSG:3857</authid>
-          <description>WGS 84 / Pseudo-Mercator</description>
-          <projectionacronym>merc</projectionacronym>
-          <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <resourceMetadata>
-        <identifier>OpenStreetMap tiles</identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type>dataset</type>
-        <title>OpenStreetMap tiles</title>
-        <abstract>OpenStreetMap is built by a community of mappers that contribute and maintain data about roads, trails, cafés, railway stations, and much more, all over the world.</abstract>
-        <links>
-          <link mimeType="" url="https://www.openstreetmap.org/" size="" name="Source" type="WWW:LINK" format="" description=""/>
-        </links>
-        <fees></fees>
-        <rights>Base map and data from OpenStreetMap and OpenStreetMap Foundation (CC-BY-SA). © https://www.openstreetmap.org and contributors.</rights>
-        <license>Open Data Commons Open Database License (ODbL)</license>
-        <license>Creative Commons Attribution-ShareAlike (CC-BY-SA)</license>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <wkt>PROJCRS["WGS 84 / Pseudo-Mercator",BASEGEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["Popular Visualisation Pseudo-Mercator",METHOD["Popular Visualisation Pseudo Mercator",ID["EPSG",1024]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["False easting",0,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["unknown"],AREA["World - 85°S to 85°N"],BBOX[-85.06,-180,85.06,180]],ID["EPSG",3857]]</wkt>
-            <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs</proj4>
-            <srsid>3857</srsid>
-            <srid>3857</srid>
-            <authid>EPSG:3857</authid>
-            <description>WGS 84 / Pseudo-Mercator</description>
-            <projectionacronym>merc</projectionacronym>
-            <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent>
-          <spatial miny="-85.05112877980660357" crs="EPSG:4326" minz="0" dimensions="2" minx="-180" maxy="85.05112877980660357" maxx="180" maxz="0"/>
-        </extent>
-      </resourceMetadata>
-      <provider>wms</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="default">
-        <map-layer-style name="default"/>
-      </map-layer-style-manager>
-      <flags>
-        <Identifiable>1</Identifiable>
-        <Removable>1</Removable>
-        <Searchable>0</Searchable>
-        <Private>0</Private>
-      </flags>
-      <temporal enabled="0" fetchMode="0" mode="0">
-        <fixedRange>
-          <start></start>
-          <end></end>
-        </fixedRange>
-      </temporal>
-      <customproperties>
-        <property value="Undefined" key="identify/format"/>
-        <property value="OpenStreetMap" key="ol_layer_type"/>
-      </customproperties>
-      <pipe>
-        <provider>
-          <resampling enabled="false" maxOversampling="2" zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour"/>
-        </provider>
-        <rasterrenderer nodataColor="" opacity="1" band="1" type="singlebandcolordata" alphaBand="-1">
-          <rasterTransparency/>
-          <minMaxOrigin>
-            <limits>None</limits>
-            <extent>WholeRaster</extent>
-            <statAccuracy>Estimated</statAccuracy>
-            <cumulativeCutLower>0.02</cumulativeCutLower>
-            <cumulativeCutUpper>0.98</cumulativeCutUpper>
-            <stdDevFactor>2</stdDevFactor>
-          </minMaxOrigin>
-        </rasterrenderer>
-        <brightnesscontrast contrast="0" brightness="0" gamma="1"/>
-        <huesaturation colorizeRed="255" saturation="0" colorizeGreen="128" colorizeBlue="128" grayscaleMode="0" colorizeStrength="100" colorizeOn="0"/>
-        <rasterresampler maxOversampling="2"/>
-        <resamplingStage>resamplingFilter</resamplingStage>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer geometry="Point" simplifyAlgorithm="0" maxScale="0" refreshOnNotifyMessage="" readOnly="0" type="vector" labelsEnabled="1" autoRefreshTime="0" styleCategories="AllStyleCategories" simplifyDrawingTol="1" minScale="100000000" autoRefreshEnabled="0" wkbType="Point" refreshOnNotifyEnabled="0" simplifyDrawingHints="0" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1">
-      <extent>
-        <xmin>3.36242419149896987</xmin>
-        <ymin>50.7516615888459981</ymin>
-        <xmax>7.21543177939966984</xmax>
-        <ymax>53.54140406727790236</ymax>
-      </extent>
-      <id>ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3</id>
-      <datasource>dbname='gis' host=apitestbed.geonovum.nl port=5432 sslmode=allow authcfg=7149dg3 key='id' srid=0 type=Point checkPrimaryKeyUnicity='0' table="public"."ProtectedSite" (geom)</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>ProtectedSite</layername>
-      <srs>
-        <spatialrefsys>
-          <wkt></wkt>
-          <proj4></proj4>
-          <srsid>0</srsid>
-          <srid>0</srid>
-          <authid></authid>
-          <description></description>
-          <projectionacronym></projectionacronym>
-          <ellipsoidacronym></ellipsoidacronym>
+          <wkt>PROJCRS["Amersfoort / RD New",BASEGEOGCRS["Amersfoort",DATUM["Amersfoort",ELLIPSOID["Bessel 1841",6377397.155,299.1528128,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4289]],CONVERSION["RD New",METHOD["Oblique Stereographic",ID["EPSG",9809]],PARAMETER["Latitude of natural origin",52.1561605555556,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",5.38763888888889,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["Scale factor at natural origin",0.9999079,SCALEUNIT["unity",1],ID["EPSG",8805]],PARAMETER["False easting",155000,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",463000,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting (X)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing (Y)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["unknown"],AREA["Netherlands - onshore"],BBOX[50.75,3.2,53.7,7.22]],ID["EPSG",28992]]</wkt>
+          <proj4>+proj=sterea +lat_0=52.1561605555556 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +towgs84=565.2369,50.0087,465.658,-0.406857330322398,0.350732676542563,-1.8703473836068,4.0812 +units=m +no_defs</proj4>
+          <srsid>2517</srsid>
+          <srid>28992</srid>
+          <authid>EPSG:28992</authid>
+          <description>Amersfoort / RD New</description>
+          <projectionacronym>sterea</projectionacronym>
+          <ellipsoidacronym>EPSG:7004</ellipsoidacronym>
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
@@ -315,7 +208,7 @@
           </spatialrefsys>
         </crs>
         <extent>
-          <spatial miny="0" crs="" minz="0" dimensions="2" minx="0" maxy="0" maxx="0" maxz="0"/>
+          <spatial maxz="0" miny="0" crs="" minx="0" minz="0" maxx="0" dimensions="2" maxy="0"/>
           <temporal>
             <period>
               <start></start>
@@ -324,7 +217,7 @@
           </temporal>
         </extent>
       </resourceMetadata>
-      <provider encoding="">postgres</provider>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
       <dataDependencies/>
@@ -339,362 +232,301 @@
         <Searchable>1</Searchable>
         <Private>0</Private>
       </flags>
-      <temporal enabled="0" fixedDuration="0" accumulate="0" endExpression="" startField="" endField="" startExpression="" durationUnit="min" durationField="" mode="0">
+      <temporal mode="0" durationField="" startField="" enabled="0" endField="" startExpression="" endExpression="" durationUnit="min" fixedDuration="0" accumulate="0">
         <fixedRange>
           <start></start>
           <end></end>
         </fixedRange>
       </temporal>
-      <renderer-v2 attr="siteProtectionClassification" symbollevels="0" type="categorizedSymbol" enableorderby="0" forceraster="0">
-        <categories>
-          <category label="cultural" value="cultural" render="true" symbol="0"/>
-          <category label="" value="" render="true" symbol="1"/>
-          <category label="" value="" render="true" symbol="2"/>
-        </categories>
+      <renderer-v2 type="graduatedSymbol" forceraster="0" graduatedMethod="GraduatedColor" enableorderby="0" symbollevels="0" attr="AANT_MAN">
+        <ranges>
+          <range label="-99999999 - 355" lower="-99999999.000000000000000" upper="355.000000000000000" render="true" symbol="0"/>
+          <range label="355 - 975" lower="355.000000000000000" upper="975.000000000000000" render="true" symbol="1"/>
+          <range label="975 - 2221" lower="975.000000000000000" upper="2220.999999999999091" render="true" symbol="2"/>
+          <range label="2221 - 4355" lower="2220.999999999999091" upper="4355.000000000000000" render="true" symbol="3"/>
+          <range label="4355 - 72795" lower="4355.000000000000000" upper="72795.000000000000000" render="true" symbol="4"/>
+        </ranges>
         <symbols>
-          <symbol alpha="1" name="0" type="marker" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="0">
             <data_defined_properties>
               <Option type="Map">
-                <Option value="" name="name" type="QString"/>
+                <Option type="QString" value="" name="name"/>
                 <Option name="properties"/>
-                <Option value="collection" name="type" type="QString"/>
+                <Option type="QString" value="collection" name="type"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
               <Option type="Map">
-                <Option value="0" name="angle" type="QString"/>
-                <Option value="117,42,223,255" name="color" type="QString"/>
-                <Option value="1" name="horizontal_anchor_point" type="QString"/>
-                <Option value="bevel" name="joinstyle" type="QString"/>
-                <Option value="circle" name="name" type="QString"/>
-                <Option value="0,0" name="offset" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
-                <Option value="MM" name="offset_unit" type="QString"/>
-                <Option value="35,35,35,255" name="outline_color" type="QString"/>
-                <Option value="solid" name="outline_style" type="QString"/>
-                <Option value="0" name="outline_width" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale" type="QString"/>
-                <Option value="MM" name="outline_width_unit" type="QString"/>
-                <Option value="diameter" name="scale_method" type="QString"/>
-                <Option value="2" name="size" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="size_map_unit_scale" type="QString"/>
-                <Option value="MM" name="size_unit" type="QString"/>
-                <Option value="1" name="vertical_anchor_point" type="QString"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
+                <Option type="QString" value="255,255,255,255" name="color"/>
+                <Option type="QString" value="bevel" name="joinstyle"/>
+                <Option type="QString" value="0,0" name="offset"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
+                <Option type="QString" value="MM" name="offset_unit"/>
+                <Option type="QString" value="35,35,35,255" name="outline_color"/>
+                <Option type="QString" value="solid" name="outline_style"/>
+                <Option type="QString" value="0.26" name="outline_width"/>
+                <Option type="QString" value="MM" name="outline_width_unit"/>
+                <Option type="QString" value="solid" name="style"/>
               </Option>
-              <prop v="0" k="angle"/>
-              <prop v="117,42,223,255" k="color"/>
-              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="255,255,255,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
-              <prop v="circle" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
               <prop v="solid" k="outline_style"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="0.26" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
-              <prop v="diameter" k="scale_method"/>
-              <prop v="2" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MM" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+              <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" name="1" type="marker" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="1">
             <data_defined_properties>
               <Option type="Map">
-                <Option value="" name="name" type="QString"/>
+                <Option type="QString" value="" name="name"/>
                 <Option name="properties"/>
-                <Option value="collection" name="type" type="QString"/>
+                <Option type="QString" value="collection" name="type"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
               <Option type="Map">
-                <Option value="0" name="angle" type="QString"/>
-                <Option value="203,99,25,255" name="color" type="QString"/>
-                <Option value="1" name="horizontal_anchor_point" type="QString"/>
-                <Option value="bevel" name="joinstyle" type="QString"/>
-                <Option value="circle" name="name" type="QString"/>
-                <Option value="0,0" name="offset" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
-                <Option value="MM" name="offset_unit" type="QString"/>
-                <Option value="35,35,35,255" name="outline_color" type="QString"/>
-                <Option value="solid" name="outline_style" type="QString"/>
-                <Option value="0" name="outline_width" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale" type="QString"/>
-                <Option value="MM" name="outline_width_unit" type="QString"/>
-                <Option value="diameter" name="scale_method" type="QString"/>
-                <Option value="2" name="size" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="size_map_unit_scale" type="QString"/>
-                <Option value="MM" name="size_unit" type="QString"/>
-                <Option value="1" name="vertical_anchor_point" type="QString"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
+                <Option type="QString" value="255,191,191,255" name="color"/>
+                <Option type="QString" value="bevel" name="joinstyle"/>
+                <Option type="QString" value="0,0" name="offset"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
+                <Option type="QString" value="MM" name="offset_unit"/>
+                <Option type="QString" value="35,35,35,255" name="outline_color"/>
+                <Option type="QString" value="solid" name="outline_style"/>
+                <Option type="QString" value="0.26" name="outline_width"/>
+                <Option type="QString" value="MM" name="outline_width_unit"/>
+                <Option type="QString" value="solid" name="style"/>
               </Option>
-              <prop v="0" k="angle"/>
-              <prop v="203,99,25,255" k="color"/>
-              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="255,191,191,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
-              <prop v="circle" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
               <prop v="solid" k="outline_style"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="0.26" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
-              <prop v="diameter" k="scale_method"/>
-              <prop v="2" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MM" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+              <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" name="2" type="marker" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="2">
             <data_defined_properties>
               <Option type="Map">
-                <Option value="" name="name" type="QString"/>
+                <Option type="QString" value="" name="name"/>
                 <Option name="properties"/>
-                <Option value="collection" name="type" type="QString"/>
+                <Option type="QString" value="collection" name="type"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
               <Option type="Map">
-                <Option value="0" name="angle" type="QString"/>
-                <Option value="67,202,121,255" name="color" type="QString"/>
-                <Option value="1" name="horizontal_anchor_point" type="QString"/>
-                <Option value="bevel" name="joinstyle" type="QString"/>
-                <Option value="circle" name="name" type="QString"/>
-                <Option value="0,0" name="offset" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
-                <Option value="MM" name="offset_unit" type="QString"/>
-                <Option value="35,35,35,255" name="outline_color" type="QString"/>
-                <Option value="solid" name="outline_style" type="QString"/>
-                <Option value="0" name="outline_width" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale" type="QString"/>
-                <Option value="MM" name="outline_width_unit" type="QString"/>
-                <Option value="diameter" name="scale_method" type="QString"/>
-                <Option value="2" name="size" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="size_map_unit_scale" type="QString"/>
-                <Option value="MM" name="size_unit" type="QString"/>
-                <Option value="1" name="vertical_anchor_point" type="QString"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
+                <Option type="QString" value="255,128,128,255" name="color"/>
+                <Option type="QString" value="bevel" name="joinstyle"/>
+                <Option type="QString" value="0,0" name="offset"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
+                <Option type="QString" value="MM" name="offset_unit"/>
+                <Option type="QString" value="35,35,35,255" name="outline_color"/>
+                <Option type="QString" value="solid" name="outline_style"/>
+                <Option type="QString" value="0.26" name="outline_width"/>
+                <Option type="QString" value="MM" name="outline_width_unit"/>
+                <Option type="QString" value="solid" name="style"/>
               </Option>
-              <prop v="0" k="angle"/>
-              <prop v="67,202,121,255" k="color"/>
-              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="255,128,128,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
-              <prop v="circle" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
               <prop v="solid" k="outline_style"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="0.26" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
-              <prop v="diameter" k="scale_method"/>
-              <prop v="2" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MM" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+              <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="3">
+            <data_defined_properties>
+              <Option type="Map">
+                <Option type="QString" value="" name="name"/>
+                <Option name="properties"/>
+                <Option type="QString" value="collection" name="type"/>
+              </Option>
+            </data_defined_properties>
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
+              <Option type="Map">
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
+                <Option type="QString" value="255,64,64,255" name="color"/>
+                <Option type="QString" value="bevel" name="joinstyle"/>
+                <Option type="QString" value="0,0" name="offset"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
+                <Option type="QString" value="MM" name="offset_unit"/>
+                <Option type="QString" value="35,35,35,255" name="outline_color"/>
+                <Option type="QString" value="solid" name="outline_style"/>
+                <Option type="QString" value="0.26" name="outline_width"/>
+                <Option type="QString" value="MM" name="outline_width_unit"/>
+                <Option type="QString" value="solid" name="style"/>
+              </Option>
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="255,64,64,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="4">
+            <data_defined_properties>
+              <Option type="Map">
+                <Option type="QString" value="" name="name"/>
+                <Option name="properties"/>
+                <Option type="QString" value="collection" name="type"/>
+              </Option>
+            </data_defined_properties>
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
+              <Option type="Map">
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
+                <Option type="QString" value="255,0,0,255" name="color"/>
+                <Option type="QString" value="bevel" name="joinstyle"/>
+                <Option type="QString" value="0,0" name="offset"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
+                <Option type="QString" value="MM" name="offset_unit"/>
+                <Option type="QString" value="35,35,35,255" name="outline_color"/>
+                <Option type="QString" value="solid" name="outline_style"/>
+                <Option type="QString" value="0.26" name="outline_width"/>
+                <Option type="QString" value="MM" name="outline_width_unit"/>
+                <Option type="QString" value="solid" name="style"/>
+              </Option>
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="255,0,0,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="solid" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </symbols>
         <source-symbol>
-          <symbol alpha="1" name="0" type="marker" clip_to_extent="1" force_rhr="0">
+          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="0">
             <data_defined_properties>
               <Option type="Map">
-                <Option value="" name="name" type="QString"/>
+                <Option type="QString" value="" name="name"/>
                 <Option name="properties"/>
-                <Option value="collection" name="type" type="QString"/>
+                <Option type="QString" value="collection" name="type"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
               <Option type="Map">
-                <Option value="0" name="angle" type="QString"/>
-                <Option value="231,113,72,255" name="color" type="QString"/>
-                <Option value="1" name="horizontal_anchor_point" type="QString"/>
-                <Option value="bevel" name="joinstyle" type="QString"/>
-                <Option value="circle" name="name" type="QString"/>
-                <Option value="0,0" name="offset" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
-                <Option value="MM" name="offset_unit" type="QString"/>
-                <Option value="35,35,35,255" name="outline_color" type="QString"/>
-                <Option value="solid" name="outline_style" type="QString"/>
-                <Option value="0" name="outline_width" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale" type="QString"/>
-                <Option value="MM" name="outline_width_unit" type="QString"/>
-                <Option value="diameter" name="scale_method" type="QString"/>
-                <Option value="2" name="size" type="QString"/>
-                <Option value="3x:0,0,0,0,0,0" name="size_map_unit_scale" type="QString"/>
-                <Option value="MM" name="size_unit" type="QString"/>
-                <Option value="1" name="vertical_anchor_point" type="QString"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
+                <Option type="QString" value="133,182,111,255" name="color"/>
+                <Option type="QString" value="bevel" name="joinstyle"/>
+                <Option type="QString" value="0,0" name="offset"/>
+                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
+                <Option type="QString" value="MM" name="offset_unit"/>
+                <Option type="QString" value="35,35,35,255" name="outline_color"/>
+                <Option type="QString" value="solid" name="outline_style"/>
+                <Option type="QString" value="0.26" name="outline_width"/>
+                <Option type="QString" value="MM" name="outline_width_unit"/>
+                <Option type="QString" value="solid" name="style"/>
               </Option>
-              <prop v="0" k="angle"/>
-              <prop v="231,113,72,255" k="color"/>
-              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="133,182,111,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
-              <prop v="circle" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
               <prop v="35,35,35,255" k="outline_color"/>
               <prop v="solid" k="outline_style"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="0.26" k="outline_width"/>
               <prop v="MM" k="outline_width_unit"/>
-              <prop v="diameter" k="scale_method"/>
-              <prop v="2" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MM" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+              <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </source-symbol>
-        <colorramp name="[source]" type="randomcolors">
-          <Option/>
+        <colorramp type="gradient" name="[source]">
+          <Option type="Map">
+            <Option type="QString" value="255,255,255,255" name="color1"/>
+            <Option type="QString" value="255,0,0,255" name="color2"/>
+            <Option type="QString" value="0" name="discrete"/>
+            <Option type="QString" value="gradient" name="rampType"/>
+          </Option>
+          <prop v="255,255,255,255" k="color1"/>
+          <prop v="255,0,0,255" k="color2"/>
+          <prop v="0" k="discrete"/>
+          <prop v="gradient" k="rampType"/>
         </colorramp>
+        <classificationMethod id="Quantile">
+          <symmetricMode symmetrypoint="0" astride="0" enabled="0"/>
+          <labelFormat trimtrailingzeroes="1" format="%1 - %2" labelprecision="0"/>
+          <parameters>
+            <Option/>
+          </parameters>
+          <extraInformation/>
+        </classificationMethod>
         <rotation/>
         <sizescale/>
       </renderer-v2>
-      <labeling type="simple">
-        <settings calloutType="simple">
-          <text-style fontLetterSpacing="0" textOpacity="1" fontKerning="1" fontSizeMapUnitScale="3x:0,0,0,0,0,0" namedStyle="Regular" textOrientation="horizontal" isExpression="0" fontWordSpacing="0" fontStrikeout="0" fieldName="text" fontSize="10" fontWeight="50" fontItalic="0" blendMode="0" previewBkgrdColor="255,255,255,255" allowHtml="0" fontFamily=".AppleSystemUIFont" fontUnderline="0" fontSizeUnit="Point" multilineHeight="1" useSubstitutions="0" textColor="0,0,0,255" capitalization="0">
-            <text-buffer bufferColor="255,255,255,255" bufferOpacity="1" bufferSize="1" bufferNoFill="1" bufferDraw="0" bufferJoinStyle="128" bufferSizeUnits="MM" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferBlendMode="0"/>
-            <text-mask maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskSizeUnits="MM" maskJoinStyle="128" maskType="0" maskSize="1.5" maskedSymbolLayers="" maskOpacity="1" maskEnabled="0"/>
-            <background shapeJoinStyle="64" shapeSizeY="0" shapeSizeUnit="MM" shapeBorderColor="128,128,128,255" shapeType="0" shapeRadiiUnit="MM" shapeOffsetY="0" shapeOffsetX="0" shapeBorderWidth="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetUnit="MM" shapeDraw="0" shapeOpacity="1" shapeBlendMode="0" shapeRadiiX="0" shapeSizeX="0" shapeFillColor="255,255,255,255" shapeRotation="0" shapeSizeType="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeSVGFile="" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRotationType="0" shapeBorderWidthUnit="MM">
-              <symbol alpha="1" name="markerSymbol" type="marker" clip_to_extent="1" force_rhr="0">
-                <data_defined_properties>
-                  <Option type="Map">
-                    <Option value="" name="name" type="QString"/>
-                    <Option name="properties"/>
-                    <Option value="collection" name="type" type="QString"/>
-                  </Option>
-                </data_defined_properties>
-                <layer enabled="1" locked="0" pass="0" class="SimpleMarker">
-                  <Option type="Map">
-                    <Option value="0" name="angle" type="QString"/>
-                    <Option value="225,89,137,255" name="color" type="QString"/>
-                    <Option value="1" name="horizontal_anchor_point" type="QString"/>
-                    <Option value="bevel" name="joinstyle" type="QString"/>
-                    <Option value="circle" name="name" type="QString"/>
-                    <Option value="0,0" name="offset" type="QString"/>
-                    <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
-                    <Option value="MM" name="offset_unit" type="QString"/>
-                    <Option value="35,35,35,255" name="outline_color" type="QString"/>
-                    <Option value="solid" name="outline_style" type="QString"/>
-                    <Option value="0" name="outline_width" type="QString"/>
-                    <Option value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale" type="QString"/>
-                    <Option value="MM" name="outline_width_unit" type="QString"/>
-                    <Option value="diameter" name="scale_method" type="QString"/>
-                    <Option value="2" name="size" type="QString"/>
-                    <Option value="3x:0,0,0,0,0,0" name="size_map_unit_scale" type="QString"/>
-                    <Option value="MM" name="size_unit" type="QString"/>
-                    <Option value="1" name="vertical_anchor_point" type="QString"/>
-                  </Option>
-                  <prop v="0" k="angle"/>
-                  <prop v="225,89,137,255" k="color"/>
-                  <prop v="1" k="horizontal_anchor_point"/>
-                  <prop v="bevel" k="joinstyle"/>
-                  <prop v="circle" k="name"/>
-                  <prop v="0,0" k="offset"/>
-                  <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-                  <prop v="MM" k="offset_unit"/>
-                  <prop v="35,35,35,255" k="outline_color"/>
-                  <prop v="solid" k="outline_style"/>
-                  <prop v="0" k="outline_width"/>
-                  <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-                  <prop v="MM" k="outline_width_unit"/>
-                  <prop v="diameter" k="scale_method"/>
-                  <prop v="2" k="size"/>
-                  <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-                  <prop v="MM" k="size_unit"/>
-                  <prop v="1" k="vertical_anchor_point"/>
-                  <data_defined_properties>
-                    <Option type="Map">
-                      <Option value="" name="name" type="QString"/>
-                      <Option name="properties"/>
-                      <Option value="collection" name="type" type="QString"/>
-                    </Option>
-                  </data_defined_properties>
-                </layer>
-              </symbol>
-            </background>
-            <shadow shadowOffsetGlobal="1" shadowRadiusAlphaOnly="0" shadowRadius="1.5" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowBlendMode="6" shadowOpacity="0.69999999999999996" shadowScale="100" shadowRadiusUnit="MM" shadowColor="0,0,0,255" shadowOffsetAngle="135" shadowOffsetDist="1" shadowUnder="0" shadowDraw="0" shadowOffsetUnit="MM"/>
-            <dd_properties>
-              <Option type="Map">
-                <Option value="" name="name" type="QString"/>
-                <Option name="properties"/>
-                <Option value="collection" name="type" type="QString"/>
-              </Option>
-            </dd_properties>
-            <substitutions/>
-          </text-style>
-          <text-format wrapChar="" reverseDirectionSymbol="0" formatNumbers="0" decimals="3" useMaxLineLengthForAutoWrap="1" leftDirectionSymbol="&lt;" addDirectionSymbol="0" plussign="0" multilineAlign="3" rightDirectionSymbol=">" placeDirectionSymbol="0" autoWrapLength="0"/>
-          <placement labelOffsetMapUnitScale="3x:0,0,0,0,0,0" offsetUnits="MM" distMapUnitScale="3x:0,0,0,0,0,0" overrunDistanceUnit="MM" xOffset="0" fitInPolygonOnly="0" layerType="PointGeometry" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" overrunDistance="0" distUnits="MM" dist="0" priority="5" placementFlags="10" lineAnchorPercent="0.5" geometryGeneratorType="PointGeometry" preserveRotation="1" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" repeatDistanceUnits="MM" maxCurvedCharAngleOut="-25" quadOffset="4" geometryGenerator="" maxCurvedCharAngleIn="25" centroidWhole="0" offsetType="0" centroidInside="0" geometryGeneratorEnabled="0" rotationAngle="0" placement="0" repeatDistance="0" lineAnchorType="0" polygonPlacementFlags="2" yOffset="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR"/>
-          <rendering obstacleFactor="1" displayAll="0" labelPerPart="0" obstacleType="1" scaleVisibility="0" fontMaxPixelSize="10000" upsidedownLabels="0" zIndex="0" limitNumLabels="0" maxNumLabels="2000" scaleMax="0" obstacle="1" mergeLines="0" fontLimitPixelSize="0" drawLabels="1" fontMinPixelSize="3" minFeatureSize="0" scaleMin="0"/>
-          <dd_properties>
-            <Option type="Map">
-              <Option value="" name="name" type="QString"/>
-              <Option name="properties"/>
-              <Option value="collection" name="type" type="QString"/>
-            </Option>
-          </dd_properties>
-          <callout type="simple">
-            <Option type="Map">
-              <Option value="pole_of_inaccessibility" name="anchorPoint" type="QString"/>
-              <Option name="ddProperties" type="Map">
-                <Option value="" name="name" type="QString"/>
-                <Option name="properties"/>
-                <Option value="collection" name="type" type="QString"/>
-              </Option>
-              <Option value="false" name="drawToAllParts" type="bool"/>
-              <Option value="0" name="enabled" type="QString"/>
-              <Option value="point_on_exterior" name="labelAnchorPoint" type="QString"/>
-              <Option value="&lt;symbol alpha=&quot;1&quot; name=&quot;symbol&quot; type=&quot;line&quot; clip_to_extent=&quot;1&quot; force_rhr=&quot;0&quot;>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option value=&quot;&quot; name=&quot;name&quot; type=&quot;QString&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option value=&quot;collection&quot; name=&quot;type&quot; type=&quot;QString&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;layer enabled=&quot;1&quot; locked=&quot;0&quot; pass=&quot;0&quot; class=&quot;SimpleLine&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option value=&quot;0&quot; name=&quot;align_dash_pattern&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;square&quot; name=&quot;capstyle&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;5;2&quot; name=&quot;customdash&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;customdash_map_unit_scale&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;MM&quot; name=&quot;customdash_unit&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;0&quot; name=&quot;dash_pattern_offset&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;dash_pattern_offset_map_unit_scale&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;MM&quot; name=&quot;dash_pattern_offset_unit&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;0&quot; name=&quot;draw_inside_polygon&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;bevel&quot; name=&quot;joinstyle&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;60,60,60,255&quot; name=&quot;line_color&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;solid&quot; name=&quot;line_style&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;0.3&quot; name=&quot;line_width&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;MM&quot; name=&quot;line_width_unit&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;0&quot; name=&quot;offset&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;offset_map_unit_scale&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;MM&quot; name=&quot;offset_unit&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;0&quot; name=&quot;ring_filter&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;0&quot; name=&quot;tweak_dash_pattern_on_corners&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;0&quot; name=&quot;use_custom_dash&quot; type=&quot;QString&quot;/>&lt;Option value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;width_map_unit_scale&quot; type=&quot;QString&quot;/>&lt;/Option>&lt;prop v=&quot;0&quot; k=&quot;align_dash_pattern&quot;/>&lt;prop v=&quot;square&quot; k=&quot;capstyle&quot;/>&lt;prop v=&quot;5;2&quot; k=&quot;customdash&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;customdash_map_unit_scale&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;customdash_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;dash_pattern_offset&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;dash_pattern_offset_map_unit_scale&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;dash_pattern_offset_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;draw_inside_polygon&quot;/>&lt;prop v=&quot;bevel&quot; k=&quot;joinstyle&quot;/>&lt;prop v=&quot;60,60,60,255&quot; k=&quot;line_color&quot;/>&lt;prop v=&quot;solid&quot; k=&quot;line_style&quot;/>&lt;prop v=&quot;0.3&quot; k=&quot;line_width&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;line_width_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;offset&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;offset_map_unit_scale&quot;/>&lt;prop v=&quot;MM&quot; k=&quot;offset_unit&quot;/>&lt;prop v=&quot;0&quot; k=&quot;ring_filter&quot;/>&lt;prop v=&quot;0&quot; k=&quot;tweak_dash_pattern_on_corners&quot;/>&lt;prop v=&quot;0&quot; k=&quot;use_custom_dash&quot;/>&lt;prop v=&quot;3x:0,0,0,0,0,0&quot; k=&quot;width_map_unit_scale&quot;/>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option value=&quot;&quot; name=&quot;name&quot; type=&quot;QString&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option value=&quot;collection&quot; name=&quot;type&quot; type=&quot;QString&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>" name="lineSymbol" type="QString"/>
-              <Option value="0" name="minLength" type="double"/>
-              <Option value="3x:0,0,0,0,0,0" name="minLengthMapUnitScale" type="QString"/>
-              <Option value="MM" name="minLengthUnit" type="QString"/>
-              <Option value="0" name="offsetFromAnchor" type="double"/>
-              <Option value="3x:0,0,0,0,0,0" name="offsetFromAnchorMapUnitScale" type="QString"/>
-              <Option value="MM" name="offsetFromAnchorUnit" type="QString"/>
-              <Option value="0" name="offsetFromLabel" type="double"/>
-              <Option value="3x:0,0,0,0,0,0" name="offsetFromLabelMapUnitScale" type="QString"/>
-              <Option value="MM" name="offsetFromLabelUnit" type="QString"/>
-            </Option>
-          </callout>
-        </settings>
-      </labeling>
       <customproperties>
-        <property value="0" key="embeddedWidgets/count"/>
+        <property key="embeddedWidgets/count" value="0"/>
         <property key="variableNames"/>
         <property key="variableValues"/>
       </customproperties>
@@ -702,40 +534,40 @@
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
       <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-        <DiagramCategory rotationOffset="270" opacity="1" labelPlacementMethod="XHeight" showAxis="1" backgroundAlpha="255" penAlpha="255" scaleBasedVisibility="0" sizeType="MM" lineSizeType="MM" direction="0" backgroundColor="#ffffff" sizeScale="3x:0,0,0,0,0,0" scaleDependency="Area" spacingUnitScale="3x:0,0,0,0,0,0" minScaleDenominator="0" lineSizeScale="3x:0,0,0,0,0,0" width="15" spacing="5" minimumSize="0" diagramOrientation="Up" barWidth="5" height="15" penColor="#000000" spacingUnit="MM" enabled="0" penWidth="0" maxScaleDenominator="1e+08">
-          <fontProperties description=".AppleSystemUIFont,13,-1,5,50,0,0,0,0,0" style=""/>
+        <DiagramCategory spacing="5" penWidth="0" showAxis="1" penAlpha="255" scaleBasedVisibility="0" barWidth="5" maxScaleDenominator="1e+08" direction="0" sizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" labelPlacementMethod="XHeight" width="15" penColor="#000000" lineSizeScale="3x:0,0,0,0,0,0" spacingUnit="MM" height="15" spacingUnitScale="3x:0,0,0,0,0,0" opacity="1" minimumSize="0" minScaleDenominator="0" enabled="0" backgroundColor="#ffffff" diagramOrientation="Up" rotationOffset="270" sizeType="MM" backgroundAlpha="255" scaleDependency="Area">
+          <fontProperties style="" description=".AppleSystemUIFont,13,-1,5,50,0,0,0,0,0"/>
           <axisSymbol>
-            <symbol alpha="1" name="" type="line" clip_to_extent="1" force_rhr="0">
+            <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="line" name="">
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
-              <layer enabled="1" locked="0" pass="0" class="SimpleLine">
+              <layer enabled="1" class="SimpleLine" locked="0" pass="0">
                 <Option type="Map">
-                  <Option value="0" name="align_dash_pattern" type="QString"/>
-                  <Option value="square" name="capstyle" type="QString"/>
-                  <Option value="5;2" name="customdash" type="QString"/>
-                  <Option value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale" type="QString"/>
-                  <Option value="MM" name="customdash_unit" type="QString"/>
-                  <Option value="0" name="dash_pattern_offset" type="QString"/>
-                  <Option value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale" type="QString"/>
-                  <Option value="MM" name="dash_pattern_offset_unit" type="QString"/>
-                  <Option value="0" name="draw_inside_polygon" type="QString"/>
-                  <Option value="bevel" name="joinstyle" type="QString"/>
-                  <Option value="35,35,35,255" name="line_color" type="QString"/>
-                  <Option value="solid" name="line_style" type="QString"/>
-                  <Option value="0.26" name="line_width" type="QString"/>
-                  <Option value="MM" name="line_width_unit" type="QString"/>
-                  <Option value="0" name="offset" type="QString"/>
-                  <Option value="3x:0,0,0,0,0,0" name="offset_map_unit_scale" type="QString"/>
-                  <Option value="MM" name="offset_unit" type="QString"/>
-                  <Option value="0" name="ring_filter" type="QString"/>
-                  <Option value="0" name="tweak_dash_pattern_on_corners" type="QString"/>
-                  <Option value="0" name="use_custom_dash" type="QString"/>
-                  <Option value="3x:0,0,0,0,0,0" name="width_map_unit_scale" type="QString"/>
+                  <Option type="QString" value="0" name="align_dash_pattern"/>
+                  <Option type="QString" value="square" name="capstyle"/>
+                  <Option type="QString" value="5;2" name="customdash"/>
+                  <Option type="QString" value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale"/>
+                  <Option type="QString" value="MM" name="customdash_unit"/>
+                  <Option type="QString" value="0" name="dash_pattern_offset"/>
+                  <Option type="QString" value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale"/>
+                  <Option type="QString" value="MM" name="dash_pattern_offset_unit"/>
+                  <Option type="QString" value="0" name="draw_inside_polygon"/>
+                  <Option type="QString" value="bevel" name="joinstyle"/>
+                  <Option type="QString" value="35,35,35,255" name="line_color"/>
+                  <Option type="QString" value="solid" name="line_style"/>
+                  <Option type="QString" value="0.26" name="line_width"/>
+                  <Option type="QString" value="MM" name="line_width_unit"/>
+                  <Option type="QString" value="0" name="offset"/>
+                  <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
+                  <Option type="QString" value="MM" name="offset_unit"/>
+                  <Option type="QString" value="0" name="ring_filter"/>
+                  <Option type="QString" value="0" name="tweak_dash_pattern_on_corners"/>
+                  <Option type="QString" value="0" name="use_custom_dash"/>
+                  <Option type="QString" value="3x:0,0,0,0,0,0" name="width_map_unit_scale"/>
                 </Option>
                 <prop v="0" k="align_dash_pattern"/>
                 <prop v="square" k="capstyle"/>
@@ -760,9 +592,9 @@
                 <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
                 <data_defined_properties>
                   <Option type="Map">
-                    <Option value="" name="name" type="QString"/>
+                    <Option type="QString" value="" name="name"/>
                     <Option name="properties"/>
-                    <Option value="collection" name="type" type="QString"/>
+                    <Option type="QString" value="collection" name="type"/>
                   </Option>
                 </data_defined_properties>
               </layer>
@@ -770,121 +602,897 @@
           </axisSymbol>
         </DiagramCategory>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings linePlacementFlags="18" dist="0" zIndex="0" showAll="1" placement="0" priority="0" obstacle="0">
+      <DiagramLayerSettings linePlacementFlags="18" dist="0" placement="1" obstacle="0" priority="0" showAll="1" zIndex="0">
         <properties>
           <Option type="Map">
-            <Option value="" name="name" type="QString"/>
+            <Option type="QString" value="" name="name"/>
             <Option name="properties"/>
-            <Option value="collection" name="type" type="QString"/>
+            <Option type="QString" value="collection" name="type"/>
           </Option>
         </properties>
       </DiagramLayerSettings>
       <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
         <activeChecks/>
-        <checkConfiguration/>
+        <checkConfiguration type="Map">
+          <Option type="Map" name="QgsGeometryGapCheck">
+            <Option type="double" value="0" name="allowedGapsBuffer"/>
+            <Option type="bool" value="false" name="allowedGapsEnabled"/>
+            <Option type="QString" value="" name="allowedGapsLayer"/>
+          </Option>
+        </checkConfiguration>
       </geometryOptions>
       <legend type="default-vector"/>
       <referencedLayers/>
       <fieldConfiguration>
-        <field name="id" configurationFlags="None">
+        <field configurationFlags="None" name="fid">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="gml_id" configurationFlags="None">
+        <field configurationFlags="None" name="WK_CODE">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="localId" configurationFlags="None">
-          <editWidget type="Range">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="namespace" configurationFlags="None">
+        <field configurationFlags="None" name="WK_NAAM">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="versionId" configurationFlags="None">
+        <field configurationFlags="None" name="GM_CODE">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="legalFoundationDate" configurationFlags="None">
+        <field configurationFlags="None" name="GM_NAAM">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="percentageUnderDesignation" configurationFlags="None">
-          <editWidget type="Range">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="siteProtectionClassification" configurationFlags="None">
-          <editWidget type="List">
-            <config>
-              <Option/>
-            </config>
-          </editWidget>
-        </field>
-        <field name="language" configurationFlags="None">
+        <field configurationFlags="None" name="IND_WBI">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="nativeness" configurationFlags="None">
+        <field configurationFlags="None" name="WATER">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="nameStatus" configurationFlags="None">
+        <field configurationFlags="None" name="OAD">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="sourceOfName" configurationFlags="None">
+        <field configurationFlags="None" name="STED">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="pronunciation" configurationFlags="None">
+        <field configurationFlags="None" name="AANT_INW">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="text" configurationFlags="None">
+        <field configurationFlags="None" name="AANT_MAN">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field name="script" configurationFlags="None">
+        <field configurationFlags="None" name="AANT_VROUW">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_00_14_JR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_15_24_JR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_25_44_JR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_45_64_JR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_65_EO_JR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_ONGEHUWD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_GEHUWD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_GESCHEID">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_VERWEDUW">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="GEBOO_TOT">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_GEBOO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="STERFT_TOT">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_STERFT">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="BEV_DICHTH">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AANTAL_HH">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_EENP_HH">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_HH_Z_K">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_HH_M_K">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="GEM_HH_GR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_WEST_AL">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_N_W_AL">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_MAROKKO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_ANT_ARU">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_SURINAM">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_TURKIJE">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_OVER_NW">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BED_A">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BED_BF">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BED_GI">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BED_HJ">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BED_KL">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BED_MN">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BED_RU">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BEDV">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="WONINGEN">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="WOZ">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_1GEZW">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_MGEZW">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_WONT2000">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="P_WONV2000">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AO_UIT_TOT">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="WW_UIT_TOT">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="WWB_UITTOT">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_SOZ_OW">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AUTO_TOT">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AUTO_HH">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AUTO_LAND">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="BEDR_AUTO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="MOTOR_2W">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_LFTJ6J">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_LFTO6J">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BST_B">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="A_BST_NB">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_ARTSPR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV1_ARTSPR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV3_ARTSPR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_ARTSPR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_SUPERM">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV1_SUPERM">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV3_SUPERM">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_SUPERM">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_DAGLMD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV1_DAGLMD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV3_DAGLMD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_DAGLMD">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_WARENH">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_WARENH">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV10WARENH">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV20WARENH">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_CAFE">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV1_CAFE">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV3_CAFE">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_CAFE">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_CAFTAR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV1_CAFTAR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV3_CAFTAR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_CAFTAR">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_RESTAU">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV1_RESTAU">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV3_RESTAU">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_RESTAU">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_HOTEL">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_HOTEL">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV10_HOTEL">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV20_HOTEL">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_KDV">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV1_KDV">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV3_KDV">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_KDV">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_BSO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV1_BSO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV3_BSO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_BSO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_BRANDW">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_OPRITH">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_TREINST">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_OVERST">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_ZWEMB">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_IJSBAAN">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_BIBLIO">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_BIOS">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV5_BIOS">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV10_BIOS">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV20_BIOS">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_SAUNA">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_ZONBNK">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AF_ATTRAC">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV10ATTRAC">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV20ATTRAC">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="AV50ATTRAC">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="OPP_TOT">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="OPP_LAND">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="OPP_WATER">
           <editWidget type="TextEdit">
             <config>
               <Option/>
@@ -893,95 +1501,645 @@
         </field>
       </fieldConfiguration>
       <aliases>
-        <alias field="id" name="" index="0"/>
-        <alias field="gml_id" name="" index="1"/>
-        <alias field="localId" name="" index="2"/>
-        <alias field="namespace" name="" index="3"/>
-        <alias field="versionId" name="" index="4"/>
-        <alias field="legalFoundationDate" name="" index="5"/>
-        <alias field="percentageUnderDesignation" name="" index="6"/>
-        <alias field="siteProtectionClassification" name="" index="7"/>
-        <alias field="language" name="" index="8"/>
-        <alias field="nativeness" name="" index="9"/>
-        <alias field="nameStatus" name="" index="10"/>
-        <alias field="sourceOfName" name="" index="11"/>
-        <alias field="pronunciation" name="" index="12"/>
-        <alias field="text" name="" index="13"/>
-        <alias field="script" name="" index="14"/>
+        <alias index="0" name="" field="fid"/>
+        <alias index="1" name="" field="WK_CODE"/>
+        <alias index="2" name="" field="WK_NAAM"/>
+        <alias index="3" name="" field="GM_CODE"/>
+        <alias index="4" name="" field="GM_NAAM"/>
+        <alias index="5" name="" field="IND_WBI"/>
+        <alias index="6" name="" field="WATER"/>
+        <alias index="7" name="" field="OAD"/>
+        <alias index="8" name="" field="STED"/>
+        <alias index="9" name="" field="AANT_INW"/>
+        <alias index="10" name="" field="AANT_MAN"/>
+        <alias index="11" name="" field="AANT_VROUW"/>
+        <alias index="12" name="" field="P_00_14_JR"/>
+        <alias index="13" name="" field="P_15_24_JR"/>
+        <alias index="14" name="" field="P_25_44_JR"/>
+        <alias index="15" name="" field="P_45_64_JR"/>
+        <alias index="16" name="" field="P_65_EO_JR"/>
+        <alias index="17" name="" field="P_ONGEHUWD"/>
+        <alias index="18" name="" field="P_GEHUWD"/>
+        <alias index="19" name="" field="P_GESCHEID"/>
+        <alias index="20" name="" field="P_VERWEDUW"/>
+        <alias index="21" name="" field="GEBOO_TOT"/>
+        <alias index="22" name="" field="P_GEBOO"/>
+        <alias index="23" name="" field="STERFT_TOT"/>
+        <alias index="24" name="" field="P_STERFT"/>
+        <alias index="25" name="" field="BEV_DICHTH"/>
+        <alias index="26" name="" field="AANTAL_HH"/>
+        <alias index="27" name="" field="P_EENP_HH"/>
+        <alias index="28" name="" field="P_HH_Z_K"/>
+        <alias index="29" name="" field="P_HH_M_K"/>
+        <alias index="30" name="" field="GEM_HH_GR"/>
+        <alias index="31" name="" field="P_WEST_AL"/>
+        <alias index="32" name="" field="P_N_W_AL"/>
+        <alias index="33" name="" field="P_MAROKKO"/>
+        <alias index="34" name="" field="P_ANT_ARU"/>
+        <alias index="35" name="" field="P_SURINAM"/>
+        <alias index="36" name="" field="P_TURKIJE"/>
+        <alias index="37" name="" field="P_OVER_NW"/>
+        <alias index="38" name="" field="A_BED_A"/>
+        <alias index="39" name="" field="A_BED_BF"/>
+        <alias index="40" name="" field="A_BED_GI"/>
+        <alias index="41" name="" field="A_BED_HJ"/>
+        <alias index="42" name="" field="A_BED_KL"/>
+        <alias index="43" name="" field="A_BED_MN"/>
+        <alias index="44" name="" field="A_BED_RU"/>
+        <alias index="45" name="" field="A_BEDV"/>
+        <alias index="46" name="" field="WONINGEN"/>
+        <alias index="47" name="" field="WOZ"/>
+        <alias index="48" name="" field="P_1GEZW"/>
+        <alias index="49" name="" field="P_MGEZW"/>
+        <alias index="50" name="" field="P_WONT2000"/>
+        <alias index="51" name="" field="P_WONV2000"/>
+        <alias index="52" name="" field="AO_UIT_TOT"/>
+        <alias index="53" name="" field="WW_UIT_TOT"/>
+        <alias index="54" name="" field="WWB_UITTOT"/>
+        <alias index="55" name="" field="A_SOZ_OW"/>
+        <alias index="56" name="" field="AUTO_TOT"/>
+        <alias index="57" name="" field="AUTO_HH"/>
+        <alias index="58" name="" field="AUTO_LAND"/>
+        <alias index="59" name="" field="BEDR_AUTO"/>
+        <alias index="60" name="" field="MOTOR_2W"/>
+        <alias index="61" name="" field="A_LFTJ6J"/>
+        <alias index="62" name="" field="A_LFTO6J"/>
+        <alias index="63" name="" field="A_BST_B"/>
+        <alias index="64" name="" field="A_BST_NB"/>
+        <alias index="65" name="" field="AF_ARTSPR"/>
+        <alias index="66" name="" field="AV1_ARTSPR"/>
+        <alias index="67" name="" field="AV3_ARTSPR"/>
+        <alias index="68" name="" field="AV5_ARTSPR"/>
+        <alias index="69" name="" field="AF_SUPERM"/>
+        <alias index="70" name="" field="AV1_SUPERM"/>
+        <alias index="71" name="" field="AV3_SUPERM"/>
+        <alias index="72" name="" field="AV5_SUPERM"/>
+        <alias index="73" name="" field="AF_DAGLMD"/>
+        <alias index="74" name="" field="AV1_DAGLMD"/>
+        <alias index="75" name="" field="AV3_DAGLMD"/>
+        <alias index="76" name="" field="AV5_DAGLMD"/>
+        <alias index="77" name="" field="AF_WARENH"/>
+        <alias index="78" name="" field="AV5_WARENH"/>
+        <alias index="79" name="" field="AV10WARENH"/>
+        <alias index="80" name="" field="AV20WARENH"/>
+        <alias index="81" name="" field="AF_CAFE"/>
+        <alias index="82" name="" field="AV1_CAFE"/>
+        <alias index="83" name="" field="AV3_CAFE"/>
+        <alias index="84" name="" field="AV5_CAFE"/>
+        <alias index="85" name="" field="AF_CAFTAR"/>
+        <alias index="86" name="" field="AV1_CAFTAR"/>
+        <alias index="87" name="" field="AV3_CAFTAR"/>
+        <alias index="88" name="" field="AV5_CAFTAR"/>
+        <alias index="89" name="" field="AF_RESTAU"/>
+        <alias index="90" name="" field="AV1_RESTAU"/>
+        <alias index="91" name="" field="AV3_RESTAU"/>
+        <alias index="92" name="" field="AV5_RESTAU"/>
+        <alias index="93" name="" field="AF_HOTEL"/>
+        <alias index="94" name="" field="AV5_HOTEL"/>
+        <alias index="95" name="" field="AV10_HOTEL"/>
+        <alias index="96" name="" field="AV20_HOTEL"/>
+        <alias index="97" name="" field="AF_KDV"/>
+        <alias index="98" name="" field="AV1_KDV"/>
+        <alias index="99" name="" field="AV3_KDV"/>
+        <alias index="100" name="" field="AV5_KDV"/>
+        <alias index="101" name="" field="AF_BSO"/>
+        <alias index="102" name="" field="AV1_BSO"/>
+        <alias index="103" name="" field="AV3_BSO"/>
+        <alias index="104" name="" field="AV5_BSO"/>
+        <alias index="105" name="" field="AF_BRANDW"/>
+        <alias index="106" name="" field="AF_OPRITH"/>
+        <alias index="107" name="" field="AF_TREINST"/>
+        <alias index="108" name="" field="AF_OVERST"/>
+        <alias index="109" name="" field="AF_ZWEMB"/>
+        <alias index="110" name="" field="AF_IJSBAAN"/>
+        <alias index="111" name="" field="AF_BIBLIO"/>
+        <alias index="112" name="" field="AF_BIOS"/>
+        <alias index="113" name="" field="AV5_BIOS"/>
+        <alias index="114" name="" field="AV10_BIOS"/>
+        <alias index="115" name="" field="AV20_BIOS"/>
+        <alias index="116" name="" field="AF_SAUNA"/>
+        <alias index="117" name="" field="AF_ZONBNK"/>
+        <alias index="118" name="" field="AF_ATTRAC"/>
+        <alias index="119" name="" field="AV10ATTRAC"/>
+        <alias index="120" name="" field="AV20ATTRAC"/>
+        <alias index="121" name="" field="AV50ATTRAC"/>
+        <alias index="122" name="" field="OPP_TOT"/>
+        <alias index="123" name="" field="OPP_LAND"/>
+        <alias index="124" name="" field="OPP_WATER"/>
       </aliases>
       <defaults>
-        <default applyOnUpdate="0" field="id" expression=""/>
-        <default applyOnUpdate="0" field="gml_id" expression=""/>
-        <default applyOnUpdate="0" field="localId" expression=""/>
-        <default applyOnUpdate="0" field="namespace" expression=""/>
-        <default applyOnUpdate="0" field="versionId" expression=""/>
-        <default applyOnUpdate="0" field="legalFoundationDate" expression=""/>
-        <default applyOnUpdate="0" field="percentageUnderDesignation" expression=""/>
-        <default applyOnUpdate="0" field="siteProtectionClassification" expression=""/>
-        <default applyOnUpdate="0" field="language" expression=""/>
-        <default applyOnUpdate="0" field="nativeness" expression=""/>
-        <default applyOnUpdate="0" field="nameStatus" expression=""/>
-        <default applyOnUpdate="0" field="sourceOfName" expression=""/>
-        <default applyOnUpdate="0" field="pronunciation" expression=""/>
-        <default applyOnUpdate="0" field="text" expression=""/>
-        <default applyOnUpdate="0" field="script" expression=""/>
+        <default applyOnUpdate="0" expression="" field="fid"/>
+        <default applyOnUpdate="0" expression="" field="WK_CODE"/>
+        <default applyOnUpdate="0" expression="" field="WK_NAAM"/>
+        <default applyOnUpdate="0" expression="" field="GM_CODE"/>
+        <default applyOnUpdate="0" expression="" field="GM_NAAM"/>
+        <default applyOnUpdate="0" expression="" field="IND_WBI"/>
+        <default applyOnUpdate="0" expression="" field="WATER"/>
+        <default applyOnUpdate="0" expression="" field="OAD"/>
+        <default applyOnUpdate="0" expression="" field="STED"/>
+        <default applyOnUpdate="0" expression="" field="AANT_INW"/>
+        <default applyOnUpdate="0" expression="" field="AANT_MAN"/>
+        <default applyOnUpdate="0" expression="" field="AANT_VROUW"/>
+        <default applyOnUpdate="0" expression="" field="P_00_14_JR"/>
+        <default applyOnUpdate="0" expression="" field="P_15_24_JR"/>
+        <default applyOnUpdate="0" expression="" field="P_25_44_JR"/>
+        <default applyOnUpdate="0" expression="" field="P_45_64_JR"/>
+        <default applyOnUpdate="0" expression="" field="P_65_EO_JR"/>
+        <default applyOnUpdate="0" expression="" field="P_ONGEHUWD"/>
+        <default applyOnUpdate="0" expression="" field="P_GEHUWD"/>
+        <default applyOnUpdate="0" expression="" field="P_GESCHEID"/>
+        <default applyOnUpdate="0" expression="" field="P_VERWEDUW"/>
+        <default applyOnUpdate="0" expression="" field="GEBOO_TOT"/>
+        <default applyOnUpdate="0" expression="" field="P_GEBOO"/>
+        <default applyOnUpdate="0" expression="" field="STERFT_TOT"/>
+        <default applyOnUpdate="0" expression="" field="P_STERFT"/>
+        <default applyOnUpdate="0" expression="" field="BEV_DICHTH"/>
+        <default applyOnUpdate="0" expression="" field="AANTAL_HH"/>
+        <default applyOnUpdate="0" expression="" field="P_EENP_HH"/>
+        <default applyOnUpdate="0" expression="" field="P_HH_Z_K"/>
+        <default applyOnUpdate="0" expression="" field="P_HH_M_K"/>
+        <default applyOnUpdate="0" expression="" field="GEM_HH_GR"/>
+        <default applyOnUpdate="0" expression="" field="P_WEST_AL"/>
+        <default applyOnUpdate="0" expression="" field="P_N_W_AL"/>
+        <default applyOnUpdate="0" expression="" field="P_MAROKKO"/>
+        <default applyOnUpdate="0" expression="" field="P_ANT_ARU"/>
+        <default applyOnUpdate="0" expression="" field="P_SURINAM"/>
+        <default applyOnUpdate="0" expression="" field="P_TURKIJE"/>
+        <default applyOnUpdate="0" expression="" field="P_OVER_NW"/>
+        <default applyOnUpdate="0" expression="" field="A_BED_A"/>
+        <default applyOnUpdate="0" expression="" field="A_BED_BF"/>
+        <default applyOnUpdate="0" expression="" field="A_BED_GI"/>
+        <default applyOnUpdate="0" expression="" field="A_BED_HJ"/>
+        <default applyOnUpdate="0" expression="" field="A_BED_KL"/>
+        <default applyOnUpdate="0" expression="" field="A_BED_MN"/>
+        <default applyOnUpdate="0" expression="" field="A_BED_RU"/>
+        <default applyOnUpdate="0" expression="" field="A_BEDV"/>
+        <default applyOnUpdate="0" expression="" field="WONINGEN"/>
+        <default applyOnUpdate="0" expression="" field="WOZ"/>
+        <default applyOnUpdate="0" expression="" field="P_1GEZW"/>
+        <default applyOnUpdate="0" expression="" field="P_MGEZW"/>
+        <default applyOnUpdate="0" expression="" field="P_WONT2000"/>
+        <default applyOnUpdate="0" expression="" field="P_WONV2000"/>
+        <default applyOnUpdate="0" expression="" field="AO_UIT_TOT"/>
+        <default applyOnUpdate="0" expression="" field="WW_UIT_TOT"/>
+        <default applyOnUpdate="0" expression="" field="WWB_UITTOT"/>
+        <default applyOnUpdate="0" expression="" field="A_SOZ_OW"/>
+        <default applyOnUpdate="0" expression="" field="AUTO_TOT"/>
+        <default applyOnUpdate="0" expression="" field="AUTO_HH"/>
+        <default applyOnUpdate="0" expression="" field="AUTO_LAND"/>
+        <default applyOnUpdate="0" expression="" field="BEDR_AUTO"/>
+        <default applyOnUpdate="0" expression="" field="MOTOR_2W"/>
+        <default applyOnUpdate="0" expression="" field="A_LFTJ6J"/>
+        <default applyOnUpdate="0" expression="" field="A_LFTO6J"/>
+        <default applyOnUpdate="0" expression="" field="A_BST_B"/>
+        <default applyOnUpdate="0" expression="" field="A_BST_NB"/>
+        <default applyOnUpdate="0" expression="" field="AF_ARTSPR"/>
+        <default applyOnUpdate="0" expression="" field="AV1_ARTSPR"/>
+        <default applyOnUpdate="0" expression="" field="AV3_ARTSPR"/>
+        <default applyOnUpdate="0" expression="" field="AV5_ARTSPR"/>
+        <default applyOnUpdate="0" expression="" field="AF_SUPERM"/>
+        <default applyOnUpdate="0" expression="" field="AV1_SUPERM"/>
+        <default applyOnUpdate="0" expression="" field="AV3_SUPERM"/>
+        <default applyOnUpdate="0" expression="" field="AV5_SUPERM"/>
+        <default applyOnUpdate="0" expression="" field="AF_DAGLMD"/>
+        <default applyOnUpdate="0" expression="" field="AV1_DAGLMD"/>
+        <default applyOnUpdate="0" expression="" field="AV3_DAGLMD"/>
+        <default applyOnUpdate="0" expression="" field="AV5_DAGLMD"/>
+        <default applyOnUpdate="0" expression="" field="AF_WARENH"/>
+        <default applyOnUpdate="0" expression="" field="AV5_WARENH"/>
+        <default applyOnUpdate="0" expression="" field="AV10WARENH"/>
+        <default applyOnUpdate="0" expression="" field="AV20WARENH"/>
+        <default applyOnUpdate="0" expression="" field="AF_CAFE"/>
+        <default applyOnUpdate="0" expression="" field="AV1_CAFE"/>
+        <default applyOnUpdate="0" expression="" field="AV3_CAFE"/>
+        <default applyOnUpdate="0" expression="" field="AV5_CAFE"/>
+        <default applyOnUpdate="0" expression="" field="AF_CAFTAR"/>
+        <default applyOnUpdate="0" expression="" field="AV1_CAFTAR"/>
+        <default applyOnUpdate="0" expression="" field="AV3_CAFTAR"/>
+        <default applyOnUpdate="0" expression="" field="AV5_CAFTAR"/>
+        <default applyOnUpdate="0" expression="" field="AF_RESTAU"/>
+        <default applyOnUpdate="0" expression="" field="AV1_RESTAU"/>
+        <default applyOnUpdate="0" expression="" field="AV3_RESTAU"/>
+        <default applyOnUpdate="0" expression="" field="AV5_RESTAU"/>
+        <default applyOnUpdate="0" expression="" field="AF_HOTEL"/>
+        <default applyOnUpdate="0" expression="" field="AV5_HOTEL"/>
+        <default applyOnUpdate="0" expression="" field="AV10_HOTEL"/>
+        <default applyOnUpdate="0" expression="" field="AV20_HOTEL"/>
+        <default applyOnUpdate="0" expression="" field="AF_KDV"/>
+        <default applyOnUpdate="0" expression="" field="AV1_KDV"/>
+        <default applyOnUpdate="0" expression="" field="AV3_KDV"/>
+        <default applyOnUpdate="0" expression="" field="AV5_KDV"/>
+        <default applyOnUpdate="0" expression="" field="AF_BSO"/>
+        <default applyOnUpdate="0" expression="" field="AV1_BSO"/>
+        <default applyOnUpdate="0" expression="" field="AV3_BSO"/>
+        <default applyOnUpdate="0" expression="" field="AV5_BSO"/>
+        <default applyOnUpdate="0" expression="" field="AF_BRANDW"/>
+        <default applyOnUpdate="0" expression="" field="AF_OPRITH"/>
+        <default applyOnUpdate="0" expression="" field="AF_TREINST"/>
+        <default applyOnUpdate="0" expression="" field="AF_OVERST"/>
+        <default applyOnUpdate="0" expression="" field="AF_ZWEMB"/>
+        <default applyOnUpdate="0" expression="" field="AF_IJSBAAN"/>
+        <default applyOnUpdate="0" expression="" field="AF_BIBLIO"/>
+        <default applyOnUpdate="0" expression="" field="AF_BIOS"/>
+        <default applyOnUpdate="0" expression="" field="AV5_BIOS"/>
+        <default applyOnUpdate="0" expression="" field="AV10_BIOS"/>
+        <default applyOnUpdate="0" expression="" field="AV20_BIOS"/>
+        <default applyOnUpdate="0" expression="" field="AF_SAUNA"/>
+        <default applyOnUpdate="0" expression="" field="AF_ZONBNK"/>
+        <default applyOnUpdate="0" expression="" field="AF_ATTRAC"/>
+        <default applyOnUpdate="0" expression="" field="AV10ATTRAC"/>
+        <default applyOnUpdate="0" expression="" field="AV20ATTRAC"/>
+        <default applyOnUpdate="0" expression="" field="AV50ATTRAC"/>
+        <default applyOnUpdate="0" expression="" field="OPP_TOT"/>
+        <default applyOnUpdate="0" expression="" field="OPP_LAND"/>
+        <default applyOnUpdate="0" expression="" field="OPP_WATER"/>
       </defaults>
       <constraints>
-        <constraint unique_strength="1" exp_strength="0" constraints="3" field="id" notnull_strength="1"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="gml_id" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="localId" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="namespace" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="versionId" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="legalFoundationDate" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="percentageUnderDesignation" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="siteProtectionClassification" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="language" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="nativeness" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="nameStatus" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="sourceOfName" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="pronunciation" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="text" notnull_strength="0"/>
-        <constraint unique_strength="0" exp_strength="0" constraints="0" field="script" notnull_strength="0"/>
+        <constraint constraints="3" notnull_strength="1" unique_strength="1" field="fid" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WK_CODE" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WK_NAAM" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="GM_CODE" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="GM_NAAM" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="IND_WBI" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WATER" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="OAD" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="STED" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AANT_INW" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AANT_MAN" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AANT_VROUW" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_00_14_JR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_15_24_JR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_25_44_JR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_45_64_JR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_65_EO_JR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_ONGEHUWD" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_GEHUWD" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_GESCHEID" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_VERWEDUW" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="GEBOO_TOT" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_GEBOO" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="STERFT_TOT" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_STERFT" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="BEV_DICHTH" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AANTAL_HH" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_EENP_HH" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_HH_Z_K" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_HH_M_K" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="GEM_HH_GR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_WEST_AL" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_N_W_AL" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_MAROKKO" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_ANT_ARU" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_SURINAM" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_TURKIJE" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_OVER_NW" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_A" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_BF" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_GI" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_HJ" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_KL" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_MN" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_RU" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BEDV" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WONINGEN" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WOZ" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_1GEZW" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_MGEZW" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_WONT2000" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_WONV2000" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AO_UIT_TOT" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WW_UIT_TOT" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WWB_UITTOT" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_SOZ_OW" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AUTO_TOT" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AUTO_HH" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AUTO_LAND" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="BEDR_AUTO" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="MOTOR_2W" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_LFTJ6J" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_LFTO6J" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BST_B" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BST_NB" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_ARTSPR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_ARTSPR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_ARTSPR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_ARTSPR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_SUPERM" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_SUPERM" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_SUPERM" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_SUPERM" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_DAGLMD" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_DAGLMD" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_DAGLMD" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_DAGLMD" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_WARENH" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_WARENH" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV10WARENH" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV20WARENH" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_CAFE" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_CAFE" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_CAFE" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_CAFE" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_CAFTAR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_CAFTAR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_CAFTAR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_CAFTAR" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_RESTAU" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_RESTAU" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_RESTAU" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_RESTAU" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_HOTEL" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_HOTEL" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV10_HOTEL" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV20_HOTEL" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_KDV" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_KDV" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_KDV" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_KDV" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_BSO" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_BSO" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_BSO" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_BSO" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_BRANDW" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_OPRITH" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_TREINST" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_OVERST" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_ZWEMB" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_IJSBAAN" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_BIBLIO" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_BIOS" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_BIOS" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV10_BIOS" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV20_BIOS" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_SAUNA" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_ZONBNK" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_ATTRAC" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV10ATTRAC" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV20ATTRAC" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV50ATTRAC" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="OPP_TOT" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="OPP_LAND" exp_strength="0"/>
+        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="OPP_WATER" exp_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint desc="" field="id" exp=""/>
-        <constraint desc="" field="gml_id" exp=""/>
-        <constraint desc="" field="localId" exp=""/>
-        <constraint desc="" field="namespace" exp=""/>
-        <constraint desc="" field="versionId" exp=""/>
-        <constraint desc="" field="legalFoundationDate" exp=""/>
-        <constraint desc="" field="percentageUnderDesignation" exp=""/>
-        <constraint desc="" field="siteProtectionClassification" exp=""/>
-        <constraint desc="" field="language" exp=""/>
-        <constraint desc="" field="nativeness" exp=""/>
-        <constraint desc="" field="nameStatus" exp=""/>
-        <constraint desc="" field="sourceOfName" exp=""/>
-        <constraint desc="" field="pronunciation" exp=""/>
-        <constraint desc="" field="text" exp=""/>
-        <constraint desc="" field="script" exp=""/>
+        <constraint exp="" field="fid" desc=""/>
+        <constraint exp="" field="WK_CODE" desc=""/>
+        <constraint exp="" field="WK_NAAM" desc=""/>
+        <constraint exp="" field="GM_CODE" desc=""/>
+        <constraint exp="" field="GM_NAAM" desc=""/>
+        <constraint exp="" field="IND_WBI" desc=""/>
+        <constraint exp="" field="WATER" desc=""/>
+        <constraint exp="" field="OAD" desc=""/>
+        <constraint exp="" field="STED" desc=""/>
+        <constraint exp="" field="AANT_INW" desc=""/>
+        <constraint exp="" field="AANT_MAN" desc=""/>
+        <constraint exp="" field="AANT_VROUW" desc=""/>
+        <constraint exp="" field="P_00_14_JR" desc=""/>
+        <constraint exp="" field="P_15_24_JR" desc=""/>
+        <constraint exp="" field="P_25_44_JR" desc=""/>
+        <constraint exp="" field="P_45_64_JR" desc=""/>
+        <constraint exp="" field="P_65_EO_JR" desc=""/>
+        <constraint exp="" field="P_ONGEHUWD" desc=""/>
+        <constraint exp="" field="P_GEHUWD" desc=""/>
+        <constraint exp="" field="P_GESCHEID" desc=""/>
+        <constraint exp="" field="P_VERWEDUW" desc=""/>
+        <constraint exp="" field="GEBOO_TOT" desc=""/>
+        <constraint exp="" field="P_GEBOO" desc=""/>
+        <constraint exp="" field="STERFT_TOT" desc=""/>
+        <constraint exp="" field="P_STERFT" desc=""/>
+        <constraint exp="" field="BEV_DICHTH" desc=""/>
+        <constraint exp="" field="AANTAL_HH" desc=""/>
+        <constraint exp="" field="P_EENP_HH" desc=""/>
+        <constraint exp="" field="P_HH_Z_K" desc=""/>
+        <constraint exp="" field="P_HH_M_K" desc=""/>
+        <constraint exp="" field="GEM_HH_GR" desc=""/>
+        <constraint exp="" field="P_WEST_AL" desc=""/>
+        <constraint exp="" field="P_N_W_AL" desc=""/>
+        <constraint exp="" field="P_MAROKKO" desc=""/>
+        <constraint exp="" field="P_ANT_ARU" desc=""/>
+        <constraint exp="" field="P_SURINAM" desc=""/>
+        <constraint exp="" field="P_TURKIJE" desc=""/>
+        <constraint exp="" field="P_OVER_NW" desc=""/>
+        <constraint exp="" field="A_BED_A" desc=""/>
+        <constraint exp="" field="A_BED_BF" desc=""/>
+        <constraint exp="" field="A_BED_GI" desc=""/>
+        <constraint exp="" field="A_BED_HJ" desc=""/>
+        <constraint exp="" field="A_BED_KL" desc=""/>
+        <constraint exp="" field="A_BED_MN" desc=""/>
+        <constraint exp="" field="A_BED_RU" desc=""/>
+        <constraint exp="" field="A_BEDV" desc=""/>
+        <constraint exp="" field="WONINGEN" desc=""/>
+        <constraint exp="" field="WOZ" desc=""/>
+        <constraint exp="" field="P_1GEZW" desc=""/>
+        <constraint exp="" field="P_MGEZW" desc=""/>
+        <constraint exp="" field="P_WONT2000" desc=""/>
+        <constraint exp="" field="P_WONV2000" desc=""/>
+        <constraint exp="" field="AO_UIT_TOT" desc=""/>
+        <constraint exp="" field="WW_UIT_TOT" desc=""/>
+        <constraint exp="" field="WWB_UITTOT" desc=""/>
+        <constraint exp="" field="A_SOZ_OW" desc=""/>
+        <constraint exp="" field="AUTO_TOT" desc=""/>
+        <constraint exp="" field="AUTO_HH" desc=""/>
+        <constraint exp="" field="AUTO_LAND" desc=""/>
+        <constraint exp="" field="BEDR_AUTO" desc=""/>
+        <constraint exp="" field="MOTOR_2W" desc=""/>
+        <constraint exp="" field="A_LFTJ6J" desc=""/>
+        <constraint exp="" field="A_LFTO6J" desc=""/>
+        <constraint exp="" field="A_BST_B" desc=""/>
+        <constraint exp="" field="A_BST_NB" desc=""/>
+        <constraint exp="" field="AF_ARTSPR" desc=""/>
+        <constraint exp="" field="AV1_ARTSPR" desc=""/>
+        <constraint exp="" field="AV3_ARTSPR" desc=""/>
+        <constraint exp="" field="AV5_ARTSPR" desc=""/>
+        <constraint exp="" field="AF_SUPERM" desc=""/>
+        <constraint exp="" field="AV1_SUPERM" desc=""/>
+        <constraint exp="" field="AV3_SUPERM" desc=""/>
+        <constraint exp="" field="AV5_SUPERM" desc=""/>
+        <constraint exp="" field="AF_DAGLMD" desc=""/>
+        <constraint exp="" field="AV1_DAGLMD" desc=""/>
+        <constraint exp="" field="AV3_DAGLMD" desc=""/>
+        <constraint exp="" field="AV5_DAGLMD" desc=""/>
+        <constraint exp="" field="AF_WARENH" desc=""/>
+        <constraint exp="" field="AV5_WARENH" desc=""/>
+        <constraint exp="" field="AV10WARENH" desc=""/>
+        <constraint exp="" field="AV20WARENH" desc=""/>
+        <constraint exp="" field="AF_CAFE" desc=""/>
+        <constraint exp="" field="AV1_CAFE" desc=""/>
+        <constraint exp="" field="AV3_CAFE" desc=""/>
+        <constraint exp="" field="AV5_CAFE" desc=""/>
+        <constraint exp="" field="AF_CAFTAR" desc=""/>
+        <constraint exp="" field="AV1_CAFTAR" desc=""/>
+        <constraint exp="" field="AV3_CAFTAR" desc=""/>
+        <constraint exp="" field="AV5_CAFTAR" desc=""/>
+        <constraint exp="" field="AF_RESTAU" desc=""/>
+        <constraint exp="" field="AV1_RESTAU" desc=""/>
+        <constraint exp="" field="AV3_RESTAU" desc=""/>
+        <constraint exp="" field="AV5_RESTAU" desc=""/>
+        <constraint exp="" field="AF_HOTEL" desc=""/>
+        <constraint exp="" field="AV5_HOTEL" desc=""/>
+        <constraint exp="" field="AV10_HOTEL" desc=""/>
+        <constraint exp="" field="AV20_HOTEL" desc=""/>
+        <constraint exp="" field="AF_KDV" desc=""/>
+        <constraint exp="" field="AV1_KDV" desc=""/>
+        <constraint exp="" field="AV3_KDV" desc=""/>
+        <constraint exp="" field="AV5_KDV" desc=""/>
+        <constraint exp="" field="AF_BSO" desc=""/>
+        <constraint exp="" field="AV1_BSO" desc=""/>
+        <constraint exp="" field="AV3_BSO" desc=""/>
+        <constraint exp="" field="AV5_BSO" desc=""/>
+        <constraint exp="" field="AF_BRANDW" desc=""/>
+        <constraint exp="" field="AF_OPRITH" desc=""/>
+        <constraint exp="" field="AF_TREINST" desc=""/>
+        <constraint exp="" field="AF_OVERST" desc=""/>
+        <constraint exp="" field="AF_ZWEMB" desc=""/>
+        <constraint exp="" field="AF_IJSBAAN" desc=""/>
+        <constraint exp="" field="AF_BIBLIO" desc=""/>
+        <constraint exp="" field="AF_BIOS" desc=""/>
+        <constraint exp="" field="AV5_BIOS" desc=""/>
+        <constraint exp="" field="AV10_BIOS" desc=""/>
+        <constraint exp="" field="AV20_BIOS" desc=""/>
+        <constraint exp="" field="AF_SAUNA" desc=""/>
+        <constraint exp="" field="AF_ZONBNK" desc=""/>
+        <constraint exp="" field="AF_ATTRAC" desc=""/>
+        <constraint exp="" field="AV10ATTRAC" desc=""/>
+        <constraint exp="" field="AV20ATTRAC" desc=""/>
+        <constraint exp="" field="AV50ATTRAC" desc=""/>
+        <constraint exp="" field="OPP_TOT" desc=""/>
+        <constraint exp="" field="OPP_LAND" desc=""/>
+        <constraint exp="" field="OPP_WATER" desc=""/>
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
-        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
         <columns>
-          <column name="id" type="field" hidden="0" width="-1"/>
-          <column name="gml_id" type="field" hidden="0" width="-1"/>
-          <column name="localId" type="field" hidden="0" width="-1"/>
-          <column name="namespace" type="field" hidden="0" width="-1"/>
-          <column name="versionId" type="field" hidden="0" width="-1"/>
-          <column name="legalFoundationDate" type="field" hidden="0" width="-1"/>
-          <column name="percentageUnderDesignation" type="field" hidden="0" width="-1"/>
-          <column name="siteProtectionClassification" type="field" hidden="0" width="-1"/>
-          <column name="language" type="field" hidden="0" width="-1"/>
-          <column name="nativeness" type="field" hidden="0" width="-1"/>
-          <column name="nameStatus" type="field" hidden="0" width="-1"/>
-          <column name="sourceOfName" type="field" hidden="0" width="-1"/>
-          <column name="pronunciation" type="field" hidden="0" width="-1"/>
-          <column name="text" type="field" hidden="0" width="-1"/>
-          <column name="script" type="field" hidden="0" width="-1"/>
-          <column type="actions" hidden="1" width="-1"/>
+          <column width="-1" type="field" hidden="0" name="fid"/>
+          <column width="-1" type="field" hidden="0" name="WK_CODE"/>
+          <column width="-1" type="field" hidden="0" name="WK_NAAM"/>
+          <column width="-1" type="field" hidden="0" name="GM_CODE"/>
+          <column width="-1" type="field" hidden="0" name="GM_NAAM"/>
+          <column width="-1" type="field" hidden="0" name="IND_WBI"/>
+          <column width="-1" type="field" hidden="0" name="WATER"/>
+          <column width="-1" type="field" hidden="0" name="OAD"/>
+          <column width="-1" type="field" hidden="0" name="STED"/>
+          <column width="-1" type="field" hidden="0" name="AANT_INW"/>
+          <column width="-1" type="field" hidden="0" name="AANT_MAN"/>
+          <column width="-1" type="field" hidden="0" name="AANT_VROUW"/>
+          <column width="-1" type="field" hidden="0" name="P_00_14_JR"/>
+          <column width="-1" type="field" hidden="0" name="P_15_24_JR"/>
+          <column width="-1" type="field" hidden="0" name="P_25_44_JR"/>
+          <column width="-1" type="field" hidden="0" name="P_45_64_JR"/>
+          <column width="-1" type="field" hidden="0" name="P_65_EO_JR"/>
+          <column width="-1" type="field" hidden="0" name="P_ONGEHUWD"/>
+          <column width="-1" type="field" hidden="0" name="P_GEHUWD"/>
+          <column width="-1" type="field" hidden="0" name="P_GESCHEID"/>
+          <column width="-1" type="field" hidden="0" name="P_VERWEDUW"/>
+          <column width="-1" type="field" hidden="0" name="GEBOO_TOT"/>
+          <column width="-1" type="field" hidden="0" name="P_GEBOO"/>
+          <column width="-1" type="field" hidden="0" name="STERFT_TOT"/>
+          <column width="-1" type="field" hidden="0" name="P_STERFT"/>
+          <column width="-1" type="field" hidden="0" name="BEV_DICHTH"/>
+          <column width="-1" type="field" hidden="0" name="AANTAL_HH"/>
+          <column width="-1" type="field" hidden="0" name="P_EENP_HH"/>
+          <column width="-1" type="field" hidden="0" name="P_HH_Z_K"/>
+          <column width="-1" type="field" hidden="0" name="P_HH_M_K"/>
+          <column width="-1" type="field" hidden="0" name="GEM_HH_GR"/>
+          <column width="-1" type="field" hidden="0" name="P_WEST_AL"/>
+          <column width="-1" type="field" hidden="0" name="P_N_W_AL"/>
+          <column width="-1" type="field" hidden="0" name="P_MAROKKO"/>
+          <column width="-1" type="field" hidden="0" name="P_ANT_ARU"/>
+          <column width="-1" type="field" hidden="0" name="P_SURINAM"/>
+          <column width="-1" type="field" hidden="0" name="P_TURKIJE"/>
+          <column width="-1" type="field" hidden="0" name="P_OVER_NW"/>
+          <column width="-1" type="field" hidden="0" name="A_BED_A"/>
+          <column width="-1" type="field" hidden="0" name="A_BED_BF"/>
+          <column width="-1" type="field" hidden="0" name="A_BED_GI"/>
+          <column width="-1" type="field" hidden="0" name="A_BED_HJ"/>
+          <column width="-1" type="field" hidden="0" name="A_BED_KL"/>
+          <column width="-1" type="field" hidden="0" name="A_BED_MN"/>
+          <column width="-1" type="field" hidden="0" name="A_BED_RU"/>
+          <column width="-1" type="field" hidden="0" name="A_BEDV"/>
+          <column width="-1" type="field" hidden="0" name="WONINGEN"/>
+          <column width="-1" type="field" hidden="0" name="WOZ"/>
+          <column width="-1" type="field" hidden="0" name="P_1GEZW"/>
+          <column width="-1" type="field" hidden="0" name="P_MGEZW"/>
+          <column width="-1" type="field" hidden="0" name="P_WONT2000"/>
+          <column width="-1" type="field" hidden="0" name="P_WONV2000"/>
+          <column width="-1" type="field" hidden="0" name="AO_UIT_TOT"/>
+          <column width="-1" type="field" hidden="0" name="WW_UIT_TOT"/>
+          <column width="-1" type="field" hidden="0" name="WWB_UITTOT"/>
+          <column width="-1" type="field" hidden="0" name="A_SOZ_OW"/>
+          <column width="-1" type="field" hidden="0" name="AUTO_TOT"/>
+          <column width="-1" type="field" hidden="0" name="AUTO_HH"/>
+          <column width="-1" type="field" hidden="0" name="AUTO_LAND"/>
+          <column width="-1" type="field" hidden="0" name="BEDR_AUTO"/>
+          <column width="-1" type="field" hidden="0" name="MOTOR_2W"/>
+          <column width="-1" type="field" hidden="0" name="A_LFTJ6J"/>
+          <column width="-1" type="field" hidden="0" name="A_LFTO6J"/>
+          <column width="-1" type="field" hidden="0" name="A_BST_B"/>
+          <column width="-1" type="field" hidden="0" name="A_BST_NB"/>
+          <column width="-1" type="field" hidden="0" name="AF_ARTSPR"/>
+          <column width="-1" type="field" hidden="0" name="AV1_ARTSPR"/>
+          <column width="-1" type="field" hidden="0" name="AV3_ARTSPR"/>
+          <column width="-1" type="field" hidden="0" name="AV5_ARTSPR"/>
+          <column width="-1" type="field" hidden="0" name="AF_SUPERM"/>
+          <column width="-1" type="field" hidden="0" name="AV1_SUPERM"/>
+          <column width="-1" type="field" hidden="0" name="AV3_SUPERM"/>
+          <column width="-1" type="field" hidden="0" name="AV5_SUPERM"/>
+          <column width="-1" type="field" hidden="0" name="AF_DAGLMD"/>
+          <column width="-1" type="field" hidden="0" name="AV1_DAGLMD"/>
+          <column width="-1" type="field" hidden="0" name="AV3_DAGLMD"/>
+          <column width="-1" type="field" hidden="0" name="AV5_DAGLMD"/>
+          <column width="-1" type="field" hidden="0" name="AF_WARENH"/>
+          <column width="-1" type="field" hidden="0" name="AV5_WARENH"/>
+          <column width="-1" type="field" hidden="0" name="AV10WARENH"/>
+          <column width="-1" type="field" hidden="0" name="AV20WARENH"/>
+          <column width="-1" type="field" hidden="0" name="AF_CAFE"/>
+          <column width="-1" type="field" hidden="0" name="AV1_CAFE"/>
+          <column width="-1" type="field" hidden="0" name="AV3_CAFE"/>
+          <column width="-1" type="field" hidden="0" name="AV5_CAFE"/>
+          <column width="-1" type="field" hidden="0" name="AF_CAFTAR"/>
+          <column width="-1" type="field" hidden="0" name="AV1_CAFTAR"/>
+          <column width="-1" type="field" hidden="0" name="AV3_CAFTAR"/>
+          <column width="-1" type="field" hidden="0" name="AV5_CAFTAR"/>
+          <column width="-1" type="field" hidden="0" name="AF_RESTAU"/>
+          <column width="-1" type="field" hidden="0" name="AV1_RESTAU"/>
+          <column width="-1" type="field" hidden="0" name="AV3_RESTAU"/>
+          <column width="-1" type="field" hidden="0" name="AV5_RESTAU"/>
+          <column width="-1" type="field" hidden="0" name="AF_HOTEL"/>
+          <column width="-1" type="field" hidden="0" name="AV5_HOTEL"/>
+          <column width="-1" type="field" hidden="0" name="AV10_HOTEL"/>
+          <column width="-1" type="field" hidden="0" name="AV20_HOTEL"/>
+          <column width="-1" type="field" hidden="0" name="AF_KDV"/>
+          <column width="-1" type="field" hidden="0" name="AV1_KDV"/>
+          <column width="-1" type="field" hidden="0" name="AV3_KDV"/>
+          <column width="-1" type="field" hidden="0" name="AV5_KDV"/>
+          <column width="-1" type="field" hidden="0" name="AF_BSO"/>
+          <column width="-1" type="field" hidden="0" name="AV1_BSO"/>
+          <column width="-1" type="field" hidden="0" name="AV3_BSO"/>
+          <column width="-1" type="field" hidden="0" name="AV5_BSO"/>
+          <column width="-1" type="field" hidden="0" name="AF_BRANDW"/>
+          <column width="-1" type="field" hidden="0" name="AF_OPRITH"/>
+          <column width="-1" type="field" hidden="0" name="AF_TREINST"/>
+          <column width="-1" type="field" hidden="0" name="AF_OVERST"/>
+          <column width="-1" type="field" hidden="0" name="AF_ZWEMB"/>
+          <column width="-1" type="field" hidden="0" name="AF_IJSBAAN"/>
+          <column width="-1" type="field" hidden="0" name="AF_BIBLIO"/>
+          <column width="-1" type="field" hidden="0" name="AF_BIOS"/>
+          <column width="-1" type="field" hidden="0" name="AV5_BIOS"/>
+          <column width="-1" type="field" hidden="0" name="AV10_BIOS"/>
+          <column width="-1" type="field" hidden="0" name="AV20_BIOS"/>
+          <column width="-1" type="field" hidden="0" name="AF_SAUNA"/>
+          <column width="-1" type="field" hidden="0" name="AF_ZONBNK"/>
+          <column width="-1" type="field" hidden="0" name="AF_ATTRAC"/>
+          <column width="-1" type="field" hidden="0" name="AV10ATTRAC"/>
+          <column width="-1" type="field" hidden="0" name="AV20ATTRAC"/>
+          <column width="-1" type="field" hidden="0" name="AV50ATTRAC"/>
+          <column width="-1" type="field" hidden="0" name="OPP_TOT"/>
+          <column width="-1" type="field" hidden="0" name="OPP_LAND"/>
+          <column width="-1" type="field" hidden="0" name="OPP_WATER"/>
+          <column width="-1" type="actions" hidden="1"/>
         </columns>
       </attributetableconfig>
       <conditionalstyles>
@@ -1013,48 +2171,267 @@ def my_form_open(dialog, layer, feature):
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
       <editable>
-        <field editable="1" name="gml_id"/>
-        <field editable="1" name="id"/>
-        <field editable="1" name="language"/>
-        <field editable="1" name="legalFoundationDate"/>
-        <field editable="1" name="localId"/>
-        <field editable="1" name="nameStatus"/>
-        <field editable="1" name="namespace"/>
-        <field editable="1" name="nativeness"/>
-        <field editable="1" name="percentageUnderDesignation"/>
-        <field editable="1" name="pronunciation"/>
-        <field editable="1" name="script"/>
-        <field editable="1" name="siteProtectionClassification"/>
-        <field editable="1" name="sourceOfName"/>
-        <field editable="1" name="text"/>
-        <field editable="1" name="versionId"/>
+        <field editable="1" name="AANTAL_HH"/>
+        <field editable="1" name="AANT_INW"/>
+        <field editable="1" name="AANT_MAN"/>
+        <field editable="1" name="AANT_VROUW"/>
+        <field editable="1" name="AF_ARTSPR"/>
+        <field editable="1" name="AF_ATTRAC"/>
+        <field editable="1" name="AF_BIBLIO"/>
+        <field editable="1" name="AF_BIOS"/>
+        <field editable="1" name="AF_BRANDW"/>
+        <field editable="1" name="AF_BSO"/>
+        <field editable="1" name="AF_CAFE"/>
+        <field editable="1" name="AF_CAFTAR"/>
+        <field editable="1" name="AF_DAGLMD"/>
+        <field editable="1" name="AF_HOTEL"/>
+        <field editable="1" name="AF_IJSBAAN"/>
+        <field editable="1" name="AF_KDV"/>
+        <field editable="1" name="AF_OPRITH"/>
+        <field editable="1" name="AF_OVERST"/>
+        <field editable="1" name="AF_RESTAU"/>
+        <field editable="1" name="AF_SAUNA"/>
+        <field editable="1" name="AF_SUPERM"/>
+        <field editable="1" name="AF_TREINST"/>
+        <field editable="1" name="AF_WARENH"/>
+        <field editable="1" name="AF_ZONBNK"/>
+        <field editable="1" name="AF_ZWEMB"/>
+        <field editable="1" name="AO_UIT_TOT"/>
+        <field editable="1" name="AUTO_HH"/>
+        <field editable="1" name="AUTO_LAND"/>
+        <field editable="1" name="AUTO_TOT"/>
+        <field editable="1" name="AV10ATTRAC"/>
+        <field editable="1" name="AV10WARENH"/>
+        <field editable="1" name="AV10_BIOS"/>
+        <field editable="1" name="AV10_HOTEL"/>
+        <field editable="1" name="AV1_ARTSPR"/>
+        <field editable="1" name="AV1_BSO"/>
+        <field editable="1" name="AV1_CAFE"/>
+        <field editable="1" name="AV1_CAFTAR"/>
+        <field editable="1" name="AV1_DAGLMD"/>
+        <field editable="1" name="AV1_KDV"/>
+        <field editable="1" name="AV1_RESTAU"/>
+        <field editable="1" name="AV1_SUPERM"/>
+        <field editable="1" name="AV20ATTRAC"/>
+        <field editable="1" name="AV20WARENH"/>
+        <field editable="1" name="AV20_BIOS"/>
+        <field editable="1" name="AV20_HOTEL"/>
+        <field editable="1" name="AV3_ARTSPR"/>
+        <field editable="1" name="AV3_BSO"/>
+        <field editable="1" name="AV3_CAFE"/>
+        <field editable="1" name="AV3_CAFTAR"/>
+        <field editable="1" name="AV3_DAGLMD"/>
+        <field editable="1" name="AV3_KDV"/>
+        <field editable="1" name="AV3_RESTAU"/>
+        <field editable="1" name="AV3_SUPERM"/>
+        <field editable="1" name="AV50ATTRAC"/>
+        <field editable="1" name="AV5_ARTSPR"/>
+        <field editable="1" name="AV5_BIOS"/>
+        <field editable="1" name="AV5_BSO"/>
+        <field editable="1" name="AV5_CAFE"/>
+        <field editable="1" name="AV5_CAFTAR"/>
+        <field editable="1" name="AV5_DAGLMD"/>
+        <field editable="1" name="AV5_HOTEL"/>
+        <field editable="1" name="AV5_KDV"/>
+        <field editable="1" name="AV5_RESTAU"/>
+        <field editable="1" name="AV5_SUPERM"/>
+        <field editable="1" name="AV5_WARENH"/>
+        <field editable="1" name="A_BEDV"/>
+        <field editable="1" name="A_BED_A"/>
+        <field editable="1" name="A_BED_BF"/>
+        <field editable="1" name="A_BED_GI"/>
+        <field editable="1" name="A_BED_HJ"/>
+        <field editable="1" name="A_BED_KL"/>
+        <field editable="1" name="A_BED_MN"/>
+        <field editable="1" name="A_BED_RU"/>
+        <field editable="1" name="A_BST_B"/>
+        <field editable="1" name="A_BST_NB"/>
+        <field editable="1" name="A_LFTJ6J"/>
+        <field editable="1" name="A_LFTO6J"/>
+        <field editable="1" name="A_SOZ_OW"/>
+        <field editable="1" name="BEDR_AUTO"/>
+        <field editable="1" name="BEV_DICHTH"/>
+        <field editable="1" name="GEBOO_TOT"/>
+        <field editable="1" name="GEM_HH_GR"/>
+        <field editable="1" name="GM_CODE"/>
+        <field editable="1" name="GM_NAAM"/>
+        <field editable="1" name="IND_WBI"/>
+        <field editable="1" name="MOTOR_2W"/>
+        <field editable="1" name="OAD"/>
+        <field editable="1" name="OPP_LAND"/>
+        <field editable="1" name="OPP_TOT"/>
+        <field editable="1" name="OPP_WATER"/>
+        <field editable="1" name="P_00_14_JR"/>
+        <field editable="1" name="P_15_24_JR"/>
+        <field editable="1" name="P_1GEZW"/>
+        <field editable="1" name="P_25_44_JR"/>
+        <field editable="1" name="P_45_64_JR"/>
+        <field editable="1" name="P_65_EO_JR"/>
+        <field editable="1" name="P_ANT_ARU"/>
+        <field editable="1" name="P_EENP_HH"/>
+        <field editable="1" name="P_GEBOO"/>
+        <field editable="1" name="P_GEHUWD"/>
+        <field editable="1" name="P_GESCHEID"/>
+        <field editable="1" name="P_HH_M_K"/>
+        <field editable="1" name="P_HH_Z_K"/>
+        <field editable="1" name="P_MAROKKO"/>
+        <field editable="1" name="P_MGEZW"/>
+        <field editable="1" name="P_N_W_AL"/>
+        <field editable="1" name="P_ONGEHUWD"/>
+        <field editable="1" name="P_OVER_NW"/>
+        <field editable="1" name="P_STERFT"/>
+        <field editable="1" name="P_SURINAM"/>
+        <field editable="1" name="P_TURKIJE"/>
+        <field editable="1" name="P_VERWEDUW"/>
+        <field editable="1" name="P_WEST_AL"/>
+        <field editable="1" name="P_WONT2000"/>
+        <field editable="1" name="P_WONV2000"/>
+        <field editable="1" name="STED"/>
+        <field editable="1" name="STERFT_TOT"/>
+        <field editable="1" name="WATER"/>
+        <field editable="1" name="WK_CODE"/>
+        <field editable="1" name="WK_NAAM"/>
+        <field editable="1" name="WONINGEN"/>
+        <field editable="1" name="WOZ"/>
+        <field editable="1" name="WWB_UITTOT"/>
+        <field editable="1" name="WW_UIT_TOT"/>
+        <field editable="1" name="fid"/>
       </editable>
       <labelOnTop>
-        <field name="gml_id" labelOnTop="0"/>
-        <field name="id" labelOnTop="0"/>
-        <field name="language" labelOnTop="0"/>
-        <field name="legalFoundationDate" labelOnTop="0"/>
-        <field name="localId" labelOnTop="0"/>
-        <field name="nameStatus" labelOnTop="0"/>
-        <field name="namespace" labelOnTop="0"/>
-        <field name="nativeness" labelOnTop="0"/>
-        <field name="percentageUnderDesignation" labelOnTop="0"/>
-        <field name="pronunciation" labelOnTop="0"/>
-        <field name="script" labelOnTop="0"/>
-        <field name="siteProtectionClassification" labelOnTop="0"/>
-        <field name="sourceOfName" labelOnTop="0"/>
-        <field name="text" labelOnTop="0"/>
-        <field name="versionId" labelOnTop="0"/>
+        <field labelOnTop="0" name="AANTAL_HH"/>
+        <field labelOnTop="0" name="AANT_INW"/>
+        <field labelOnTop="0" name="AANT_MAN"/>
+        <field labelOnTop="0" name="AANT_VROUW"/>
+        <field labelOnTop="0" name="AF_ARTSPR"/>
+        <field labelOnTop="0" name="AF_ATTRAC"/>
+        <field labelOnTop="0" name="AF_BIBLIO"/>
+        <field labelOnTop="0" name="AF_BIOS"/>
+        <field labelOnTop="0" name="AF_BRANDW"/>
+        <field labelOnTop="0" name="AF_BSO"/>
+        <field labelOnTop="0" name="AF_CAFE"/>
+        <field labelOnTop="0" name="AF_CAFTAR"/>
+        <field labelOnTop="0" name="AF_DAGLMD"/>
+        <field labelOnTop="0" name="AF_HOTEL"/>
+        <field labelOnTop="0" name="AF_IJSBAAN"/>
+        <field labelOnTop="0" name="AF_KDV"/>
+        <field labelOnTop="0" name="AF_OPRITH"/>
+        <field labelOnTop="0" name="AF_OVERST"/>
+        <field labelOnTop="0" name="AF_RESTAU"/>
+        <field labelOnTop="0" name="AF_SAUNA"/>
+        <field labelOnTop="0" name="AF_SUPERM"/>
+        <field labelOnTop="0" name="AF_TREINST"/>
+        <field labelOnTop="0" name="AF_WARENH"/>
+        <field labelOnTop="0" name="AF_ZONBNK"/>
+        <field labelOnTop="0" name="AF_ZWEMB"/>
+        <field labelOnTop="0" name="AO_UIT_TOT"/>
+        <field labelOnTop="0" name="AUTO_HH"/>
+        <field labelOnTop="0" name="AUTO_LAND"/>
+        <field labelOnTop="0" name="AUTO_TOT"/>
+        <field labelOnTop="0" name="AV10ATTRAC"/>
+        <field labelOnTop="0" name="AV10WARENH"/>
+        <field labelOnTop="0" name="AV10_BIOS"/>
+        <field labelOnTop="0" name="AV10_HOTEL"/>
+        <field labelOnTop="0" name="AV1_ARTSPR"/>
+        <field labelOnTop="0" name="AV1_BSO"/>
+        <field labelOnTop="0" name="AV1_CAFE"/>
+        <field labelOnTop="0" name="AV1_CAFTAR"/>
+        <field labelOnTop="0" name="AV1_DAGLMD"/>
+        <field labelOnTop="0" name="AV1_KDV"/>
+        <field labelOnTop="0" name="AV1_RESTAU"/>
+        <field labelOnTop="0" name="AV1_SUPERM"/>
+        <field labelOnTop="0" name="AV20ATTRAC"/>
+        <field labelOnTop="0" name="AV20WARENH"/>
+        <field labelOnTop="0" name="AV20_BIOS"/>
+        <field labelOnTop="0" name="AV20_HOTEL"/>
+        <field labelOnTop="0" name="AV3_ARTSPR"/>
+        <field labelOnTop="0" name="AV3_BSO"/>
+        <field labelOnTop="0" name="AV3_CAFE"/>
+        <field labelOnTop="0" name="AV3_CAFTAR"/>
+        <field labelOnTop="0" name="AV3_DAGLMD"/>
+        <field labelOnTop="0" name="AV3_KDV"/>
+        <field labelOnTop="0" name="AV3_RESTAU"/>
+        <field labelOnTop="0" name="AV3_SUPERM"/>
+        <field labelOnTop="0" name="AV50ATTRAC"/>
+        <field labelOnTop="0" name="AV5_ARTSPR"/>
+        <field labelOnTop="0" name="AV5_BIOS"/>
+        <field labelOnTop="0" name="AV5_BSO"/>
+        <field labelOnTop="0" name="AV5_CAFE"/>
+        <field labelOnTop="0" name="AV5_CAFTAR"/>
+        <field labelOnTop="0" name="AV5_DAGLMD"/>
+        <field labelOnTop="0" name="AV5_HOTEL"/>
+        <field labelOnTop="0" name="AV5_KDV"/>
+        <field labelOnTop="0" name="AV5_RESTAU"/>
+        <field labelOnTop="0" name="AV5_SUPERM"/>
+        <field labelOnTop="0" name="AV5_WARENH"/>
+        <field labelOnTop="0" name="A_BEDV"/>
+        <field labelOnTop="0" name="A_BED_A"/>
+        <field labelOnTop="0" name="A_BED_BF"/>
+        <field labelOnTop="0" name="A_BED_GI"/>
+        <field labelOnTop="0" name="A_BED_HJ"/>
+        <field labelOnTop="0" name="A_BED_KL"/>
+        <field labelOnTop="0" name="A_BED_MN"/>
+        <field labelOnTop="0" name="A_BED_RU"/>
+        <field labelOnTop="0" name="A_BST_B"/>
+        <field labelOnTop="0" name="A_BST_NB"/>
+        <field labelOnTop="0" name="A_LFTJ6J"/>
+        <field labelOnTop="0" name="A_LFTO6J"/>
+        <field labelOnTop="0" name="A_SOZ_OW"/>
+        <field labelOnTop="0" name="BEDR_AUTO"/>
+        <field labelOnTop="0" name="BEV_DICHTH"/>
+        <field labelOnTop="0" name="GEBOO_TOT"/>
+        <field labelOnTop="0" name="GEM_HH_GR"/>
+        <field labelOnTop="0" name="GM_CODE"/>
+        <field labelOnTop="0" name="GM_NAAM"/>
+        <field labelOnTop="0" name="IND_WBI"/>
+        <field labelOnTop="0" name="MOTOR_2W"/>
+        <field labelOnTop="0" name="OAD"/>
+        <field labelOnTop="0" name="OPP_LAND"/>
+        <field labelOnTop="0" name="OPP_TOT"/>
+        <field labelOnTop="0" name="OPP_WATER"/>
+        <field labelOnTop="0" name="P_00_14_JR"/>
+        <field labelOnTop="0" name="P_15_24_JR"/>
+        <field labelOnTop="0" name="P_1GEZW"/>
+        <field labelOnTop="0" name="P_25_44_JR"/>
+        <field labelOnTop="0" name="P_45_64_JR"/>
+        <field labelOnTop="0" name="P_65_EO_JR"/>
+        <field labelOnTop="0" name="P_ANT_ARU"/>
+        <field labelOnTop="0" name="P_EENP_HH"/>
+        <field labelOnTop="0" name="P_GEBOO"/>
+        <field labelOnTop="0" name="P_GEHUWD"/>
+        <field labelOnTop="0" name="P_GESCHEID"/>
+        <field labelOnTop="0" name="P_HH_M_K"/>
+        <field labelOnTop="0" name="P_HH_Z_K"/>
+        <field labelOnTop="0" name="P_MAROKKO"/>
+        <field labelOnTop="0" name="P_MGEZW"/>
+        <field labelOnTop="0" name="P_N_W_AL"/>
+        <field labelOnTop="0" name="P_ONGEHUWD"/>
+        <field labelOnTop="0" name="P_OVER_NW"/>
+        <field labelOnTop="0" name="P_STERFT"/>
+        <field labelOnTop="0" name="P_SURINAM"/>
+        <field labelOnTop="0" name="P_TURKIJE"/>
+        <field labelOnTop="0" name="P_VERWEDUW"/>
+        <field labelOnTop="0" name="P_WEST_AL"/>
+        <field labelOnTop="0" name="P_WONT2000"/>
+        <field labelOnTop="0" name="P_WONV2000"/>
+        <field labelOnTop="0" name="STED"/>
+        <field labelOnTop="0" name="STERFT_TOT"/>
+        <field labelOnTop="0" name="WATER"/>
+        <field labelOnTop="0" name="WK_CODE"/>
+        <field labelOnTop="0" name="WK_NAAM"/>
+        <field labelOnTop="0" name="WONINGEN"/>
+        <field labelOnTop="0" name="WOZ"/>
+        <field labelOnTop="0" name="WWB_UITTOT"/>
+        <field labelOnTop="0" name="WW_UIT_TOT"/>
+        <field labelOnTop="0" name="fid"/>
       </labelOnTop>
       <dataDefinedFieldProperties/>
       <widgets/>
-      <previewExpression>"namespace"</previewExpression>
+      <previewExpression>"WK_CODE"</previewExpression>
       <mapTip></mapTip>
     </maplayer>
   </projectlayers>
   <layerorder>
-    <layer id="OpenStreetMap_11c5af9e_6efe_4f48_b4ff_bfd188963d00"/>
-    <layer id="ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3"/>
+    <layer id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73"/>
   </layerorder>
   <properties>
     <DefaultStyles>
@@ -1118,16 +2495,18 @@ def my_form_open(dialog, layer, feature):
     <WCSLayers type="QStringList"/>
     <WCSUrl type="QString"></WCSUrl>
     <WFSLayers type="QStringList">
-      <value>Bridges_b5497c98_a12d_4fad_ad02_af42b264aef6</value>
-      <value>Buildings_875f32f9_a0d3_402e_984b_ad0061f50c9f</value>
-      <value>rce_21f09d53_097d_4032_bb21_59bada797bdf</value>
-      <value>rce_vlak_ae7b7bbb_7a0a_414e_a210_49d1ebc60cd5</value>
+      <value>vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73</value>
+      <value>vlak_38fef2ae_80ec_49ad_958a_6dc4d099d3b1</value>
     </WFSLayers>
     <WFSLayersPrecision>
       <Bridges_b5497c98_a12d_4fad_ad02_af42b264aef6 type="int">8</Bridges_b5497c98_a12d_4fad_ad02_af42b264aef6>
       <Buildings_875f32f9_a0d3_402e_984b_ad0061f50c9f type="int">8</Buildings_875f32f9_a0d3_402e_984b_ad0061f50c9f>
+      <ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3 type="int">8</ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3>
       <rce_21f09d53_097d_4032_bb21_59bada797bdf type="int">8</rce_21f09d53_097d_4032_bb21_59bada797bdf>
       <rce_vlak_ae7b7bbb_7a0a_414e_a210_49d1ebc60cd5 type="int">8</rce_vlak_ae7b7bbb_7a0a_414e_a210_49d1ebc60cd5>
+      <vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73 type="int">8</vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73>
+      <vlak_38fef2ae_80ec_49ad_958a_6dc4d099d3b1 type="int">8</vlak_38fef2ae_80ec_49ad_958a_6dc4d099d3b1>
+      <wijk_2015_a1c1776b_ba15_4a6c_880f_c35dfb42bee4 type="int">8</wijk_2015_a1c1776b_ba15_4a6c_880f_c35dfb42bee4>
     </WFSLayersPrecision>
     <WFSTLayers>
       <Delete type="QStringList"/>
@@ -1137,26 +2516,26 @@ def my_form_open(dialog, layer, feature):
     <WFSUrl type="QString"></WFSUrl>
     <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
-    <WMSContactMail type="QString"></WMSContactMail>
-    <WMSContactOrganization type="QString"></WMSContactOrganization>
-    <WMSContactPerson type="QString"></WMSContactPerson>
-    <WMSContactPhone type="QString"></WMSContactPhone>
-    <WMSContactPosition type="QString"></WMSContactPosition>
+    <WMSContactMail type="QString">ff@dd.nl</WMSContactMail>
+    <WMSContactOrganization type="QString">dfgs</WMSContactOrganization>
+    <WMSContactPerson type="QString">dfgd</WMSContactPerson>
+    <WMSContactPhone type="QString">34635645</WMSContactPhone>
+    <WMSContactPosition type="QString">distributor</WMSContactPosition>
     <WMSDefaultMapUnitsPerMm type="double">1</WMSDefaultMapUnitsPerMm>
     <WMSFeatureInfoUseAttributeFormSettings type="bool">false</WMSFeatureInfoUseAttributeFormSettings>
     <WMSFees type="QString">conditions unknown</WMSFees>
     <WMSImageQuality type="int">90</WMSImageQuality>
     <WMSKeywordList type="QStringList">
-      <value></value>
+      <value>fdgdfg</value>
     </WMSKeywordList>
     <WMSMaxAtlasFeatures type="int">1</WMSMaxAtlasFeatures>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSOnlineResource type="QString">http://ddfgd</WMSOnlineResource>
     <WMSPrecision type="QString">8</WMSPrecision>
-    <WMSRootName type="QString"></WMSRootName>
+    <WMSRootName type="QString">sdfgs</WMSRootName>
     <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
-    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
-    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
-    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <WMSServiceAbstract type="QString">dfgs dfs dfg sdfg </WMSServiceAbstract>
+    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
+    <WMSServiceTitle type="QString">sdfsd</WMSServiceTitle>
     <WMSTileBuffer type="int">0</WMSTileBuffer>
     <WMSUrl type="QString"></WMSUrl>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
@@ -1184,9 +2563,9 @@ def my_form_open(dialog, layer, feature):
   </properties>
   <dataDefinedServerProperties>
     <Option type="Map">
-      <Option value="" name="name" type="QString"/>
+      <Option type="QString" value="" name="name"/>
       <Option name="properties"/>
-      <Option value="collection" name="type" type="QString"/>
+      <Option type="QString" value="collection" name="type"/>
     </Option>
   </dataDefinedServerProperties>
   <visibility-presets/>
@@ -1273,7 +2652,7 @@ def my_form_open(dialog, layer, feature):
   <Bookmarks/>
   <ProjectViewSettings UseProjectScales="0">
     <Scales/>
-    <DefaultViewExtent xmin="5.36330845868770467" xmax="5.44860305231477504" ymax="52.11192134565997947" ymin="52.06874883583149938">
+    <DefaultViewExtent xmax="4.61479339052452531" xmin="4.57655952814392641" ymax="52.38809919917972735" ymin="52.36874683780235529">
       <spatialrefsys>
         <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
         <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -1287,18 +2666,18 @@ def my_form_open(dialog, layer, feature):
       </spatialrefsys>
     </DefaultViewExtent>
   </ProjectViewSettings>
-  <ProjectTimeSettings timeStepUnit="h" cumulativeTemporalRange="0" frameRate="1" timeStep="1"/>
+  <ProjectTimeSettings cumulativeTemporalRange="0" frameRate="1" timeStepUnit="h" timeStep="1"/>
   <ProjectDisplaySettings>
     <BearingFormat id="bearing">
       <Option type="Map">
-        <Option value="" name="decimal_separator" type="QChar"/>
-        <Option value="6" name="decimals" type="int"/>
-        <Option value="0" name="direction_format" type="int"/>
-        <Option value="0" name="rounding_type" type="int"/>
-        <Option value="false" name="show_plus" type="bool"/>
-        <Option value="true" name="show_thousand_separator" type="bool"/>
-        <Option value="false" name="show_trailing_zeros" type="bool"/>
-        <Option value="" name="thousand_separator" type="QChar"/>
+        <Option type="QChar" value="" name="decimal_separator"/>
+        <Option type="int" value="6" name="decimals"/>
+        <Option type="int" value="0" name="direction_format"/>
+        <Option type="int" value="0" name="rounding_type"/>
+        <Option type="bool" value="false" name="show_plus"/>
+        <Option type="bool" value="true" name="show_thousand_separator"/>
+        <Option type="bool" value="false" name="show_trailing_zeros"/>
+        <Option type="QChar" value="" name="thousand_separator"/>
       </Option>
     </BearingFormat>
   </ProjectDisplaySettings>

@@ -18,7 +18,7 @@ services:
       - QGIS_SERVER_LOG_LEVEL:0
       #- PGSERVICEFILE:If you want to change the default of /etc/qgisserver/pg_service.conf
       - QGIS_PROJECT_FILE:/etc/qgisserver/project.qgs
-      - QGIS_SERVER_IGNORE_BAD_LAYERS:true
+      #- QGIS_SERVER_IGNORE_BAD_LAYERS:true
       #- MAX_REQUESTS_PER_PROCESS:The number of requests a QGIS server will serve before being restarted by apache
       #- QGIS_CATCH_SEGV:1
 
