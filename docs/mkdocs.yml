@@ -12,7 +12,7 @@ nav:
     - Results: results/index.md
     - Code: https://github.com/Geonovum/ogc-api-testbed
 
-use_directory_urls: true
+# use_directory_urls: true
 
 #theme:
 #    name: null
