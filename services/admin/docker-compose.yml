@@ -103,7 +103,7 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=service-network"
 
-      - "traefik.http.middlewares.portainer-stripprefix.stripprefix.prefixes=/portainer"
+      - "traefik.http.middlewares.portainer_stripprefix.stripprefix.prefixes=/portainer"
       - "traefik.http.services.portainer.loadbalancer.server.port=9000"
 
       # SSL/https router
@@ -113,13 +113,13 @@ services:
       - "traefik.http.routers.portainer_https.tls=${TRAEFIK_USE_TLS}"
       - "traefik.http.routers.portainer_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
       - "traefik.http.routers.portainer_https.tls.options=my_default@file"
-      - "traefik.http.routers.portainer_https.middlewares=portainer-stripprefix,secure-headers@file"
+      - "traefik.http.routers.portainer_https.middlewares=portainer_stripprefix,secure-headers@file"
 
       # local http router
       - "traefik.http.routers.portainer_http.service=portainer"
       - "traefik.http.routers.portainer_http.rule=Host(`localhost`) && PathPrefix(`/portainer`)"
       - "traefik.http.routers.portainer_http.entrypoints=http"
-      - "traefik.http.routers.portainer_http.middlewares=portainer-stripprefix"
+      - "traefik.http.routers.portainer_http.middlewares=portainer_stripprefix"
 
 volumes:
   portainer_data:
