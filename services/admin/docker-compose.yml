@@ -108,7 +108,7 @@ services:
 
       # SSL/https router
       - "traefik.http.routers.portainer_https.service=portainer"
-      - "traefik.http.routers.portainer_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/portainer`)"
+      - "traefik.http.routers.portainer_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/portainer/`)"
       - "traefik.http.routers.portainer_https.entrypoints=https"
       - "traefik.http.routers.portainer_https.tls=${TRAEFIK_USE_TLS}"
       - "traefik.http.routers.portainer_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
