@@ -1,11 +1,11 @@
 ---
-title: OGC-API-Testbed Landing Page
+title: OGC-API-Testbed - STABLE
 ---
 
-# OGC-API-Testbed Home
+# OGC-API-Testbed - STABLE - Home
 
 Landing page for this server instance. 
-For full documentation see [apitestdocs.geonovum.nl](https://apitestdocs.geonovum.nl).
+Main website and documentation: [apitestdocs.geonovum.nl](https://apitestdocs.geonovum.nl).
  
 Below the (web-) services running on this domain. Click links to view and interact.
 
@@ -16,11 +16,11 @@ Open Source products running in this instance. Links to documentation and HOWTOs
 
 | Endpoint | Author | Docs | HOWTO
 | --- | --- | --- | --- 
-| [/pygeoapi](/pygeoapi) | [GeoPython Community](https://geopython.github.io/) | [link](https://docs.pygeoapi.io/en/latest/) | [link](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi.md)  
-| [/ldproxy](/ldproxy) | Interactive Instruments | [link](https://interactive-instruments.github.io/ldproxy/) | [link](https://apitestdocs.geonovum.nl/howto/howto_ldproxy.md)  
-| [/geoserver](/geoserver/ogc/features) | GeoServer Community | [link](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) | [link](https://apitestdocs.geonovum.nl/howto/howto_geoserver.md)  
-| [/qgis*](/qgis/wfs3) | QGIS Community | [link](https://www.qgis.org/) | [link](https://apitestdocs.geonovum.nl/howto/howto_qgis.md)  
-| [/pycsw/csw.py](/pycsw/csw.py/collections/metadata:main) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pycsw.org/en/latest/index.html) | [HOWTO](howto/howto_pycsw.md) 
+| [/pygeoapi](/pygeoapi) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  
+| [/ldproxy](/ldproxy) | Interactive Instruments | [docs](https://interactive-instruments.github.io/ldproxy/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_ldproxy.md)  
+| [/geoserver](/geoserver/ogc/features) | GeoServer Community | [docs](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_geoserver/)  
+| [/qgis*](/qgis/wfs3) | QGIS Community | [docs](https://www.qgis.org/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_qgis/)  
+| [/pycsw/csw.py](/pycsw/csw.py/collections/metadata:main) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pycsw.org/en/latest/index.html) | [HOWTO](howto/howto_pycsw/) 
 
 
 * *"QGIS" is the QGIS Server Application.*
@@ -38,9 +38,9 @@ These are services for administration and maintenance.
 
 | Endpoint | What / Author | Docs | HOWTO
 | --- | --- | --- | --- 
-| [PGAdmin](/pgadmin) | Manage PostgreSQL Data | PGAdmin Community | [link](https://www.pgadmin.org/) | [link](https://apitestdocs.geonovum.nl/howto/howto_pgadmin.md)  
-| [Portainer](/portainer/) | Visual Docker Manager | Docker | [link](https://www.portainer.io/) | [link](https://apitestdocs.geonovum.nl/howto/howto_portainer.md)  
-| [GeoHealthCheck](/ghc) | OGC Services Monitor | [GeoPython Community](https://geopython.github.io)  | [link](https://geohealthcheck.org) | [link](https://apitestdocs.geonovum.nl/howto/howto_ghc.md)  
+| [PGAdmin](/pgadmin) | Manage PostgreSQL Data | PGAdmin Community | [docs](https://www.pgadmin.org/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pgadmin/)  
+| [Portainer](/portainer/) | Visual Docker Manager | Docker | [docs](https://www.portainer.io/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_portainer/)  
+| [GeoHealthCheck](/ghc) | OGC Services Monitor | [GeoPython Community](https://geopython.github.io)  | [docs](https://geohealthcheck.org) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_ghc/)  
 
 # Links
 
