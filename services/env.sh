@@ -34,6 +34,7 @@ esac
 
 if [[ ${DEPLOY_ENV} = "prod" ]]
 then
+	source /etc/environment
     TRAEFIK_SSL_ENDPOINT="https"
     TRAEFIK_SSL_CERT_RESOLVER="le"
     TRAEFIK_USE_TLS="true"
