@@ -31,4 +31,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Deploy 📦
-        run: mkdocs gh-deploy --force -m 'update website'
+        run: mkdocs gh-deploy --force -m 'Update website via GH Action'
