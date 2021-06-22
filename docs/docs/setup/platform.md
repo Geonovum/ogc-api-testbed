@@ -7,15 +7,16 @@ title: Platform setup
 The project contains contains components to bootstrap, configure and maintain a remote
 deployment of an OGC API web-service stack using modern "DevOps" tooling.
 
-## design principles
+## Design Principles
 
 The main design principles are:
 
+* starting point is an empty VPS/VM with Ubuntu and root (key) access
 * any action on the server/VM host is performed from a client host
-* i.e. no direct access/login to/on the server/VM, only maybe for problem solving
+* i.e. no direct access/login to/on the server/VM is required, only for problem solving
 * remote actions can be performed manually or triggered by GitHub Workflows
 * all credentials (passwords, SSH-keys, etc) are secured 
-* operational stack instances for "production" (stable) and "sandbox" (playground)
+* two operational stack instances 1) production, *"Stable"* and 2) playground, *"Sandbox"*
 
 ## Components
 
@@ -26,7 +27,8 @@ The components used at the lowest level are:
 * [Ansible](https://www.ansible.com/) *"...an open-source software provisioning tool"* ([Wikipedia](https://en.wikipedia.org/wiki/Ansible_(software)))
 * [GitHub Actions/Workflows](https://docs.github.com/en/actions) *"...Automate, customize, and execute software development workflows in a GitHub repository..."*
 
-The Docker-components are used to run the operational stack, i.e. the OGC API web-services. Ansible is used to provision both the server OS-software
+The Docker-components are used to run the operational stack, i.e. the OGC API web-services and supporting services like for monitoring. 
+Ansible is used to provision both the server OS-software
 and the operational stack. Ansible is executed on a local client/desktop system to invoke operations on a remote server/VM.
 These operations are bundled in so called Ansible Playbooks, YAML files that describe a desired server state.
 GitHub Actions are used to construct Workflows. These Actions will invoke these Ansible Playbooks, effectively configuring
@@ -38,22 +40,25 @@ and [GitHub Encrypted Secrets](https://docs.github.com/en/actions/reference/encr
 The operational stack is composed with the following components:
 
 * [Traefik](https://traefik.io/) a frontend proxy/load-balancer and SSL (HTTPS) endpoint.
-* [mkdocs](https://www.mkdocs.org/) for live documentation
-* [GeoHealthCheck]() is a component to monitor the availability and complience of the implementations 
-* [portainer]() provides a mechanism to monitor running containers
-* [PostGreSQL / pgadmin]()
+* [mkdocs](https://www.mkdocs.org/) for live documentation and landing pages ("Home")
+* [GeoHealthCheck]() monitors the availability and QoS of OGC webservices 
+* [portainer]() provides monitoring of and access to running Docker containers
+* [PostgreSQL with PostGIS]() - geospatial RDBMS, nicknamed "PostGIS"
+* PGAdmin - administration component for PostgreSQL DBs
 
 ## Production and Sandbox Instance
 
 Two separate server/CM-instances are managed to provide stable/production and 
-sandbox/playground environments. As to control changes these instances are mapped to two GitHub branches:
+sandbox/playground environments. As to control changes these instances are mapped to two GitHub repositories:
 
-* `main` for the stable/production instance
-* `sandbox` for the playground
+* https://github.com/Geonovum/ogc-api-testbed for the stable/production instance, nicknamed **Stable**
+* https://github.com/Geonovum/ogc-api-sandbox the playground instance, nicknamed **Sandbox**
 
-[GitHub Protected Branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches) are
-used to provide for selective access and deployment.
-
+The **Stable** repo is a so called [GitHub Template repo](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-template-repository) 
+from which the **Sandbox** is cloned.
+ 
+*NB initally [GitHub Protected Branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches) were considered, but*
+*it felt that those would be less transparent and even confusing for selective access and chances of mistakes.*
 
 ## Selective Redeploy
 When changes are pushed to this repo only the affected services are redeployed.
@@ -70,25 +75,52 @@ This is effected by a combination of GitHub Actions and Ansible Playbooks as fol
 * the GH Action then calls the Ansible Playbook [deploy.yml](ansible/deploy.yml) with a `--tags` option related to the Service, e.g. `--tags pygeoapi`
 * the [deploy.yml](ansible/deploy.yml) will always update the GH repo on the server VM via the `pre_tasks`
 * the Ansible task indicated by the `tags` is then executed
-       
-TODO: this will be extended with 
-[GitHub Protected Branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches)
-to map the branch pushed to a server (host) instance via Ansible Inventory settings.
+
+## Security
+
+Maintaining a public repository and providing secured access to services can be a challenge.
+Complex solutions exist in the Docker space using Docker Secrets, `/etcd` service etc
+We tried to keep it simpler, using [Ansible Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html) 
+and [GitHub Secrets](https://dev.to/n3wt0n/how-secrets-work-in-github-and-how-to-manage-them-p4o) are the two main
+mechanisms used for bootstrap and deploy.
+
+The [bootstrap.yml](https://github.com/Geonovum/ogc-api-testbed/blob/main/ansible/bootstrap.yml) also applies various Linux hardening components like
+IP-blacklisting on multiple login attempt, key-only logine etc.
 
 ## Steps and Workflows
 
 These can be used to setup a running server from zero.
 
-### Step 0 - Obtain access to server/VM
+### Prerequisites
+
+Step 0, this is what you need to have available first.
+
+#### Access to a server/VM
 This implies acquiring a server/VM instance from a hosting provider.
 Main requirements are that server/VM runs an LTS Ubuntu (20.4 or better) and that SSL-keys are available for root access 
 (or an admin user account with sudo-rights).
 
-### Step 1 - Clone this repo
+Login there first and copy your SSh public key (`id_rsa.pub` usually) key to `/root/.ssh/authorized_keys`
 
-`git clone https://github.com/Geonovum/ogc-api-testbed.git`.
+#### Python 3 and Ansible
+You need a Python 3 installation and then it is a matter of running
 
-### Step 2 - Bootstrap the server/VM
+`pip install ansible`.
+
+NB best is to use a Python Virtual Environment.
+
+### Step 1 - Clone template repo
+
+Clone from the template repo: https://github.com/Geonovum/ogc-api-testbed.git.
+See [how to do this](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template).
+
+### Step 2 - Adapt variables and credentials
+
+Adapt the files under `git/ansible/vars`, following the README there.
+
+Adapt the inventory file under `git/ansible/hosts`, following the README there.
+
+### Step 3 - Bootstrap the server/VM
 "Bootstrap" here implies the complete provisioning of a remote server/VM that runs the operational service stack.
 This is a one-time manual action, but can be executed at any time as Ansible actions are idempotent.
 By its nature, Ansible tasks will only change the system if there is something to do.
