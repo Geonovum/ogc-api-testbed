@@ -4,13 +4,13 @@ title: Extending pygeoapi
 
 # Extending pygeoapi
 
-An interesting use case around OGC API's is the ability to extend a baseproduct with additional methods to facilitate more advanced procedures. For example on a dataset with 'public announcements', citizens may want interact with an announcement by sharing it with their freinds, upvote or comment on it. 
+An interesting use case around OGC API's is the ability to extend a base product with additional methods to facilitate more advanced data interaction. For example on a dataset with 'public announcements', citizens may want to interact with an announcement by sharing it with their friends, upvote or comment on it. 
 
-Of all products in the testbed pygeoapi seems most appropriate to be extended to facilitate this use case. Unfortunately pygeoapi currently does not offer an extension point to add methods. There is however the OGC API Processes endpoint which can be used for this purpose. Also I provide an example of an extension point in pygeoapi, to indicate how extensions are managed in pygeoapi.
+Of all products in the testbed pygeoapi seems most appropriate to be extended to facilitate this use case. Unfortunately pygeoapi currently does not offer any extension points to add new methods. There is however the OGC API Processes endpoint which can be used for this purpose. Also I provide an example of an extension point in pygeoapi, to indicate how extensions are managed in pygeoapi.
 
 ## OGC API processes
 
-OGC API processes has a similar goal as described above, to extend interacting with datasets by offering the capability to run processes on a dataset. The advantage is that users don't need to download the data, but can interact with the data at its origin. Processes are defined server side. Which processes are available is listed in the /processes endpoint.
+OGC API processes has a similar goal, to extend interacting with datasets by offering the capability to run processes on a dataset. The advantage is that users don't need to download the data, but can interact with the data at its origin. Processes are defined server side. Which processes are available is listed in the /processes endpoint.
 
 OGC API processes is more verbose then what people expect in modern api's. For example submitting 2 parameters to the hello-world process requires this input json object.
 
