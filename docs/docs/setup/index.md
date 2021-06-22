@@ -4,11 +4,12 @@ title: Setup
 
 # Setup
 
-This section describes the setup details of the platform.
+This section describes the setup/installation details of the platform.
 
 ##  Platform setup
 
-This section introduces the setup of the platform and components used in the platform infrastructure.
+This section introduces the setup of the platform and 
+components used in the platform infrastructure.
 
 * [Platform setup](platform.md) 
 

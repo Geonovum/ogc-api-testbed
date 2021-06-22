@@ -4,7 +4,10 @@ title: Service deployment
 
 # Service deployment
 
-The api testbed environment uses a configuration mechanism stored in GitHub. Whenever a commit is detected on the configuration repository, a deployment of the changed service is triggered automatically. Such an approach is known as [Continuos Deployment](https://en.wikipedia.org/wiki/Continuous_deployment). While a deployment task is running, you can follow it on [github](https://github.com/Geonovum/ogc-api-testbed/actions).
+The api testbed environment uses a configuration mechanism stored in GitHub. 
+Whenever a commit is detected on the configuration repository, 
+a deployment of the changed service is triggered automatically. 
+Such an approach is known as [Continuous Deployment](https://en.wikipedia.org/wiki/Continuous_deployment). While a deployment task is running, you can follow it on [github](https://github.com/Geonovum/ogc-api-testbed/actions).
 
 It is possible to directly commit your changes to GitHub, but a better practice is to work from [Pull Requests](https://en.wikipedia.org/wiki/Distributed_version_control#Pull_requests). Some discussion and an approval process can happen around a pull request, before it is merged and deployed.
 

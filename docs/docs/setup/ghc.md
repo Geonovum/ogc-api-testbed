@@ -17,6 +17,7 @@ OGC OAFeat standard with two basic checks (called "Probes"):
 - full OAS schema validation
 
 ## Deployment
+
 GHC is part of the
 [Admin Stack](https://github.com/Geonovum/ogc-api-testbed/tree/main/services/admin) in the testbed.
 
@@ -36,18 +37,12 @@ GHC needs quite some variables (around 31, though many defaults apply).
 These are all configured once in
 [ghc.env](https://github.com/Geonovum/ogc-api-testbed/blob/main/services/admin/ghc.env). 
 Many variables represent credentials like email and 
-database configuration. These are bundled as `geohealthcheck_env` 
+database configuration. These are bundled as `etc_environment` 
 in and forwarded from the encrypted Ansible file `vars.yml`.
-
-The Ansible [deploy.yml](https://github.com/Geonovum/ogc-api-testbed/blob/main/ansible/deploy.yml#L52) 
-line applies `geohealthcheck_env` such that these are available
-to the local environment and referenced in 
-`ghc.env` (and thus to the Docker Containers).
 
 ```
     - name: "admin"
       shell: "cd {{ services_home }}/admin && ./deploy.sh && docker ps"
-      environment: "{{ geohealthcheck_env }}"
       tags: admin
 
 ```

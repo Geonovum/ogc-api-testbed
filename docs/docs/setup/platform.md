@@ -4,7 +4,7 @@ title: Platform setup
 
 # Platform setup
 
-The project contains contains components to bootstrap, configure and maintain a remote
+The project repository contains contains components to bootstrap, configure and maintain a remote
 deployment of an OGC API web-service stack using modern "DevOps" tooling.
 
 ## Design Principles
@@ -37,14 +37,21 @@ and provisioning the operational stack on a remote server/VM.
 Security is guaranteed by the use of [Ansible-Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html) 
 and [GitHub Encrypted Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
-The operational stack is composed with the following components:
+The operational stack has the following components:
 
 * [Traefik](https://traefik.io/) a frontend proxy/load-balancer and SSL (HTTPS) endpoint.
-* [mkdocs](https://www.mkdocs.org/) for live documentation and landing pages ("Home")
-* [GeoHealthCheck]() monitors the availability and QoS of OGC webservices 
-* [portainer]() provides monitoring of and access to running Docker containers
-* [PostgreSQL with PostGIS]() - geospatial RDBMS, nicknamed "PostGIS"
-* PGAdmin - administration component for PostgreSQL DBs
+* [pygeoapi](https://pygeoapi.io/) a Python server implementation of the OGC API suite of standards.
+* [GeoServer](http://geoserver.org/) a Java server implementation of the OGC API suite of standards.
+* [ldproxy](https://interactive-instruments.github.io/ldproxy/) a Java server implementation of the OGC API suite of standards.
+* [QGIS Server](https://www.qgis.org/) - server component of QGIS with OGC OAFeat support.
+* [PostgreSQL/PostGIS](https://postgis.net) - geospatial database
+
+For administration, documentation and monitoring the following components are used:
+
+* [mkdocs](https://www.mkdocs.org/) for live documentation and landing pages
+* [PGAdmin](https://www.pgadmin.org/) - visual PostgreSQL manager  
+* [GeoHealthCheck](https://geohealthcheck.org) to monitor the availability, compliance and QoS of OGC web services
+* [Portainer](https://www.portainer.io/) visual Docker monitor and manager
 
 ## Production and Sandbox Instance
 
@@ -61,17 +68,20 @@ from which the **Sandbox** is cloned.
 *it felt that those would be less transparent and even confusing for selective access and chances of mistakes.*
 
 ## Selective Redeploy
-When changes are pushed to this repo only the affected services are redeployed.
+
+When changes are pushed to the repo, only the affected services are redeployed.
 This is effected by a combination of GitHub Actions and Ansible Playbooks as follows:
 
 * each Service has a dedicated GitHub Action "deploy" file, e.g. [deploy.pygeoapi.yml](.github/workflows/deploy.pygeoapi.yml)
 * the GitHub Action "deploy" file contains a trigger for a `push` with a `paths` constraint, in this example:
+
 ```  
     on:
       push:
         paths:
           - 'services/pygeoapi/**'
-```   
+``` 
+
 * the GH Action then calls the Ansible Playbook [deploy.yml](ansible/deploy.yml) with a `--tags` option related to the Service, e.g. `--tags pygeoapi`
 * the [deploy.yml](ansible/deploy.yml) will always update the GH repo on the server VM via the `pre_tasks`
 * the Ansible task indicated by the `tags` is then executed
