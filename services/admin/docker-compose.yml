@@ -67,13 +67,8 @@ services:
     expose:
       - 5432
 
-    environment:
-      # See also ansible/vars/vars.yml
-      - POSTGRES_HOST=ghc_db
-      - POSTGRES_PORT=5432
-      - POSTGRES_DB=${PG_GHC_DB:-ghc}
-      - POSTGRES_USER=${PG_GHC_USER:-ghc}
-      - POSTGRES_PASSWORD=${PG_GHC_PASSWORD:-ghc}
+    env_file:
+      - ghc_db.env
 
     labels:
       - "traefik.enable=false"

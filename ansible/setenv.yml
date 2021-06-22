@@ -1,0 +1,22 @@
+# For testing...
+- name: "Set permanent env-vars"
+  hosts: all
+  gather_facts: yes
+  become_user: "{{ my_admin_user }}"
+  
+  vars:
+    ansible_ssh_user: "{{ my_admin_user }}"
+
+  vars_files:
+    - vars/vars.yml
+
+  tasks:
+    - name: "Populate /etc/environment"
+      become: true
+      become_user: root
+      lineinfile:
+        dest: "/etc/environment"
+        state: present
+        regexp: "^{{ item.key }}="
+        line: "{{ item.key }}={{ item.value}}"
+      with_dict: "{{ etc_environment }}"

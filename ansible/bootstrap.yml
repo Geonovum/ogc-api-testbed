@@ -49,6 +49,16 @@
         regexp: '^EMAIL'
         line: 'EMAIL={{ my_email }}'
 
+    - name: "Populate /etc/environment"
+      become: true
+      become_user: root
+      lineinfile:
+        dest: "/etc/environment"
+        state: present
+        regexp: "^{{ item.key }}="
+        line: "{{ item.key }}={{ item.value}}"
+      with_dict: "{{ etc_environment }}"
+
     # https://www.jeffgeerling.com/blog/2018/cloning-private-github-repositories-ansible-on-remote-server-through-ssh
     - name: "Clone Git Repo"
       git:

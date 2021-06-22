@@ -10,6 +10,16 @@
     ansible_ssh_user: "{{ my_admin_user }}"
 
   pre_tasks:
+    - name: "Populate /etc/environment"
+      become: true
+      become_user: root
+      lineinfile:
+        dest: "/etc/environment"
+        state: present
+        regexp: "^{{ item.key }}="
+        line: "{{ item.key }}={{ item.value}}"
+      with_dict: "{{ etc_environment }}"
+
     - name: "PRE-TASK - Clone or Update Git Repo"
       git: "repo={{ my_github_repo }} dest={{ my_git_home }} version=main clone=yes force=yes accept_hostkey=True"
       tags: always
@@ -46,7 +56,6 @@
 
     - name: "postgis"
       shell: "cd {{ services_home }}/postgis && ./deploy.sh && docker ps"
-      environment: "{{ postgis_env }}"
       tags: postgis
 
     - name: "home"
@@ -55,5 +64,4 @@
 
     - name: "admin"
       shell: "cd {{ services_home }}/admin && ./deploy.sh && docker ps"
-      environment: "{{ geohealthcheck_env }}"
       tags: admin
