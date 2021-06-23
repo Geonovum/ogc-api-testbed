@@ -37,8 +37,8 @@ These are services for administration and maintenance.
 
 | Endpoint | What | Author | Docs | HOWTO
 | --- | --- | --- | --- | --- 
-| [PGAdmin](/pgadmin) | Manage PostgreSQL Data  PGAdmin Community | [docs](https://www.pgadmin.org/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pgadmin/)  
-| [Portainer](/portainer/) | Visual Docker Manager | Docker | [docs](https://www.portainer.io/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_portainer/)  
+| [PGAdmin](/pgadmin) | Manage PostgreSQL Data | PGAdmin Community | [docs](https://www.pgadmin.org/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pgadmin/)  
+| [Portainer](/portainer/) | Visual Docker Manager | [portainer.io](https://portainer.io) | [docs](https://documentation.portainer.io) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_portainer/)  
 | [GeoHealthCheck](/ghc) | OGC Services Monitor | [GeoPython Community](https://geopython.github.io)  | [docs](https://geohealthcheck.org) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_ghc/)  
 
 # Links
