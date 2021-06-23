@@ -30,15 +30,14 @@ Open Source products running in this instance. Links to documentation and HOWTOs
 The above services serve data from local files (e.g. GeoPackage) and these storage services:
 
 * "PostGIS" - access via <server-domain-name> port 5432 - spatial database based on PostgreSQL. 
-*  Manage data with the [PGAdmin web application](/pgadmin)
 
 ## Supporting Services
 
 These are services for administration and maintenance.
 
-| Endpoint | What / Author | Docs | HOWTO
-| --- | --- | --- | --- 
-| [PGAdmin](/pgadmin) | Manage PostgreSQL Data | PGAdmin Community | [docs](https://www.pgadmin.org/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pgadmin/)  
+| Endpoint | What | Author | Docs | HOWTO
+| --- | --- | --- | --- | --- 
+| [PGAdmin](/pgadmin) | Manage PostgreSQL Data  PGAdmin Community | [docs](https://www.pgadmin.org/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pgadmin/)  
 | [Portainer](/portainer/) | Visual Docker Manager | Docker | [docs](https://www.portainer.io/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_portainer/)  
 | [GeoHealthCheck](/ghc) | OGC Services Monitor | [GeoPython Community](https://geopython.github.io)  | [docs](https://geohealthcheck.org) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_ghc/)  
 
