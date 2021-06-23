@@ -8,19 +8,20 @@
 [![docs Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.docs.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.docs.yml)
 [![Gitter](https://img.shields.io/gitter/room/Geonovum/ogc-api-testbed.svg?style=flat-square)](https://gitter.im/Geonovum/ogc-api-testbed)
 
-# OGC API Testbed
+# OGC API Testbed - STABLE
 Bootstrap and continuous integration/deployment (CI/CD) for OGC API web-service components.
 See the [website apitestdocs.geonovum.nl](https://apitestdocs.geonovum.nl) for docmentation and details.
 
 Want to access the (OGC) web-services? Go to:
 
-* Stable (production) server at [apitestbed.geonovum.nl](https://apitestbed.geonovum.nl/)
-* Sandbox (experimental) server at [apisandbox.geonovum.nl](https://apisandbox.geonovum.nl/) (TODO)
+* Stable (production) server at [apitestbed.geonovum.nl](https://apitestbed.geonovum.nl/) (from this repo)
+* Sandbox (experimental) server at [apisandbox.geonovum.nl](https://apisandbox.geonovum.nl/) (from [Sandbox repo](https://github.com/Geonovum/ogc-api-sandbox))
 
 ## Summary
 
 This repo contains all that is needed to bootstrap, configure and maintain (CI/CD) a remote
-deployment of an OGC API web-service stack using modern "DevOps" tooling.
+deployment of an OGC API web-service stack using modern "DevOps" tooling. You can use it as a [GitHub Template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template)
+to configure and run your own instance.
 
 The main design principles are:
 
