@@ -37,6 +37,8 @@ GeoServer uses [Freemarker templates](https://freemarker.apache.org/) to render 
   <li>Mail: <a href="mailto:${contact.contactEmail}">${contact.contactEmail}</a></li>
 ```
 
+To highlight the impact of skinning, we have prepared a tailored skin for geoserver at https://apitestbed.geonovum.nl/geoserver/ogc/features. We've added a layout inspired on the GeoNovum website. For this, 2 layout template overrides have been added to `~/data/templates/ogc/features`.
+
 ## LDProxy
 
 The HTML encoding is implemented using [Mustache templates](https://mustache.github.io/). Custom templates are supported, they have to reside in the data directory under the relative path `templates/html/{templateName}.mustache`, where `{templateName}` equals the name of a default template (see [source code](https://github.com/search?q=repo%3Ainteractive-instruments%2Fldproxy+extension%3Amustache&type=Code) on GitHub) (taken from [ldproxy docs](https://github.com/interactive-instruments/ldproxy/blob/fb772a7c3bc9b32cdde06a1ac92bbb72414b07d1/docs/en/configuration/services/building-blocks/html.md#customization)).
