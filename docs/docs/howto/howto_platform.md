@@ -19,6 +19,7 @@ Info:
 * OPTIONAL: DNS: if you need docs (not for Sandbox) create CNAME and set in `git/docs/docs/CNAME`
 * copy your SSH public key to `/root/.ssh/authorized_keys`, e.g. `scp ~/.ssh/id_rsa.pub root@apisandbox.geonovum.nl:.ssh/authorized_keys`
 * test login with SSH key: `ssh root@apisandbox.geonovum.nl`
+* upgrade server to latest: `apt-get update && apt-get -y upgrade`
 
 ## 2. Generate GitHub Repo
 
@@ -118,4 +119,81 @@ fi
  
 So `DEPLOY_ENV=prod` here is to discern with a deployment on `localhost` (`DEPLOY_ENV=local`, where .e.g. no https/SSL is used)
 
+### Create SSH Keys
 
+These are used to invoke actions on the server both from GitHub Actions (via GitHub Sercrets) and from your local Ansible setup. Plus a set of authorized_keys 
+for the admin SSH user.
+
+* cd `git/ansible/vars`
+* create new keypair (no password): `ssh-keygen -t rsa -q -N "" -f gh-key.rsa`
+
+### Create authorized_keys
+
+Create new `git/ansible/vars/authorized_keys` with your public key and `gh-key.rsa.pub` .
+
+### Adapt vars.yml
+
+Create new `git/ansible/vars/vars.yml` from example in that dir.
+
+### Create Ansible Vault password
+
+* global replace `~/.ssh/ansible-vault/ogc-api-testbed.txt` with `~/.ssh/ansible-vault/ogc-api-sandbox.txt` in `git/ansible/README.md`
+* create strong password  
+* store in `~/.ssh/ansible-vault/ogc-api-sandbox.txt` for convenience
+
+### Set GitHub Secrets
+
+Three secrets need to be set:
+
+Go to GH repo Settings|Secrets and create these three secrets
+
+* ANSIBLE_INVENTORY_PROD - with value from `git/ansible/hosts/prod.yml`
+* ANSIBLE_SSH_PRIVATE_KEY - with value from `git/ansible/vars/gh-key.rsa`
+* ANSIBLE_VAULT_PASSWORD - value from `~/.ssh/ansible-vault/ogc-api-sandbox.txt` 
+
+
+### Encrypt files
+
+VERY IMPORTANT. UNENCRYPTED FILES SHOULD NEVER BE CHECKED IN!!!
+
+Using `ansible-vault`:
+
+```
+ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt  vars.yml
+ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt  gh-key.rsa
+ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt  gh-key.rsa.pub 
+ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt  authorized_keys 
+
+```
+
+### Global replace apitestbed.geonovum.nl
+
+Under `git/services` all occurences with `apisandbox.geonovum.nl`
+ 
+### Disable workflows
+
+Temporary.
+
+```
+git mv workflows workflows.not
+git add .
+git commit -m "disable workflows"
+git push
+
+
+```
+
+## 6 Bootstrap/provision Server
+
+Op server eerst pip installeren:
+
+* `apt-get install python3-pip`
+ 
+dan inspoelen:
+
+* `ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt bootstrap.yml -i hosts/prod.yml`
+
+Issues oplossen:
+
+* `/home/oadmin/git` is owned by root, change to `oadmin` 
+* CNAME in `git/docs/docs` moet weg 

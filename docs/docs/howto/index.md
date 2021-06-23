@@ -10,7 +10,7 @@ The following sections of HOWTOs exist.
 
 The Platform section describes how to deploy your own instance of the OGC API Testbed platform.
 
-* [HOWTO Deploy](howto_platform.md)
+* [HOWTO Platform](howto_platform.md)
 
 ## HOWTO Services
 The deployment section describes how to deploy services
