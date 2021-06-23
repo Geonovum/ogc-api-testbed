@@ -56,7 +56,7 @@
             <a href="https://www.geonovum.nl/privacy" class="block-footernavigation__menu-item-link nav-link" data-drupal-link-system-path="node/11">Cookies</a>
                     </li>
                             <li class="block-footernavigation__menu-item nav-item">
-            <a href="https://www.geonovum.nl/over-deze-website" class="block-footernavigation__menu-item-link nav-link" data-drupal-link-system-path="node/274">Over deze website</a>
+            <a href="https://www.geonovum.nl/over-deze-website" class="block-footernavigation__menu-item-link nav-link" data-drupal-link-system-path="node/274">Over deze API</a>
                     </li>
                             <li class="block-footernavigation__menu-item nav-item">
             <a href="https://www.geonovum.nl/over-geonovum/contact" class="block-footernavigation__menu-item-link nav-link" data-drupal-link-system-path="node/275">Contact</a>

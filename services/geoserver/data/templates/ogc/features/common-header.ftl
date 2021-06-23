@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="${resourceLink("apicss/geoserver.css")}" type="text/css" media="all" />
       <style>
         header a {
-            height: 4.5rem;
+            height: 4.7rem;
             width: 8.2rem;
             margin: 10px;
             background: url(https://www.geonovum.nl/logo.svg) no-repeat;
