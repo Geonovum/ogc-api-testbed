@@ -10,7 +10,7 @@
 
 # OGC API Testbed - STABLE
 Bootstrap and continuous integration/deployment (CI/CD) for OGC API web-service components.
-See the [website apitestdocs.geonovum.nl](https://apitestdocs.geonovum.nl) for docmentation and details.
+See the [website apitestdocs.geonovum.nl](https://apitestdocs.geonovum.nl) for documentation and details.
 
 Want to access the (OGC) web-services? Go to:
 
