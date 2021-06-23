@@ -21,7 +21,7 @@ Want to access the (OGC) web-services? Go to:
 
 This repo contains all that is needed to bootstrap, configure and maintain (CI/CD) a remote
 deployment of an OGC API web-service stack using modern "DevOps" tooling. You can use it as a [GitHub Template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template)
-to configure and run your own instance.
+to configure and run your own instance. See for example the [OGC API Sandbox repo](https://github.com/Geonovum/ogc-api-sandbox).
 
 The main design principles are:
 
