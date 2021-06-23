@@ -16,23 +16,29 @@
             margin: 10px;
             background: url(https://www.geonovum.nl/logo.svg) no-repeat;
         }
+        header, .region-footer {
+            border-bottom: 1px solid rgba(94,94,94,.2)
+        }
         body {
-        color: #5e5e5e;
-        font-family: "Open Sans",sans-serif;
-    font-size: 1rem;
-    line-height: 1.5rem;
+          color: #5e5e5e;
+          font-family: "Open Sans",sans-serif;
+          font-size: 1rem;
+          line-height: 1.5rem;
         }
         .region-footer {
-    position: relative;
-    margin-top: 6rem;
-    padding-bottom: 6rem;
-    padding-top: 3rem;
-}
+          position: relative;
+          margin-top: 6rem;
+          padding-bottom: 6rem;
+          padding-top: 3rem;
+        }
       </style>
   </head>
 <body>
-  <header id="header">
-    <a href="${serviceLink("")}"></a>
+  <header id="header" class="container">
+  <div class="row">
+    <div class="col-md-2"><a href="${serviceLink("")}"></a></div>
+    <div class="col-md-10">Verkent, verbindt, verankert</div>
+  </div>
   </header>
   <#if pagecrumbs??>
   <div id="breadcrumb" class="py-2 mb-4">

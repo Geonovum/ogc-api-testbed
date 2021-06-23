@@ -1,10 +1,11 @@
    </div>
    </main>
   
+  <div style="background-color:#efefef">
    <footer class="page-footer container">
-      <div class="region-footer">
+      <div class="">
     
-  <div itemscope="" itemtype="http://schema.org/Organization" class="row">
+  <div itemscope="" itemtype="http://schema.org/Organization" class="row region-footer">
     <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="footer-details col-sm-3">
       <h3>Postadres</h3>
       <address>
@@ -46,12 +47,8 @@
 
   </div>
 
-  
-
-<nav aria-labelledby="block-footernavigation-title" id="block-footernavigation" class="navbar navbar-expand-lg navbar-light">
-
+         <nav aria-labelledby="block-footernavigation-title" id="block-footernavigation" class="navbar navbar-expand-lg navbar-light">
               <ul class="navbar-nav">
-
                             <li class="block-footernavigation__menu-item nav-item">
             <a href="https://www.geonovum.nl/privacy" class="block-footernavigation__menu-item-link nav-link" data-drupal-link-system-path="node/11">Privacy</a>
                     </li>
@@ -65,13 +62,9 @@
             <a href="https://www.geonovum.nl/over-geonovum/contact" class="block-footernavigation__menu-item-link nav-link" data-drupal-link-system-path="node/275">Contact</a>
                     </li>
               </ul>
-      
-  </nav>
-
-
-  </div>
-
+         </nav>
+      </div>
     </footer>
-  
+  </div>
 </body>
 </html>
