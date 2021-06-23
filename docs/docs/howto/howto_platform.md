@@ -4,7 +4,7 @@ title: HOWTO Platform
 
 # HOWTO Platform
 
-Describes how to setup your own instance of the OGC API Testbed.
+Describes how to setup your own instance of the OGC API Testbed platform.
 As a working example the OGC API Sandbox (Playground) instance is presented step-by-step.
 
 ## 1. Ubuntu Server
@@ -57,9 +57,13 @@ We will call the root dir of the cloned git repo on your system just `git/` from
 
 ## 5. Adapt Ansible Config
 
-Most of the configuration specific to the server is stored under `git/ansible/hosts` (Ansible inventories)
-and `git/ansible/vars`. Most files are encrypted with `Ansible Vault`. You will need to 
-create your own (encrypted) version of these encrypted files. For many files an example file is given. 
+Most of the configuration that is specific to your new server 
+is stored under `git/ansible/hosts` (Ansible inventories)
+and `git/ansible/vars` (variables and SSH keys). 
+
+Most files are encrypted with `Ansible Vault`. You will need to 
+create your own (encrypted) version of these encrypted files. 
+For many files an example file is given. 
 
 ### Ansible Hosts
 The hostname is crucial to services functioning. Two steps:
@@ -117,23 +121,79 @@ fi
 
 ```
  
-So `DEPLOY_ENV=prod` here is to discern with a deployment on `localhost` (`DEPLOY_ENV=local`, where .e.g. no https/SSL is used)
+So `DEPLOY_ENV=prod` here is to discern with a deployment on `localhost` (`DEPLOY_ENV=local`, where .e.g. no https/SSL is used).
 
 ### Create SSH Keys
 
-These are used to invoke actions on the server both from GitHub Actions (via GitHub Sercrets) and from your local Ansible setup. Plus a set of authorized_keys 
-for the admin SSH user.
+These are used to invoke actions on the server both from GitHub Actions (via GitHub Sercrets) 
+and from your local Ansible setup. Plus a set of authorized_keys for the admin SSH user.
 
 * cd `git/ansible/vars`
-* create new keypair (no password): `ssh-keygen -t rsa -q -N "" -f gh-key.rsa`
+* create new SSH keypair (no password): `ssh-keygen -t rsa -q -N "" -f gh-key.rsa`
 
 ### Create authorized_keys
 
-Create new `git/ansible/vars/authorized_keys` with your public key and `gh-key.rsa.pub` .
+Create new `git/ansible/vars/authorized_keys` with your public key and for others you want to give access to the admin SSH account,
+plus `gh-key.rsa.pub` .
+
+```
+cat gh-key.rsa.pub > authorized_keys
+cat ~/.ssh/id.rsa.pub >> authorized_keys
+cat id.rsa.pub.of.joe >> authorized_keys   # etc
+
+```
 
 ### Adapt vars.yml
 
-Create new `git/ansible/vars/vars.yml` from example in that dir.
+Create new `git/ansible/vars/vars.yml` from example `vars.example.yml` in that dir.
+
+The first part of `vars.yml` contains generix, less-secret, values. 
+Use variables where possible. Format is Python-Jinja2 template-like:
+
+
+```
+my_ssh_pubkey_file: ~/.ssh/id_rsa.pub
+my_email: my@email.nl
+my_admin_user: the_admin_username
+my_admin_home: "/home/{{ my_admin_user }}"
+my_git_home: "{{ my_admin_home }}/git"
+my_github_repo: https://github.com/Geonovum/ogc-api-sandbox.git
+var_dir: /var/ogcapi
+logs_dir: "{{ var_dir }}/log"
+services_home: "{{ my_git_home }}/services"
+platform_home: "{{ my_git_home }}/platform"
+pip_install_packages:
+  - name: docker
+timezone: Europe/Amsterdam
+ufw_open_ports: ['22', '80', '443', '5432']
+```
+  
+The second part deals with more secret values, like usernames and passwords for services.
+For most services indicated below with comment after `#`. `GHC_` denotes GeoHealthCheck (GHC) vars.
+If you don't use GHC you can skip those.
+
+
+```
+etc_environment:
+  PG_DB: the_db  # PostGIS service
+  PG_USER: the_user  # PostGIS service
+  PG_PASSWORD: the_pw  # PostGIS service
+  PGADMIN_EMAIL: the_user@the_user.nl # PGadmin service
+  PGADMIN_PASSWORD: the_pw  # PGadmin service
+  GHC_SQLALCHEMY_DATABASE_URI: postgresql://the_user:the_pw@the_db:5432/the_db  # PGadmin service
+  GHC_ADMIN_USER_NAME: the_user
+  GHC_ADMIN_USER_PASSWORD: the_pw
+  GHC_ADMIN_USER_EMAIL: the_user@the_user.nl
+  GHC_NOTIFICATIONS_EMAIL: the_user@the_user.com
+  GHC_SMTP_EMAIL: the_user@the_user.com
+  GHC_SMTP_SERVER: smtp.gmail.com
+  GHC_SMTP_PORT: 587
+  GHC_SMTP_TLS: True
+  GHC_SMTP_SSL: False
+  GHC_SMTP_USERNAME: the_user@the_user.com
+  GHC_SMTP_PASSWORD: the_pw
+
+```
 
 ### Create Ansible Vault password
 
@@ -172,7 +232,8 @@ Under `git/services` all occurences with `apisandbox.geonovum.nl`
  
 ### Disable workflows
 
-Temporary.
+We do not want that workflows take effect immediately. 
+So disable them by renaming the dir.
 
 ```
 git mv workflows workflows.not
@@ -180,20 +241,33 @@ git add .
 git commit -m "disable workflows"
 git push
 
-
 ```
 
-## 6 Bootstrap/provision Server
+## 6 Prune repo tree for unneeded services
 
-Op server eerst pip installeren:
+At this step you may want to delete services you don't need:
 
-* `apt-get install python3-pip`
- 
-dan inspoelen:
+* `rm -rf git/docs` . Documentation is already maintained and available via [https://apitestdocs.geonovum.nl/](https://apitestdocs.geonovum.nl/) 
+* for each service you want to delete, delete these 3 resources, e.g. for service `xyz`
+    * `rm -rf git/services/xyz`
+    * `rm  git/.github/workflows/deploy.xyz.yml`
+    * in `git/ansible/deploy.yml` delete the three Ansible `task` lines with that name and tag.
+
+## 7 Bootstrap/provision Server
+
+Bootstrap in single playbook.
 
 * `ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt bootstrap.yml -i hosts/prod.yml`
 
-Issues oplossen:
+Observe output for errors (better is to save output in file via `.. > bootstrap.log 2>&1`).
+
+Site should be running at: [https://apisandbox.geonovum.nl](https://apisandbox.geonovum.nl)
+Check with portainer [https://apisandbox.geonovum.nl/portainer/](https://apisandbox.geonovum.nl/portainer/).
+
+## 8 Resolve Issues
+
+These are typical issues found and resolved:
 
 * `/home/oadmin/git` is owned by root, change to `oadmin` 
-* CNAME in `git/docs/docs` moet weg 
+* delete (or change) CNAME `git/docs/docs`
+* permissions in services/qgis/data , make datadir writeable for all: `chmod 777 services/qgis/data`

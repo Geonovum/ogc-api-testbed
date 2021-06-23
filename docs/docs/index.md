@@ -26,7 +26,7 @@ To access and interact with the (OGC web-) services, go to
 one of the two server instances:
 
 * Stable (production) server at [apitestbed.geonovum.nl](https://apitestbed.geonovum.nl/)
-* Sandbox (experimental) server at [apisandbox.geonovum.nl](https://apisandbox.geonovum.nl/) (TODO)
+* Sandbox (experimental) server at [apisandbox.geonovum.nl](https://apisandbox.geonovum.nl/)
 
 ## Links
 
