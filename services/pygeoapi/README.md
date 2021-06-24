@@ -16,3 +16,13 @@ See the following deployment files:
 * [Ansible Playbook](../../ansible/deploy.yml)
 
 The Ansible Playbook can also be invoked directly.
+ 
+## New Service from Duplication
+
+Creating a new service `xyz` via duplication of this directory:
+
+* duplicate this and name it as the service e.g. `services/xyz`
+* create GitHub Action file as copy/rename from [GitHub Action](../../.github/workflows/deploy.pygeoapi.yml) to `deploy.xyz.yml`
+* new 3 lines for `xyz` in [Ansible Playbook](../../ansible/deploy.yml)
+* the variables, mainly `SERVICE_NAME=xyz` in [env.sh](env.sh).
+* adapt at least `url:` (line 5) in [local.config.yml](local.config.yml)
