@@ -5,14 +5,14 @@ title: HOWTO Platform
 # HOWTO Platform
 
 Describes how to setup your own instance of the OGC API Testbed platform.
-As a working example the OGC API Sandbox (Playground) instance is presented step-by-step.
+As a real-world example, the OGC API Sandbox (Playground) instance is presented below step-by-step.
 
 ## 1. Ubuntu Server
 
 Info:
 
 * setup or acquire a Linux Ubuntu server, minimal Ubuntu 20.4 LTS
-* can be a VM/VPS or bare metal server
+* can be a VM/VPS or bare metal server, even a local VirtualBox (with Vagrant) instance
 * Sandbox specs: 4CPU, 16RAM, 100GB  but also strongly depends on the services one needs to run
 * root access via SSH required
 * DNS: create A-record `apisandbox.geonovum.nl` for IP address `109.237.219.249`
@@ -38,24 +38,29 @@ Steps (see also [here](https://docs.github.com/en/github/creating-cloning-and-ar
 * above file list press green button "Use this template"
 * follow the steps indicated, if you want to serve docs on a separate domain indicate "Include all branches"
  
-## 3. Prepare local system
+## 3. Prepare Local System
 
 On your local system:
 
-* be sure to have Python 3 (3.7 or better) installed
+### Install Ansible:
+
+* have Python 3 (3.7 or better) installed
 * OPTIONAL (but recommended) create a Python Virtualenv (for Ansible)  
 * install [Ansible](https://www.ansible.com/) with `pip install ansible` 2.9.* or higher
 * test: `ansible --version` - shows *ansible 2.9.19 ...*
 * test: `ansible-vault --version` shows *ansible-vault 2.9.19 ...*
-* install Ansible modules, "roles": `ansible-galaxy install --roles-path ./roles -r requirements.yml`
+ 
+More on Ansible below.
 
-## 4. Clone new repo
+### Install `Git` client.
+
+## 4. Clone New GitHub Repo
 
 * `git clone https://github.com/Geonovum/ogc-api-sandbox.git`
 
 We will call the root dir of the cloned git repo on your system just `git/` from here.
 
-## 5. Adapt Ansible Config
+## 5. Setup Ansible
 
 Most of the configuration that is specific to your new server 
 is stored under `git/ansible/hosts` (Ansible inventories)
@@ -65,10 +70,20 @@ Most files are encrypted with `Ansible Vault`. You will need to
 create your own (encrypted) version of these encrypted files. 
 For many files an example file is given. 
 
+### Ansible Modules
+
+Called "Roles" these are third-party Ansible components that help with specific tasks.
+Install these as follows:
+
+```
+cd git/ansible
+ansible-galaxy install --roles-path ./roles -r requirements.yml
+```
+
 ### Ansible Hosts
 The hostname is crucial to services functioning. Two steps:
 
-* set content of `git/ansible/hosts/prod.yml` to
+* set content of `git/ansible/hosts/prod.yml` (Inventory) to
 
 ```
 ogcapi:
@@ -195,7 +210,7 @@ etc_environment:
 
 ```
 
-### Create Ansible Vault password
+### Create Ansible Vault Password
 
 * global replace `~/.ssh/ansible-vault/ogc-api-testbed.txt` with `~/.ssh/ansible-vault/ogc-api-sandbox.txt` in `git/ansible/README.md`
 * create strong password  
@@ -212,11 +227,11 @@ Go to GH repo Settings|Secrets and create these three secrets
 * ANSIBLE_VAULT_PASSWORD - value from `~/.ssh/ansible-vault/ogc-api-sandbox.txt` 
 
 
-### Encrypt files
+### Encrypt Ansible Files
 
 VERY IMPORTANT. UNENCRYPTED FILES SHOULD NEVER BE CHECKED IN!!!
 
-Using `ansible-vault`:
+Using `ansible-vault` with password encrypt these:
 
 ```
 ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt  vars.yml
@@ -226,14 +241,14 @@ ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox
 
 ```
 
-### Global replace apitestbed.geonovum.nl
+### Globally Replace apitestbed.geonovum.nl
 
-Under `git/services` all occurences with `apisandbox.geonovum.nl`
+Under `git/services` replace all occurrences of `apitestbed.geonovum.nl` with `apisandbox.geonovum.nl`
  
-### Disable workflows
+### Disable GitHub Workflows
 
 We do not want that workflows take effect immediately. 
-So disable them by renaming the dir.
+So disable them temporary by renaming the dir.
 
 ```
 git mv workflows workflows.not
@@ -243,7 +258,7 @@ git push
 
 ```
 
-## 6 Prune repo tree for unneeded services
+## 6 Prune Repo Tree for Unneeded Services
 
 At this step you may want to delete services you don't need:
 
@@ -251,15 +266,25 @@ At this step you may want to delete services you don't need:
 * for each service you want to delete, delete these 3 resources, e.g. for service `xyz`
     * `rm -rf git/services/xyz`
     * `rm  git/.github/workflows/deploy.xyz.yml`
-    * in `git/ansible/deploy.yml` delete the three Ansible `task` lines with that name and tag.
+    * in `git/ansible/deploy.yml` delete the three Ansible `task` lines with `xyz` name and tag.
 
 ## 7 Bootstrap/provision Server
 
-Bootstrap in single playbook.
+Moment of truth! Bootstrap (provision the server) in single playbook.
 
 * `ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt bootstrap.yml -i hosts/prod.yml`
 
+If all goes well, this output should be shown at end:
+
+```
+PLAY RECAP ***********************************************************************************************************
+apisandbox                 : ok=58   changed=22   unreachable=0    failed=0    skipped=8    rescued=0    ignored=0   
+
+```
+
 Observe output for errors (better is to save output in file via `.. > bootstrap.log 2>&1`).
+
+In cases of errors and after fixes, simply rerun the above Playbook.
 
 Site should be running at: [https://apisandbox.geonovum.nl](https://apisandbox.geonovum.nl)
 Check with portainer [https://apisandbox.geonovum.nl/portainer/](https://apisandbox.geonovum.nl/portainer/).
@@ -271,3 +296,15 @@ These are typical issues found and resolved:
 * `/home/oadmin/git` is owned by root, change to `oadmin` 
 * delete (or change) CNAME `git/docs/docs`
 * permissions in services/qgis/data , make datadir writeable for all: `chmod 777 services/qgis/data`
+
+## 9. Enable GitHub Workflows
+
+Enable by renaming:
+
+```
+git mv workflows.not workflows 
+git add .
+git commit -m "enable workflows"
+git push
+
+```
