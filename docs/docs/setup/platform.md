@@ -4,7 +4,7 @@ title: Platform setup
 
 # Platform setup
 
-The project repository contains contains components to bootstrap, configure and maintain a remote
+The project repository contains contains components to bootstrap, configure ("provision") and maintain a remote
 deployment of an OGC API web-service stack using modern "DevOps" tooling.
 
 ## Design Principles
@@ -20,7 +20,7 @@ The main design principles are:
 
 ## Components
 
-The components used at the lowest level are:
+The components used to realize this design are:
 
 * [Docker](https://www.docker.com/) *"...OS-level virtualization to deliver software in packages called containers..."* ([Wikipedia](https://en.wikipedia.org/wiki/Docker_(software)))
 * [Docker Compose](https://docs.docker.com/compose) *"...a tool for defining and running multi-container Docker applications..."*
@@ -28,9 +28,9 @@ The components used at the lowest level are:
 * [GitHub Actions/Workflows](https://docs.github.com/en/actions) *"...Automate, customize, and execute software development workflows in a GitHub repository..."*
 
 The Docker-components are used to run the operational stack, i.e. the OGC API web-services and supporting services like for monitoring. 
-Ansible is used to provision both the server OS-software
+Ansible is used to provision (bootstrap)  both the server OS-software
 and the operational stack. Ansible is executed on a local client/desktop system to invoke operations on a remote server/VM.
-These operations are bundled in so called Ansible Playbooks, YAML files that describe a desired server state.
+These operations are bundled in so-called Ansible Playbooks, YAML files that describe a desired server state.
 GitHub Actions are used to construct Workflows. These Actions will invoke these Ansible Playbooks, effectively configuring
 and provisioning the operational stack on a remote server/VM. 
                     
@@ -72,7 +72,7 @@ from which the **Sandbox** is cloned.
 When changes are pushed to the repo, only the affected services are redeployed.
 This is effected by a combination of GitHub Actions and Ansible Playbooks as follows:
 
-* each Service has a dedicated GitHub Action "deploy" file, e.g. [deploy.pygeoapi.yml](.github/workflows/deploy.pygeoapi.yml)
+* each Service has a dedicated GitHub Action "deploy" file, e.g. [deploy.pygeoapi.yml](https://github.com/Geonovum/ogc-api-testbed/tree/main/.github/workflows/deploy.pygeoapi.yml)
 * the GitHub Action "deploy" file contains a trigger for a `push` with a `paths` constraint, in this example:
 
 ```  
@@ -82,8 +82,8 @@ This is effected by a combination of GitHub Actions and Ansible Playbooks as fol
           - 'services/pygeoapi/**'
 ``` 
 
-* the GH Action then calls the Ansible Playbook [deploy.yml](ansible/deploy.yml) with a `--tags` option related to the Service, e.g. `--tags pygeoapi`
-* the [deploy.yml](ansible/deploy.yml) will always update the GH repo on the server VM via the `pre_tasks`
+* the GH Action then calls the Ansible Playbook [deploy.yml](https://github.com/Geonovum/ogc-api-testbed/tree/main/ansible/deploy.yml) with a `--tags` option related to the Service, e.g. `--tags pygeoapi`
+* the [deploy.yml](https://github.com/Geonovum/ogc-api-testbed/tree/main/ansible/deploy.yml) will always update the GH repo on the server VM via the `pre_tasks`
 * the Ansible task indicated by the `tags` is then executed
 
 ## Security
@@ -101,11 +101,12 @@ IP-blacklisting on multiple login attempt, key-only logine etc.
 
 Below is a shortened version how 
 to setup and maintain a testbed server instance from zero.
-In a [dedicated HOWTO Platform](/howto/howto_platform.md) all steps are described in great detail.
+In a [dedicated HOWTO](/howto/howto_platform/) 
+all steps are expanded/described in very great detail.
 
 ### Prerequisites
 
-Step 0, this is what you need to have available first.
+This is what you need to have available first.
 
 #### Access to a server/VM
 This implies acquiring a server/VM instance from a hosting provider.
@@ -113,24 +114,20 @@ Main requirements are that server/VM runs an LTS Ubuntu (20.4 or better) and tha
 (or an admin user account with sudo-rights).
 
 #### Python 3 and Ansible
-You need a Python 3 installation and then it is a matter of running
+You need a Python 3 installation and install Ansible and `git` (client).
 
-`pip install ansible`.
-
-NB best is to use a Python Virtual Environment.
-
-### Step 1 - Clone template repo
+### Clone template repo
 
 Clone from the template repo: https://github.com/Geonovum/ogc-api-testbed.git.
 See [how to do this](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template).
 
-### Step 2 - Adapt variables and credentials
+### Setup Ansible
 
 Adapt the files under `git/ansible/vars`, following the README there.
 
 Adapt the inventory file under `git/ansible/hosts`, following the README there.
 
-### Step 3 - Bootstrap the server/VM
+### Bootstrap the server/VM
 "Bootstrap" here implies the complete provisioning of a remote server/VM that runs the operational service stack.
 This is a one-time manual action, but can be executed at any time as Ansible actions are idempotent.
 By its nature, Ansible tasks will only change the system if there is something to do.
@@ -142,7 +139,7 @@ In this step Docker and Docker Compose are installed and a Linux [systemd](https
 that automatically starts/stops the operational stack, also on reboots.
 The software for the operational stack, i.e. from this repo, is cloned on the server as well.
 
-### Step 3 - Maintain the server/VM
+### Maintain the server/VM
 This step is the daily operational maintenance. 
 The basic substeps are:
 
@@ -150,3 +147,5 @@ The basic substeps are:
 * commit/push the change to GitHub
 * watch the triggered GitHub Actions, check for any errors
 * observe changes via website
+
+As indicated, a [dedicated HOWTO](/howto/howto_platform/) describes the above steps in very great detail.
