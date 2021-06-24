@@ -133,7 +133,7 @@ This is a one-time manual action, but can be executed at any time as Ansible act
 By its nature, Ansible tasks will only change the system if there is something to do.
 
 Startpoint is a fresh Ubuntu-server or VM with root access via SSH-keys (no passwords).
-The Ansible playbook [bootstrap.yml](ansible/bootstrap.yml) installs the neccessary software, and hardens
+The Ansible playbook [bootstrap.yml](https://github.com/Geonovum/ogc-api-testbed/tree/main/ansible/bootstrap.yml) installs the neccessary software, and hardens
 the server security, e.g. using [fail2ban](https://www.fail2ban.org/).
 In this step Docker and Docker Compose are installed and a Linux [systemd](https://en.wikipedia.org/wiki/Systemd) service is run
 that automatically starts/stops the operational stack, also on reboots.
