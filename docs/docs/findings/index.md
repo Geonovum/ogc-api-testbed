@@ -11,7 +11,11 @@ This document lists some of the experiences during installation and creation of 
 
 ## Docker
 
-Docker (and related technologies such as kubernetes, cloud foundry) are replacing traditional web servers following the [pet vs cattle](https://www.hava.io/blog/cattle-vs-pets-devops-explained) paradigm. Many pro's and con's are documented. We list a number of them which came up during the project.
+Docker (and related Cloud-technologies like Kubernetes and Cloud Foundry) are replacing the traditional 
+installation and maintenance of web services, often dubbed as "[Box Hugging](https://m.subbu.org/code-the-infra-8c67a869cb89)".
+These Cloud-technologies are following the [Pets vs Cattle](https://www.hava.io/blog/cattle-vs-pets-devops-explained) paradigm. 
+Many pro's and con's are documented. 
+We list a number of them which came up during the project.
 
 Pro's
 
@@ -24,11 +28,17 @@ Con's
 
 ## Data management
 
-A typical use case will be that a geonovum employee arrives with some shapefiles to be published. The shapefile can be deployed as part of the deployment (via github). An alternative route is to import the data into postgres. The data can then be used in various applications. Importing a shapefile into postgres requires direct connection to postgres or use the PGAdmin dump import. GeoServer (via GeoCat Bridge) has an option to upload a shapefile and import it to Postgres. See [HOWTO data](../howto/howto_database.md) on how to use both approaches.
+A typical use case will be that a geonovum employee arrives with some shapefiles to be published. 
+The Shapefile can be deployed as part of the deployment (via github). An alternative route is to import the data into postgres. The data can then be used in various applications. Importing a shapefile into postgres requires direct connection to postgres or use the PGAdmin dump import. GeoServer (via GeoCat Bridge) has an option to upload a shapefile and import it to Postgres. See [HOWTO data](../howto/howto_database.md) on how to use both approaches.
 
 ## Run infra locally
 
-The current deployment can be run locally on Linux and Mac easily, which is helpfull to test a new development before creating the Pull Request. However it may be the case that this does not easily work on Windows. On the other hand, maybe this is not a scenario, because the GeoNovum employee might update the configuration in git, and deploy it to the test environment, and use that as a test prior to moving the configuration to the production system.
+The current deployment can be run locally on Linux and Mac easily, which is helpful 
+to test a new development before creating the Pull Request. 
+However it may be the case that this does not easily work on Windows. 
+On the other hand, maybe this is not a scenario, because the Geonovum employee 
+might update the configuration in `GitHub`, and deploy it to the Sandbox environment, 
+and use that as a test prior to moving the configuration to the production system.
 
 ## Use of attached storage
 

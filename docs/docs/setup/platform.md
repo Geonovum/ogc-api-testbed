@@ -99,7 +99,9 @@ IP-blacklisting on multiple login attempt, key-only logine etc.
 
 ## Steps and Workflows
 
-These can be used to setup a running server from zero.
+Below is a shortened version how 
+to setup and maintain a testbed server instance from zero.
+In a [dedicated HOWTO Platform](/howto/howto_platform.md) all steps are described in great detail.
 
 ### Prerequisites
 
@@ -109,8 +111,6 @@ Step 0, this is what you need to have available first.
 This implies acquiring a server/VM instance from a hosting provider.
 Main requirements are that server/VM runs an LTS Ubuntu (20.4 or better) and that SSL-keys are available for root access 
 (or an admin user account with sudo-rights).
-
-Login there first and copy your SSh public key (`id_rsa.pub` usually) key to `/root/.ssh/authorized_keys`
 
 #### Python 3 and Ansible
 You need a Python 3 installation and then it is a matter of running

@@ -10,7 +10,7 @@ the Platform's design/setup, how it is provisioned (bootstrapped) and its contin
 Initially, the main goal of the Platform is to experiment with, and evaluate 
 various implementations of the [OGC API Features (OAFeat) Standard](https://ogcapi.ogc.org/features/). Given the generic nature
 of the Platform's web-services deployment architecture, additional services and OGC APIs may be added.
-The stable version of the Platform is provided as a [Open Source GitHub Template](https://github.com/Geonovum/ogc-api-testbed), allowing any party to 
+The stable version of the Platform is provided as an [Open Source GitHub Template](https://github.com/Geonovum/ogc-api-testbed), allowing any party to 
 derive and customize their own.
 
 Find a quick intro in the project [README](https://github.com/Geonovum/ogc-api-testbed#readme).
