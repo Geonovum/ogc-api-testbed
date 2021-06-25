@@ -53,7 +53,11 @@
     - name: "qgis"
       shell: "cd {{ services_home }}/qgis && ./deploy.sh && docker ps"
       tags: qgis
-
+    
+    - name: "goaf"
+      shell: "cd {{ services_home }}/goaf && ./deploy.sh && docker ps"
+      tags: goaf
+    
     - name: "postgis"
       shell: "cd {{ services_home }}/postgis && ./deploy.sh && docker ps"
       tags: postgis

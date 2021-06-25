@@ -20,6 +20,9 @@ The deployment section describes how to deploy services
 * [HOWTO deploy pygeoapi](howto_pygeoapi.md)
 * [HOWTO deploy GeoServer](howto_geoserver.md)
 * [HOWTO deploy LDProxy](howto_ldproxy.md)
+* [HOWTO deploy pycsw](howto_pycsw.md)
+* [HOWTO deploy qgis](howto_qgis.md)
+* [HOWTO deploy GOAF](howto_goaf.md)
 
 ## HOWTO Cases
 

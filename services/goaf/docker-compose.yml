@@ -1,0 +1,58 @@
+version: "3.3"
+
+services:
+
+  goaf:
+    # Seems 'latest' is another version
+    image: pdok/wfs-3.0:latest
+
+    container_name: goaf
+
+    expose:
+      - "8080"
+
+#    ports:
+#      - "7080:7080"
+    
+    volumes:
+      - ./data:/data
+    
+    environment:
+      - PATH_GPKG=/data/data.gpkg
+      - PROVIDER=gpkg
+      - ENDPOINT=${TRAEFIK_SSL_DOMAIN}/goaf
+
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      # This will replace any /goaf/* with /rest/services/* when calling the goaf container
+      - "traefik.http.middlewares.goaf-replace-restservices-path.replacepathregex.regex=/goaf(.*)"
+      - "traefik.http.middlewares.goaf-replace-restservices-path.replacepathregex.replacement=/rest/services$$1"
+
+      - "traefik.http.middlewares.goaf-replace-manager-path.replacepathregex.regex=/manager_goaf(.*)"
+      - "traefik.http.middlewares.goaf-replace-manager-path.replacepathregex.replacement=/manager$$1"
+
+      # SSL/https router
+      - "traefik.http.routers.goaf_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/goaf`)"
+      - "traefik.http.routers.goaf_https.entrypoints=https"
+      - "traefik.http.routers.goaf_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.goaf_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.goaf_https.tls.options=my_default@file"
+      - "traefik.http.routers.goaf_https.middlewares=secure-headers@file,goaf-replace-restservices-path"
+
+      # local http router - REST services
+      - "traefik.http.routers.goaf_http.rule=Host(`localhost`) && PathPrefix(`/goaf`)"
+      - "traefik.http.routers.goaf_http.entrypoints=http"
+      - "traefik.http.routers.goaf_http.middlewares=goaf-replace-restservices-path"
+
+      # local http router - for goaf Manager
+      - "traefik.http.routers.goaf_manager_http.rule=Host(`localhost`) && PathPrefix(`/manager_goaf`)"
+      - "traefik.http.routers.goaf_manager_http.entrypoints=http"
+      - "traefik.http.routers.goaf_manager_http.middlewares=goaf-replace-manager-path"
+
+networks:
+  default:
+    external:
+      name: service-network
