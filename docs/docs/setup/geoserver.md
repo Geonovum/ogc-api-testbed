@@ -36,12 +36,19 @@ In order to configure a new resource on GeoServer we added the required configur
 
 An alternative for manual setup us the [GeoCat bridge](https://geocat.net/bridge) tool, which is a typical tool to configure new resources on GeoServer from within the QGIS or ArcMAP Desktop application.
 
+## Template overrides
+
+We experimented with [template overrides](https://docs.geoserver.org/latest/en/user/community/ogc-api/features/index.html#service-configuration) to add the geonovum corporate identity to the OGC API endpoints. We found some interesting behaviour, which we reported to the GeoServer community. To override common-header.ftl for /collections, you need to add the override in /data/templates/ogc/features. To override it for /items you need to place it in data/workspaces.
+
+## GeoPackage support
+
+GeoPackage is often mentioned as a replacement for (appschema) GML to share larger datasets efficiently. GeoServer has support for GeoPackage as output format after installing a dedicated community plugin. The plugin also requires the wps plugin to be installed. Both plugins are installed and verified that these can be used as export format for OGC API Features.
+
 ## Issues
-Some issues found during deployment (and solutions where found)
+Some issues found during deployment 
 
 * [Issue #22](https://github.com/Geonovum/ogc-api-testbed/issues/22) - Permission Issue for mounted dirs: the GeoServer Container permanently changes the ownership of mounted dirs
 * [Issue #21](https://github.com/Geonovum/ogc-api-testbed/issues/21) - OGC API Plugin: running on subpath with https does not render linked resources correctly
+* [GEOS-10125](https://osgeo-org.atlassian.net/browse/GEOS-10125) - GeoServer currently does not add the (meta)data linksto the links section in /collections endpoint
+* [GEOS-10126](https://osgeo-org.atlassian.net/browse/GEOS-10126) - GeoServer uses deprecated mediatype application/x-gpkg.
 
-## Open research questions
-- how are metadata links configured on layers, exposed in ogc api features
-- are there an options to fetch gml, app-schema gml and/or geopackage via ogc-api features
