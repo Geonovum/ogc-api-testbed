@@ -7,6 +7,8 @@ title: Platform setup
 The project repository contains contains components to bootstrap, configure ("provision") and maintain a remote
 deployment of an OGC API web-service stack using modern "DevOps" tooling.
 
+![Schematic overview of the platform](../images/schema.png)
+
 ## Design Principles
 
 The main design principles are:
