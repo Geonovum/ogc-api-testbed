@@ -10,8 +10,8 @@ server:
     pretty_print: true
     limit: 10
     map:
-        url: https://tile.openstreetmap.org/{z}/{x}/{y}.png
-        attribution: 'Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        url: https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:3857/{z}/{x}/{y}.png
+        attribution: 'Map data &copy; <a href="https://pdok.nl">PDOK Kadaster</a>'
 #        url: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
 #        attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia maps</a> | Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
     ogc_schemas_location: /schemas.opengis.net
@@ -105,4 +105,5 @@ resources:
                       CPL_DEBUG: NO
 
               id_field: gml_id
+              title_field: text
               layer: rce
