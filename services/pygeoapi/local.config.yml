@@ -65,20 +65,25 @@ resources:
             - EPSG:4258
         links:
             - type: text/html
-              rel: canonical
-              title: information
+              rel: describedby
+              title: Metadata as HTML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/45eaae76-874a-4fe1-88f4-820517e3de73
-              hreflang: en-US
+              hreflang: nl
             - type: application/xml
-              rel: canonical
-              title: information
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/45eaae76-874a-4fe1-88f4-820517e3de73
-              hreflang: en-US
+              rel: describedby
+              title: Metadata as iso19139 xml
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/45eaae76-874a-4fe1-88f4-820517e3de73/formatters/xml
+              hreflang: nl
             - type: text/html
-              rel: canonical
-              title: information
+              rel: tag
+              title: Referentie naar het concept beschermde gebieden (inspire registry)
               href: http://inspire.ec.europa.eu/featureconcept/ProtectedSite
-              hreflang: en-US
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download volledige dataset Werelderfgoed als GML
+              href: https://service.pdok.nl/rce/ps-ch/wfs/v1_0?request=GetFeature&service=WFS&version=1.1.0&typeName=ps-ch:rce_inspire_polygons&outputFormat=text%2Fxml%3B%20subtype%3Dgml%2F3.1.1
+              hreflang: nl
         extents:
             spatial:
                 bbox: [4.40, 51.76, 5.80, 52.85]
