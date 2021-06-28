@@ -4,9 +4,9 @@ services:
 
   goaf:
     # Seems 'latest' is another version
-    image: pdok/wfs-3.0:latest
-
-    container_name: goaf
+    image: ${DOCKER_IMAGE}
+ 
+    container_name: ${SERVICE_NAME}
 
     expose:
       - "8080"
@@ -20,22 +20,19 @@ services:
     environment:
       - PATH_GPKG=/data/data.gpkg
       - PROVIDER=gpkg
-      - ENDPOINT=${TRAEFIK_SSL_DOMAIN}/goaf
+      - ENDPOINT=${SERVICE_PATH}
 
     labels:
       # Enable Traefik routing on overlay service network
       - "traefik.enable=true"
       - "traefik.docker.network=service-network"
 
-      # This will replace any /goaf/* with /rest/services/* when calling the goaf container
-      - "traefik.http.middlewares.goaf-replace-restservices-path.replacepathregex.regex=/goaf(.*)"
-      - "traefik.http.middlewares.goaf-replace-restservices-path.replacepathregex.replacement=/rest/services$$1"
-
-      - "traefik.http.middlewares.goaf-replace-manager-path.replacepathregex.regex=/manager_goaf(.*)"
-      - "traefik.http.middlewares.goaf-replace-manager-path.replacepathregex.replacement=/manager$$1"
+      # This will replace any ${SERVICE_PATH}/* with /rest/services/* when calling the goaf container
+#      - "traefik.http.middlewares.goaf-replace-restservices-path.replacepathregex.regex=${SERVICE_PATH}(.*)"
+#      - "traefik.http.middlewares.goaf-replace-restservices-path.replacepathregex.replacement=/rest/services$$1"
 
       # SSL/https router
-      - "traefik.http.routers.goaf_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/goaf`)"
+      - "traefik.http.routers.goaf_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`${SERVICE_PATH}`)"
       - "traefik.http.routers.goaf_https.entrypoints=https"
       - "traefik.http.routers.goaf_https.tls=${TRAEFIK_USE_TLS}"
       - "traefik.http.routers.goaf_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
@@ -43,14 +40,9 @@ services:
       - "traefik.http.routers.goaf_https.middlewares=secure-headers@file,goaf-replace-restservices-path"
 
       # local http router - REST services
-      - "traefik.http.routers.goaf_http.rule=Host(`localhost`) && PathPrefix(`/goaf`)"
+      - "traefik.http.routers.goaf_http.rule=Host(`localhost`) && PathPrefix(`${SERVICE_PATH}`)"
       - "traefik.http.routers.goaf_http.entrypoints=http"
       - "traefik.http.routers.goaf_http.middlewares=goaf-replace-restservices-path"
-
-      # local http router - for goaf Manager
-      - "traefik.http.routers.goaf_manager_http.rule=Host(`localhost`) && PathPrefix(`/manager_goaf`)"
-      - "traefik.http.routers.goaf_manager_http.entrypoints=http"
-      - "traefik.http.routers.goaf_manager_http.middlewares=goaf-replace-manager-path"
 
 networks:
   default:

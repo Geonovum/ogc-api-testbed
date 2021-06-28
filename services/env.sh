@@ -6,6 +6,7 @@
 
 # Assume a local deployment
 export DEPLOY_ENV="local"
+export TRAEFIK_DOMAIN="localhost"
 export TRAEFIK_SSL_ENDPOINT=
 export TRAEFIK_SSL_DOMAIN="apitestbed.geonovum.nl"
 export TRAEFIK_SSL_CERT_RESOLVER=
@@ -38,4 +39,5 @@ then
     TRAEFIK_SSL_ENDPOINT="https"
     TRAEFIK_SSL_CERT_RESOLVER="le"
     TRAEFIK_USE_TLS="true"
+    TRAEFIK_DOMAIN="${TRAEFIK_SSL_DOMAIN}"
 fi

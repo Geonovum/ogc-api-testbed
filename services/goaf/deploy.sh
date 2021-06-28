@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source ../env.sh
+source ./env.sh
 
-
-./stop.sh && docker pull pdok/wfs-3.0:latest && ./start.sh
+./stop.sh && docker pull ${DOCKER_IMAGE} && ./start.sh
