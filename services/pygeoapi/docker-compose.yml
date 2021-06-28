@@ -17,7 +17,7 @@ services:
 
     environment:
       # Specific to Flask apps
-      - SCRIPT_NAME="${SERVICE_PATH}"
+      - SCRIPT_NAME=${SERVICE_PATH}
 
     volumes:
       # Map data and config into pygeoapi container
