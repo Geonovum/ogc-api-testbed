@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source ../env.sh
+source ./env.sh
 
-./stop.sh && docker pull geopython/pycsw:latest && ./start.sh
+./stop.sh && docker pull ${DOCKER_IMAGE} && ./start.sh

@@ -4,9 +4,9 @@ services:
 
   pycsw:
     
-    image: geopython/pycsw:latest
+    image: ${DOCKER_IMAGE}
 
-    container_name: pycsw
+    container_name: ${SERVICE_NAME}
 
     expose:
       - "8000"
@@ -15,7 +15,7 @@ services:
 #     - "5000:80"
 
     environment:
-      - SCRIPT_NAME=/pycsw/csw.py
+      - SCRIPT_NAME=${SCRIPT_NAME}
 
     volumes:
       # Map data and config into  container
@@ -26,19 +26,18 @@ services:
       # Enable Traefik routing on overlay service network
       - "traefik.enable=true"
       - "traefik.docker.network=service-network"
-      - "traefik.http.middlewares.portainer-stripprefix.stripprefix.prefixes=/pycsw"
 
       # SSL/https router
-      - "traefik.http.routers.pycsw_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/pycsw`)"
-      - "traefik.http.routers.pycsw_https.entrypoints=https"
-      - "traefik.http.routers.pycsw_https.tls=${TRAEFIK_USE_TLS}"
-      - "traefik.http.routers.pycsw_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
-      - "traefik.http.routers.pycsw_https.tls.options=my_default@file"
-      - "traefik.http.routers.pycsw_https.middlewares=secure-headers@file"
+      - "traefik.http.routers.${SERVICE_NAME}_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`${SCRIPT_NAME}`)"
+      - "traefik.http.routers.${SERVICE_NAME}_https.entrypoints=https"
+      - "traefik.http.routers.${SERVICE_NAME}_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.${SERVICE_NAME}_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.${SERVICE_NAME}_https.tls.options=my_default@file"
+      - "traefik.http.routers.${SERVICE_NAME}_https.middlewares=secure-headers@file"
 
       # local http router
-      - "traefik.http.routers.pycsw_http.rule=Host(`localhost`) && PathPrefix(`/pycsw`)"
-      - "traefik.http.routers.pycsw_http.entrypoints=http"
+      - "traefik.http.routers.${SERVICE_NAME}_http.rule=Host(`localhost`) && PathPrefix(`${SCRIPT_NAME}`)"
+      - "traefik.http.routers.${SERVICE_NAME}_http.entrypoints=http"
 
 networks:
   default:
