@@ -1,9 +1,6 @@
-# ldproxy demo service 
-Runs latest [ldproxy](https://github.com/interactive-instruments/ldproxy) using
-its [LDProxy Docker Image from DockerHub](https://hub.docker.com/r/iide/ldproxy).
-with a [local config file](data/cfg.yml).
-
-Note that the [proxy path is replaced](docker-compose.yml) by Traefik during routing.
+# goaf demo service 
+Runs latest [Kadaster PDOK GOAF](https://github.com/PDOK/goaf) using
+its [goaf Docker Image from DockerHub](https://hub.docker.com/r/pdok/wfs-3.0).
 
 ## Deployment
 
@@ -13,17 +10,16 @@ when committed/pushed.
 A GitHub Action invokes an Ansible Playbook.
 See the following deployment files:
 
-* [GitHub Action](../../.github/workflows/deploy.ldproxy.yml)
+* [GitHub Action](../../.github/workflows/deploy.goaf.yml)
 * [Ansible Playbook](../../ansible/deploy.yml)
 
 The Ansible Playbook can also be invoked directly.
 
-# Managing Services
-`ldproxy` includes a [Manager](https://interactive-instruments.github.io/ldproxy/book/01-managing-services.html) service
-to add/configure services and data. This is anabled only locally, as any config will be managed in GitHub and deployed
-on remote server.
+## New Service from Duplication
 
-Access the local manager with the link: http://localhost:8000/manager_ldproxy. 
-This will make changes to the data/ directory. These can be committed and deployed.
+Creating a new service `xyz` via duplication of this directory:
 
-Services can also be managed by hand but that is a bit more involved.
+* duplicate this and name it as the service e.g. `services/xyz`
+* create GitHub Action file as copy/rename from [GitHub Action](../../.github/workflows/deploy.goaf.yml) to `deploy.xyz.yml`
+* new 3 lines for `xyz` in [Ansible Playbook](../../ansible/deploy.yml)
+* the variables, mainly `SERVICE_NAME=xyz` in [env.sh](env.sh).
