@@ -22,9 +22,9 @@ approval process can happen around a Pull Request, before it is merged and deplo
 
 For your case, decide if you want to update an existing service or create a new service. 
 All services in the platform are available as paths on a single domain. 
-Each service contains an orchestration of one or more [docker containers](https://en.wikipedia.org/wiki/Docker_(software)), 
+Each service contains an orchestration of one or more [Docker Containers](https://en.wikipedia.org/wiki/Docker_(software)), 
 which together provide the functionality of the service. Docker containers are based on of-the-shelf 
-product images from DockerHub, combined with a service specific configuration.
+product images from DockerHub, combined with a service-specific configuration.
 
 ## Update a service
 
@@ -59,7 +59,7 @@ In the best case `docker-compose.yml` requires no changes.
 
 This step is specific to the service-component. 
 For example `pygeoapi` has a single `local.config.yml`
-file. In many cases the fill service URL with the subpath needs to be adapted.
+file. In many cases the full service URL with the subpath needs to be adapted.
 Others, like GOAF, may need var-settings in the `docker-compose.yml` file.
 Usually you will add data files like GeoPackage-files on a `/data/` subfolder.
 
