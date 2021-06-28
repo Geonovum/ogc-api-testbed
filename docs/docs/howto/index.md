@@ -10,13 +10,13 @@ The following sections of HOWTOs exist.
 
 The Platform section describes how to deploy your own instance of the OGC API Testbed platform.
 
-* [HOWTO Platform](howto_platform.md)
+* [HOWTO Platform](howto_platform.md) - setting up a new platform
 * [HOWTO Error Analysis](howto_errors.md)
 
 ## HOWTO Services
 The deployment section describes how to deploy services
 
-* [HOWTO Deploy](howto_deploy.md)
+* [HOWTO Deploy](howto_deploy.md) - create or update a service
 * [HOWTO deploy pygeoapi](howto_pygeoapi.md)
 * [HOWTO deploy GeoServer](howto_geoserver.md)
 * [HOWTO deploy LDProxy](howto_ldproxy.md)
