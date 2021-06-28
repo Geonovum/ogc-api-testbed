@@ -4,9 +4,9 @@ services:
 
   ldproxy:
     # Seems 'latest' is another version
-    image: iide/ldproxy:master
+    image: ${DOCKER_IMAGE}
 
-    container_name: ldproxy
+    container_name: ${SERVICE_NAME}
 
     expose:
       - "7080"
@@ -23,29 +23,29 @@ services:
       - "traefik.docker.network=service-network"
 
       # This will replace any /ldproxy/* with /rest/services/* when calling the ldproxy container
-      - "traefik.http.middlewares.ldproxy-replace-restservices-path.replacepathregex.regex=/ldproxy(.*)"
-      - "traefik.http.middlewares.ldproxy-replace-restservices-path.replacepathregex.replacement=/rest/services$$1"
+      - "traefik.http.middlewares.${SERVICE_NAME}_replace_restservices_path.replacepathregex.regex=${SERVICE_PATH}(.*)"
+      - "traefik.http.middlewares.${SERVICE_NAME}_replace_restservices_path.replacepathregex.replacement=/rest/services$$1"
 
-      - "traefik.http.middlewares.ldproxy-replace-manager-path.replacepathregex.regex=/manager_ldproxy(.*)"
-      - "traefik.http.middlewares.ldproxy-replace-manager-path.replacepathregex.replacement=/manager$$1"
+      - "traefik.http.middlewares.${SERVICE_NAME}_replace_manager_path.replacepathregex.regex=${SERVICE_PATH_MANAGER}(.*)"
+      - "traefik.http.middlewares.${SERVICE_NAME}_replace_manager_path.replacepathregex.replacement=/manager$$1"
 
       # SSL/https router
-      - "traefik.http.routers.ldproxy_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`/ldproxy`)"
-      - "traefik.http.routers.ldproxy_https.entrypoints=https"
-      - "traefik.http.routers.ldproxy_https.tls=${TRAEFIK_USE_TLS}"
-      - "traefik.http.routers.ldproxy_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
-      - "traefik.http.routers.ldproxy_https.tls.options=my_default@file"
-      - "traefik.http.routers.ldproxy_https.middlewares=secure-headers@file,ldproxy-replace-restservices-path"
+      - "traefik.http.routers.${SERVICE_NAME}_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`${SERVICE_PATH}`)"
+      - "traefik.http.routers.${SERVICE_NAME}_https.entrypoints=https"
+      - "traefik.http.routers.${SERVICE_NAME}_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.${SERVICE_NAME}_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.${SERVICE_NAME}_https.tls.options=my_default@file"
+      - "traefik.http.routers.${SERVICE_NAME}_https.middlewares=secure-headers@file,${SERVICE_NAME}_replace_restservices_path"
 
       # local http router - REST services
-      - "traefik.http.routers.ldproxy_http.rule=Host(`localhost`) && PathPrefix(`/ldproxy`)"
-      - "traefik.http.routers.ldproxy_http.entrypoints=http"
-      - "traefik.http.routers.ldproxy_http.middlewares=ldproxy-replace-restservices-path"
+      - "traefik.http.routers.${SERVICE_NAME}_http.rule=Host(`localhost`) && PathPrefix(`${SERVICE_PATH}`)"
+      - "traefik.http.routers.${SERVICE_NAME}_http.entrypoints=http"
+      - "traefik.http.routers.${SERVICE_NAME}_http.middlewares=${SERVICE_NAME}_replace_restservices_path"
 
       # local http router - for ldproxy Manager
-      - "traefik.http.routers.ldproxy_manager_http.rule=Host(`localhost`) && PathPrefix(`/manager_ldproxy`)"
-      - "traefik.http.routers.ldproxy_manager_http.entrypoints=http"
-      - "traefik.http.routers.ldproxy_manager_http.middlewares=ldproxy-replace-manager-path"
+      - "traefik.http.routers.${SERVICE_NAME}_manager_http.rule=Host(`localhost`) && PathPrefix(`${SERVICE_PATH_MANAGER}`)"
+      - "traefik.http.routers.${SERVICE_NAME}_manager_http.entrypoints=http"
+      - "traefik.http.routers.${SERVICE_NAME}_manager_http.middlewares=${SERVICE_NAME}_replace_manager_path"
 
 networks:
   default:

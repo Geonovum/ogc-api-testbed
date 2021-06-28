@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../env.sh
+source ./env.sh
 
 # Now logging to docker console
 # RMFILES="data/api-resources data/cache data/ldproxy.log data/store data/tmp"
