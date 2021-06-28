@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../env.sh
+source ./env.sh
 
 # To prevent permission problems...for now
 chmod 777 data

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../env.sh
+source ./env.sh
 
 
-./stop.sh && docker pull camptocamp/qgis-server:latest && ./start.sh
+./stop.sh && docker pull ${DOCKER_IMAGE} && ./start.sh
