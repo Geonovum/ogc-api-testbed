@@ -1,5 +1,6 @@
 version: '3.3'
 
+# See env.sh and ../env.sh for env vars
 services:
 
   pygeoapi:
@@ -15,7 +16,8 @@ services:
     #     - "5000:80"
 
     environment:
-      SCRIPT_NAME: "${SCRIPT_NAME}"
+      # Specific to Flask apps
+      - SCRIPT_NAME="${SERVICE_PATH}"
 
     volumes:
       # Map data and config into pygeoapi container
@@ -28,7 +30,7 @@ services:
       - "traefik.docker.network=service-network"
 
       # Define SSL/https router
-      - "traefik.http.routers.${SERVICE_NAME}_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`${SCRIPT_NAME}`)"
+      - "traefik.http.routers.${SERVICE_NAME}_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`${SERVICE_PATH}`)"
       - "traefik.http.routers.${SERVICE_NAME}_https.entrypoints=https"
       - "traefik.http.routers.${SERVICE_NAME}_https.tls=${TRAEFIK_USE_TLS}"
       - "traefik.http.routers.${SERVICE_NAME}_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
@@ -36,7 +38,7 @@ services:
       - "traefik.http.routers.${SERVICE_NAME}_https.middlewares=secure-headers@file"
 
       # Define local http router
-      - "traefik.http.routers.${SERVICE_NAME}_http.rule=Host(`localhost`) && PathPrefix(`${SCRIPT_NAME}`)"
+      - "traefik.http.routers.${SERVICE_NAME}_http.rule=Host(`localhost`) && PathPrefix(`${SERVICE_PATH}`)"
       - "traefik.http.routers.${SERVICE_NAME}_http.entrypoints=http"
 
 networks:
