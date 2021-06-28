@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source ../env.sh
+source ./env.sh
 
 ./stop.sh && ./start.sh
