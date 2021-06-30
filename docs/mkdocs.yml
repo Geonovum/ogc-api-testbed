@@ -11,6 +11,7 @@ nav:
     - Setup: setup/index.md
     - Cases: cases/index.md
     - Results: findings/index.md
+    - Credits: credits/index.md
     - Code: https://github.com/Geonovum/ogc-api-testbed
 
 # use_directory_urls: true
