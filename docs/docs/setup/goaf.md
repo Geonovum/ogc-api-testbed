@@ -12,6 +12,3 @@ GOAF supports a PostGres or GeoPackage backend. Which file to serve the type of 
 
 We have added the default BRT image provided by PDOK as example.
 
-
-
-
