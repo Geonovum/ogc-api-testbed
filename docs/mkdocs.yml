@@ -18,10 +18,10 @@ nav:
 
 theme:
   name: material
-  
-#theme:
-#    name: null
-#    custom_dir: pygeoapi.io-theme
+  palette:
+      # See https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-scheme
+      # Default is indigo (blue)
+      primary: light green
 
 plugins:
     - search
