@@ -17,7 +17,4 @@ QGIS server is configured through QGIS Desktop. The project file generated with 
 QGIS_PROJECT_FILE:/etc/qgisserver/my-new-project.qgs
 ```
 
-- Test your service via https://apitestbed.geonovum.nl/qgis/wfs3
-
-
-
+- Test your service via [https://apitestbed.geonovum.nl/qgis/wfs3](https://apitestbed.geonovum.nl/qgis/wfs3)
