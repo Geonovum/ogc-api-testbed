@@ -11,6 +11,7 @@ The following sections of HOWTOs exist.
 The Platform section describes how to deploy your own instance of the OGC API Testbed platform.
 
 * [HOWTO Platform](howto_platform.md) - setting up a new platform
+* [HOWTO System Maintenance](howto_system.md) - maintaining the host system  
 * [HOWTO Error Analysis](howto_errors.md)
 
 ## HOWTO Services

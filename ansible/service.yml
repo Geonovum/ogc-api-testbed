@@ -17,8 +17,3 @@
     - name: "status"
       shell: "systemctl status ogcapi.service ; docker ps"
       tags: status
-
-    # https://docs.ansible.com/ansible/latest/modules/reboot_module.html
-    - name: "reboot"
-      shell: "shutdown -r now"
-      tags: reboot

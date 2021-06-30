@@ -1,0 +1,19 @@
+# Allows remote maintenance of the (Ubuntu) host system.
+- name: "Host System Maintenance"
+  become: true
+  hosts: all
+  gather_facts: yes
+
+  vars_files:
+    - vars/vars.yml
+
+  tasks:
+    # Update outdated Ubuntu packages using APT.
+    - name: "update_packages"
+      shell: "apt-get update && apt-get -y upgrade"
+      tags: update_packages
+
+    # https://docs.ansible.com/ansible/latest/modules/reboot_module.html
+    - name: "reboot"
+      reboot:
+      tags: reboot
