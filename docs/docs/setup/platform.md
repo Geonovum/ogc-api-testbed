@@ -28,6 +28,7 @@ The components used to realize this design are:
 * [Docker Compose](https://docs.docker.com/compose) *"...a tool for defining and running multi-container Docker applications..."*
 * [Ansible](https://www.ansible.com/) *"...an open-source software provisioning tool"* ([Wikipedia](https://en.wikipedia.org/wiki/Ansible_(software)))
 * [GitHub Actions/Workflows](https://docs.github.com/en/actions) *"...Automate, customize, and execute software development workflows in a GitHub repository..."*
+* [Traefik](https://traefik.io/) a frontend proxy/load-balancer and SSL (HTTPS) endpoint.
 
 The Docker-components are used to run the operational stack, i.e. the OGC API web-services and supporting services like for monitoring. 
 Ansible is used to provision (bootstrap)  both the server OS-software
@@ -39,13 +40,18 @@ and provisioning the operational stack on a remote server/VM.
 Security is guaranteed by the use of [Ansible-Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html) 
 and [GitHub Encrypted Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
-The operational stack has the following components:
+Traefik manages the routing of remote requests to relevant containers. Traefik listens to Docker Engine to be aware of available containers. Containers include a dedicated configuration which is picked up by traefik to enable the route. 
 
-* [Traefik](https://traefik.io/) a frontend proxy/load-balancer and SSL (HTTPS) endpoint.
-* [pygeoapi](https://pygeoapi.io/) a Python server implementation of the OGC API suite of standards.
-* [GeoServer](http://geoserver.org/) a Java server implementation of the OGC API suite of standards.
-* [ldproxy](https://interactive-instruments.github.io/ldproxy/) a Java server implementation of the OGC API suite of standards.
+## Services
+
+A number of services has been deployed within the platform, which can act as a template to add additional services. 
+
+* [pygeoapi](https://pygeoapi.io/) - a Python server implementation of the OGC API suite of standards.
+* [pycsw](https://pycsw.org/) - a Python server implementation of  OGC API Records.
+* [GeoServer](http://geoserver.org/) - a Java server implementation of the OGC API suite of standards.
+* [ldproxy](https://interactive-instruments.github.io/ldproxy/) - a Java server implementation of the OGC API suite of standards.
 * [QGIS Server](https://www.qgis.org/) - server component of QGIS with OGC OAFeat support.
+* [GOAF](https://www.github.com/pdok/goaf) - OAF service developed in Go, maintained by PDOK.
 * [PostgreSQL/PostGIS](https://postgis.net) - geospatial database
 
 For administration, documentation and monitoring the following components are used:
