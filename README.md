@@ -2,6 +2,8 @@
 [![pygeoapi Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.pygeoapi.yml)
 [![ldproxy Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.ldproxy.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.ldproxy.yml)
 [![geoserver Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.geoserver.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.geoserver.yml)
+[![goaf Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.goaf.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.goaf.yml)
+[![qgis Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.qgis.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.qgis.yml)
 [![postgis Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.postgis.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.postgis.yml)
 [![admin Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.admin.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.admin.yml)
 [![home Deploy](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.home.yml/badge.svg)](https://github.com/Geonovum/ogc-api-testbed/actions/workflows/deploy.home.yml)
@@ -58,6 +60,7 @@ The operational stack has the following components:
 * [GeoServer](http://geoserver.org/) a Java server implementation of the OGC API suite of standards.
 * [ldproxy](https://interactive-instruments.github.io/ldproxy/) a Java server implementation of the OGC API suite of standards.
 * [QGIS Server](https://www.qgis.org/) - server component of QGIS with OGC OAFeat support.
+* [GOAF](https://github.com/PDOK/goaf) - OGC OAFeat implementation in Golang.
 * [PostgreSQL/PostGIS](https://postgis.net) - geospatial database
 
 For administration, documentation and monitoring the following components are used:

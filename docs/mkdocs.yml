@@ -4,13 +4,13 @@ site_author: Geonovum
 copyright: "&copy; 2021 Geonovum"
 site_url: https://apitestdocs.geonovum.nl
 repo_url: https://github.com/Geonovum/ogc-api-testbed
-docs_dir: docs
+docs_dir: docs/docs
 nav:
     - Home: index.md
     - Howto: howto/index.md
     - Setup: setup/index.md
     - Cases: cases/index.md
-    - Results: findings/index.md
+    - Findings: findings/index.md
     - Credits: credits/index.md
     - Code: https://github.com/Geonovum/ogc-api-testbed
 
