@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis saveDateTime="2021-06-21T23:40:13" projectname="" saveUserFull="Paul" version="3.18.1-Zürich" saveUser="geocat">
+<qgis projectname="" saveUserFull="just" saveUser="just" version="3.16.0-Hannover" saveDateTime="2021-09-06T17:50:54">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -20,30 +20,31 @@
   </projectCrs>
   <layer-tree-group>
     <customproperties/>
-    <layer-tree-group checked="Qt::Checked" expanded="1" name="foo">
+    <layer-tree-layer checked="Qt::Checked" expanded="1" providerKey="ogr" legend_split_behavior="0" legend_exp="" patch_size="-1,-1" name="dutch_addresses_4326 OGRGeoJSON" id="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b" source="./dutch_addresses_4326.gpkg|layername=OGRGeoJSON|option:LIST_ALL_TABLES=AUTO">
       <customproperties/>
-      <layer-tree-layer checked="Qt::Checked" expanded="0" legend_split_behavior="0" patch_size="-1,-1" providerKey="ogr" legend_exp="" name="cbs-grenzen" source="./vlak.gpkg|layername=vlak" id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73">
-        <customproperties/>
-      </layer-tree-layer>
-    </layer-tree-group>
+    </layer-tree-layer>
+    <layer-tree-layer checked="Qt::Checked" expanded="1" providerKey="ogr" legend_split_behavior="0" legend_exp="" patch_size="-1,-1" name="cbs-grenzen" id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73" source="./vlak.gpkg|layername=vlak">
+      <customproperties/>
+    </layer-tree-layer>
     <custom-order enabled="0">
       <item>vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73</item>
+      <item>dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b</item>
     </custom-order>
   </layer-tree-group>
-  <snapping-settings maxScale="0" mode="2" self-snapping="0" minScale="0" enabled="0" type="1" unit="1" intersection-snapping="0" tolerance="12" scaleDependencyMode="0">
+  <snapping-settings enabled="0" minScale="0" intersection-snapping="0" scaleDependencyMode="0" type="1" mode="2" self-snapping="0" tolerance="12" unit="1" maxScale="0">
     <individual-layer-settings>
-      <layer-setting maxScale="0" minScale="0" enabled="0" type="1" units="1" tolerance="12" id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73"/>
+      <layer-setting enabled="0" units="1" minScale="0" type="1" id="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b" tolerance="12" maxScale="0"/>
+      <layer-setting enabled="0" units="1" minScale="0" type="1" id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73" tolerance="12" maxScale="0"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
-  <polymorphicRelations/>
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>4.58231235927709246</xmin>
-      <ymin>52.36874683780235529</ymin>
-      <xmax>4.60904055939135926</xmax>
-      <ymax>52.38809919917972735</ymax>
+      <xmin>5.75312442264785417</xmin>
+      <ymin>52.07726619618154018</ymin>
+      <xmax>5.80686347130311376</xmax>
+      <ymax>52.11517850352879577</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -64,13 +65,16 @@
   </mapcanvas>
   <projectModels/>
   <legend updateDrawingOrder="true">
-    <legendgroup open="true" checked="Qt::Checked" name="foo">
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" showFeatureCount="0" name="cbs-grenzen">
-        <filegroup open="false" hidden="false">
-          <legendlayerfile visible="1" isInOverview="0" layerid="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73"/>
-        </filegroup>
-      </legendlayer>
-    </legendgroup>
+    <legendlayer checked="Qt::Checked" open="true" name="dutch_addresses_4326 OGRGeoJSON" showFeatureCount="0" drawingOrder="-1">
+      <filegroup hidden="false" open="true">
+        <legendlayerfile isInOverview="0" layerid="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer checked="Qt::Checked" open="true" name="cbs-grenzen" showFeatureCount="0" drawingOrder="-1">
+      <filegroup hidden="false" open="true">
+        <legendlayerfile isInOverview="0" layerid="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73" visible="1"/>
+      </filegroup>
+    </legendlayer>
   </legend>
   <mapViewDocks/>
   <mapViewDocks3D/>
@@ -99,7 +103,57 @@
     <rendermaptile>0</rendermaptile>
     <expressionContextScope/>
   </mapcanvas>
-  <main-annotation-layer autoRefreshEnabled="0" type="annotation" refreshOnNotifyMessage="" autoRefreshTime="0" refreshOnNotifyEnabled="0">
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+    <expressionContextScope/>
+  </mapcanvas>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+    <expressionContextScope/>
+  </mapcanvas>
+  <main-annotation-layer refreshOnNotifyEnabled="0" type="annotation" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
     <id>Annotations_3ca50bc4_fc6d_4b31_9a4f_8d046196d5ec</id>
     <datasource></datasource>
     <keywordList>
@@ -116,7 +170,7 @@
         <description></description>
         <projectionacronym></projectionacronym>
         <ellipsoidacronym></ellipsoidacronym>
-        <geographicflag>false</geographicflag>
+        <geographicflag>true</geographicflag>
       </spatialrefsys>
     </srs>
     <resourceMetadata>
@@ -139,17 +193,258 @@
           <description></description>
           <projectionacronym></projectionacronym>
           <ellipsoidacronym></ellipsoidacronym>
-          <geographicflag>false</geographicflag>
+          <geographicflag>true</geographicflag>
         </spatialrefsys>
       </crs>
       <extent/>
     </resourceMetadata>
     <items/>
     <layerOpacity>1</layerOpacity>
-    <blendMode>0</blendMode>
   </main-annotation-layer>
   <projectlayers>
-    <maplayer type="vector" readOnly="0" simplifyLocal="1" autoRefreshEnabled="0" geometry="Polygon" simplifyAlgorithm="0" styleCategories="AllStyleCategories" simplifyDrawingHints="1" labelsEnabled="0" wkbType="MultiPolygon" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" simplifyDrawingTol="1" minScale="100000000" refreshOnNotifyEnabled="0" simplifyMaxScale="1" refreshOnNotifyMessage="" maxScale="0">
+    <maplayer simplifyDrawingTol="1" autoRefreshEnabled="0" readOnly="0" styleCategories="AllStyleCategories" simplifyLocal="1" minScale="100000000" simplifyDrawingHints="1" refreshOnNotifyEnabled="0" simplifyMaxScale="1" maxScale="0" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" simplifyAlgorithm="0" type="vector" wkbType="Point" labelsEnabled="0" geometry="Point" refreshOnNotifyMessage="">
+      <extent>
+        <xmin>5.67067000000000032</xmin>
+        <ymin>52.04270000000000351</ymin>
+        <xmax>5.82911000000000001</xmax>
+        <ymax>52.12369999999999948</ymax>
+      </extent>
+      <id>dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b</id>
+      <datasource>./dutch_addresses_4326.gpkg|layername=OGRGeoJSON|option:LIST_ALL_TABLES=AUTO</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>dutch_addresses_4326 OGRGeoJSON</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal enabled="0" durationField="" durationUnit="min" endField="" endExpression="" fixedDuration="0" accumulate="0" mode="0" startExpression="" startField="">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <renderer-v2 type="singleSymbol" symbollevels="0" enableorderby="0" forceraster="0">
+        <symbols>
+          <symbol clip_to_extent="1" alpha="1" type="marker" name="0" force_rhr="0">
+            <layer enabled="1" pass="0" class="SimpleMarker" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="232,113,141,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="2" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+        <activeChecks type="StringList">
+          <Option type="QString" value=""/>
+        </activeChecks>
+        <checkConfiguration/>
+      </geometryOptions>
+      <legend type="default-vector"/>
+      <referencedLayers/>
+      <fieldConfiguration>
+        <field name="fid" configurationFlags="None">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="id" configurationFlags="None">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="straatnaam" configurationFlags="None">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="huisnummer" configurationFlags="None">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="huisletter" configurationFlags="None">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="woonplaats" configurationFlags="None">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="postcode" configurationFlags="None">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="toevoeging" configurationFlags="None">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="fid" name=""/>
+        <alias index="1" field="id" name=""/>
+        <alias index="2" field="straatnaam" name=""/>
+        <alias index="3" field="huisnummer" name=""/>
+        <alias index="4" field="huisletter" name=""/>
+        <alias index="5" field="woonplaats" name=""/>
+        <alias index="6" field="postcode" name=""/>
+        <alias index="7" field="toevoeging" name=""/>
+      </aliases>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="fid"/>
+        <default applyOnUpdate="0" expression="" field="id"/>
+        <default applyOnUpdate="0" expression="" field="straatnaam"/>
+        <default applyOnUpdate="0" expression="" field="huisnummer"/>
+        <default applyOnUpdate="0" expression="" field="huisletter"/>
+        <default applyOnUpdate="0" expression="" field="woonplaats"/>
+        <default applyOnUpdate="0" expression="" field="postcode"/>
+        <default applyOnUpdate="0" expression="" field="toevoeging"/>
+      </defaults>
+      <constraints>
+        <constraint notnull_strength="1" exp_strength="0" constraints="3" field="fid" unique_strength="1"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="id" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="straatnaam" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="huisnummer" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="huisletter" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="woonplaats" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="postcode" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="toevoeging" unique_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" exp="" field="fid"/>
+        <constraint desc="" exp="" field="id"/>
+        <constraint desc="" exp="" field="straatnaam"/>
+        <constraint desc="" exp="" field="huisnummer"/>
+        <constraint desc="" exp="" field="huisletter"/>
+        <constraint desc="" exp="" field="woonplaats"/>
+        <constraint desc="" exp="" field="postcode"/>
+        <constraint desc="" exp="" field="toevoeging"/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <storedexpressions/>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <dataDefinedFieldProperties/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer simplifyDrawingTol="1" autoRefreshEnabled="0" readOnly="0" styleCategories="AllStyleCategories" simplifyLocal="1" minScale="100000000" simplifyDrawingHints="1" refreshOnNotifyEnabled="0" simplifyMaxScale="1" maxScale="0" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" simplifyAlgorithm="0" type="vector" wkbType="MultiPolygon" labelsEnabled="0" geometry="Polygon" refreshOnNotifyMessage="">
       <extent>
         <xmin>10425.15602849909919314</xmin>
         <ymin>306846.19803570199292153</ymin>
@@ -204,11 +499,11 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
-          <spatial maxz="0" miny="0" crs="" minx="0" minz="0" maxx="0" dimensions="2" maxy="0"/>
+          <spatial minx="0" crs="" miny="0" minz="0" maxy="0" maxx="0" maxz="0" dimensions="2"/>
           <temporal>
             <period>
               <start></start>
@@ -230,45 +525,24 @@
         <Identifiable>1</Identifiable>
         <Removable>1</Removable>
         <Searchable>1</Searchable>
-        <Private>0</Private>
       </flags>
-      <temporal mode="0" durationField="" startField="" enabled="0" endField="" startExpression="" endExpression="" durationUnit="min" fixedDuration="0" accumulate="0">
+      <temporal enabled="0" durationField="" durationUnit="min" endField="" endExpression="" fixedDuration="0" accumulate="0" mode="0" startExpression="" startField="">
         <fixedRange>
           <start></start>
           <end></end>
         </fixedRange>
       </temporal>
-      <renderer-v2 type="graduatedSymbol" forceraster="0" graduatedMethod="GraduatedColor" enableorderby="0" symbollevels="0" attr="AANT_MAN">
+      <renderer-v2 type="graduatedSymbol" symbollevels="0" enableorderby="0" graduatedMethod="GraduatedColor" forceraster="0" attr="AANT_MAN">
         <ranges>
-          <range label="-99999999 - 355" lower="-99999999.000000000000000" upper="355.000000000000000" render="true" symbol="0"/>
-          <range label="355 - 975" lower="355.000000000000000" upper="975.000000000000000" render="true" symbol="1"/>
-          <range label="975 - 2221" lower="975.000000000000000" upper="2220.999999999999091" render="true" symbol="2"/>
-          <range label="2221 - 4355" lower="2220.999999999999091" upper="4355.000000000000000" render="true" symbol="3"/>
-          <range label="4355 - 72795" lower="4355.000000000000000" upper="72795.000000000000000" render="true" symbol="4"/>
+          <range label="-99999999 - 355" lower="-99999999.000000000000000" symbol="0" upper="355.000000000000000" render="true"/>
+          <range label="355 - 975" lower="355.000000000000000" symbol="1" upper="975.000000000000000" render="true"/>
+          <range label="975 - 2221" lower="975.000000000000000" symbol="2" upper="2220.999999999999091" render="true"/>
+          <range label="2221 - 4355" lower="2220.999999999999091" symbol="3" upper="4355.000000000000000" render="true"/>
+          <range label="4355 - 72795" lower="4355.000000000000000" symbol="4" upper="72795.000000000000000" render="true"/>
         </ranges>
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="0">
-            <data_defined_properties>
-              <Option type="Map">
-                <Option type="QString" value="" name="name"/>
-                <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
-              </Option>
-            </data_defined_properties>
-            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
-              <Option type="Map">
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
-                <Option type="QString" value="255,255,255,255" name="color"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.26" name="outline_width"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="solid" name="style"/>
-              </Option>
+          <symbol clip_to_extent="1" alpha="1" type="fill" name="0" force_rhr="0">
+            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
               <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
               <prop v="255,255,255,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
@@ -282,35 +556,15 @@
               <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="1">
-            <data_defined_properties>
-              <Option type="Map">
-                <Option type="QString" value="" name="name"/>
-                <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
-              </Option>
-            </data_defined_properties>
-            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
-              <Option type="Map">
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
-                <Option type="QString" value="255,191,191,255" name="color"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.26" name="outline_width"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="solid" name="style"/>
-              </Option>
+          <symbol clip_to_extent="1" alpha="1" type="fill" name="1" force_rhr="0">
+            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
               <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
               <prop v="255,191,191,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
@@ -324,35 +578,15 @@
               <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="2">
-            <data_defined_properties>
-              <Option type="Map">
-                <Option type="QString" value="" name="name"/>
-                <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
-              </Option>
-            </data_defined_properties>
-            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
-              <Option type="Map">
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
-                <Option type="QString" value="255,128,128,255" name="color"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.26" name="outline_width"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="solid" name="style"/>
-              </Option>
+          <symbol clip_to_extent="1" alpha="1" type="fill" name="2" force_rhr="0">
+            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
               <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
               <prop v="255,128,128,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
@@ -366,35 +600,15 @@
               <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="3">
-            <data_defined_properties>
-              <Option type="Map">
-                <Option type="QString" value="" name="name"/>
-                <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
-              </Option>
-            </data_defined_properties>
-            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
-              <Option type="Map">
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
-                <Option type="QString" value="255,64,64,255" name="color"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.26" name="outline_width"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="solid" name="style"/>
-              </Option>
+          <symbol clip_to_extent="1" alpha="1" type="fill" name="3" force_rhr="0">
+            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
               <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
               <prop v="255,64,64,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
@@ -408,35 +622,15 @@
               <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="4">
-            <data_defined_properties>
-              <Option type="Map">
-                <Option type="QString" value="" name="name"/>
-                <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
-              </Option>
-            </data_defined_properties>
-            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
-              <Option type="Map">
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
-                <Option type="QString" value="255,0,0,255" name="color"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.26" name="outline_width"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="solid" name="style"/>
-              </Option>
+          <symbol clip_to_extent="1" alpha="1" type="fill" name="4" force_rhr="0">
+            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
               <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
               <prop v="255,0,0,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
@@ -450,37 +644,17 @@
               <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </symbols>
         <source-symbol>
-          <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="fill" name="0">
-            <data_defined_properties>
-              <Option type="Map">
-                <Option type="QString" value="" name="name"/>
-                <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
-              </Option>
-            </data_defined_properties>
-            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
-              <Option type="Map">
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
-                <Option type="QString" value="133,182,111,255" name="color"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.26" name="outline_width"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="solid" name="style"/>
-              </Option>
+          <symbol clip_to_extent="1" alpha="1" type="fill" name="0" force_rhr="0">
+            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
               <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
               <prop v="133,182,111,255" k="color"/>
               <prop v="bevel" k="joinstyle"/>
@@ -494,29 +668,23 @@
               <prop v="solid" k="style"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </source-symbol>
         <colorramp type="gradient" name="[source]">
-          <Option type="Map">
-            <Option type="QString" value="255,255,255,255" name="color1"/>
-            <Option type="QString" value="255,0,0,255" name="color2"/>
-            <Option type="QString" value="0" name="discrete"/>
-            <Option type="QString" value="gradient" name="rampType"/>
-          </Option>
           <prop v="255,255,255,255" k="color1"/>
           <prop v="255,0,0,255" k="color2"/>
           <prop v="0" k="discrete"/>
           <prop v="gradient" k="rampType"/>
         </colorramp>
         <classificationMethod id="Quantile">
-          <symmetricMode symmetrypoint="0" astride="0" enabled="0"/>
-          <labelFormat trimtrailingzeroes="1" format="%1 - %2" labelprecision="0"/>
+          <symmetricMode symmetrypoint="0" enabled="0" astride="0"/>
+          <labelFormat labelprecision="4" format="%1 - %2" trimtrailingzeroes="1"/>
           <parameters>
             <Option/>
           </parameters>
@@ -533,42 +701,13 @@
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
-      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
-        <DiagramCategory spacing="5" penWidth="0" showAxis="1" penAlpha="255" scaleBasedVisibility="0" barWidth="5" maxScaleDenominator="1e+08" direction="0" sizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" labelPlacementMethod="XHeight" width="15" penColor="#000000" lineSizeScale="3x:0,0,0,0,0,0" spacingUnit="MM" height="15" spacingUnitScale="3x:0,0,0,0,0,0" opacity="1" minimumSize="0" minScaleDenominator="0" enabled="0" backgroundColor="#ffffff" diagramOrientation="Up" rotationOffset="270" sizeType="MM" backgroundAlpha="255" scaleDependency="Area">
-          <fontProperties style="" description=".AppleSystemUIFont,13,-1,5,50,0,0,0,0,0"/>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory penAlpha="255" minimumSize="0" barWidth="5" penWidth="0" rotationOffset="270" sizeType="MM" sizeScale="3x:0,0,0,0,0,0" opacity="1" enabled="0" labelPlacementMethod="XHeight" spacing="5" backgroundColor="#ffffff" penColor="#000000" lineSizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" spacingUnit="MM" spacingUnitScale="3x:0,0,0,0,0,0" width="15" minScaleDenominator="0" showAxis="1" direction="0" scaleBasedVisibility="0" height="15" backgroundAlpha="255" diagramOrientation="Up" maxScaleDenominator="1e+08" scaleDependency="Area">
+          <fontProperties description=".AppleSystemUIFont,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute label="" color="#000000" field=""/>
           <axisSymbol>
-            <symbol alpha="1" clip_to_extent="1" force_rhr="0" type="line" name="">
-              <data_defined_properties>
-                <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
-                  <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
-                </Option>
-              </data_defined_properties>
-              <layer enabled="1" class="SimpleLine" locked="0" pass="0">
-                <Option type="Map">
-                  <Option type="QString" value="0" name="align_dash_pattern"/>
-                  <Option type="QString" value="square" name="capstyle"/>
-                  <Option type="QString" value="5;2" name="customdash"/>
-                  <Option type="QString" value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale"/>
-                  <Option type="QString" value="MM" name="customdash_unit"/>
-                  <Option type="QString" value="0" name="dash_pattern_offset"/>
-                  <Option type="QString" value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale"/>
-                  <Option type="QString" value="MM" name="dash_pattern_offset_unit"/>
-                  <Option type="QString" value="0" name="draw_inside_polygon"/>
-                  <Option type="QString" value="bevel" name="joinstyle"/>
-                  <Option type="QString" value="35,35,35,255" name="line_color"/>
-                  <Option type="QString" value="solid" name="line_style"/>
-                  <Option type="QString" value="0.26" name="line_width"/>
-                  <Option type="QString" value="MM" name="line_width_unit"/>
-                  <Option type="QString" value="0" name="offset"/>
-                  <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                  <Option type="QString" value="MM" name="offset_unit"/>
-                  <Option type="QString" value="0" name="ring_filter"/>
-                  <Option type="QString" value="0" name="tweak_dash_pattern_on_corners"/>
-                  <Option type="QString" value="0" name="use_custom_dash"/>
-                  <Option type="QString" value="3x:0,0,0,0,0,0" name="width_map_unit_scale"/>
-                </Option>
+            <symbol clip_to_extent="1" alpha="1" type="line" name="" force_rhr="0">
+              <layer enabled="1" pass="0" class="SimpleLine" locked="0">
                 <prop v="0" k="align_dash_pattern"/>
                 <prop v="square" k="capstyle"/>
                 <prop v="5;2" k="customdash"/>
@@ -592,9 +731,9 @@
                 <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
                 <data_defined_properties>
                   <Option type="Map">
-                    <Option type="QString" value="" name="name"/>
+                    <Option type="QString" name="name" value=""/>
                     <Option name="properties"/>
-                    <Option type="QString" value="collection" name="type"/>
+                    <Option type="QString" name="type" value="collection"/>
                   </Option>
                 </data_defined_properties>
               </layer>
@@ -602,12 +741,12 @@
           </axisSymbol>
         </DiagramCategory>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings linePlacementFlags="18" dist="0" placement="1" obstacle="0" priority="0" showAll="1" zIndex="0">
+      <DiagramLayerSettings showAll="1" linePlacementFlags="18" placement="1" dist="0" zIndex="0" priority="0" obstacle="0">
         <properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </properties>
       </DiagramLayerSettings>
@@ -615,884 +754,884 @@
         <activeChecks/>
         <checkConfiguration type="Map">
           <Option type="Map" name="QgsGeometryGapCheck">
-            <Option type="double" value="0" name="allowedGapsBuffer"/>
-            <Option type="bool" value="false" name="allowedGapsEnabled"/>
-            <Option type="QString" value="" name="allowedGapsLayer"/>
+            <Option type="double" name="allowedGapsBuffer" value="0"/>
+            <Option type="bool" name="allowedGapsEnabled" value="false"/>
+            <Option type="QString" name="allowedGapsLayer" value=""/>
           </Option>
         </checkConfiguration>
       </geometryOptions>
       <legend type="default-vector"/>
       <referencedLayers/>
       <fieldConfiguration>
-        <field configurationFlags="None" name="fid">
+        <field name="fid" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="WK_CODE">
+        <field name="WK_CODE" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="WK_NAAM">
+        <field name="WK_NAAM" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="GM_CODE">
+        <field name="GM_CODE" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="GM_NAAM">
+        <field name="GM_NAAM" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="IND_WBI">
+        <field name="IND_WBI" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="WATER">
+        <field name="WATER" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="OAD">
+        <field name="OAD" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="STED">
+        <field name="STED" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AANT_INW">
+        <field name="AANT_INW" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AANT_MAN">
+        <field name="AANT_MAN" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AANT_VROUW">
+        <field name="AANT_VROUW" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_00_14_JR">
+        <field name="P_00_14_JR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_15_24_JR">
+        <field name="P_15_24_JR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_25_44_JR">
+        <field name="P_25_44_JR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_45_64_JR">
+        <field name="P_45_64_JR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_65_EO_JR">
+        <field name="P_65_EO_JR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_ONGEHUWD">
+        <field name="P_ONGEHUWD" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_GEHUWD">
+        <field name="P_GEHUWD" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_GESCHEID">
+        <field name="P_GESCHEID" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_VERWEDUW">
+        <field name="P_VERWEDUW" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="GEBOO_TOT">
+        <field name="GEBOO_TOT" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_GEBOO">
+        <field name="P_GEBOO" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="STERFT_TOT">
+        <field name="STERFT_TOT" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_STERFT">
+        <field name="P_STERFT" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="BEV_DICHTH">
+        <field name="BEV_DICHTH" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AANTAL_HH">
+        <field name="AANTAL_HH" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_EENP_HH">
+        <field name="P_EENP_HH" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_HH_Z_K">
+        <field name="P_HH_Z_K" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_HH_M_K">
+        <field name="P_HH_M_K" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="GEM_HH_GR">
+        <field name="GEM_HH_GR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_WEST_AL">
+        <field name="P_WEST_AL" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_N_W_AL">
+        <field name="P_N_W_AL" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_MAROKKO">
+        <field name="P_MAROKKO" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_ANT_ARU">
+        <field name="P_ANT_ARU" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_SURINAM">
+        <field name="P_SURINAM" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_TURKIJE">
+        <field name="P_TURKIJE" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_OVER_NW">
+        <field name="P_OVER_NW" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BED_A">
+        <field name="A_BED_A" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BED_BF">
+        <field name="A_BED_BF" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BED_GI">
+        <field name="A_BED_GI" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BED_HJ">
+        <field name="A_BED_HJ" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BED_KL">
+        <field name="A_BED_KL" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BED_MN">
+        <field name="A_BED_MN" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BED_RU">
+        <field name="A_BED_RU" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BEDV">
+        <field name="A_BEDV" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="WONINGEN">
+        <field name="WONINGEN" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="WOZ">
+        <field name="WOZ" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_1GEZW">
+        <field name="P_1GEZW" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_MGEZW">
+        <field name="P_MGEZW" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_WONT2000">
+        <field name="P_WONT2000" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="P_WONV2000">
+        <field name="P_WONV2000" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AO_UIT_TOT">
+        <field name="AO_UIT_TOT" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="WW_UIT_TOT">
+        <field name="WW_UIT_TOT" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="WWB_UITTOT">
+        <field name="WWB_UITTOT" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_SOZ_OW">
+        <field name="A_SOZ_OW" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AUTO_TOT">
+        <field name="AUTO_TOT" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AUTO_HH">
+        <field name="AUTO_HH" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AUTO_LAND">
+        <field name="AUTO_LAND" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="BEDR_AUTO">
+        <field name="BEDR_AUTO" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="MOTOR_2W">
+        <field name="MOTOR_2W" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_LFTJ6J">
+        <field name="A_LFTJ6J" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_LFTO6J">
+        <field name="A_LFTO6J" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BST_B">
+        <field name="A_BST_B" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="A_BST_NB">
+        <field name="A_BST_NB" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_ARTSPR">
+        <field name="AF_ARTSPR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV1_ARTSPR">
+        <field name="AV1_ARTSPR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV3_ARTSPR">
+        <field name="AV3_ARTSPR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_ARTSPR">
+        <field name="AV5_ARTSPR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_SUPERM">
+        <field name="AF_SUPERM" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV1_SUPERM">
+        <field name="AV1_SUPERM" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV3_SUPERM">
+        <field name="AV3_SUPERM" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_SUPERM">
+        <field name="AV5_SUPERM" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_DAGLMD">
+        <field name="AF_DAGLMD" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV1_DAGLMD">
+        <field name="AV1_DAGLMD" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV3_DAGLMD">
+        <field name="AV3_DAGLMD" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_DAGLMD">
+        <field name="AV5_DAGLMD" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_WARENH">
+        <field name="AF_WARENH" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_WARENH">
+        <field name="AV5_WARENH" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV10WARENH">
+        <field name="AV10WARENH" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV20WARENH">
+        <field name="AV20WARENH" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_CAFE">
+        <field name="AF_CAFE" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV1_CAFE">
+        <field name="AV1_CAFE" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV3_CAFE">
+        <field name="AV3_CAFE" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_CAFE">
+        <field name="AV5_CAFE" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_CAFTAR">
+        <field name="AF_CAFTAR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV1_CAFTAR">
+        <field name="AV1_CAFTAR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV3_CAFTAR">
+        <field name="AV3_CAFTAR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_CAFTAR">
+        <field name="AV5_CAFTAR" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_RESTAU">
+        <field name="AF_RESTAU" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV1_RESTAU">
+        <field name="AV1_RESTAU" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV3_RESTAU">
+        <field name="AV3_RESTAU" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_RESTAU">
+        <field name="AV5_RESTAU" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_HOTEL">
+        <field name="AF_HOTEL" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_HOTEL">
+        <field name="AV5_HOTEL" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV10_HOTEL">
+        <field name="AV10_HOTEL" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV20_HOTEL">
+        <field name="AV20_HOTEL" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_KDV">
+        <field name="AF_KDV" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV1_KDV">
+        <field name="AV1_KDV" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV3_KDV">
+        <field name="AV3_KDV" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_KDV">
+        <field name="AV5_KDV" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_BSO">
+        <field name="AF_BSO" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV1_BSO">
+        <field name="AV1_BSO" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV3_BSO">
+        <field name="AV3_BSO" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_BSO">
+        <field name="AV5_BSO" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_BRANDW">
+        <field name="AF_BRANDW" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_OPRITH">
+        <field name="AF_OPRITH" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_TREINST">
+        <field name="AF_TREINST" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_OVERST">
+        <field name="AF_OVERST" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_ZWEMB">
+        <field name="AF_ZWEMB" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_IJSBAAN">
+        <field name="AF_IJSBAAN" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_BIBLIO">
+        <field name="AF_BIBLIO" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_BIOS">
+        <field name="AF_BIOS" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV5_BIOS">
+        <field name="AV5_BIOS" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV10_BIOS">
+        <field name="AV10_BIOS" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV20_BIOS">
+        <field name="AV20_BIOS" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_SAUNA">
+        <field name="AF_SAUNA" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_ZONBNK">
+        <field name="AF_ZONBNK" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AF_ATTRAC">
+        <field name="AF_ATTRAC" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV10ATTRAC">
+        <field name="AV10ATTRAC" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV20ATTRAC">
+        <field name="AV20ATTRAC" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="AV50ATTRAC">
+        <field name="AV50ATTRAC" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="OPP_TOT">
+        <field name="OPP_TOT" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="OPP_LAND">
+        <field name="OPP_LAND" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
             </config>
           </editWidget>
         </field>
-        <field configurationFlags="None" name="OPP_WATER">
+        <field name="OPP_WATER" configurationFlags="None">
           <editWidget type="TextEdit">
             <config>
               <Option/>
@@ -1501,131 +1640,131 @@
         </field>
       </fieldConfiguration>
       <aliases>
-        <alias index="0" name="" field="fid"/>
-        <alias index="1" name="" field="WK_CODE"/>
-        <alias index="2" name="" field="WK_NAAM"/>
-        <alias index="3" name="" field="GM_CODE"/>
-        <alias index="4" name="" field="GM_NAAM"/>
-        <alias index="5" name="" field="IND_WBI"/>
-        <alias index="6" name="" field="WATER"/>
-        <alias index="7" name="" field="OAD"/>
-        <alias index="8" name="" field="STED"/>
-        <alias index="9" name="" field="AANT_INW"/>
-        <alias index="10" name="" field="AANT_MAN"/>
-        <alias index="11" name="" field="AANT_VROUW"/>
-        <alias index="12" name="" field="P_00_14_JR"/>
-        <alias index="13" name="" field="P_15_24_JR"/>
-        <alias index="14" name="" field="P_25_44_JR"/>
-        <alias index="15" name="" field="P_45_64_JR"/>
-        <alias index="16" name="" field="P_65_EO_JR"/>
-        <alias index="17" name="" field="P_ONGEHUWD"/>
-        <alias index="18" name="" field="P_GEHUWD"/>
-        <alias index="19" name="" field="P_GESCHEID"/>
-        <alias index="20" name="" field="P_VERWEDUW"/>
-        <alias index="21" name="" field="GEBOO_TOT"/>
-        <alias index="22" name="" field="P_GEBOO"/>
-        <alias index="23" name="" field="STERFT_TOT"/>
-        <alias index="24" name="" field="P_STERFT"/>
-        <alias index="25" name="" field="BEV_DICHTH"/>
-        <alias index="26" name="" field="AANTAL_HH"/>
-        <alias index="27" name="" field="P_EENP_HH"/>
-        <alias index="28" name="" field="P_HH_Z_K"/>
-        <alias index="29" name="" field="P_HH_M_K"/>
-        <alias index="30" name="" field="GEM_HH_GR"/>
-        <alias index="31" name="" field="P_WEST_AL"/>
-        <alias index="32" name="" field="P_N_W_AL"/>
-        <alias index="33" name="" field="P_MAROKKO"/>
-        <alias index="34" name="" field="P_ANT_ARU"/>
-        <alias index="35" name="" field="P_SURINAM"/>
-        <alias index="36" name="" field="P_TURKIJE"/>
-        <alias index="37" name="" field="P_OVER_NW"/>
-        <alias index="38" name="" field="A_BED_A"/>
-        <alias index="39" name="" field="A_BED_BF"/>
-        <alias index="40" name="" field="A_BED_GI"/>
-        <alias index="41" name="" field="A_BED_HJ"/>
-        <alias index="42" name="" field="A_BED_KL"/>
-        <alias index="43" name="" field="A_BED_MN"/>
-        <alias index="44" name="" field="A_BED_RU"/>
-        <alias index="45" name="" field="A_BEDV"/>
-        <alias index="46" name="" field="WONINGEN"/>
-        <alias index="47" name="" field="WOZ"/>
-        <alias index="48" name="" field="P_1GEZW"/>
-        <alias index="49" name="" field="P_MGEZW"/>
-        <alias index="50" name="" field="P_WONT2000"/>
-        <alias index="51" name="" field="P_WONV2000"/>
-        <alias index="52" name="" field="AO_UIT_TOT"/>
-        <alias index="53" name="" field="WW_UIT_TOT"/>
-        <alias index="54" name="" field="WWB_UITTOT"/>
-        <alias index="55" name="" field="A_SOZ_OW"/>
-        <alias index="56" name="" field="AUTO_TOT"/>
-        <alias index="57" name="" field="AUTO_HH"/>
-        <alias index="58" name="" field="AUTO_LAND"/>
-        <alias index="59" name="" field="BEDR_AUTO"/>
-        <alias index="60" name="" field="MOTOR_2W"/>
-        <alias index="61" name="" field="A_LFTJ6J"/>
-        <alias index="62" name="" field="A_LFTO6J"/>
-        <alias index="63" name="" field="A_BST_B"/>
-        <alias index="64" name="" field="A_BST_NB"/>
-        <alias index="65" name="" field="AF_ARTSPR"/>
-        <alias index="66" name="" field="AV1_ARTSPR"/>
-        <alias index="67" name="" field="AV3_ARTSPR"/>
-        <alias index="68" name="" field="AV5_ARTSPR"/>
-        <alias index="69" name="" field="AF_SUPERM"/>
-        <alias index="70" name="" field="AV1_SUPERM"/>
-        <alias index="71" name="" field="AV3_SUPERM"/>
-        <alias index="72" name="" field="AV5_SUPERM"/>
-        <alias index="73" name="" field="AF_DAGLMD"/>
-        <alias index="74" name="" field="AV1_DAGLMD"/>
-        <alias index="75" name="" field="AV3_DAGLMD"/>
-        <alias index="76" name="" field="AV5_DAGLMD"/>
-        <alias index="77" name="" field="AF_WARENH"/>
-        <alias index="78" name="" field="AV5_WARENH"/>
-        <alias index="79" name="" field="AV10WARENH"/>
-        <alias index="80" name="" field="AV20WARENH"/>
-        <alias index="81" name="" field="AF_CAFE"/>
-        <alias index="82" name="" field="AV1_CAFE"/>
-        <alias index="83" name="" field="AV3_CAFE"/>
-        <alias index="84" name="" field="AV5_CAFE"/>
-        <alias index="85" name="" field="AF_CAFTAR"/>
-        <alias index="86" name="" field="AV1_CAFTAR"/>
-        <alias index="87" name="" field="AV3_CAFTAR"/>
-        <alias index="88" name="" field="AV5_CAFTAR"/>
-        <alias index="89" name="" field="AF_RESTAU"/>
-        <alias index="90" name="" field="AV1_RESTAU"/>
-        <alias index="91" name="" field="AV3_RESTAU"/>
-        <alias index="92" name="" field="AV5_RESTAU"/>
-        <alias index="93" name="" field="AF_HOTEL"/>
-        <alias index="94" name="" field="AV5_HOTEL"/>
-        <alias index="95" name="" field="AV10_HOTEL"/>
-        <alias index="96" name="" field="AV20_HOTEL"/>
-        <alias index="97" name="" field="AF_KDV"/>
-        <alias index="98" name="" field="AV1_KDV"/>
-        <alias index="99" name="" field="AV3_KDV"/>
-        <alias index="100" name="" field="AV5_KDV"/>
-        <alias index="101" name="" field="AF_BSO"/>
-        <alias index="102" name="" field="AV1_BSO"/>
-        <alias index="103" name="" field="AV3_BSO"/>
-        <alias index="104" name="" field="AV5_BSO"/>
-        <alias index="105" name="" field="AF_BRANDW"/>
-        <alias index="106" name="" field="AF_OPRITH"/>
-        <alias index="107" name="" field="AF_TREINST"/>
-        <alias index="108" name="" field="AF_OVERST"/>
-        <alias index="109" name="" field="AF_ZWEMB"/>
-        <alias index="110" name="" field="AF_IJSBAAN"/>
-        <alias index="111" name="" field="AF_BIBLIO"/>
-        <alias index="112" name="" field="AF_BIOS"/>
-        <alias index="113" name="" field="AV5_BIOS"/>
-        <alias index="114" name="" field="AV10_BIOS"/>
-        <alias index="115" name="" field="AV20_BIOS"/>
-        <alias index="116" name="" field="AF_SAUNA"/>
-        <alias index="117" name="" field="AF_ZONBNK"/>
-        <alias index="118" name="" field="AF_ATTRAC"/>
-        <alias index="119" name="" field="AV10ATTRAC"/>
-        <alias index="120" name="" field="AV20ATTRAC"/>
-        <alias index="121" name="" field="AV50ATTRAC"/>
-        <alias index="122" name="" field="OPP_TOT"/>
-        <alias index="123" name="" field="OPP_LAND"/>
-        <alias index="124" name="" field="OPP_WATER"/>
+        <alias index="0" field="fid" name=""/>
+        <alias index="1" field="WK_CODE" name=""/>
+        <alias index="2" field="WK_NAAM" name=""/>
+        <alias index="3" field="GM_CODE" name=""/>
+        <alias index="4" field="GM_NAAM" name=""/>
+        <alias index="5" field="IND_WBI" name=""/>
+        <alias index="6" field="WATER" name=""/>
+        <alias index="7" field="OAD" name=""/>
+        <alias index="8" field="STED" name=""/>
+        <alias index="9" field="AANT_INW" name=""/>
+        <alias index="10" field="AANT_MAN" name=""/>
+        <alias index="11" field="AANT_VROUW" name=""/>
+        <alias index="12" field="P_00_14_JR" name=""/>
+        <alias index="13" field="P_15_24_JR" name=""/>
+        <alias index="14" field="P_25_44_JR" name=""/>
+        <alias index="15" field="P_45_64_JR" name=""/>
+        <alias index="16" field="P_65_EO_JR" name=""/>
+        <alias index="17" field="P_ONGEHUWD" name=""/>
+        <alias index="18" field="P_GEHUWD" name=""/>
+        <alias index="19" field="P_GESCHEID" name=""/>
+        <alias index="20" field="P_VERWEDUW" name=""/>
+        <alias index="21" field="GEBOO_TOT" name=""/>
+        <alias index="22" field="P_GEBOO" name=""/>
+        <alias index="23" field="STERFT_TOT" name=""/>
+        <alias index="24" field="P_STERFT" name=""/>
+        <alias index="25" field="BEV_DICHTH" name=""/>
+        <alias index="26" field="AANTAL_HH" name=""/>
+        <alias index="27" field="P_EENP_HH" name=""/>
+        <alias index="28" field="P_HH_Z_K" name=""/>
+        <alias index="29" field="P_HH_M_K" name=""/>
+        <alias index="30" field="GEM_HH_GR" name=""/>
+        <alias index="31" field="P_WEST_AL" name=""/>
+        <alias index="32" field="P_N_W_AL" name=""/>
+        <alias index="33" field="P_MAROKKO" name=""/>
+        <alias index="34" field="P_ANT_ARU" name=""/>
+        <alias index="35" field="P_SURINAM" name=""/>
+        <alias index="36" field="P_TURKIJE" name=""/>
+        <alias index="37" field="P_OVER_NW" name=""/>
+        <alias index="38" field="A_BED_A" name=""/>
+        <alias index="39" field="A_BED_BF" name=""/>
+        <alias index="40" field="A_BED_GI" name=""/>
+        <alias index="41" field="A_BED_HJ" name=""/>
+        <alias index="42" field="A_BED_KL" name=""/>
+        <alias index="43" field="A_BED_MN" name=""/>
+        <alias index="44" field="A_BED_RU" name=""/>
+        <alias index="45" field="A_BEDV" name=""/>
+        <alias index="46" field="WONINGEN" name=""/>
+        <alias index="47" field="WOZ" name=""/>
+        <alias index="48" field="P_1GEZW" name=""/>
+        <alias index="49" field="P_MGEZW" name=""/>
+        <alias index="50" field="P_WONT2000" name=""/>
+        <alias index="51" field="P_WONV2000" name=""/>
+        <alias index="52" field="AO_UIT_TOT" name=""/>
+        <alias index="53" field="WW_UIT_TOT" name=""/>
+        <alias index="54" field="WWB_UITTOT" name=""/>
+        <alias index="55" field="A_SOZ_OW" name=""/>
+        <alias index="56" field="AUTO_TOT" name=""/>
+        <alias index="57" field="AUTO_HH" name=""/>
+        <alias index="58" field="AUTO_LAND" name=""/>
+        <alias index="59" field="BEDR_AUTO" name=""/>
+        <alias index="60" field="MOTOR_2W" name=""/>
+        <alias index="61" field="A_LFTJ6J" name=""/>
+        <alias index="62" field="A_LFTO6J" name=""/>
+        <alias index="63" field="A_BST_B" name=""/>
+        <alias index="64" field="A_BST_NB" name=""/>
+        <alias index="65" field="AF_ARTSPR" name=""/>
+        <alias index="66" field="AV1_ARTSPR" name=""/>
+        <alias index="67" field="AV3_ARTSPR" name=""/>
+        <alias index="68" field="AV5_ARTSPR" name=""/>
+        <alias index="69" field="AF_SUPERM" name=""/>
+        <alias index="70" field="AV1_SUPERM" name=""/>
+        <alias index="71" field="AV3_SUPERM" name=""/>
+        <alias index="72" field="AV5_SUPERM" name=""/>
+        <alias index="73" field="AF_DAGLMD" name=""/>
+        <alias index="74" field="AV1_DAGLMD" name=""/>
+        <alias index="75" field="AV3_DAGLMD" name=""/>
+        <alias index="76" field="AV5_DAGLMD" name=""/>
+        <alias index="77" field="AF_WARENH" name=""/>
+        <alias index="78" field="AV5_WARENH" name=""/>
+        <alias index="79" field="AV10WARENH" name=""/>
+        <alias index="80" field="AV20WARENH" name=""/>
+        <alias index="81" field="AF_CAFE" name=""/>
+        <alias index="82" field="AV1_CAFE" name=""/>
+        <alias index="83" field="AV3_CAFE" name=""/>
+        <alias index="84" field="AV5_CAFE" name=""/>
+        <alias index="85" field="AF_CAFTAR" name=""/>
+        <alias index="86" field="AV1_CAFTAR" name=""/>
+        <alias index="87" field="AV3_CAFTAR" name=""/>
+        <alias index="88" field="AV5_CAFTAR" name=""/>
+        <alias index="89" field="AF_RESTAU" name=""/>
+        <alias index="90" field="AV1_RESTAU" name=""/>
+        <alias index="91" field="AV3_RESTAU" name=""/>
+        <alias index="92" field="AV5_RESTAU" name=""/>
+        <alias index="93" field="AF_HOTEL" name=""/>
+        <alias index="94" field="AV5_HOTEL" name=""/>
+        <alias index="95" field="AV10_HOTEL" name=""/>
+        <alias index="96" field="AV20_HOTEL" name=""/>
+        <alias index="97" field="AF_KDV" name=""/>
+        <alias index="98" field="AV1_KDV" name=""/>
+        <alias index="99" field="AV3_KDV" name=""/>
+        <alias index="100" field="AV5_KDV" name=""/>
+        <alias index="101" field="AF_BSO" name=""/>
+        <alias index="102" field="AV1_BSO" name=""/>
+        <alias index="103" field="AV3_BSO" name=""/>
+        <alias index="104" field="AV5_BSO" name=""/>
+        <alias index="105" field="AF_BRANDW" name=""/>
+        <alias index="106" field="AF_OPRITH" name=""/>
+        <alias index="107" field="AF_TREINST" name=""/>
+        <alias index="108" field="AF_OVERST" name=""/>
+        <alias index="109" field="AF_ZWEMB" name=""/>
+        <alias index="110" field="AF_IJSBAAN" name=""/>
+        <alias index="111" field="AF_BIBLIO" name=""/>
+        <alias index="112" field="AF_BIOS" name=""/>
+        <alias index="113" field="AV5_BIOS" name=""/>
+        <alias index="114" field="AV10_BIOS" name=""/>
+        <alias index="115" field="AV20_BIOS" name=""/>
+        <alias index="116" field="AF_SAUNA" name=""/>
+        <alias index="117" field="AF_ZONBNK" name=""/>
+        <alias index="118" field="AF_ATTRAC" name=""/>
+        <alias index="119" field="AV10ATTRAC" name=""/>
+        <alias index="120" field="AV20ATTRAC" name=""/>
+        <alias index="121" field="AV50ATTRAC" name=""/>
+        <alias index="122" field="OPP_TOT" name=""/>
+        <alias index="123" field="OPP_LAND" name=""/>
+        <alias index="124" field="OPP_WATER" name=""/>
       </aliases>
       <defaults>
         <default applyOnUpdate="0" expression="" field="fid"/>
@@ -1755,391 +1894,391 @@
         <default applyOnUpdate="0" expression="" field="OPP_WATER"/>
       </defaults>
       <constraints>
-        <constraint constraints="3" notnull_strength="1" unique_strength="1" field="fid" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WK_CODE" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WK_NAAM" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="GM_CODE" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="GM_NAAM" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="IND_WBI" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WATER" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="OAD" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="STED" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AANT_INW" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AANT_MAN" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AANT_VROUW" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_00_14_JR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_15_24_JR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_25_44_JR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_45_64_JR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_65_EO_JR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_ONGEHUWD" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_GEHUWD" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_GESCHEID" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_VERWEDUW" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="GEBOO_TOT" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_GEBOO" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="STERFT_TOT" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_STERFT" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="BEV_DICHTH" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AANTAL_HH" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_EENP_HH" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_HH_Z_K" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_HH_M_K" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="GEM_HH_GR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_WEST_AL" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_N_W_AL" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_MAROKKO" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_ANT_ARU" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_SURINAM" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_TURKIJE" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_OVER_NW" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_A" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_BF" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_GI" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_HJ" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_KL" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_MN" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BED_RU" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BEDV" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WONINGEN" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WOZ" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_1GEZW" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_MGEZW" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_WONT2000" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="P_WONV2000" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AO_UIT_TOT" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WW_UIT_TOT" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="WWB_UITTOT" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_SOZ_OW" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AUTO_TOT" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AUTO_HH" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AUTO_LAND" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="BEDR_AUTO" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="MOTOR_2W" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_LFTJ6J" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_LFTO6J" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BST_B" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="A_BST_NB" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_ARTSPR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_ARTSPR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_ARTSPR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_ARTSPR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_SUPERM" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_SUPERM" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_SUPERM" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_SUPERM" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_DAGLMD" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_DAGLMD" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_DAGLMD" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_DAGLMD" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_WARENH" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_WARENH" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV10WARENH" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV20WARENH" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_CAFE" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_CAFE" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_CAFE" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_CAFE" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_CAFTAR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_CAFTAR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_CAFTAR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_CAFTAR" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_RESTAU" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_RESTAU" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_RESTAU" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_RESTAU" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_HOTEL" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_HOTEL" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV10_HOTEL" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV20_HOTEL" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_KDV" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_KDV" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_KDV" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_KDV" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_BSO" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV1_BSO" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV3_BSO" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_BSO" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_BRANDW" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_OPRITH" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_TREINST" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_OVERST" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_ZWEMB" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_IJSBAAN" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_BIBLIO" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_BIOS" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV5_BIOS" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV10_BIOS" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV20_BIOS" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_SAUNA" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_ZONBNK" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AF_ATTRAC" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV10ATTRAC" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV20ATTRAC" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="AV50ATTRAC" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="OPP_TOT" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="OPP_LAND" exp_strength="0"/>
-        <constraint constraints="0" notnull_strength="0" unique_strength="0" field="OPP_WATER" exp_strength="0"/>
+        <constraint notnull_strength="1" exp_strength="0" constraints="3" field="fid" unique_strength="1"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WK_CODE" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WK_NAAM" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="GM_CODE" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="GM_NAAM" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="IND_WBI" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WATER" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="OAD" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="STED" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AANT_INW" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AANT_MAN" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AANT_VROUW" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_00_14_JR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_15_24_JR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_25_44_JR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_45_64_JR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_65_EO_JR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_ONGEHUWD" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_GEHUWD" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_GESCHEID" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_VERWEDUW" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="GEBOO_TOT" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_GEBOO" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="STERFT_TOT" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_STERFT" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="BEV_DICHTH" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AANTAL_HH" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_EENP_HH" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_HH_Z_K" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_HH_M_K" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="GEM_HH_GR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_WEST_AL" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_N_W_AL" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_MAROKKO" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_ANT_ARU" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_SURINAM" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_TURKIJE" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_OVER_NW" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_A" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_BF" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_GI" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_HJ" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_KL" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_MN" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_RU" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BEDV" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WONINGEN" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WOZ" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_1GEZW" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_MGEZW" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_WONT2000" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_WONV2000" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AO_UIT_TOT" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WW_UIT_TOT" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WWB_UITTOT" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_SOZ_OW" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AUTO_TOT" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AUTO_HH" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AUTO_LAND" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="BEDR_AUTO" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="MOTOR_2W" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_LFTJ6J" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_LFTO6J" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BST_B" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BST_NB" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_ARTSPR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_ARTSPR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_ARTSPR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_ARTSPR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_SUPERM" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_SUPERM" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_SUPERM" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_SUPERM" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_DAGLMD" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_DAGLMD" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_DAGLMD" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_DAGLMD" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_WARENH" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_WARENH" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV10WARENH" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV20WARENH" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_CAFE" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_CAFE" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_CAFE" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_CAFE" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_CAFTAR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_CAFTAR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_CAFTAR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_CAFTAR" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_RESTAU" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_RESTAU" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_RESTAU" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_RESTAU" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_HOTEL" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_HOTEL" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV10_HOTEL" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV20_HOTEL" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_KDV" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_KDV" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_KDV" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_KDV" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_BSO" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_BSO" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_BSO" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_BSO" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_BRANDW" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_OPRITH" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_TREINST" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_OVERST" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_ZWEMB" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_IJSBAAN" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_BIBLIO" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_BIOS" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_BIOS" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV10_BIOS" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV20_BIOS" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_SAUNA" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_ZONBNK" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_ATTRAC" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV10ATTRAC" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV20ATTRAC" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV50ATTRAC" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="OPP_TOT" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="OPP_LAND" unique_strength="0"/>
+        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="OPP_WATER" unique_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint exp="" field="fid" desc=""/>
-        <constraint exp="" field="WK_CODE" desc=""/>
-        <constraint exp="" field="WK_NAAM" desc=""/>
-        <constraint exp="" field="GM_CODE" desc=""/>
-        <constraint exp="" field="GM_NAAM" desc=""/>
-        <constraint exp="" field="IND_WBI" desc=""/>
-        <constraint exp="" field="WATER" desc=""/>
-        <constraint exp="" field="OAD" desc=""/>
-        <constraint exp="" field="STED" desc=""/>
-        <constraint exp="" field="AANT_INW" desc=""/>
-        <constraint exp="" field="AANT_MAN" desc=""/>
-        <constraint exp="" field="AANT_VROUW" desc=""/>
-        <constraint exp="" field="P_00_14_JR" desc=""/>
-        <constraint exp="" field="P_15_24_JR" desc=""/>
-        <constraint exp="" field="P_25_44_JR" desc=""/>
-        <constraint exp="" field="P_45_64_JR" desc=""/>
-        <constraint exp="" field="P_65_EO_JR" desc=""/>
-        <constraint exp="" field="P_ONGEHUWD" desc=""/>
-        <constraint exp="" field="P_GEHUWD" desc=""/>
-        <constraint exp="" field="P_GESCHEID" desc=""/>
-        <constraint exp="" field="P_VERWEDUW" desc=""/>
-        <constraint exp="" field="GEBOO_TOT" desc=""/>
-        <constraint exp="" field="P_GEBOO" desc=""/>
-        <constraint exp="" field="STERFT_TOT" desc=""/>
-        <constraint exp="" field="P_STERFT" desc=""/>
-        <constraint exp="" field="BEV_DICHTH" desc=""/>
-        <constraint exp="" field="AANTAL_HH" desc=""/>
-        <constraint exp="" field="P_EENP_HH" desc=""/>
-        <constraint exp="" field="P_HH_Z_K" desc=""/>
-        <constraint exp="" field="P_HH_M_K" desc=""/>
-        <constraint exp="" field="GEM_HH_GR" desc=""/>
-        <constraint exp="" field="P_WEST_AL" desc=""/>
-        <constraint exp="" field="P_N_W_AL" desc=""/>
-        <constraint exp="" field="P_MAROKKO" desc=""/>
-        <constraint exp="" field="P_ANT_ARU" desc=""/>
-        <constraint exp="" field="P_SURINAM" desc=""/>
-        <constraint exp="" field="P_TURKIJE" desc=""/>
-        <constraint exp="" field="P_OVER_NW" desc=""/>
-        <constraint exp="" field="A_BED_A" desc=""/>
-        <constraint exp="" field="A_BED_BF" desc=""/>
-        <constraint exp="" field="A_BED_GI" desc=""/>
-        <constraint exp="" field="A_BED_HJ" desc=""/>
-        <constraint exp="" field="A_BED_KL" desc=""/>
-        <constraint exp="" field="A_BED_MN" desc=""/>
-        <constraint exp="" field="A_BED_RU" desc=""/>
-        <constraint exp="" field="A_BEDV" desc=""/>
-        <constraint exp="" field="WONINGEN" desc=""/>
-        <constraint exp="" field="WOZ" desc=""/>
-        <constraint exp="" field="P_1GEZW" desc=""/>
-        <constraint exp="" field="P_MGEZW" desc=""/>
-        <constraint exp="" field="P_WONT2000" desc=""/>
-        <constraint exp="" field="P_WONV2000" desc=""/>
-        <constraint exp="" field="AO_UIT_TOT" desc=""/>
-        <constraint exp="" field="WW_UIT_TOT" desc=""/>
-        <constraint exp="" field="WWB_UITTOT" desc=""/>
-        <constraint exp="" field="A_SOZ_OW" desc=""/>
-        <constraint exp="" field="AUTO_TOT" desc=""/>
-        <constraint exp="" field="AUTO_HH" desc=""/>
-        <constraint exp="" field="AUTO_LAND" desc=""/>
-        <constraint exp="" field="BEDR_AUTO" desc=""/>
-        <constraint exp="" field="MOTOR_2W" desc=""/>
-        <constraint exp="" field="A_LFTJ6J" desc=""/>
-        <constraint exp="" field="A_LFTO6J" desc=""/>
-        <constraint exp="" field="A_BST_B" desc=""/>
-        <constraint exp="" field="A_BST_NB" desc=""/>
-        <constraint exp="" field="AF_ARTSPR" desc=""/>
-        <constraint exp="" field="AV1_ARTSPR" desc=""/>
-        <constraint exp="" field="AV3_ARTSPR" desc=""/>
-        <constraint exp="" field="AV5_ARTSPR" desc=""/>
-        <constraint exp="" field="AF_SUPERM" desc=""/>
-        <constraint exp="" field="AV1_SUPERM" desc=""/>
-        <constraint exp="" field="AV3_SUPERM" desc=""/>
-        <constraint exp="" field="AV5_SUPERM" desc=""/>
-        <constraint exp="" field="AF_DAGLMD" desc=""/>
-        <constraint exp="" field="AV1_DAGLMD" desc=""/>
-        <constraint exp="" field="AV3_DAGLMD" desc=""/>
-        <constraint exp="" field="AV5_DAGLMD" desc=""/>
-        <constraint exp="" field="AF_WARENH" desc=""/>
-        <constraint exp="" field="AV5_WARENH" desc=""/>
-        <constraint exp="" field="AV10WARENH" desc=""/>
-        <constraint exp="" field="AV20WARENH" desc=""/>
-        <constraint exp="" field="AF_CAFE" desc=""/>
-        <constraint exp="" field="AV1_CAFE" desc=""/>
-        <constraint exp="" field="AV3_CAFE" desc=""/>
-        <constraint exp="" field="AV5_CAFE" desc=""/>
-        <constraint exp="" field="AF_CAFTAR" desc=""/>
-        <constraint exp="" field="AV1_CAFTAR" desc=""/>
-        <constraint exp="" field="AV3_CAFTAR" desc=""/>
-        <constraint exp="" field="AV5_CAFTAR" desc=""/>
-        <constraint exp="" field="AF_RESTAU" desc=""/>
-        <constraint exp="" field="AV1_RESTAU" desc=""/>
-        <constraint exp="" field="AV3_RESTAU" desc=""/>
-        <constraint exp="" field="AV5_RESTAU" desc=""/>
-        <constraint exp="" field="AF_HOTEL" desc=""/>
-        <constraint exp="" field="AV5_HOTEL" desc=""/>
-        <constraint exp="" field="AV10_HOTEL" desc=""/>
-        <constraint exp="" field="AV20_HOTEL" desc=""/>
-        <constraint exp="" field="AF_KDV" desc=""/>
-        <constraint exp="" field="AV1_KDV" desc=""/>
-        <constraint exp="" field="AV3_KDV" desc=""/>
-        <constraint exp="" field="AV5_KDV" desc=""/>
-        <constraint exp="" field="AF_BSO" desc=""/>
-        <constraint exp="" field="AV1_BSO" desc=""/>
-        <constraint exp="" field="AV3_BSO" desc=""/>
-        <constraint exp="" field="AV5_BSO" desc=""/>
-        <constraint exp="" field="AF_BRANDW" desc=""/>
-        <constraint exp="" field="AF_OPRITH" desc=""/>
-        <constraint exp="" field="AF_TREINST" desc=""/>
-        <constraint exp="" field="AF_OVERST" desc=""/>
-        <constraint exp="" field="AF_ZWEMB" desc=""/>
-        <constraint exp="" field="AF_IJSBAAN" desc=""/>
-        <constraint exp="" field="AF_BIBLIO" desc=""/>
-        <constraint exp="" field="AF_BIOS" desc=""/>
-        <constraint exp="" field="AV5_BIOS" desc=""/>
-        <constraint exp="" field="AV10_BIOS" desc=""/>
-        <constraint exp="" field="AV20_BIOS" desc=""/>
-        <constraint exp="" field="AF_SAUNA" desc=""/>
-        <constraint exp="" field="AF_ZONBNK" desc=""/>
-        <constraint exp="" field="AF_ATTRAC" desc=""/>
-        <constraint exp="" field="AV10ATTRAC" desc=""/>
-        <constraint exp="" field="AV20ATTRAC" desc=""/>
-        <constraint exp="" field="AV50ATTRAC" desc=""/>
-        <constraint exp="" field="OPP_TOT" desc=""/>
-        <constraint exp="" field="OPP_LAND" desc=""/>
-        <constraint exp="" field="OPP_WATER" desc=""/>
+        <constraint desc="" exp="" field="fid"/>
+        <constraint desc="" exp="" field="WK_CODE"/>
+        <constraint desc="" exp="" field="WK_NAAM"/>
+        <constraint desc="" exp="" field="GM_CODE"/>
+        <constraint desc="" exp="" field="GM_NAAM"/>
+        <constraint desc="" exp="" field="IND_WBI"/>
+        <constraint desc="" exp="" field="WATER"/>
+        <constraint desc="" exp="" field="OAD"/>
+        <constraint desc="" exp="" field="STED"/>
+        <constraint desc="" exp="" field="AANT_INW"/>
+        <constraint desc="" exp="" field="AANT_MAN"/>
+        <constraint desc="" exp="" field="AANT_VROUW"/>
+        <constraint desc="" exp="" field="P_00_14_JR"/>
+        <constraint desc="" exp="" field="P_15_24_JR"/>
+        <constraint desc="" exp="" field="P_25_44_JR"/>
+        <constraint desc="" exp="" field="P_45_64_JR"/>
+        <constraint desc="" exp="" field="P_65_EO_JR"/>
+        <constraint desc="" exp="" field="P_ONGEHUWD"/>
+        <constraint desc="" exp="" field="P_GEHUWD"/>
+        <constraint desc="" exp="" field="P_GESCHEID"/>
+        <constraint desc="" exp="" field="P_VERWEDUW"/>
+        <constraint desc="" exp="" field="GEBOO_TOT"/>
+        <constraint desc="" exp="" field="P_GEBOO"/>
+        <constraint desc="" exp="" field="STERFT_TOT"/>
+        <constraint desc="" exp="" field="P_STERFT"/>
+        <constraint desc="" exp="" field="BEV_DICHTH"/>
+        <constraint desc="" exp="" field="AANTAL_HH"/>
+        <constraint desc="" exp="" field="P_EENP_HH"/>
+        <constraint desc="" exp="" field="P_HH_Z_K"/>
+        <constraint desc="" exp="" field="P_HH_M_K"/>
+        <constraint desc="" exp="" field="GEM_HH_GR"/>
+        <constraint desc="" exp="" field="P_WEST_AL"/>
+        <constraint desc="" exp="" field="P_N_W_AL"/>
+        <constraint desc="" exp="" field="P_MAROKKO"/>
+        <constraint desc="" exp="" field="P_ANT_ARU"/>
+        <constraint desc="" exp="" field="P_SURINAM"/>
+        <constraint desc="" exp="" field="P_TURKIJE"/>
+        <constraint desc="" exp="" field="P_OVER_NW"/>
+        <constraint desc="" exp="" field="A_BED_A"/>
+        <constraint desc="" exp="" field="A_BED_BF"/>
+        <constraint desc="" exp="" field="A_BED_GI"/>
+        <constraint desc="" exp="" field="A_BED_HJ"/>
+        <constraint desc="" exp="" field="A_BED_KL"/>
+        <constraint desc="" exp="" field="A_BED_MN"/>
+        <constraint desc="" exp="" field="A_BED_RU"/>
+        <constraint desc="" exp="" field="A_BEDV"/>
+        <constraint desc="" exp="" field="WONINGEN"/>
+        <constraint desc="" exp="" field="WOZ"/>
+        <constraint desc="" exp="" field="P_1GEZW"/>
+        <constraint desc="" exp="" field="P_MGEZW"/>
+        <constraint desc="" exp="" field="P_WONT2000"/>
+        <constraint desc="" exp="" field="P_WONV2000"/>
+        <constraint desc="" exp="" field="AO_UIT_TOT"/>
+        <constraint desc="" exp="" field="WW_UIT_TOT"/>
+        <constraint desc="" exp="" field="WWB_UITTOT"/>
+        <constraint desc="" exp="" field="A_SOZ_OW"/>
+        <constraint desc="" exp="" field="AUTO_TOT"/>
+        <constraint desc="" exp="" field="AUTO_HH"/>
+        <constraint desc="" exp="" field="AUTO_LAND"/>
+        <constraint desc="" exp="" field="BEDR_AUTO"/>
+        <constraint desc="" exp="" field="MOTOR_2W"/>
+        <constraint desc="" exp="" field="A_LFTJ6J"/>
+        <constraint desc="" exp="" field="A_LFTO6J"/>
+        <constraint desc="" exp="" field="A_BST_B"/>
+        <constraint desc="" exp="" field="A_BST_NB"/>
+        <constraint desc="" exp="" field="AF_ARTSPR"/>
+        <constraint desc="" exp="" field="AV1_ARTSPR"/>
+        <constraint desc="" exp="" field="AV3_ARTSPR"/>
+        <constraint desc="" exp="" field="AV5_ARTSPR"/>
+        <constraint desc="" exp="" field="AF_SUPERM"/>
+        <constraint desc="" exp="" field="AV1_SUPERM"/>
+        <constraint desc="" exp="" field="AV3_SUPERM"/>
+        <constraint desc="" exp="" field="AV5_SUPERM"/>
+        <constraint desc="" exp="" field="AF_DAGLMD"/>
+        <constraint desc="" exp="" field="AV1_DAGLMD"/>
+        <constraint desc="" exp="" field="AV3_DAGLMD"/>
+        <constraint desc="" exp="" field="AV5_DAGLMD"/>
+        <constraint desc="" exp="" field="AF_WARENH"/>
+        <constraint desc="" exp="" field="AV5_WARENH"/>
+        <constraint desc="" exp="" field="AV10WARENH"/>
+        <constraint desc="" exp="" field="AV20WARENH"/>
+        <constraint desc="" exp="" field="AF_CAFE"/>
+        <constraint desc="" exp="" field="AV1_CAFE"/>
+        <constraint desc="" exp="" field="AV3_CAFE"/>
+        <constraint desc="" exp="" field="AV5_CAFE"/>
+        <constraint desc="" exp="" field="AF_CAFTAR"/>
+        <constraint desc="" exp="" field="AV1_CAFTAR"/>
+        <constraint desc="" exp="" field="AV3_CAFTAR"/>
+        <constraint desc="" exp="" field="AV5_CAFTAR"/>
+        <constraint desc="" exp="" field="AF_RESTAU"/>
+        <constraint desc="" exp="" field="AV1_RESTAU"/>
+        <constraint desc="" exp="" field="AV3_RESTAU"/>
+        <constraint desc="" exp="" field="AV5_RESTAU"/>
+        <constraint desc="" exp="" field="AF_HOTEL"/>
+        <constraint desc="" exp="" field="AV5_HOTEL"/>
+        <constraint desc="" exp="" field="AV10_HOTEL"/>
+        <constraint desc="" exp="" field="AV20_HOTEL"/>
+        <constraint desc="" exp="" field="AF_KDV"/>
+        <constraint desc="" exp="" field="AV1_KDV"/>
+        <constraint desc="" exp="" field="AV3_KDV"/>
+        <constraint desc="" exp="" field="AV5_KDV"/>
+        <constraint desc="" exp="" field="AF_BSO"/>
+        <constraint desc="" exp="" field="AV1_BSO"/>
+        <constraint desc="" exp="" field="AV3_BSO"/>
+        <constraint desc="" exp="" field="AV5_BSO"/>
+        <constraint desc="" exp="" field="AF_BRANDW"/>
+        <constraint desc="" exp="" field="AF_OPRITH"/>
+        <constraint desc="" exp="" field="AF_TREINST"/>
+        <constraint desc="" exp="" field="AF_OVERST"/>
+        <constraint desc="" exp="" field="AF_ZWEMB"/>
+        <constraint desc="" exp="" field="AF_IJSBAAN"/>
+        <constraint desc="" exp="" field="AF_BIBLIO"/>
+        <constraint desc="" exp="" field="AF_BIOS"/>
+        <constraint desc="" exp="" field="AV5_BIOS"/>
+        <constraint desc="" exp="" field="AV10_BIOS"/>
+        <constraint desc="" exp="" field="AV20_BIOS"/>
+        <constraint desc="" exp="" field="AF_SAUNA"/>
+        <constraint desc="" exp="" field="AF_ZONBNK"/>
+        <constraint desc="" exp="" field="AF_ATTRAC"/>
+        <constraint desc="" exp="" field="AV10ATTRAC"/>
+        <constraint desc="" exp="" field="AV20ATTRAC"/>
+        <constraint desc="" exp="" field="AV50ATTRAC"/>
+        <constraint desc="" exp="" field="OPP_TOT"/>
+        <constraint desc="" exp="" field="OPP_LAND"/>
+        <constraint desc="" exp="" field="OPP_WATER"/>
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
         <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
-          <column width="-1" type="field" hidden="0" name="fid"/>
-          <column width="-1" type="field" hidden="0" name="WK_CODE"/>
-          <column width="-1" type="field" hidden="0" name="WK_NAAM"/>
-          <column width="-1" type="field" hidden="0" name="GM_CODE"/>
-          <column width="-1" type="field" hidden="0" name="GM_NAAM"/>
-          <column width="-1" type="field" hidden="0" name="IND_WBI"/>
-          <column width="-1" type="field" hidden="0" name="WATER"/>
-          <column width="-1" type="field" hidden="0" name="OAD"/>
-          <column width="-1" type="field" hidden="0" name="STED"/>
-          <column width="-1" type="field" hidden="0" name="AANT_INW"/>
-          <column width="-1" type="field" hidden="0" name="AANT_MAN"/>
-          <column width="-1" type="field" hidden="0" name="AANT_VROUW"/>
-          <column width="-1" type="field" hidden="0" name="P_00_14_JR"/>
-          <column width="-1" type="field" hidden="0" name="P_15_24_JR"/>
-          <column width="-1" type="field" hidden="0" name="P_25_44_JR"/>
-          <column width="-1" type="field" hidden="0" name="P_45_64_JR"/>
-          <column width="-1" type="field" hidden="0" name="P_65_EO_JR"/>
-          <column width="-1" type="field" hidden="0" name="P_ONGEHUWD"/>
-          <column width="-1" type="field" hidden="0" name="P_GEHUWD"/>
-          <column width="-1" type="field" hidden="0" name="P_GESCHEID"/>
-          <column width="-1" type="field" hidden="0" name="P_VERWEDUW"/>
-          <column width="-1" type="field" hidden="0" name="GEBOO_TOT"/>
-          <column width="-1" type="field" hidden="0" name="P_GEBOO"/>
-          <column width="-1" type="field" hidden="0" name="STERFT_TOT"/>
-          <column width="-1" type="field" hidden="0" name="P_STERFT"/>
-          <column width="-1" type="field" hidden="0" name="BEV_DICHTH"/>
-          <column width="-1" type="field" hidden="0" name="AANTAL_HH"/>
-          <column width="-1" type="field" hidden="0" name="P_EENP_HH"/>
-          <column width="-1" type="field" hidden="0" name="P_HH_Z_K"/>
-          <column width="-1" type="field" hidden="0" name="P_HH_M_K"/>
-          <column width="-1" type="field" hidden="0" name="GEM_HH_GR"/>
-          <column width="-1" type="field" hidden="0" name="P_WEST_AL"/>
-          <column width="-1" type="field" hidden="0" name="P_N_W_AL"/>
-          <column width="-1" type="field" hidden="0" name="P_MAROKKO"/>
-          <column width="-1" type="field" hidden="0" name="P_ANT_ARU"/>
-          <column width="-1" type="field" hidden="0" name="P_SURINAM"/>
-          <column width="-1" type="field" hidden="0" name="P_TURKIJE"/>
-          <column width="-1" type="field" hidden="0" name="P_OVER_NW"/>
-          <column width="-1" type="field" hidden="0" name="A_BED_A"/>
-          <column width="-1" type="field" hidden="0" name="A_BED_BF"/>
-          <column width="-1" type="field" hidden="0" name="A_BED_GI"/>
-          <column width="-1" type="field" hidden="0" name="A_BED_HJ"/>
-          <column width="-1" type="field" hidden="0" name="A_BED_KL"/>
-          <column width="-1" type="field" hidden="0" name="A_BED_MN"/>
-          <column width="-1" type="field" hidden="0" name="A_BED_RU"/>
-          <column width="-1" type="field" hidden="0" name="A_BEDV"/>
-          <column width="-1" type="field" hidden="0" name="WONINGEN"/>
-          <column width="-1" type="field" hidden="0" name="WOZ"/>
-          <column width="-1" type="field" hidden="0" name="P_1GEZW"/>
-          <column width="-1" type="field" hidden="0" name="P_MGEZW"/>
-          <column width="-1" type="field" hidden="0" name="P_WONT2000"/>
-          <column width="-1" type="field" hidden="0" name="P_WONV2000"/>
-          <column width="-1" type="field" hidden="0" name="AO_UIT_TOT"/>
-          <column width="-1" type="field" hidden="0" name="WW_UIT_TOT"/>
-          <column width="-1" type="field" hidden="0" name="WWB_UITTOT"/>
-          <column width="-1" type="field" hidden="0" name="A_SOZ_OW"/>
-          <column width="-1" type="field" hidden="0" name="AUTO_TOT"/>
-          <column width="-1" type="field" hidden="0" name="AUTO_HH"/>
-          <column width="-1" type="field" hidden="0" name="AUTO_LAND"/>
-          <column width="-1" type="field" hidden="0" name="BEDR_AUTO"/>
-          <column width="-1" type="field" hidden="0" name="MOTOR_2W"/>
-          <column width="-1" type="field" hidden="0" name="A_LFTJ6J"/>
-          <column width="-1" type="field" hidden="0" name="A_LFTO6J"/>
-          <column width="-1" type="field" hidden="0" name="A_BST_B"/>
-          <column width="-1" type="field" hidden="0" name="A_BST_NB"/>
-          <column width="-1" type="field" hidden="0" name="AF_ARTSPR"/>
-          <column width="-1" type="field" hidden="0" name="AV1_ARTSPR"/>
-          <column width="-1" type="field" hidden="0" name="AV3_ARTSPR"/>
-          <column width="-1" type="field" hidden="0" name="AV5_ARTSPR"/>
-          <column width="-1" type="field" hidden="0" name="AF_SUPERM"/>
-          <column width="-1" type="field" hidden="0" name="AV1_SUPERM"/>
-          <column width="-1" type="field" hidden="0" name="AV3_SUPERM"/>
-          <column width="-1" type="field" hidden="0" name="AV5_SUPERM"/>
-          <column width="-1" type="field" hidden="0" name="AF_DAGLMD"/>
-          <column width="-1" type="field" hidden="0" name="AV1_DAGLMD"/>
-          <column width="-1" type="field" hidden="0" name="AV3_DAGLMD"/>
-          <column width="-1" type="field" hidden="0" name="AV5_DAGLMD"/>
-          <column width="-1" type="field" hidden="0" name="AF_WARENH"/>
-          <column width="-1" type="field" hidden="0" name="AV5_WARENH"/>
-          <column width="-1" type="field" hidden="0" name="AV10WARENH"/>
-          <column width="-1" type="field" hidden="0" name="AV20WARENH"/>
-          <column width="-1" type="field" hidden="0" name="AF_CAFE"/>
-          <column width="-1" type="field" hidden="0" name="AV1_CAFE"/>
-          <column width="-1" type="field" hidden="0" name="AV3_CAFE"/>
-          <column width="-1" type="field" hidden="0" name="AV5_CAFE"/>
-          <column width="-1" type="field" hidden="0" name="AF_CAFTAR"/>
-          <column width="-1" type="field" hidden="0" name="AV1_CAFTAR"/>
-          <column width="-1" type="field" hidden="0" name="AV3_CAFTAR"/>
-          <column width="-1" type="field" hidden="0" name="AV5_CAFTAR"/>
-          <column width="-1" type="field" hidden="0" name="AF_RESTAU"/>
-          <column width="-1" type="field" hidden="0" name="AV1_RESTAU"/>
-          <column width="-1" type="field" hidden="0" name="AV3_RESTAU"/>
-          <column width="-1" type="field" hidden="0" name="AV5_RESTAU"/>
-          <column width="-1" type="field" hidden="0" name="AF_HOTEL"/>
-          <column width="-1" type="field" hidden="0" name="AV5_HOTEL"/>
-          <column width="-1" type="field" hidden="0" name="AV10_HOTEL"/>
-          <column width="-1" type="field" hidden="0" name="AV20_HOTEL"/>
-          <column width="-1" type="field" hidden="0" name="AF_KDV"/>
-          <column width="-1" type="field" hidden="0" name="AV1_KDV"/>
-          <column width="-1" type="field" hidden="0" name="AV3_KDV"/>
-          <column width="-1" type="field" hidden="0" name="AV5_KDV"/>
-          <column width="-1" type="field" hidden="0" name="AF_BSO"/>
-          <column width="-1" type="field" hidden="0" name="AV1_BSO"/>
-          <column width="-1" type="field" hidden="0" name="AV3_BSO"/>
-          <column width="-1" type="field" hidden="0" name="AV5_BSO"/>
-          <column width="-1" type="field" hidden="0" name="AF_BRANDW"/>
-          <column width="-1" type="field" hidden="0" name="AF_OPRITH"/>
-          <column width="-1" type="field" hidden="0" name="AF_TREINST"/>
-          <column width="-1" type="field" hidden="0" name="AF_OVERST"/>
-          <column width="-1" type="field" hidden="0" name="AF_ZWEMB"/>
-          <column width="-1" type="field" hidden="0" name="AF_IJSBAAN"/>
-          <column width="-1" type="field" hidden="0" name="AF_BIBLIO"/>
-          <column width="-1" type="field" hidden="0" name="AF_BIOS"/>
-          <column width="-1" type="field" hidden="0" name="AV5_BIOS"/>
-          <column width="-1" type="field" hidden="0" name="AV10_BIOS"/>
-          <column width="-1" type="field" hidden="0" name="AV20_BIOS"/>
-          <column width="-1" type="field" hidden="0" name="AF_SAUNA"/>
-          <column width="-1" type="field" hidden="0" name="AF_ZONBNK"/>
-          <column width="-1" type="field" hidden="0" name="AF_ATTRAC"/>
-          <column width="-1" type="field" hidden="0" name="AV10ATTRAC"/>
-          <column width="-1" type="field" hidden="0" name="AV20ATTRAC"/>
-          <column width="-1" type="field" hidden="0" name="AV50ATTRAC"/>
-          <column width="-1" type="field" hidden="0" name="OPP_TOT"/>
-          <column width="-1" type="field" hidden="0" name="OPP_LAND"/>
-          <column width="-1" type="field" hidden="0" name="OPP_WATER"/>
-          <column width="-1" type="actions" hidden="1"/>
+          <column hidden="0" type="field" name="fid" width="-1"/>
+          <column hidden="0" type="field" name="WK_CODE" width="-1"/>
+          <column hidden="0" type="field" name="WK_NAAM" width="-1"/>
+          <column hidden="0" type="field" name="GM_CODE" width="-1"/>
+          <column hidden="0" type="field" name="GM_NAAM" width="-1"/>
+          <column hidden="0" type="field" name="IND_WBI" width="-1"/>
+          <column hidden="0" type="field" name="WATER" width="-1"/>
+          <column hidden="0" type="field" name="OAD" width="-1"/>
+          <column hidden="0" type="field" name="STED" width="-1"/>
+          <column hidden="0" type="field" name="AANT_INW" width="-1"/>
+          <column hidden="0" type="field" name="AANT_MAN" width="-1"/>
+          <column hidden="0" type="field" name="AANT_VROUW" width="-1"/>
+          <column hidden="0" type="field" name="P_00_14_JR" width="-1"/>
+          <column hidden="0" type="field" name="P_15_24_JR" width="-1"/>
+          <column hidden="0" type="field" name="P_25_44_JR" width="-1"/>
+          <column hidden="0" type="field" name="P_45_64_JR" width="-1"/>
+          <column hidden="0" type="field" name="P_65_EO_JR" width="-1"/>
+          <column hidden="0" type="field" name="P_ONGEHUWD" width="-1"/>
+          <column hidden="0" type="field" name="P_GEHUWD" width="-1"/>
+          <column hidden="0" type="field" name="P_GESCHEID" width="-1"/>
+          <column hidden="0" type="field" name="P_VERWEDUW" width="-1"/>
+          <column hidden="0" type="field" name="GEBOO_TOT" width="-1"/>
+          <column hidden="0" type="field" name="P_GEBOO" width="-1"/>
+          <column hidden="0" type="field" name="STERFT_TOT" width="-1"/>
+          <column hidden="0" type="field" name="P_STERFT" width="-1"/>
+          <column hidden="0" type="field" name="BEV_DICHTH" width="-1"/>
+          <column hidden="0" type="field" name="AANTAL_HH" width="-1"/>
+          <column hidden="0" type="field" name="P_EENP_HH" width="-1"/>
+          <column hidden="0" type="field" name="P_HH_Z_K" width="-1"/>
+          <column hidden="0" type="field" name="P_HH_M_K" width="-1"/>
+          <column hidden="0" type="field" name="GEM_HH_GR" width="-1"/>
+          <column hidden="0" type="field" name="P_WEST_AL" width="-1"/>
+          <column hidden="0" type="field" name="P_N_W_AL" width="-1"/>
+          <column hidden="0" type="field" name="P_MAROKKO" width="-1"/>
+          <column hidden="0" type="field" name="P_ANT_ARU" width="-1"/>
+          <column hidden="0" type="field" name="P_SURINAM" width="-1"/>
+          <column hidden="0" type="field" name="P_TURKIJE" width="-1"/>
+          <column hidden="0" type="field" name="P_OVER_NW" width="-1"/>
+          <column hidden="0" type="field" name="A_BED_A" width="-1"/>
+          <column hidden="0" type="field" name="A_BED_BF" width="-1"/>
+          <column hidden="0" type="field" name="A_BED_GI" width="-1"/>
+          <column hidden="0" type="field" name="A_BED_HJ" width="-1"/>
+          <column hidden="0" type="field" name="A_BED_KL" width="-1"/>
+          <column hidden="0" type="field" name="A_BED_MN" width="-1"/>
+          <column hidden="0" type="field" name="A_BED_RU" width="-1"/>
+          <column hidden="0" type="field" name="A_BEDV" width="-1"/>
+          <column hidden="0" type="field" name="WONINGEN" width="-1"/>
+          <column hidden="0" type="field" name="WOZ" width="-1"/>
+          <column hidden="0" type="field" name="P_1GEZW" width="-1"/>
+          <column hidden="0" type="field" name="P_MGEZW" width="-1"/>
+          <column hidden="0" type="field" name="P_WONT2000" width="-1"/>
+          <column hidden="0" type="field" name="P_WONV2000" width="-1"/>
+          <column hidden="0" type="field" name="AO_UIT_TOT" width="-1"/>
+          <column hidden="0" type="field" name="WW_UIT_TOT" width="-1"/>
+          <column hidden="0" type="field" name="WWB_UITTOT" width="-1"/>
+          <column hidden="0" type="field" name="A_SOZ_OW" width="-1"/>
+          <column hidden="0" type="field" name="AUTO_TOT" width="-1"/>
+          <column hidden="0" type="field" name="AUTO_HH" width="-1"/>
+          <column hidden="0" type="field" name="AUTO_LAND" width="-1"/>
+          <column hidden="0" type="field" name="BEDR_AUTO" width="-1"/>
+          <column hidden="0" type="field" name="MOTOR_2W" width="-1"/>
+          <column hidden="0" type="field" name="A_LFTJ6J" width="-1"/>
+          <column hidden="0" type="field" name="A_LFTO6J" width="-1"/>
+          <column hidden="0" type="field" name="A_BST_B" width="-1"/>
+          <column hidden="0" type="field" name="A_BST_NB" width="-1"/>
+          <column hidden="0" type="field" name="AF_ARTSPR" width="-1"/>
+          <column hidden="0" type="field" name="AV1_ARTSPR" width="-1"/>
+          <column hidden="0" type="field" name="AV3_ARTSPR" width="-1"/>
+          <column hidden="0" type="field" name="AV5_ARTSPR" width="-1"/>
+          <column hidden="0" type="field" name="AF_SUPERM" width="-1"/>
+          <column hidden="0" type="field" name="AV1_SUPERM" width="-1"/>
+          <column hidden="0" type="field" name="AV3_SUPERM" width="-1"/>
+          <column hidden="0" type="field" name="AV5_SUPERM" width="-1"/>
+          <column hidden="0" type="field" name="AF_DAGLMD" width="-1"/>
+          <column hidden="0" type="field" name="AV1_DAGLMD" width="-1"/>
+          <column hidden="0" type="field" name="AV3_DAGLMD" width="-1"/>
+          <column hidden="0" type="field" name="AV5_DAGLMD" width="-1"/>
+          <column hidden="0" type="field" name="AF_WARENH" width="-1"/>
+          <column hidden="0" type="field" name="AV5_WARENH" width="-1"/>
+          <column hidden="0" type="field" name="AV10WARENH" width="-1"/>
+          <column hidden="0" type="field" name="AV20WARENH" width="-1"/>
+          <column hidden="0" type="field" name="AF_CAFE" width="-1"/>
+          <column hidden="0" type="field" name="AV1_CAFE" width="-1"/>
+          <column hidden="0" type="field" name="AV3_CAFE" width="-1"/>
+          <column hidden="0" type="field" name="AV5_CAFE" width="-1"/>
+          <column hidden="0" type="field" name="AF_CAFTAR" width="-1"/>
+          <column hidden="0" type="field" name="AV1_CAFTAR" width="-1"/>
+          <column hidden="0" type="field" name="AV3_CAFTAR" width="-1"/>
+          <column hidden="0" type="field" name="AV5_CAFTAR" width="-1"/>
+          <column hidden="0" type="field" name="AF_RESTAU" width="-1"/>
+          <column hidden="0" type="field" name="AV1_RESTAU" width="-1"/>
+          <column hidden="0" type="field" name="AV3_RESTAU" width="-1"/>
+          <column hidden="0" type="field" name="AV5_RESTAU" width="-1"/>
+          <column hidden="0" type="field" name="AF_HOTEL" width="-1"/>
+          <column hidden="0" type="field" name="AV5_HOTEL" width="-1"/>
+          <column hidden="0" type="field" name="AV10_HOTEL" width="-1"/>
+          <column hidden="0" type="field" name="AV20_HOTEL" width="-1"/>
+          <column hidden="0" type="field" name="AF_KDV" width="-1"/>
+          <column hidden="0" type="field" name="AV1_KDV" width="-1"/>
+          <column hidden="0" type="field" name="AV3_KDV" width="-1"/>
+          <column hidden="0" type="field" name="AV5_KDV" width="-1"/>
+          <column hidden="0" type="field" name="AF_BSO" width="-1"/>
+          <column hidden="0" type="field" name="AV1_BSO" width="-1"/>
+          <column hidden="0" type="field" name="AV3_BSO" width="-1"/>
+          <column hidden="0" type="field" name="AV5_BSO" width="-1"/>
+          <column hidden="0" type="field" name="AF_BRANDW" width="-1"/>
+          <column hidden="0" type="field" name="AF_OPRITH" width="-1"/>
+          <column hidden="0" type="field" name="AF_TREINST" width="-1"/>
+          <column hidden="0" type="field" name="AF_OVERST" width="-1"/>
+          <column hidden="0" type="field" name="AF_ZWEMB" width="-1"/>
+          <column hidden="0" type="field" name="AF_IJSBAAN" width="-1"/>
+          <column hidden="0" type="field" name="AF_BIBLIO" width="-1"/>
+          <column hidden="0" type="field" name="AF_BIOS" width="-1"/>
+          <column hidden="0" type="field" name="AV5_BIOS" width="-1"/>
+          <column hidden="0" type="field" name="AV10_BIOS" width="-1"/>
+          <column hidden="0" type="field" name="AV20_BIOS" width="-1"/>
+          <column hidden="0" type="field" name="AF_SAUNA" width="-1"/>
+          <column hidden="0" type="field" name="AF_ZONBNK" width="-1"/>
+          <column hidden="0" type="field" name="AF_ATTRAC" width="-1"/>
+          <column hidden="0" type="field" name="AV10ATTRAC" width="-1"/>
+          <column hidden="0" type="field" name="AV20ATTRAC" width="-1"/>
+          <column hidden="0" type="field" name="AV50ATTRAC" width="-1"/>
+          <column hidden="0" type="field" name="OPP_TOT" width="-1"/>
+          <column hidden="0" type="field" name="OPP_LAND" width="-1"/>
+          <column hidden="0" type="field" name="OPP_WATER" width="-1"/>
+          <column hidden="1" type="actions" width="-1"/>
         </columns>
       </attributetableconfig>
       <conditionalstyles>
@@ -2298,131 +2437,131 @@ def my_form_open(dialog, layer, feature):
         <field editable="1" name="fid"/>
       </editable>
       <labelOnTop>
-        <field labelOnTop="0" name="AANTAL_HH"/>
-        <field labelOnTop="0" name="AANT_INW"/>
-        <field labelOnTop="0" name="AANT_MAN"/>
-        <field labelOnTop="0" name="AANT_VROUW"/>
-        <field labelOnTop="0" name="AF_ARTSPR"/>
-        <field labelOnTop="0" name="AF_ATTRAC"/>
-        <field labelOnTop="0" name="AF_BIBLIO"/>
-        <field labelOnTop="0" name="AF_BIOS"/>
-        <field labelOnTop="0" name="AF_BRANDW"/>
-        <field labelOnTop="0" name="AF_BSO"/>
-        <field labelOnTop="0" name="AF_CAFE"/>
-        <field labelOnTop="0" name="AF_CAFTAR"/>
-        <field labelOnTop="0" name="AF_DAGLMD"/>
-        <field labelOnTop="0" name="AF_HOTEL"/>
-        <field labelOnTop="0" name="AF_IJSBAAN"/>
-        <field labelOnTop="0" name="AF_KDV"/>
-        <field labelOnTop="0" name="AF_OPRITH"/>
-        <field labelOnTop="0" name="AF_OVERST"/>
-        <field labelOnTop="0" name="AF_RESTAU"/>
-        <field labelOnTop="0" name="AF_SAUNA"/>
-        <field labelOnTop="0" name="AF_SUPERM"/>
-        <field labelOnTop="0" name="AF_TREINST"/>
-        <field labelOnTop="0" name="AF_WARENH"/>
-        <field labelOnTop="0" name="AF_ZONBNK"/>
-        <field labelOnTop="0" name="AF_ZWEMB"/>
-        <field labelOnTop="0" name="AO_UIT_TOT"/>
-        <field labelOnTop="0" name="AUTO_HH"/>
-        <field labelOnTop="0" name="AUTO_LAND"/>
-        <field labelOnTop="0" name="AUTO_TOT"/>
-        <field labelOnTop="0" name="AV10ATTRAC"/>
-        <field labelOnTop="0" name="AV10WARENH"/>
-        <field labelOnTop="0" name="AV10_BIOS"/>
-        <field labelOnTop="0" name="AV10_HOTEL"/>
-        <field labelOnTop="0" name="AV1_ARTSPR"/>
-        <field labelOnTop="0" name="AV1_BSO"/>
-        <field labelOnTop="0" name="AV1_CAFE"/>
-        <field labelOnTop="0" name="AV1_CAFTAR"/>
-        <field labelOnTop="0" name="AV1_DAGLMD"/>
-        <field labelOnTop="0" name="AV1_KDV"/>
-        <field labelOnTop="0" name="AV1_RESTAU"/>
-        <field labelOnTop="0" name="AV1_SUPERM"/>
-        <field labelOnTop="0" name="AV20ATTRAC"/>
-        <field labelOnTop="0" name="AV20WARENH"/>
-        <field labelOnTop="0" name="AV20_BIOS"/>
-        <field labelOnTop="0" name="AV20_HOTEL"/>
-        <field labelOnTop="0" name="AV3_ARTSPR"/>
-        <field labelOnTop="0" name="AV3_BSO"/>
-        <field labelOnTop="0" name="AV3_CAFE"/>
-        <field labelOnTop="0" name="AV3_CAFTAR"/>
-        <field labelOnTop="0" name="AV3_DAGLMD"/>
-        <field labelOnTop="0" name="AV3_KDV"/>
-        <field labelOnTop="0" name="AV3_RESTAU"/>
-        <field labelOnTop="0" name="AV3_SUPERM"/>
-        <field labelOnTop="0" name="AV50ATTRAC"/>
-        <field labelOnTop="0" name="AV5_ARTSPR"/>
-        <field labelOnTop="0" name="AV5_BIOS"/>
-        <field labelOnTop="0" name="AV5_BSO"/>
-        <field labelOnTop="0" name="AV5_CAFE"/>
-        <field labelOnTop="0" name="AV5_CAFTAR"/>
-        <field labelOnTop="0" name="AV5_DAGLMD"/>
-        <field labelOnTop="0" name="AV5_HOTEL"/>
-        <field labelOnTop="0" name="AV5_KDV"/>
-        <field labelOnTop="0" name="AV5_RESTAU"/>
-        <field labelOnTop="0" name="AV5_SUPERM"/>
-        <field labelOnTop="0" name="AV5_WARENH"/>
-        <field labelOnTop="0" name="A_BEDV"/>
-        <field labelOnTop="0" name="A_BED_A"/>
-        <field labelOnTop="0" name="A_BED_BF"/>
-        <field labelOnTop="0" name="A_BED_GI"/>
-        <field labelOnTop="0" name="A_BED_HJ"/>
-        <field labelOnTop="0" name="A_BED_KL"/>
-        <field labelOnTop="0" name="A_BED_MN"/>
-        <field labelOnTop="0" name="A_BED_RU"/>
-        <field labelOnTop="0" name="A_BST_B"/>
-        <field labelOnTop="0" name="A_BST_NB"/>
-        <field labelOnTop="0" name="A_LFTJ6J"/>
-        <field labelOnTop="0" name="A_LFTO6J"/>
-        <field labelOnTop="0" name="A_SOZ_OW"/>
-        <field labelOnTop="0" name="BEDR_AUTO"/>
-        <field labelOnTop="0" name="BEV_DICHTH"/>
-        <field labelOnTop="0" name="GEBOO_TOT"/>
-        <field labelOnTop="0" name="GEM_HH_GR"/>
-        <field labelOnTop="0" name="GM_CODE"/>
-        <field labelOnTop="0" name="GM_NAAM"/>
-        <field labelOnTop="0" name="IND_WBI"/>
-        <field labelOnTop="0" name="MOTOR_2W"/>
-        <field labelOnTop="0" name="OAD"/>
-        <field labelOnTop="0" name="OPP_LAND"/>
-        <field labelOnTop="0" name="OPP_TOT"/>
-        <field labelOnTop="0" name="OPP_WATER"/>
-        <field labelOnTop="0" name="P_00_14_JR"/>
-        <field labelOnTop="0" name="P_15_24_JR"/>
-        <field labelOnTop="0" name="P_1GEZW"/>
-        <field labelOnTop="0" name="P_25_44_JR"/>
-        <field labelOnTop="0" name="P_45_64_JR"/>
-        <field labelOnTop="0" name="P_65_EO_JR"/>
-        <field labelOnTop="0" name="P_ANT_ARU"/>
-        <field labelOnTop="0" name="P_EENP_HH"/>
-        <field labelOnTop="0" name="P_GEBOO"/>
-        <field labelOnTop="0" name="P_GEHUWD"/>
-        <field labelOnTop="0" name="P_GESCHEID"/>
-        <field labelOnTop="0" name="P_HH_M_K"/>
-        <field labelOnTop="0" name="P_HH_Z_K"/>
-        <field labelOnTop="0" name="P_MAROKKO"/>
-        <field labelOnTop="0" name="P_MGEZW"/>
-        <field labelOnTop="0" name="P_N_W_AL"/>
-        <field labelOnTop="0" name="P_ONGEHUWD"/>
-        <field labelOnTop="0" name="P_OVER_NW"/>
-        <field labelOnTop="0" name="P_STERFT"/>
-        <field labelOnTop="0" name="P_SURINAM"/>
-        <field labelOnTop="0" name="P_TURKIJE"/>
-        <field labelOnTop="0" name="P_VERWEDUW"/>
-        <field labelOnTop="0" name="P_WEST_AL"/>
-        <field labelOnTop="0" name="P_WONT2000"/>
-        <field labelOnTop="0" name="P_WONV2000"/>
-        <field labelOnTop="0" name="STED"/>
-        <field labelOnTop="0" name="STERFT_TOT"/>
-        <field labelOnTop="0" name="WATER"/>
-        <field labelOnTop="0" name="WK_CODE"/>
-        <field labelOnTop="0" name="WK_NAAM"/>
-        <field labelOnTop="0" name="WONINGEN"/>
-        <field labelOnTop="0" name="WOZ"/>
-        <field labelOnTop="0" name="WWB_UITTOT"/>
-        <field labelOnTop="0" name="WW_UIT_TOT"/>
-        <field labelOnTop="0" name="fid"/>
+        <field name="AANTAL_HH" labelOnTop="0"/>
+        <field name="AANT_INW" labelOnTop="0"/>
+        <field name="AANT_MAN" labelOnTop="0"/>
+        <field name="AANT_VROUW" labelOnTop="0"/>
+        <field name="AF_ARTSPR" labelOnTop="0"/>
+        <field name="AF_ATTRAC" labelOnTop="0"/>
+        <field name="AF_BIBLIO" labelOnTop="0"/>
+        <field name="AF_BIOS" labelOnTop="0"/>
+        <field name="AF_BRANDW" labelOnTop="0"/>
+        <field name="AF_BSO" labelOnTop="0"/>
+        <field name="AF_CAFE" labelOnTop="0"/>
+        <field name="AF_CAFTAR" labelOnTop="0"/>
+        <field name="AF_DAGLMD" labelOnTop="0"/>
+        <field name="AF_HOTEL" labelOnTop="0"/>
+        <field name="AF_IJSBAAN" labelOnTop="0"/>
+        <field name="AF_KDV" labelOnTop="0"/>
+        <field name="AF_OPRITH" labelOnTop="0"/>
+        <field name="AF_OVERST" labelOnTop="0"/>
+        <field name="AF_RESTAU" labelOnTop="0"/>
+        <field name="AF_SAUNA" labelOnTop="0"/>
+        <field name="AF_SUPERM" labelOnTop="0"/>
+        <field name="AF_TREINST" labelOnTop="0"/>
+        <field name="AF_WARENH" labelOnTop="0"/>
+        <field name="AF_ZONBNK" labelOnTop="0"/>
+        <field name="AF_ZWEMB" labelOnTop="0"/>
+        <field name="AO_UIT_TOT" labelOnTop="0"/>
+        <field name="AUTO_HH" labelOnTop="0"/>
+        <field name="AUTO_LAND" labelOnTop="0"/>
+        <field name="AUTO_TOT" labelOnTop="0"/>
+        <field name="AV10ATTRAC" labelOnTop="0"/>
+        <field name="AV10WARENH" labelOnTop="0"/>
+        <field name="AV10_BIOS" labelOnTop="0"/>
+        <field name="AV10_HOTEL" labelOnTop="0"/>
+        <field name="AV1_ARTSPR" labelOnTop="0"/>
+        <field name="AV1_BSO" labelOnTop="0"/>
+        <field name="AV1_CAFE" labelOnTop="0"/>
+        <field name="AV1_CAFTAR" labelOnTop="0"/>
+        <field name="AV1_DAGLMD" labelOnTop="0"/>
+        <field name="AV1_KDV" labelOnTop="0"/>
+        <field name="AV1_RESTAU" labelOnTop="0"/>
+        <field name="AV1_SUPERM" labelOnTop="0"/>
+        <field name="AV20ATTRAC" labelOnTop="0"/>
+        <field name="AV20WARENH" labelOnTop="0"/>
+        <field name="AV20_BIOS" labelOnTop="0"/>
+        <field name="AV20_HOTEL" labelOnTop="0"/>
+        <field name="AV3_ARTSPR" labelOnTop="0"/>
+        <field name="AV3_BSO" labelOnTop="0"/>
+        <field name="AV3_CAFE" labelOnTop="0"/>
+        <field name="AV3_CAFTAR" labelOnTop="0"/>
+        <field name="AV3_DAGLMD" labelOnTop="0"/>
+        <field name="AV3_KDV" labelOnTop="0"/>
+        <field name="AV3_RESTAU" labelOnTop="0"/>
+        <field name="AV3_SUPERM" labelOnTop="0"/>
+        <field name="AV50ATTRAC" labelOnTop="0"/>
+        <field name="AV5_ARTSPR" labelOnTop="0"/>
+        <field name="AV5_BIOS" labelOnTop="0"/>
+        <field name="AV5_BSO" labelOnTop="0"/>
+        <field name="AV5_CAFE" labelOnTop="0"/>
+        <field name="AV5_CAFTAR" labelOnTop="0"/>
+        <field name="AV5_DAGLMD" labelOnTop="0"/>
+        <field name="AV5_HOTEL" labelOnTop="0"/>
+        <field name="AV5_KDV" labelOnTop="0"/>
+        <field name="AV5_RESTAU" labelOnTop="0"/>
+        <field name="AV5_SUPERM" labelOnTop="0"/>
+        <field name="AV5_WARENH" labelOnTop="0"/>
+        <field name="A_BEDV" labelOnTop="0"/>
+        <field name="A_BED_A" labelOnTop="0"/>
+        <field name="A_BED_BF" labelOnTop="0"/>
+        <field name="A_BED_GI" labelOnTop="0"/>
+        <field name="A_BED_HJ" labelOnTop="0"/>
+        <field name="A_BED_KL" labelOnTop="0"/>
+        <field name="A_BED_MN" labelOnTop="0"/>
+        <field name="A_BED_RU" labelOnTop="0"/>
+        <field name="A_BST_B" labelOnTop="0"/>
+        <field name="A_BST_NB" labelOnTop="0"/>
+        <field name="A_LFTJ6J" labelOnTop="0"/>
+        <field name="A_LFTO6J" labelOnTop="0"/>
+        <field name="A_SOZ_OW" labelOnTop="0"/>
+        <field name="BEDR_AUTO" labelOnTop="0"/>
+        <field name="BEV_DICHTH" labelOnTop="0"/>
+        <field name="GEBOO_TOT" labelOnTop="0"/>
+        <field name="GEM_HH_GR" labelOnTop="0"/>
+        <field name="GM_CODE" labelOnTop="0"/>
+        <field name="GM_NAAM" labelOnTop="0"/>
+        <field name="IND_WBI" labelOnTop="0"/>
+        <field name="MOTOR_2W" labelOnTop="0"/>
+        <field name="OAD" labelOnTop="0"/>
+        <field name="OPP_LAND" labelOnTop="0"/>
+        <field name="OPP_TOT" labelOnTop="0"/>
+        <field name="OPP_WATER" labelOnTop="0"/>
+        <field name="P_00_14_JR" labelOnTop="0"/>
+        <field name="P_15_24_JR" labelOnTop="0"/>
+        <field name="P_1GEZW" labelOnTop="0"/>
+        <field name="P_25_44_JR" labelOnTop="0"/>
+        <field name="P_45_64_JR" labelOnTop="0"/>
+        <field name="P_65_EO_JR" labelOnTop="0"/>
+        <field name="P_ANT_ARU" labelOnTop="0"/>
+        <field name="P_EENP_HH" labelOnTop="0"/>
+        <field name="P_GEBOO" labelOnTop="0"/>
+        <field name="P_GEHUWD" labelOnTop="0"/>
+        <field name="P_GESCHEID" labelOnTop="0"/>
+        <field name="P_HH_M_K" labelOnTop="0"/>
+        <field name="P_HH_Z_K" labelOnTop="0"/>
+        <field name="P_MAROKKO" labelOnTop="0"/>
+        <field name="P_MGEZW" labelOnTop="0"/>
+        <field name="P_N_W_AL" labelOnTop="0"/>
+        <field name="P_ONGEHUWD" labelOnTop="0"/>
+        <field name="P_OVER_NW" labelOnTop="0"/>
+        <field name="P_STERFT" labelOnTop="0"/>
+        <field name="P_SURINAM" labelOnTop="0"/>
+        <field name="P_TURKIJE" labelOnTop="0"/>
+        <field name="P_VERWEDUW" labelOnTop="0"/>
+        <field name="P_WEST_AL" labelOnTop="0"/>
+        <field name="P_WONT2000" labelOnTop="0"/>
+        <field name="P_WONV2000" labelOnTop="0"/>
+        <field name="STED" labelOnTop="0"/>
+        <field name="STERFT_TOT" labelOnTop="0"/>
+        <field name="WATER" labelOnTop="0"/>
+        <field name="WK_CODE" labelOnTop="0"/>
+        <field name="WK_NAAM" labelOnTop="0"/>
+        <field name="WONINGEN" labelOnTop="0"/>
+        <field name="WOZ" labelOnTop="0"/>
+        <field name="WWB_UITTOT" labelOnTop="0"/>
+        <field name="WW_UIT_TOT" labelOnTop="0"/>
+        <field name="fid" labelOnTop="0"/>
       </labelOnTop>
       <dataDefinedFieldProperties/>
       <widgets/>
@@ -2432,6 +2571,7 @@ def my_form_open(dialog, layer, feature):
   </projectlayers>
   <layerorder>
     <layer id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73"/>
+    <layer id="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b"/>
   </layerorder>
   <properties>
     <DefaultStyles>
@@ -2563,9 +2703,9 @@ def my_form_open(dialog, layer, feature):
   </properties>
   <dataDefinedServerProperties>
     <Option type="Map">
-      <Option type="QString" value="" name="name"/>
+      <Option type="QString" name="name" value=""/>
       <Option name="properties"/>
-      <Option type="QString" value="collection" name="type"/>
+      <Option type="QString" name="type" value="collection"/>
     </Option>
   </dataDefinedServerProperties>
   <visibility-presets/>
@@ -2652,7 +2792,7 @@ def my_form_open(dialog, layer, feature):
   <Bookmarks/>
   <ProjectViewSettings UseProjectScales="0">
     <Scales/>
-    <DefaultViewExtent xmax="4.61479339052452531" xmin="4.57655952814392641" ymax="52.38809919917972735" ymin="52.36874683780235529">
+    <DefaultViewExtent ymax="52.38809919917972735" xmax="4.61479339052452531" xmin="4.57655952814392641" ymin="52.36874683780235529">
       <spatialrefsys>
         <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
         <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -2666,18 +2806,18 @@ def my_form_open(dialog, layer, feature):
       </spatialrefsys>
     </DefaultViewExtent>
   </ProjectViewSettings>
-  <ProjectTimeSettings cumulativeTemporalRange="0" frameRate="1" timeStepUnit="h" timeStep="1"/>
+  <ProjectTimeSettings timeStepUnit="h" frameRate="1" timeStep="1" cumulativeTemporalRange="0"/>
   <ProjectDisplaySettings>
     <BearingFormat id="bearing">
       <Option type="Map">
-        <Option type="QChar" value="" name="decimal_separator"/>
-        <Option type="int" value="6" name="decimals"/>
-        <Option type="int" value="0" name="direction_format"/>
-        <Option type="int" value="0" name="rounding_type"/>
-        <Option type="bool" value="false" name="show_plus"/>
-        <Option type="bool" value="true" name="show_thousand_separator"/>
-        <Option type="bool" value="false" name="show_trailing_zeros"/>
-        <Option type="QChar" value="" name="thousand_separator"/>
+        <Option type="QChar" name="decimal_separator" value=""/>
+        <Option type="int" name="decimals" value="6"/>
+        <Option type="int" name="direction_format" value="0"/>
+        <Option type="int" name="rounding_type" value="0"/>
+        <Option type="bool" name="show_plus" value="false"/>
+        <Option type="bool" name="show_thousand_separator" value="true"/>
+        <Option type="bool" name="show_trailing_zeros" value="false"/>
+        <Option type="QChar" name="thousand_separator" value=""/>
       </Option>
     </BearingFormat>
   </ProjectDisplaySettings>
