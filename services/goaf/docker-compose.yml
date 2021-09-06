@@ -17,9 +17,7 @@ services:
       - ./data:/data
     
     environment:
-      - PATH_GPKG=/data/data.gpkg
-      - PROVIDER=gpkg
-      - ENDPOINT=${SERVICE_PATH}
+      - CONFIG=/data/data.yaml      
 
     labels:
       # Enable Traefik routing on overlay service network
