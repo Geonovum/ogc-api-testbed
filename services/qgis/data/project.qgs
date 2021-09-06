@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" saveUserFull="just" saveUser="just" version="3.16.0-Hannover" saveDateTime="2021-09-06T17:50:54">
+<qgis saveDateTime="2021-09-06T18:08:45" version="3.16.0-Hannover" saveUser="just" saveUserFull="just" projectname="">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -20,10 +20,10 @@
   </projectCrs>
   <layer-tree-group>
     <customproperties/>
-    <layer-tree-layer checked="Qt::Checked" expanded="1" providerKey="ogr" legend_split_behavior="0" legend_exp="" patch_size="-1,-1" name="dutch_addresses_4326 OGRGeoJSON" id="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b" source="./dutch_addresses_4326.gpkg|layername=OGRGeoJSON|option:LIST_ALL_TABLES=AUTO">
+    <layer-tree-layer id="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b" legend_split_behavior="0" name="dutch_addresses_4326 OGRGeoJSON" expanded="1" providerKey="ogr" checked="Qt::Checked" patch_size="-1,-1" source="./dutch_addresses_4326.gpkg|layername=OGRGeoJSON|option:LIST_ALL_TABLES=AUTO" legend_exp="">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer checked="Qt::Checked" expanded="1" providerKey="ogr" legend_split_behavior="0" legend_exp="" patch_size="-1,-1" name="cbs-grenzen" id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73" source="./vlak.gpkg|layername=vlak">
+    <layer-tree-layer id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73" legend_split_behavior="0" name="cbs-grenzen" expanded="1" providerKey="ogr" checked="Qt::Checked" patch_size="-1,-1" source="./vlak.gpkg|layername=vlak" legend_exp="">
       <customproperties/>
     </layer-tree-layer>
     <custom-order enabled="0">
@@ -31,20 +31,20 @@
       <item>dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b</item>
     </custom-order>
   </layer-tree-group>
-  <snapping-settings enabled="0" minScale="0" intersection-snapping="0" scaleDependencyMode="0" type="1" mode="2" self-snapping="0" tolerance="12" unit="1" maxScale="0">
+  <snapping-settings tolerance="12" enabled="0" mode="2" intersection-snapping="0" scaleDependencyMode="0" unit="1" self-snapping="0" maxScale="0" minScale="0" type="1">
     <individual-layer-settings>
-      <layer-setting enabled="0" units="1" minScale="0" type="1" id="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b" tolerance="12" maxScale="0"/>
-      <layer-setting enabled="0" units="1" minScale="0" type="1" id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73" tolerance="12" maxScale="0"/>
+      <layer-setting id="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73" tolerance="12" enabled="0" maxScale="0" minScale="0" type="1" units="1"/>
+      <layer-setting id="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b" tolerance="12" enabled="0" maxScale="0" minScale="0" type="1" units="1"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
-  <mapcanvas annotationsVisible="1" name="theMapCanvas">
+  <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>degrees</units>
     <extent>
-      <xmin>5.75312442264785417</xmin>
-      <ymin>52.07726619618154018</ymin>
-      <xmax>5.80686347130311376</xmax>
-      <ymax>52.11517850352879577</ymax>
+      <xmin>-1</xmin>
+      <ymin>-1</ymin>
+      <xmax>1</xmax>
+      <ymax>1</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -65,95 +65,20 @@
   </mapcanvas>
   <projectModels/>
   <legend updateDrawingOrder="true">
-    <legendlayer checked="Qt::Checked" open="true" name="dutch_addresses_4326 OGRGeoJSON" showFeatureCount="0" drawingOrder="-1">
-      <filegroup hidden="false" open="true">
-        <legendlayerfile isInOverview="0" layerid="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b" visible="1"/>
+    <legendlayer drawingOrder="-1" open="true" name="dutch_addresses_4326 OGRGeoJSON" showFeatureCount="0" checked="Qt::Checked">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" visible="1" layerid="dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b"/>
       </filegroup>
     </legendlayer>
-    <legendlayer checked="Qt::Checked" open="true" name="cbs-grenzen" showFeatureCount="0" drawingOrder="-1">
-      <filegroup hidden="false" open="true">
-        <legendlayerfile isInOverview="0" layerid="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73" visible="1"/>
+    <legendlayer drawingOrder="-1" open="true" name="cbs-grenzen" showFeatureCount="0" checked="Qt::Checked">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" visible="1" layerid="vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73"/>
       </filegroup>
     </legendlayer>
   </legend>
   <mapViewDocks/>
   <mapViewDocks3D/>
-  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
-    <units>degrees</units>
-    <extent>
-      <xmin>0</xmin>
-      <ymin>0</ymin>
-      <xmax>0</xmax>
-      <ymax>0</ymax>
-    </extent>
-    <rotation>0</rotation>
-    <destinationsrs>
-      <spatialrefsys>
-        <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
-        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-        <srsid>3452</srsid>
-        <srid>4326</srid>
-        <authid>EPSG:4326</authid>
-        <description>WGS 84</description>
-        <projectionacronym>longlat</projectionacronym>
-        <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
-        <geographicflag>true</geographicflag>
-      </spatialrefsys>
-    </destinationsrs>
-    <rendermaptile>0</rendermaptile>
-    <expressionContextScope/>
-  </mapcanvas>
-  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
-    <units>degrees</units>
-    <extent>
-      <xmin>0</xmin>
-      <ymin>0</ymin>
-      <xmax>0</xmax>
-      <ymax>0</ymax>
-    </extent>
-    <rotation>0</rotation>
-    <destinationsrs>
-      <spatialrefsys>
-        <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
-        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-        <srsid>3452</srsid>
-        <srid>4326</srid>
-        <authid>EPSG:4326</authid>
-        <description>WGS 84</description>
-        <projectionacronym>longlat</projectionacronym>
-        <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
-        <geographicflag>true</geographicflag>
-      </spatialrefsys>
-    </destinationsrs>
-    <rendermaptile>0</rendermaptile>
-    <expressionContextScope/>
-  </mapcanvas>
-  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
-    <units>degrees</units>
-    <extent>
-      <xmin>0</xmin>
-      <ymin>0</ymin>
-      <xmax>0</xmax>
-      <ymax>0</ymax>
-    </extent>
-    <rotation>0</rotation>
-    <destinationsrs>
-      <spatialrefsys>
-        <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
-        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-        <srsid>3452</srsid>
-        <srid>4326</srid>
-        <authid>EPSG:4326</authid>
-        <description>WGS 84</description>
-        <projectionacronym>longlat</projectionacronym>
-        <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
-        <geographicflag>true</geographicflag>
-      </spatialrefsys>
-    </destinationsrs>
-    <rendermaptile>0</rendermaptile>
-    <expressionContextScope/>
-  </mapcanvas>
-  <main-annotation-layer refreshOnNotifyEnabled="0" type="annotation" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
+  <main-annotation-layer autoRefreshTime="0" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" type="annotation">
     <id>Annotations_3ca50bc4_fc6d_4b31_9a4f_8d046196d5ec</id>
     <datasource></datasource>
     <keywordList>
@@ -170,7 +95,7 @@
         <description></description>
         <projectionacronym></projectionacronym>
         <ellipsoidacronym></ellipsoidacronym>
-        <geographicflag>true</geographicflag>
+        <geographicflag>false</geographicflag>
       </spatialrefsys>
     </srs>
     <resourceMetadata>
@@ -193,7 +118,7 @@
           <description></description>
           <projectionacronym></projectionacronym>
           <ellipsoidacronym></ellipsoidacronym>
-          <geographicflag>true</geographicflag>
+          <geographicflag>false</geographicflag>
         </spatialrefsys>
       </crs>
       <extent/>
@@ -202,7 +127,7 @@
     <layerOpacity>1</layerOpacity>
   </main-annotation-layer>
   <projectlayers>
-    <maplayer simplifyDrawingTol="1" autoRefreshEnabled="0" readOnly="0" styleCategories="AllStyleCategories" simplifyLocal="1" minScale="100000000" simplifyDrawingHints="1" refreshOnNotifyEnabled="0" simplifyMaxScale="1" maxScale="0" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" simplifyAlgorithm="0" type="vector" wkbType="Point" labelsEnabled="0" geometry="Point" refreshOnNotifyMessage="">
+    <maplayer simplifyMaxScale="1" autoRefreshTime="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" simplifyAlgorithm="0" minScale="100000000" geometry="Point" simplifyLocal="1" readOnly="0" maxScale="0" refreshOnNotifyMessage="" wkbType="Point" labelsEnabled="0" simplifyDrawingHints="1" type="vector" refreshOnNotifyEnabled="0" autoRefreshEnabled="0" styleCategories="AllStyleCategories">
       <extent>
         <xmin>5.67067000000000032</xmin>
         <ymin>52.04270000000000351</ymin>
@@ -248,7 +173,7 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent/>
@@ -267,39 +192,39 @@
         <Removable>1</Removable>
         <Searchable>1</Searchable>
       </flags>
-      <temporal enabled="0" durationField="" durationUnit="min" endField="" endExpression="" fixedDuration="0" accumulate="0" mode="0" startExpression="" startField="">
+      <temporal fixedDuration="0" durationField="" enabled="0" mode="0" startExpression="" accumulate="0" startField="" endField="" durationUnit="min" endExpression="">
         <fixedRange>
           <start></start>
           <end></end>
         </fixedRange>
       </temporal>
-      <renderer-v2 type="singleSymbol" symbollevels="0" enableorderby="0" forceraster="0">
+      <renderer-v2 symbollevels="0" forceraster="0" enableorderby="0" type="singleSymbol">
         <symbols>
-          <symbol clip_to_extent="1" alpha="1" type="marker" name="0" force_rhr="0">
-            <layer enabled="1" pass="0" class="SimpleMarker" locked="0">
-              <prop v="0" k="angle"/>
-              <prop v="232,113,141,255" k="color"/>
-              <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="circle" k="name"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="diameter" k="scale_method"/>
-              <prop v="2" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MM" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+          <symbol name="0" force_rhr="0" clip_to_extent="1" alpha="1" type="marker">
+            <layer enabled="1" class="SimpleMarker" locked="0" pass="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="232,113,141,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" name="name" value=""/>
+                  <Option name="name" value="" type="QString"/>
                   <Option name="properties"/>
-                  <Option type="QString" name="type" value="collection"/>
+                  <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
             </layer>
@@ -312,9 +237,9 @@
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
-      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
         <activeChecks type="StringList">
-          <Option type="QString" value=""/>
+          <Option value="" type="QString"/>
         </activeChecks>
         <checkConfiguration/>
       </geometryOptions>
@@ -379,14 +304,14 @@
         </field>
       </fieldConfiguration>
       <aliases>
-        <alias index="0" field="fid" name=""/>
-        <alias index="1" field="id" name=""/>
-        <alias index="2" field="straatnaam" name=""/>
-        <alias index="3" field="huisnummer" name=""/>
-        <alias index="4" field="huisletter" name=""/>
-        <alias index="5" field="woonplaats" name=""/>
-        <alias index="6" field="postcode" name=""/>
-        <alias index="7" field="toevoeging" name=""/>
+        <alias name="" index="0" field="fid"/>
+        <alias name="" index="1" field="id"/>
+        <alias name="" index="2" field="straatnaam"/>
+        <alias name="" index="3" field="huisnummer"/>
+        <alias name="" index="4" field="huisletter"/>
+        <alias name="" index="5" field="woonplaats"/>
+        <alias name="" index="6" field="postcode"/>
+        <alias name="" index="7" field="toevoeging"/>
       </aliases>
       <defaults>
         <default applyOnUpdate="0" expression="" field="fid"/>
@@ -399,14 +324,14 @@
         <default applyOnUpdate="0" expression="" field="toevoeging"/>
       </defaults>
       <constraints>
-        <constraint notnull_strength="1" exp_strength="0" constraints="3" field="fid" unique_strength="1"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="id" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="straatnaam" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="huisnummer" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="huisletter" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="woonplaats" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="postcode" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="toevoeging" unique_strength="0"/>
+        <constraint unique_strength="1" exp_strength="0" constraints="3" notnull_strength="1" field="fid"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="id"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="straatnaam"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="huisnummer"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="huisletter"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="woonplaats"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="postcode"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="toevoeging"/>
       </constraints>
       <constraintExpressions>
         <constraint desc="" exp="" field="fid"/>
@@ -420,9 +345,9 @@
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
-        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
         <columns/>
       </attributetableconfig>
       <conditionalstyles>
@@ -444,7 +369,7 @@
       <previewExpression></previewExpression>
       <mapTip></mapTip>
     </maplayer>
-    <maplayer simplifyDrawingTol="1" autoRefreshEnabled="0" readOnly="0" styleCategories="AllStyleCategories" simplifyLocal="1" minScale="100000000" simplifyDrawingHints="1" refreshOnNotifyEnabled="0" simplifyMaxScale="1" maxScale="0" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" simplifyAlgorithm="0" type="vector" wkbType="MultiPolygon" labelsEnabled="0" geometry="Polygon" refreshOnNotifyMessage="">
+    <maplayer simplifyMaxScale="1" autoRefreshTime="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" simplifyAlgorithm="0" minScale="100000000" geometry="Polygon" simplifyLocal="1" readOnly="0" maxScale="0" refreshOnNotifyMessage="" wkbType="MultiPolygon" labelsEnabled="0" simplifyDrawingHints="1" type="vector" refreshOnNotifyEnabled="0" autoRefreshEnabled="0" styleCategories="AllStyleCategories">
       <extent>
         <xmin>10425.15602849909919314</xmin>
         <ymin>306846.19803570199292153</ymin>
@@ -499,11 +424,11 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent>
-          <spatial minx="0" crs="" miny="0" minz="0" maxy="0" maxx="0" maxz="0" dimensions="2"/>
+          <spatial minx="0" maxz="0" maxx="0" dimensions="2" minz="0" crs="" miny="0" maxy="0"/>
           <temporal>
             <period>
               <start></start>
@@ -526,165 +451,165 @@
         <Removable>1</Removable>
         <Searchable>1</Searchable>
       </flags>
-      <temporal enabled="0" durationField="" durationUnit="min" endField="" endExpression="" fixedDuration="0" accumulate="0" mode="0" startExpression="" startField="">
+      <temporal fixedDuration="0" durationField="" enabled="0" mode="0" startExpression="" accumulate="0" startField="" endField="" durationUnit="min" endExpression="">
         <fixedRange>
           <start></start>
           <end></end>
         </fixedRange>
       </temporal>
-      <renderer-v2 type="graduatedSymbol" symbollevels="0" enableorderby="0" graduatedMethod="GraduatedColor" forceraster="0" attr="AANT_MAN">
+      <renderer-v2 symbollevels="0" forceraster="0" graduatedMethod="GraduatedColor" attr="AANT_MAN" enableorderby="0" type="graduatedSymbol">
         <ranges>
-          <range label="-99999999 - 355" lower="-99999999.000000000000000" symbol="0" upper="355.000000000000000" render="true"/>
-          <range label="355 - 975" lower="355.000000000000000" symbol="1" upper="975.000000000000000" render="true"/>
-          <range label="975 - 2221" lower="975.000000000000000" symbol="2" upper="2220.999999999999091" render="true"/>
-          <range label="2221 - 4355" lower="2220.999999999999091" symbol="3" upper="4355.000000000000000" render="true"/>
-          <range label="4355 - 72795" lower="4355.000000000000000" symbol="4" upper="72795.000000000000000" render="true"/>
+          <range lower="-99999999.000000000000000" upper="355.000000000000000" render="true" symbol="0" label="-99999999 - 355"/>
+          <range lower="355.000000000000000" upper="975.000000000000000" render="true" symbol="1" label="355 - 975"/>
+          <range lower="975.000000000000000" upper="2220.999999999999091" render="true" symbol="2" label="975 - 2221"/>
+          <range lower="2220.999999999999091" upper="4355.000000000000000" render="true" symbol="3" label="2221 - 4355"/>
+          <range lower="4355.000000000000000" upper="72795.000000000000000" render="true" symbol="4" label="4355 - 72795"/>
         </ranges>
         <symbols>
-          <symbol clip_to_extent="1" alpha="1" type="fill" name="0" force_rhr="0">
-            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
-              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-              <prop v="255,255,255,255" k="color"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
-              <prop v="0.26" k="outline_width"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="solid" k="style"/>
+          <symbol name="0" force_rhr="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="255,255,255,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" name="name" value=""/>
+                  <Option name="name" value="" type="QString"/>
                   <Option name="properties"/>
-                  <Option type="QString" name="type" value="collection"/>
+                  <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol clip_to_extent="1" alpha="1" type="fill" name="1" force_rhr="0">
-            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
-              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-              <prop v="255,191,191,255" k="color"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
-              <prop v="0.26" k="outline_width"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="solid" k="style"/>
+          <symbol name="1" force_rhr="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="255,191,191,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" name="name" value=""/>
+                  <Option name="name" value="" type="QString"/>
                   <Option name="properties"/>
-                  <Option type="QString" name="type" value="collection"/>
+                  <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol clip_to_extent="1" alpha="1" type="fill" name="2" force_rhr="0">
-            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
-              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-              <prop v="255,128,128,255" k="color"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
-              <prop v="0.26" k="outline_width"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="solid" k="style"/>
+          <symbol name="2" force_rhr="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="255,128,128,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" name="name" value=""/>
+                  <Option name="name" value="" type="QString"/>
                   <Option name="properties"/>
-                  <Option type="QString" name="type" value="collection"/>
+                  <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol clip_to_extent="1" alpha="1" type="fill" name="3" force_rhr="0">
-            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
-              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-              <prop v="255,64,64,255" k="color"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
-              <prop v="0.26" k="outline_width"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="solid" k="style"/>
+          <symbol name="3" force_rhr="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="255,64,64,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" name="name" value=""/>
+                  <Option name="name" value="" type="QString"/>
                   <Option name="properties"/>
-                  <Option type="QString" name="type" value="collection"/>
+                  <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol clip_to_extent="1" alpha="1" type="fill" name="4" force_rhr="0">
-            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
-              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-              <prop v="255,0,0,255" k="color"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
-              <prop v="0.26" k="outline_width"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="solid" k="style"/>
+          <symbol name="4" force_rhr="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="255,0,0,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" name="name" value=""/>
+                  <Option name="name" value="" type="QString"/>
                   <Option name="properties"/>
-                  <Option type="QString" name="type" value="collection"/>
+                  <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </symbols>
         <source-symbol>
-          <symbol clip_to_extent="1" alpha="1" type="fill" name="0" force_rhr="0">
-            <layer enabled="1" pass="0" class="SimpleFill" locked="0">
-              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
-              <prop v="133,182,111,255" k="color"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="35,35,35,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
-              <prop v="0.26" k="outline_width"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="solid" k="style"/>
+          <symbol name="0" force_rhr="0" clip_to_extent="1" alpha="1" type="fill">
+            <layer enabled="1" class="SimpleFill" locked="0" pass="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="133,182,111,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" name="name" value=""/>
+                  <Option name="name" value="" type="QString"/>
                   <Option name="properties"/>
-                  <Option type="QString" name="type" value="collection"/>
+                  <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </source-symbol>
-        <colorramp type="gradient" name="[source]">
-          <prop v="255,255,255,255" k="color1"/>
-          <prop v="255,0,0,255" k="color2"/>
-          <prop v="0" k="discrete"/>
-          <prop v="gradient" k="rampType"/>
+        <colorramp name="[source]" type="gradient">
+          <prop k="color1" v="255,255,255,255"/>
+          <prop k="color2" v="255,0,0,255"/>
+          <prop k="discrete" v="0"/>
+          <prop k="rampType" v="gradient"/>
         </colorramp>
         <classificationMethod id="Quantile">
-          <symmetricMode symmetrypoint="0" enabled="0" astride="0"/>
-          <labelFormat labelprecision="4" format="%1 - %2" trimtrailingzeroes="1"/>
+          <symmetricMode astride="0" enabled="0" symmetrypoint="0"/>
+          <labelFormat trimtrailingzeroes="1" format="%1 - %2" labelprecision="4"/>
           <parameters>
             <Option/>
           </parameters>
@@ -694,46 +619,46 @@
         <sizescale/>
       </renderer-v2>
       <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
+        <property value="0" key="embeddedWidgets/count"/>
         <property key="variableNames"/>
         <property key="variableValues"/>
       </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
-      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-        <DiagramCategory penAlpha="255" minimumSize="0" barWidth="5" penWidth="0" rotationOffset="270" sizeType="MM" sizeScale="3x:0,0,0,0,0,0" opacity="1" enabled="0" labelPlacementMethod="XHeight" spacing="5" backgroundColor="#ffffff" penColor="#000000" lineSizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" spacingUnit="MM" spacingUnitScale="3x:0,0,0,0,0,0" width="15" minScaleDenominator="0" showAxis="1" direction="0" scaleBasedVisibility="0" height="15" backgroundAlpha="255" diagramOrientation="Up" maxScaleDenominator="1e+08" scaleDependency="Area">
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory diagramOrientation="Up" backgroundColor="#ffffff" sizeType="MM" direction="0" height="15" scaleDependency="Area" lineSizeScale="3x:0,0,0,0,0,0" backgroundAlpha="255" minimumSize="0" maxScaleDenominator="1e+08" barWidth="5" labelPlacementMethod="XHeight" minScaleDenominator="0" spacingUnit="MM" penColor="#000000" width="15" spacing="5" lineSizeType="MM" penWidth="0" scaleBasedVisibility="0" rotationOffset="270" penAlpha="255" sizeScale="3x:0,0,0,0,0,0" enabled="0" opacity="1" spacingUnitScale="3x:0,0,0,0,0,0" showAxis="1">
           <fontProperties description=".AppleSystemUIFont,13,-1,5,50,0,0,0,0,0" style=""/>
-          <attribute label="" color="#000000" field=""/>
+          <attribute color="#000000" field="" label=""/>
           <axisSymbol>
-            <symbol clip_to_extent="1" alpha="1" type="line" name="" force_rhr="0">
-              <layer enabled="1" pass="0" class="SimpleLine" locked="0">
-                <prop v="0" k="align_dash_pattern"/>
-                <prop v="square" k="capstyle"/>
-                <prop v="5;2" k="customdash"/>
-                <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-                <prop v="MM" k="customdash_unit"/>
-                <prop v="0" k="dash_pattern_offset"/>
-                <prop v="3x:0,0,0,0,0,0" k="dash_pattern_offset_map_unit_scale"/>
-                <prop v="MM" k="dash_pattern_offset_unit"/>
-                <prop v="0" k="draw_inside_polygon"/>
-                <prop v="bevel" k="joinstyle"/>
-                <prop v="35,35,35,255" k="line_color"/>
-                <prop v="solid" k="line_style"/>
-                <prop v="0.26" k="line_width"/>
-                <prop v="MM" k="line_width_unit"/>
-                <prop v="0" k="offset"/>
-                <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-                <prop v="MM" k="offset_unit"/>
-                <prop v="0" k="ring_filter"/>
-                <prop v="0" k="tweak_dash_pattern_on_corners"/>
-                <prop v="0" k="use_custom_dash"/>
-                <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+            <symbol name="" force_rhr="0" clip_to_extent="1" alpha="1" type="line">
+              <layer enabled="1" class="SimpleLine" locked="0" pass="0">
+                <prop k="align_dash_pattern" v="0"/>
+                <prop k="capstyle" v="square"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="dash_pattern_offset" v="0"/>
+                <prop k="dash_pattern_offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                <prop k="dash_pattern_offset_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="35,35,35,255"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0.26"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="ring_filter" v="0"/>
+                <prop k="tweak_dash_pattern_on_corners" v="0"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
                 <data_defined_properties>
                   <Option type="Map">
-                    <Option type="QString" name="name" value=""/>
+                    <Option name="name" value="" type="QString"/>
                     <Option name="properties"/>
-                    <Option type="QString" name="type" value="collection"/>
+                    <Option name="type" value="collection" type="QString"/>
                   </Option>
                 </data_defined_properties>
               </layer>
@@ -741,22 +666,22 @@
           </axisSymbol>
         </DiagramCategory>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings showAll="1" linePlacementFlags="18" placement="1" dist="0" zIndex="0" priority="0" obstacle="0">
+      <DiagramLayerSettings dist="0" showAll="1" placement="1" linePlacementFlags="18" priority="0" zIndex="0" obstacle="0">
         <properties>
           <Option type="Map">
-            <Option type="QString" name="name" value=""/>
+            <Option name="name" value="" type="QString"/>
             <Option name="properties"/>
-            <Option type="QString" name="type" value="collection"/>
+            <Option name="type" value="collection" type="QString"/>
           </Option>
         </properties>
       </DiagramLayerSettings>
-      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
         <activeChecks/>
         <checkConfiguration type="Map">
-          <Option type="Map" name="QgsGeometryGapCheck">
-            <Option type="double" name="allowedGapsBuffer" value="0"/>
-            <Option type="bool" name="allowedGapsEnabled" value="false"/>
-            <Option type="QString" name="allowedGapsLayer" value=""/>
+          <Option name="QgsGeometryGapCheck" type="Map">
+            <Option name="allowedGapsBuffer" value="0" type="double"/>
+            <Option name="allowedGapsEnabled" value="false" type="bool"/>
+            <Option name="allowedGapsLayer" value="" type="QString"/>
           </Option>
         </checkConfiguration>
       </geometryOptions>
@@ -1640,131 +1565,131 @@
         </field>
       </fieldConfiguration>
       <aliases>
-        <alias index="0" field="fid" name=""/>
-        <alias index="1" field="WK_CODE" name=""/>
-        <alias index="2" field="WK_NAAM" name=""/>
-        <alias index="3" field="GM_CODE" name=""/>
-        <alias index="4" field="GM_NAAM" name=""/>
-        <alias index="5" field="IND_WBI" name=""/>
-        <alias index="6" field="WATER" name=""/>
-        <alias index="7" field="OAD" name=""/>
-        <alias index="8" field="STED" name=""/>
-        <alias index="9" field="AANT_INW" name=""/>
-        <alias index="10" field="AANT_MAN" name=""/>
-        <alias index="11" field="AANT_VROUW" name=""/>
-        <alias index="12" field="P_00_14_JR" name=""/>
-        <alias index="13" field="P_15_24_JR" name=""/>
-        <alias index="14" field="P_25_44_JR" name=""/>
-        <alias index="15" field="P_45_64_JR" name=""/>
-        <alias index="16" field="P_65_EO_JR" name=""/>
-        <alias index="17" field="P_ONGEHUWD" name=""/>
-        <alias index="18" field="P_GEHUWD" name=""/>
-        <alias index="19" field="P_GESCHEID" name=""/>
-        <alias index="20" field="P_VERWEDUW" name=""/>
-        <alias index="21" field="GEBOO_TOT" name=""/>
-        <alias index="22" field="P_GEBOO" name=""/>
-        <alias index="23" field="STERFT_TOT" name=""/>
-        <alias index="24" field="P_STERFT" name=""/>
-        <alias index="25" field="BEV_DICHTH" name=""/>
-        <alias index="26" field="AANTAL_HH" name=""/>
-        <alias index="27" field="P_EENP_HH" name=""/>
-        <alias index="28" field="P_HH_Z_K" name=""/>
-        <alias index="29" field="P_HH_M_K" name=""/>
-        <alias index="30" field="GEM_HH_GR" name=""/>
-        <alias index="31" field="P_WEST_AL" name=""/>
-        <alias index="32" field="P_N_W_AL" name=""/>
-        <alias index="33" field="P_MAROKKO" name=""/>
-        <alias index="34" field="P_ANT_ARU" name=""/>
-        <alias index="35" field="P_SURINAM" name=""/>
-        <alias index="36" field="P_TURKIJE" name=""/>
-        <alias index="37" field="P_OVER_NW" name=""/>
-        <alias index="38" field="A_BED_A" name=""/>
-        <alias index="39" field="A_BED_BF" name=""/>
-        <alias index="40" field="A_BED_GI" name=""/>
-        <alias index="41" field="A_BED_HJ" name=""/>
-        <alias index="42" field="A_BED_KL" name=""/>
-        <alias index="43" field="A_BED_MN" name=""/>
-        <alias index="44" field="A_BED_RU" name=""/>
-        <alias index="45" field="A_BEDV" name=""/>
-        <alias index="46" field="WONINGEN" name=""/>
-        <alias index="47" field="WOZ" name=""/>
-        <alias index="48" field="P_1GEZW" name=""/>
-        <alias index="49" field="P_MGEZW" name=""/>
-        <alias index="50" field="P_WONT2000" name=""/>
-        <alias index="51" field="P_WONV2000" name=""/>
-        <alias index="52" field="AO_UIT_TOT" name=""/>
-        <alias index="53" field="WW_UIT_TOT" name=""/>
-        <alias index="54" field="WWB_UITTOT" name=""/>
-        <alias index="55" field="A_SOZ_OW" name=""/>
-        <alias index="56" field="AUTO_TOT" name=""/>
-        <alias index="57" field="AUTO_HH" name=""/>
-        <alias index="58" field="AUTO_LAND" name=""/>
-        <alias index="59" field="BEDR_AUTO" name=""/>
-        <alias index="60" field="MOTOR_2W" name=""/>
-        <alias index="61" field="A_LFTJ6J" name=""/>
-        <alias index="62" field="A_LFTO6J" name=""/>
-        <alias index="63" field="A_BST_B" name=""/>
-        <alias index="64" field="A_BST_NB" name=""/>
-        <alias index="65" field="AF_ARTSPR" name=""/>
-        <alias index="66" field="AV1_ARTSPR" name=""/>
-        <alias index="67" field="AV3_ARTSPR" name=""/>
-        <alias index="68" field="AV5_ARTSPR" name=""/>
-        <alias index="69" field="AF_SUPERM" name=""/>
-        <alias index="70" field="AV1_SUPERM" name=""/>
-        <alias index="71" field="AV3_SUPERM" name=""/>
-        <alias index="72" field="AV5_SUPERM" name=""/>
-        <alias index="73" field="AF_DAGLMD" name=""/>
-        <alias index="74" field="AV1_DAGLMD" name=""/>
-        <alias index="75" field="AV3_DAGLMD" name=""/>
-        <alias index="76" field="AV5_DAGLMD" name=""/>
-        <alias index="77" field="AF_WARENH" name=""/>
-        <alias index="78" field="AV5_WARENH" name=""/>
-        <alias index="79" field="AV10WARENH" name=""/>
-        <alias index="80" field="AV20WARENH" name=""/>
-        <alias index="81" field="AF_CAFE" name=""/>
-        <alias index="82" field="AV1_CAFE" name=""/>
-        <alias index="83" field="AV3_CAFE" name=""/>
-        <alias index="84" field="AV5_CAFE" name=""/>
-        <alias index="85" field="AF_CAFTAR" name=""/>
-        <alias index="86" field="AV1_CAFTAR" name=""/>
-        <alias index="87" field="AV3_CAFTAR" name=""/>
-        <alias index="88" field="AV5_CAFTAR" name=""/>
-        <alias index="89" field="AF_RESTAU" name=""/>
-        <alias index="90" field="AV1_RESTAU" name=""/>
-        <alias index="91" field="AV3_RESTAU" name=""/>
-        <alias index="92" field="AV5_RESTAU" name=""/>
-        <alias index="93" field="AF_HOTEL" name=""/>
-        <alias index="94" field="AV5_HOTEL" name=""/>
-        <alias index="95" field="AV10_HOTEL" name=""/>
-        <alias index="96" field="AV20_HOTEL" name=""/>
-        <alias index="97" field="AF_KDV" name=""/>
-        <alias index="98" field="AV1_KDV" name=""/>
-        <alias index="99" field="AV3_KDV" name=""/>
-        <alias index="100" field="AV5_KDV" name=""/>
-        <alias index="101" field="AF_BSO" name=""/>
-        <alias index="102" field="AV1_BSO" name=""/>
-        <alias index="103" field="AV3_BSO" name=""/>
-        <alias index="104" field="AV5_BSO" name=""/>
-        <alias index="105" field="AF_BRANDW" name=""/>
-        <alias index="106" field="AF_OPRITH" name=""/>
-        <alias index="107" field="AF_TREINST" name=""/>
-        <alias index="108" field="AF_OVERST" name=""/>
-        <alias index="109" field="AF_ZWEMB" name=""/>
-        <alias index="110" field="AF_IJSBAAN" name=""/>
-        <alias index="111" field="AF_BIBLIO" name=""/>
-        <alias index="112" field="AF_BIOS" name=""/>
-        <alias index="113" field="AV5_BIOS" name=""/>
-        <alias index="114" field="AV10_BIOS" name=""/>
-        <alias index="115" field="AV20_BIOS" name=""/>
-        <alias index="116" field="AF_SAUNA" name=""/>
-        <alias index="117" field="AF_ZONBNK" name=""/>
-        <alias index="118" field="AF_ATTRAC" name=""/>
-        <alias index="119" field="AV10ATTRAC" name=""/>
-        <alias index="120" field="AV20ATTRAC" name=""/>
-        <alias index="121" field="AV50ATTRAC" name=""/>
-        <alias index="122" field="OPP_TOT" name=""/>
-        <alias index="123" field="OPP_LAND" name=""/>
-        <alias index="124" field="OPP_WATER" name=""/>
+        <alias name="" index="0" field="fid"/>
+        <alias name="" index="1" field="WK_CODE"/>
+        <alias name="" index="2" field="WK_NAAM"/>
+        <alias name="" index="3" field="GM_CODE"/>
+        <alias name="" index="4" field="GM_NAAM"/>
+        <alias name="" index="5" field="IND_WBI"/>
+        <alias name="" index="6" field="WATER"/>
+        <alias name="" index="7" field="OAD"/>
+        <alias name="" index="8" field="STED"/>
+        <alias name="" index="9" field="AANT_INW"/>
+        <alias name="" index="10" field="AANT_MAN"/>
+        <alias name="" index="11" field="AANT_VROUW"/>
+        <alias name="" index="12" field="P_00_14_JR"/>
+        <alias name="" index="13" field="P_15_24_JR"/>
+        <alias name="" index="14" field="P_25_44_JR"/>
+        <alias name="" index="15" field="P_45_64_JR"/>
+        <alias name="" index="16" field="P_65_EO_JR"/>
+        <alias name="" index="17" field="P_ONGEHUWD"/>
+        <alias name="" index="18" field="P_GEHUWD"/>
+        <alias name="" index="19" field="P_GESCHEID"/>
+        <alias name="" index="20" field="P_VERWEDUW"/>
+        <alias name="" index="21" field="GEBOO_TOT"/>
+        <alias name="" index="22" field="P_GEBOO"/>
+        <alias name="" index="23" field="STERFT_TOT"/>
+        <alias name="" index="24" field="P_STERFT"/>
+        <alias name="" index="25" field="BEV_DICHTH"/>
+        <alias name="" index="26" field="AANTAL_HH"/>
+        <alias name="" index="27" field="P_EENP_HH"/>
+        <alias name="" index="28" field="P_HH_Z_K"/>
+        <alias name="" index="29" field="P_HH_M_K"/>
+        <alias name="" index="30" field="GEM_HH_GR"/>
+        <alias name="" index="31" field="P_WEST_AL"/>
+        <alias name="" index="32" field="P_N_W_AL"/>
+        <alias name="" index="33" field="P_MAROKKO"/>
+        <alias name="" index="34" field="P_ANT_ARU"/>
+        <alias name="" index="35" field="P_SURINAM"/>
+        <alias name="" index="36" field="P_TURKIJE"/>
+        <alias name="" index="37" field="P_OVER_NW"/>
+        <alias name="" index="38" field="A_BED_A"/>
+        <alias name="" index="39" field="A_BED_BF"/>
+        <alias name="" index="40" field="A_BED_GI"/>
+        <alias name="" index="41" field="A_BED_HJ"/>
+        <alias name="" index="42" field="A_BED_KL"/>
+        <alias name="" index="43" field="A_BED_MN"/>
+        <alias name="" index="44" field="A_BED_RU"/>
+        <alias name="" index="45" field="A_BEDV"/>
+        <alias name="" index="46" field="WONINGEN"/>
+        <alias name="" index="47" field="WOZ"/>
+        <alias name="" index="48" field="P_1GEZW"/>
+        <alias name="" index="49" field="P_MGEZW"/>
+        <alias name="" index="50" field="P_WONT2000"/>
+        <alias name="" index="51" field="P_WONV2000"/>
+        <alias name="" index="52" field="AO_UIT_TOT"/>
+        <alias name="" index="53" field="WW_UIT_TOT"/>
+        <alias name="" index="54" field="WWB_UITTOT"/>
+        <alias name="" index="55" field="A_SOZ_OW"/>
+        <alias name="" index="56" field="AUTO_TOT"/>
+        <alias name="" index="57" field="AUTO_HH"/>
+        <alias name="" index="58" field="AUTO_LAND"/>
+        <alias name="" index="59" field="BEDR_AUTO"/>
+        <alias name="" index="60" field="MOTOR_2W"/>
+        <alias name="" index="61" field="A_LFTJ6J"/>
+        <alias name="" index="62" field="A_LFTO6J"/>
+        <alias name="" index="63" field="A_BST_B"/>
+        <alias name="" index="64" field="A_BST_NB"/>
+        <alias name="" index="65" field="AF_ARTSPR"/>
+        <alias name="" index="66" field="AV1_ARTSPR"/>
+        <alias name="" index="67" field="AV3_ARTSPR"/>
+        <alias name="" index="68" field="AV5_ARTSPR"/>
+        <alias name="" index="69" field="AF_SUPERM"/>
+        <alias name="" index="70" field="AV1_SUPERM"/>
+        <alias name="" index="71" field="AV3_SUPERM"/>
+        <alias name="" index="72" field="AV5_SUPERM"/>
+        <alias name="" index="73" field="AF_DAGLMD"/>
+        <alias name="" index="74" field="AV1_DAGLMD"/>
+        <alias name="" index="75" field="AV3_DAGLMD"/>
+        <alias name="" index="76" field="AV5_DAGLMD"/>
+        <alias name="" index="77" field="AF_WARENH"/>
+        <alias name="" index="78" field="AV5_WARENH"/>
+        <alias name="" index="79" field="AV10WARENH"/>
+        <alias name="" index="80" field="AV20WARENH"/>
+        <alias name="" index="81" field="AF_CAFE"/>
+        <alias name="" index="82" field="AV1_CAFE"/>
+        <alias name="" index="83" field="AV3_CAFE"/>
+        <alias name="" index="84" field="AV5_CAFE"/>
+        <alias name="" index="85" field="AF_CAFTAR"/>
+        <alias name="" index="86" field="AV1_CAFTAR"/>
+        <alias name="" index="87" field="AV3_CAFTAR"/>
+        <alias name="" index="88" field="AV5_CAFTAR"/>
+        <alias name="" index="89" field="AF_RESTAU"/>
+        <alias name="" index="90" field="AV1_RESTAU"/>
+        <alias name="" index="91" field="AV3_RESTAU"/>
+        <alias name="" index="92" field="AV5_RESTAU"/>
+        <alias name="" index="93" field="AF_HOTEL"/>
+        <alias name="" index="94" field="AV5_HOTEL"/>
+        <alias name="" index="95" field="AV10_HOTEL"/>
+        <alias name="" index="96" field="AV20_HOTEL"/>
+        <alias name="" index="97" field="AF_KDV"/>
+        <alias name="" index="98" field="AV1_KDV"/>
+        <alias name="" index="99" field="AV3_KDV"/>
+        <alias name="" index="100" field="AV5_KDV"/>
+        <alias name="" index="101" field="AF_BSO"/>
+        <alias name="" index="102" field="AV1_BSO"/>
+        <alias name="" index="103" field="AV3_BSO"/>
+        <alias name="" index="104" field="AV5_BSO"/>
+        <alias name="" index="105" field="AF_BRANDW"/>
+        <alias name="" index="106" field="AF_OPRITH"/>
+        <alias name="" index="107" field="AF_TREINST"/>
+        <alias name="" index="108" field="AF_OVERST"/>
+        <alias name="" index="109" field="AF_ZWEMB"/>
+        <alias name="" index="110" field="AF_IJSBAAN"/>
+        <alias name="" index="111" field="AF_BIBLIO"/>
+        <alias name="" index="112" field="AF_BIOS"/>
+        <alias name="" index="113" field="AV5_BIOS"/>
+        <alias name="" index="114" field="AV10_BIOS"/>
+        <alias name="" index="115" field="AV20_BIOS"/>
+        <alias name="" index="116" field="AF_SAUNA"/>
+        <alias name="" index="117" field="AF_ZONBNK"/>
+        <alias name="" index="118" field="AF_ATTRAC"/>
+        <alias name="" index="119" field="AV10ATTRAC"/>
+        <alias name="" index="120" field="AV20ATTRAC"/>
+        <alias name="" index="121" field="AV50ATTRAC"/>
+        <alias name="" index="122" field="OPP_TOT"/>
+        <alias name="" index="123" field="OPP_LAND"/>
+        <alias name="" index="124" field="OPP_WATER"/>
       </aliases>
       <defaults>
         <default applyOnUpdate="0" expression="" field="fid"/>
@@ -1894,131 +1819,131 @@
         <default applyOnUpdate="0" expression="" field="OPP_WATER"/>
       </defaults>
       <constraints>
-        <constraint notnull_strength="1" exp_strength="0" constraints="3" field="fid" unique_strength="1"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WK_CODE" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WK_NAAM" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="GM_CODE" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="GM_NAAM" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="IND_WBI" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WATER" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="OAD" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="STED" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AANT_INW" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AANT_MAN" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AANT_VROUW" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_00_14_JR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_15_24_JR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_25_44_JR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_45_64_JR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_65_EO_JR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_ONGEHUWD" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_GEHUWD" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_GESCHEID" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_VERWEDUW" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="GEBOO_TOT" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_GEBOO" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="STERFT_TOT" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_STERFT" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="BEV_DICHTH" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AANTAL_HH" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_EENP_HH" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_HH_Z_K" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_HH_M_K" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="GEM_HH_GR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_WEST_AL" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_N_W_AL" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_MAROKKO" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_ANT_ARU" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_SURINAM" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_TURKIJE" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_OVER_NW" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_A" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_BF" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_GI" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_HJ" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_KL" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_MN" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BED_RU" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BEDV" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WONINGEN" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WOZ" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_1GEZW" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_MGEZW" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_WONT2000" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="P_WONV2000" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AO_UIT_TOT" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WW_UIT_TOT" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="WWB_UITTOT" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_SOZ_OW" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AUTO_TOT" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AUTO_HH" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AUTO_LAND" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="BEDR_AUTO" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="MOTOR_2W" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_LFTJ6J" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_LFTO6J" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BST_B" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="A_BST_NB" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_ARTSPR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_ARTSPR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_ARTSPR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_ARTSPR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_SUPERM" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_SUPERM" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_SUPERM" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_SUPERM" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_DAGLMD" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_DAGLMD" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_DAGLMD" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_DAGLMD" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_WARENH" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_WARENH" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV10WARENH" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV20WARENH" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_CAFE" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_CAFE" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_CAFE" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_CAFE" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_CAFTAR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_CAFTAR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_CAFTAR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_CAFTAR" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_RESTAU" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_RESTAU" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_RESTAU" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_RESTAU" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_HOTEL" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_HOTEL" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV10_HOTEL" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV20_HOTEL" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_KDV" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_KDV" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_KDV" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_KDV" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_BSO" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV1_BSO" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV3_BSO" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_BSO" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_BRANDW" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_OPRITH" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_TREINST" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_OVERST" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_ZWEMB" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_IJSBAAN" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_BIBLIO" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_BIOS" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV5_BIOS" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV10_BIOS" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV20_BIOS" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_SAUNA" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_ZONBNK" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AF_ATTRAC" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV10ATTRAC" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV20ATTRAC" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="AV50ATTRAC" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="OPP_TOT" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="OPP_LAND" unique_strength="0"/>
-        <constraint notnull_strength="0" exp_strength="0" constraints="0" field="OPP_WATER" unique_strength="0"/>
+        <constraint unique_strength="1" exp_strength="0" constraints="3" notnull_strength="1" field="fid"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="WK_CODE"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="WK_NAAM"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="GM_CODE"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="GM_NAAM"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="IND_WBI"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="WATER"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="OAD"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="STED"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AANT_INW"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AANT_MAN"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AANT_VROUW"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_00_14_JR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_15_24_JR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_25_44_JR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_45_64_JR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_65_EO_JR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_ONGEHUWD"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_GEHUWD"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_GESCHEID"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_VERWEDUW"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="GEBOO_TOT"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_GEBOO"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="STERFT_TOT"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_STERFT"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="BEV_DICHTH"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AANTAL_HH"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_EENP_HH"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_HH_Z_K"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_HH_M_K"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="GEM_HH_GR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_WEST_AL"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_N_W_AL"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_MAROKKO"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_ANT_ARU"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_SURINAM"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_TURKIJE"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_OVER_NW"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BED_A"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BED_BF"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BED_GI"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BED_HJ"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BED_KL"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BED_MN"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BED_RU"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BEDV"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="WONINGEN"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="WOZ"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_1GEZW"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_MGEZW"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_WONT2000"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="P_WONV2000"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AO_UIT_TOT"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="WW_UIT_TOT"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="WWB_UITTOT"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_SOZ_OW"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AUTO_TOT"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AUTO_HH"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AUTO_LAND"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="BEDR_AUTO"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="MOTOR_2W"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_LFTJ6J"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_LFTO6J"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BST_B"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="A_BST_NB"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_ARTSPR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV1_ARTSPR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV3_ARTSPR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_ARTSPR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_SUPERM"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV1_SUPERM"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV3_SUPERM"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_SUPERM"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_DAGLMD"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV1_DAGLMD"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV3_DAGLMD"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_DAGLMD"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_WARENH"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_WARENH"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV10WARENH"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV20WARENH"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_CAFE"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV1_CAFE"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV3_CAFE"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_CAFE"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_CAFTAR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV1_CAFTAR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV3_CAFTAR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_CAFTAR"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_RESTAU"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV1_RESTAU"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV3_RESTAU"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_RESTAU"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_HOTEL"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_HOTEL"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV10_HOTEL"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV20_HOTEL"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_KDV"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV1_KDV"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV3_KDV"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_KDV"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_BSO"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV1_BSO"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV3_BSO"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_BSO"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_BRANDW"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_OPRITH"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_TREINST"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_OVERST"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_ZWEMB"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_IJSBAAN"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_BIBLIO"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_BIOS"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV5_BIOS"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV10_BIOS"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV20_BIOS"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_SAUNA"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_ZONBNK"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AF_ATTRAC"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV10ATTRAC"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV20ATTRAC"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="AV50ATTRAC"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="OPP_TOT"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="OPP_LAND"/>
+        <constraint unique_strength="0" exp_strength="0" constraints="0" notnull_strength="0" field="OPP_WATER"/>
       </constraints>
       <constraintExpressions>
         <constraint desc="" exp="" field="fid"/>
@@ -2149,136 +2074,136 @@
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
-        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
         <columns>
-          <column hidden="0" type="field" name="fid" width="-1"/>
-          <column hidden="0" type="field" name="WK_CODE" width="-1"/>
-          <column hidden="0" type="field" name="WK_NAAM" width="-1"/>
-          <column hidden="0" type="field" name="GM_CODE" width="-1"/>
-          <column hidden="0" type="field" name="GM_NAAM" width="-1"/>
-          <column hidden="0" type="field" name="IND_WBI" width="-1"/>
-          <column hidden="0" type="field" name="WATER" width="-1"/>
-          <column hidden="0" type="field" name="OAD" width="-1"/>
-          <column hidden="0" type="field" name="STED" width="-1"/>
-          <column hidden="0" type="field" name="AANT_INW" width="-1"/>
-          <column hidden="0" type="field" name="AANT_MAN" width="-1"/>
-          <column hidden="0" type="field" name="AANT_VROUW" width="-1"/>
-          <column hidden="0" type="field" name="P_00_14_JR" width="-1"/>
-          <column hidden="0" type="field" name="P_15_24_JR" width="-1"/>
-          <column hidden="0" type="field" name="P_25_44_JR" width="-1"/>
-          <column hidden="0" type="field" name="P_45_64_JR" width="-1"/>
-          <column hidden="0" type="field" name="P_65_EO_JR" width="-1"/>
-          <column hidden="0" type="field" name="P_ONGEHUWD" width="-1"/>
-          <column hidden="0" type="field" name="P_GEHUWD" width="-1"/>
-          <column hidden="0" type="field" name="P_GESCHEID" width="-1"/>
-          <column hidden="0" type="field" name="P_VERWEDUW" width="-1"/>
-          <column hidden="0" type="field" name="GEBOO_TOT" width="-1"/>
-          <column hidden="0" type="field" name="P_GEBOO" width="-1"/>
-          <column hidden="0" type="field" name="STERFT_TOT" width="-1"/>
-          <column hidden="0" type="field" name="P_STERFT" width="-1"/>
-          <column hidden="0" type="field" name="BEV_DICHTH" width="-1"/>
-          <column hidden="0" type="field" name="AANTAL_HH" width="-1"/>
-          <column hidden="0" type="field" name="P_EENP_HH" width="-1"/>
-          <column hidden="0" type="field" name="P_HH_Z_K" width="-1"/>
-          <column hidden="0" type="field" name="P_HH_M_K" width="-1"/>
-          <column hidden="0" type="field" name="GEM_HH_GR" width="-1"/>
-          <column hidden="0" type="field" name="P_WEST_AL" width="-1"/>
-          <column hidden="0" type="field" name="P_N_W_AL" width="-1"/>
-          <column hidden="0" type="field" name="P_MAROKKO" width="-1"/>
-          <column hidden="0" type="field" name="P_ANT_ARU" width="-1"/>
-          <column hidden="0" type="field" name="P_SURINAM" width="-1"/>
-          <column hidden="0" type="field" name="P_TURKIJE" width="-1"/>
-          <column hidden="0" type="field" name="P_OVER_NW" width="-1"/>
-          <column hidden="0" type="field" name="A_BED_A" width="-1"/>
-          <column hidden="0" type="field" name="A_BED_BF" width="-1"/>
-          <column hidden="0" type="field" name="A_BED_GI" width="-1"/>
-          <column hidden="0" type="field" name="A_BED_HJ" width="-1"/>
-          <column hidden="0" type="field" name="A_BED_KL" width="-1"/>
-          <column hidden="0" type="field" name="A_BED_MN" width="-1"/>
-          <column hidden="0" type="field" name="A_BED_RU" width="-1"/>
-          <column hidden="0" type="field" name="A_BEDV" width="-1"/>
-          <column hidden="0" type="field" name="WONINGEN" width="-1"/>
-          <column hidden="0" type="field" name="WOZ" width="-1"/>
-          <column hidden="0" type="field" name="P_1GEZW" width="-1"/>
-          <column hidden="0" type="field" name="P_MGEZW" width="-1"/>
-          <column hidden="0" type="field" name="P_WONT2000" width="-1"/>
-          <column hidden="0" type="field" name="P_WONV2000" width="-1"/>
-          <column hidden="0" type="field" name="AO_UIT_TOT" width="-1"/>
-          <column hidden="0" type="field" name="WW_UIT_TOT" width="-1"/>
-          <column hidden="0" type="field" name="WWB_UITTOT" width="-1"/>
-          <column hidden="0" type="field" name="A_SOZ_OW" width="-1"/>
-          <column hidden="0" type="field" name="AUTO_TOT" width="-1"/>
-          <column hidden="0" type="field" name="AUTO_HH" width="-1"/>
-          <column hidden="0" type="field" name="AUTO_LAND" width="-1"/>
-          <column hidden="0" type="field" name="BEDR_AUTO" width="-1"/>
-          <column hidden="0" type="field" name="MOTOR_2W" width="-1"/>
-          <column hidden="0" type="field" name="A_LFTJ6J" width="-1"/>
-          <column hidden="0" type="field" name="A_LFTO6J" width="-1"/>
-          <column hidden="0" type="field" name="A_BST_B" width="-1"/>
-          <column hidden="0" type="field" name="A_BST_NB" width="-1"/>
-          <column hidden="0" type="field" name="AF_ARTSPR" width="-1"/>
-          <column hidden="0" type="field" name="AV1_ARTSPR" width="-1"/>
-          <column hidden="0" type="field" name="AV3_ARTSPR" width="-1"/>
-          <column hidden="0" type="field" name="AV5_ARTSPR" width="-1"/>
-          <column hidden="0" type="field" name="AF_SUPERM" width="-1"/>
-          <column hidden="0" type="field" name="AV1_SUPERM" width="-1"/>
-          <column hidden="0" type="field" name="AV3_SUPERM" width="-1"/>
-          <column hidden="0" type="field" name="AV5_SUPERM" width="-1"/>
-          <column hidden="0" type="field" name="AF_DAGLMD" width="-1"/>
-          <column hidden="0" type="field" name="AV1_DAGLMD" width="-1"/>
-          <column hidden="0" type="field" name="AV3_DAGLMD" width="-1"/>
-          <column hidden="0" type="field" name="AV5_DAGLMD" width="-1"/>
-          <column hidden="0" type="field" name="AF_WARENH" width="-1"/>
-          <column hidden="0" type="field" name="AV5_WARENH" width="-1"/>
-          <column hidden="0" type="field" name="AV10WARENH" width="-1"/>
-          <column hidden="0" type="field" name="AV20WARENH" width="-1"/>
-          <column hidden="0" type="field" name="AF_CAFE" width="-1"/>
-          <column hidden="0" type="field" name="AV1_CAFE" width="-1"/>
-          <column hidden="0" type="field" name="AV3_CAFE" width="-1"/>
-          <column hidden="0" type="field" name="AV5_CAFE" width="-1"/>
-          <column hidden="0" type="field" name="AF_CAFTAR" width="-1"/>
-          <column hidden="0" type="field" name="AV1_CAFTAR" width="-1"/>
-          <column hidden="0" type="field" name="AV3_CAFTAR" width="-1"/>
-          <column hidden="0" type="field" name="AV5_CAFTAR" width="-1"/>
-          <column hidden="0" type="field" name="AF_RESTAU" width="-1"/>
-          <column hidden="0" type="field" name="AV1_RESTAU" width="-1"/>
-          <column hidden="0" type="field" name="AV3_RESTAU" width="-1"/>
-          <column hidden="0" type="field" name="AV5_RESTAU" width="-1"/>
-          <column hidden="0" type="field" name="AF_HOTEL" width="-1"/>
-          <column hidden="0" type="field" name="AV5_HOTEL" width="-1"/>
-          <column hidden="0" type="field" name="AV10_HOTEL" width="-1"/>
-          <column hidden="0" type="field" name="AV20_HOTEL" width="-1"/>
-          <column hidden="0" type="field" name="AF_KDV" width="-1"/>
-          <column hidden="0" type="field" name="AV1_KDV" width="-1"/>
-          <column hidden="0" type="field" name="AV3_KDV" width="-1"/>
-          <column hidden="0" type="field" name="AV5_KDV" width="-1"/>
-          <column hidden="0" type="field" name="AF_BSO" width="-1"/>
-          <column hidden="0" type="field" name="AV1_BSO" width="-1"/>
-          <column hidden="0" type="field" name="AV3_BSO" width="-1"/>
-          <column hidden="0" type="field" name="AV5_BSO" width="-1"/>
-          <column hidden="0" type="field" name="AF_BRANDW" width="-1"/>
-          <column hidden="0" type="field" name="AF_OPRITH" width="-1"/>
-          <column hidden="0" type="field" name="AF_TREINST" width="-1"/>
-          <column hidden="0" type="field" name="AF_OVERST" width="-1"/>
-          <column hidden="0" type="field" name="AF_ZWEMB" width="-1"/>
-          <column hidden="0" type="field" name="AF_IJSBAAN" width="-1"/>
-          <column hidden="0" type="field" name="AF_BIBLIO" width="-1"/>
-          <column hidden="0" type="field" name="AF_BIOS" width="-1"/>
-          <column hidden="0" type="field" name="AV5_BIOS" width="-1"/>
-          <column hidden="0" type="field" name="AV10_BIOS" width="-1"/>
-          <column hidden="0" type="field" name="AV20_BIOS" width="-1"/>
-          <column hidden="0" type="field" name="AF_SAUNA" width="-1"/>
-          <column hidden="0" type="field" name="AF_ZONBNK" width="-1"/>
-          <column hidden="0" type="field" name="AF_ATTRAC" width="-1"/>
-          <column hidden="0" type="field" name="AV10ATTRAC" width="-1"/>
-          <column hidden="0" type="field" name="AV20ATTRAC" width="-1"/>
-          <column hidden="0" type="field" name="AV50ATTRAC" width="-1"/>
-          <column hidden="0" type="field" name="OPP_TOT" width="-1"/>
-          <column hidden="0" type="field" name="OPP_LAND" width="-1"/>
-          <column hidden="0" type="field" name="OPP_WATER" width="-1"/>
-          <column hidden="1" type="actions" width="-1"/>
+          <column name="fid" width="-1" type="field" hidden="0"/>
+          <column name="WK_CODE" width="-1" type="field" hidden="0"/>
+          <column name="WK_NAAM" width="-1" type="field" hidden="0"/>
+          <column name="GM_CODE" width="-1" type="field" hidden="0"/>
+          <column name="GM_NAAM" width="-1" type="field" hidden="0"/>
+          <column name="IND_WBI" width="-1" type="field" hidden="0"/>
+          <column name="WATER" width="-1" type="field" hidden="0"/>
+          <column name="OAD" width="-1" type="field" hidden="0"/>
+          <column name="STED" width="-1" type="field" hidden="0"/>
+          <column name="AANT_INW" width="-1" type="field" hidden="0"/>
+          <column name="AANT_MAN" width="-1" type="field" hidden="0"/>
+          <column name="AANT_VROUW" width="-1" type="field" hidden="0"/>
+          <column name="P_00_14_JR" width="-1" type="field" hidden="0"/>
+          <column name="P_15_24_JR" width="-1" type="field" hidden="0"/>
+          <column name="P_25_44_JR" width="-1" type="field" hidden="0"/>
+          <column name="P_45_64_JR" width="-1" type="field" hidden="0"/>
+          <column name="P_65_EO_JR" width="-1" type="field" hidden="0"/>
+          <column name="P_ONGEHUWD" width="-1" type="field" hidden="0"/>
+          <column name="P_GEHUWD" width="-1" type="field" hidden="0"/>
+          <column name="P_GESCHEID" width="-1" type="field" hidden="0"/>
+          <column name="P_VERWEDUW" width="-1" type="field" hidden="0"/>
+          <column name="GEBOO_TOT" width="-1" type="field" hidden="0"/>
+          <column name="P_GEBOO" width="-1" type="field" hidden="0"/>
+          <column name="STERFT_TOT" width="-1" type="field" hidden="0"/>
+          <column name="P_STERFT" width="-1" type="field" hidden="0"/>
+          <column name="BEV_DICHTH" width="-1" type="field" hidden="0"/>
+          <column name="AANTAL_HH" width="-1" type="field" hidden="0"/>
+          <column name="P_EENP_HH" width="-1" type="field" hidden="0"/>
+          <column name="P_HH_Z_K" width="-1" type="field" hidden="0"/>
+          <column name="P_HH_M_K" width="-1" type="field" hidden="0"/>
+          <column name="GEM_HH_GR" width="-1" type="field" hidden="0"/>
+          <column name="P_WEST_AL" width="-1" type="field" hidden="0"/>
+          <column name="P_N_W_AL" width="-1" type="field" hidden="0"/>
+          <column name="P_MAROKKO" width="-1" type="field" hidden="0"/>
+          <column name="P_ANT_ARU" width="-1" type="field" hidden="0"/>
+          <column name="P_SURINAM" width="-1" type="field" hidden="0"/>
+          <column name="P_TURKIJE" width="-1" type="field" hidden="0"/>
+          <column name="P_OVER_NW" width="-1" type="field" hidden="0"/>
+          <column name="A_BED_A" width="-1" type="field" hidden="0"/>
+          <column name="A_BED_BF" width="-1" type="field" hidden="0"/>
+          <column name="A_BED_GI" width="-1" type="field" hidden="0"/>
+          <column name="A_BED_HJ" width="-1" type="field" hidden="0"/>
+          <column name="A_BED_KL" width="-1" type="field" hidden="0"/>
+          <column name="A_BED_MN" width="-1" type="field" hidden="0"/>
+          <column name="A_BED_RU" width="-1" type="field" hidden="0"/>
+          <column name="A_BEDV" width="-1" type="field" hidden="0"/>
+          <column name="WONINGEN" width="-1" type="field" hidden="0"/>
+          <column name="WOZ" width="-1" type="field" hidden="0"/>
+          <column name="P_1GEZW" width="-1" type="field" hidden="0"/>
+          <column name="P_MGEZW" width="-1" type="field" hidden="0"/>
+          <column name="P_WONT2000" width="-1" type="field" hidden="0"/>
+          <column name="P_WONV2000" width="-1" type="field" hidden="0"/>
+          <column name="AO_UIT_TOT" width="-1" type="field" hidden="0"/>
+          <column name="WW_UIT_TOT" width="-1" type="field" hidden="0"/>
+          <column name="WWB_UITTOT" width="-1" type="field" hidden="0"/>
+          <column name="A_SOZ_OW" width="-1" type="field" hidden="0"/>
+          <column name="AUTO_TOT" width="-1" type="field" hidden="0"/>
+          <column name="AUTO_HH" width="-1" type="field" hidden="0"/>
+          <column name="AUTO_LAND" width="-1" type="field" hidden="0"/>
+          <column name="BEDR_AUTO" width="-1" type="field" hidden="0"/>
+          <column name="MOTOR_2W" width="-1" type="field" hidden="0"/>
+          <column name="A_LFTJ6J" width="-1" type="field" hidden="0"/>
+          <column name="A_LFTO6J" width="-1" type="field" hidden="0"/>
+          <column name="A_BST_B" width="-1" type="field" hidden="0"/>
+          <column name="A_BST_NB" width="-1" type="field" hidden="0"/>
+          <column name="AF_ARTSPR" width="-1" type="field" hidden="0"/>
+          <column name="AV1_ARTSPR" width="-1" type="field" hidden="0"/>
+          <column name="AV3_ARTSPR" width="-1" type="field" hidden="0"/>
+          <column name="AV5_ARTSPR" width="-1" type="field" hidden="0"/>
+          <column name="AF_SUPERM" width="-1" type="field" hidden="0"/>
+          <column name="AV1_SUPERM" width="-1" type="field" hidden="0"/>
+          <column name="AV3_SUPERM" width="-1" type="field" hidden="0"/>
+          <column name="AV5_SUPERM" width="-1" type="field" hidden="0"/>
+          <column name="AF_DAGLMD" width="-1" type="field" hidden="0"/>
+          <column name="AV1_DAGLMD" width="-1" type="field" hidden="0"/>
+          <column name="AV3_DAGLMD" width="-1" type="field" hidden="0"/>
+          <column name="AV5_DAGLMD" width="-1" type="field" hidden="0"/>
+          <column name="AF_WARENH" width="-1" type="field" hidden="0"/>
+          <column name="AV5_WARENH" width="-1" type="field" hidden="0"/>
+          <column name="AV10WARENH" width="-1" type="field" hidden="0"/>
+          <column name="AV20WARENH" width="-1" type="field" hidden="0"/>
+          <column name="AF_CAFE" width="-1" type="field" hidden="0"/>
+          <column name="AV1_CAFE" width="-1" type="field" hidden="0"/>
+          <column name="AV3_CAFE" width="-1" type="field" hidden="0"/>
+          <column name="AV5_CAFE" width="-1" type="field" hidden="0"/>
+          <column name="AF_CAFTAR" width="-1" type="field" hidden="0"/>
+          <column name="AV1_CAFTAR" width="-1" type="field" hidden="0"/>
+          <column name="AV3_CAFTAR" width="-1" type="field" hidden="0"/>
+          <column name="AV5_CAFTAR" width="-1" type="field" hidden="0"/>
+          <column name="AF_RESTAU" width="-1" type="field" hidden="0"/>
+          <column name="AV1_RESTAU" width="-1" type="field" hidden="0"/>
+          <column name="AV3_RESTAU" width="-1" type="field" hidden="0"/>
+          <column name="AV5_RESTAU" width="-1" type="field" hidden="0"/>
+          <column name="AF_HOTEL" width="-1" type="field" hidden="0"/>
+          <column name="AV5_HOTEL" width="-1" type="field" hidden="0"/>
+          <column name="AV10_HOTEL" width="-1" type="field" hidden="0"/>
+          <column name="AV20_HOTEL" width="-1" type="field" hidden="0"/>
+          <column name="AF_KDV" width="-1" type="field" hidden="0"/>
+          <column name="AV1_KDV" width="-1" type="field" hidden="0"/>
+          <column name="AV3_KDV" width="-1" type="field" hidden="0"/>
+          <column name="AV5_KDV" width="-1" type="field" hidden="0"/>
+          <column name="AF_BSO" width="-1" type="field" hidden="0"/>
+          <column name="AV1_BSO" width="-1" type="field" hidden="0"/>
+          <column name="AV3_BSO" width="-1" type="field" hidden="0"/>
+          <column name="AV5_BSO" width="-1" type="field" hidden="0"/>
+          <column name="AF_BRANDW" width="-1" type="field" hidden="0"/>
+          <column name="AF_OPRITH" width="-1" type="field" hidden="0"/>
+          <column name="AF_TREINST" width="-1" type="field" hidden="0"/>
+          <column name="AF_OVERST" width="-1" type="field" hidden="0"/>
+          <column name="AF_ZWEMB" width="-1" type="field" hidden="0"/>
+          <column name="AF_IJSBAAN" width="-1" type="field" hidden="0"/>
+          <column name="AF_BIBLIO" width="-1" type="field" hidden="0"/>
+          <column name="AF_BIOS" width="-1" type="field" hidden="0"/>
+          <column name="AV5_BIOS" width="-1" type="field" hidden="0"/>
+          <column name="AV10_BIOS" width="-1" type="field" hidden="0"/>
+          <column name="AV20_BIOS" width="-1" type="field" hidden="0"/>
+          <column name="AF_SAUNA" width="-1" type="field" hidden="0"/>
+          <column name="AF_ZONBNK" width="-1" type="field" hidden="0"/>
+          <column name="AF_ATTRAC" width="-1" type="field" hidden="0"/>
+          <column name="AV10ATTRAC" width="-1" type="field" hidden="0"/>
+          <column name="AV20ATTRAC" width="-1" type="field" hidden="0"/>
+          <column name="AV50ATTRAC" width="-1" type="field" hidden="0"/>
+          <column name="OPP_TOT" width="-1" type="field" hidden="0"/>
+          <column name="OPP_LAND" width="-1" type="field" hidden="0"/>
+          <column name="OPP_WATER" width="-1" type="field" hidden="0"/>
+          <column width="-1" type="actions" hidden="1"/>
         </columns>
       </attributetableconfig>
       <conditionalstyles>
@@ -2310,131 +2235,131 @@ def my_form_open(dialog, layer, feature):
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
       <editable>
-        <field editable="1" name="AANTAL_HH"/>
-        <field editable="1" name="AANT_INW"/>
-        <field editable="1" name="AANT_MAN"/>
-        <field editable="1" name="AANT_VROUW"/>
-        <field editable="1" name="AF_ARTSPR"/>
-        <field editable="1" name="AF_ATTRAC"/>
-        <field editable="1" name="AF_BIBLIO"/>
-        <field editable="1" name="AF_BIOS"/>
-        <field editable="1" name="AF_BRANDW"/>
-        <field editable="1" name="AF_BSO"/>
-        <field editable="1" name="AF_CAFE"/>
-        <field editable="1" name="AF_CAFTAR"/>
-        <field editable="1" name="AF_DAGLMD"/>
-        <field editable="1" name="AF_HOTEL"/>
-        <field editable="1" name="AF_IJSBAAN"/>
-        <field editable="1" name="AF_KDV"/>
-        <field editable="1" name="AF_OPRITH"/>
-        <field editable="1" name="AF_OVERST"/>
-        <field editable="1" name="AF_RESTAU"/>
-        <field editable="1" name="AF_SAUNA"/>
-        <field editable="1" name="AF_SUPERM"/>
-        <field editable="1" name="AF_TREINST"/>
-        <field editable="1" name="AF_WARENH"/>
-        <field editable="1" name="AF_ZONBNK"/>
-        <field editable="1" name="AF_ZWEMB"/>
-        <field editable="1" name="AO_UIT_TOT"/>
-        <field editable="1" name="AUTO_HH"/>
-        <field editable="1" name="AUTO_LAND"/>
-        <field editable="1" name="AUTO_TOT"/>
-        <field editable="1" name="AV10ATTRAC"/>
-        <field editable="1" name="AV10WARENH"/>
-        <field editable="1" name="AV10_BIOS"/>
-        <field editable="1" name="AV10_HOTEL"/>
-        <field editable="1" name="AV1_ARTSPR"/>
-        <field editable="1" name="AV1_BSO"/>
-        <field editable="1" name="AV1_CAFE"/>
-        <field editable="1" name="AV1_CAFTAR"/>
-        <field editable="1" name="AV1_DAGLMD"/>
-        <field editable="1" name="AV1_KDV"/>
-        <field editable="1" name="AV1_RESTAU"/>
-        <field editable="1" name="AV1_SUPERM"/>
-        <field editable="1" name="AV20ATTRAC"/>
-        <field editable="1" name="AV20WARENH"/>
-        <field editable="1" name="AV20_BIOS"/>
-        <field editable="1" name="AV20_HOTEL"/>
-        <field editable="1" name="AV3_ARTSPR"/>
-        <field editable="1" name="AV3_BSO"/>
-        <field editable="1" name="AV3_CAFE"/>
-        <field editable="1" name="AV3_CAFTAR"/>
-        <field editable="1" name="AV3_DAGLMD"/>
-        <field editable="1" name="AV3_KDV"/>
-        <field editable="1" name="AV3_RESTAU"/>
-        <field editable="1" name="AV3_SUPERM"/>
-        <field editable="1" name="AV50ATTRAC"/>
-        <field editable="1" name="AV5_ARTSPR"/>
-        <field editable="1" name="AV5_BIOS"/>
-        <field editable="1" name="AV5_BSO"/>
-        <field editable="1" name="AV5_CAFE"/>
-        <field editable="1" name="AV5_CAFTAR"/>
-        <field editable="1" name="AV5_DAGLMD"/>
-        <field editable="1" name="AV5_HOTEL"/>
-        <field editable="1" name="AV5_KDV"/>
-        <field editable="1" name="AV5_RESTAU"/>
-        <field editable="1" name="AV5_SUPERM"/>
-        <field editable="1" name="AV5_WARENH"/>
-        <field editable="1" name="A_BEDV"/>
-        <field editable="1" name="A_BED_A"/>
-        <field editable="1" name="A_BED_BF"/>
-        <field editable="1" name="A_BED_GI"/>
-        <field editable="1" name="A_BED_HJ"/>
-        <field editable="1" name="A_BED_KL"/>
-        <field editable="1" name="A_BED_MN"/>
-        <field editable="1" name="A_BED_RU"/>
-        <field editable="1" name="A_BST_B"/>
-        <field editable="1" name="A_BST_NB"/>
-        <field editable="1" name="A_LFTJ6J"/>
-        <field editable="1" name="A_LFTO6J"/>
-        <field editable="1" name="A_SOZ_OW"/>
-        <field editable="1" name="BEDR_AUTO"/>
-        <field editable="1" name="BEV_DICHTH"/>
-        <field editable="1" name="GEBOO_TOT"/>
-        <field editable="1" name="GEM_HH_GR"/>
-        <field editable="1" name="GM_CODE"/>
-        <field editable="1" name="GM_NAAM"/>
-        <field editable="1" name="IND_WBI"/>
-        <field editable="1" name="MOTOR_2W"/>
-        <field editable="1" name="OAD"/>
-        <field editable="1" name="OPP_LAND"/>
-        <field editable="1" name="OPP_TOT"/>
-        <field editable="1" name="OPP_WATER"/>
-        <field editable="1" name="P_00_14_JR"/>
-        <field editable="1" name="P_15_24_JR"/>
-        <field editable="1" name="P_1GEZW"/>
-        <field editable="1" name="P_25_44_JR"/>
-        <field editable="1" name="P_45_64_JR"/>
-        <field editable="1" name="P_65_EO_JR"/>
-        <field editable="1" name="P_ANT_ARU"/>
-        <field editable="1" name="P_EENP_HH"/>
-        <field editable="1" name="P_GEBOO"/>
-        <field editable="1" name="P_GEHUWD"/>
-        <field editable="1" name="P_GESCHEID"/>
-        <field editable="1" name="P_HH_M_K"/>
-        <field editable="1" name="P_HH_Z_K"/>
-        <field editable="1" name="P_MAROKKO"/>
-        <field editable="1" name="P_MGEZW"/>
-        <field editable="1" name="P_N_W_AL"/>
-        <field editable="1" name="P_ONGEHUWD"/>
-        <field editable="1" name="P_OVER_NW"/>
-        <field editable="1" name="P_STERFT"/>
-        <field editable="1" name="P_SURINAM"/>
-        <field editable="1" name="P_TURKIJE"/>
-        <field editable="1" name="P_VERWEDUW"/>
-        <field editable="1" name="P_WEST_AL"/>
-        <field editable="1" name="P_WONT2000"/>
-        <field editable="1" name="P_WONV2000"/>
-        <field editable="1" name="STED"/>
-        <field editable="1" name="STERFT_TOT"/>
-        <field editable="1" name="WATER"/>
-        <field editable="1" name="WK_CODE"/>
-        <field editable="1" name="WK_NAAM"/>
-        <field editable="1" name="WONINGEN"/>
-        <field editable="1" name="WOZ"/>
-        <field editable="1" name="WWB_UITTOT"/>
-        <field editable="1" name="WW_UIT_TOT"/>
-        <field editable="1" name="fid"/>
+        <field name="AANTAL_HH" editable="1"/>
+        <field name="AANT_INW" editable="1"/>
+        <field name="AANT_MAN" editable="1"/>
+        <field name="AANT_VROUW" editable="1"/>
+        <field name="AF_ARTSPR" editable="1"/>
+        <field name="AF_ATTRAC" editable="1"/>
+        <field name="AF_BIBLIO" editable="1"/>
+        <field name="AF_BIOS" editable="1"/>
+        <field name="AF_BRANDW" editable="1"/>
+        <field name="AF_BSO" editable="1"/>
+        <field name="AF_CAFE" editable="1"/>
+        <field name="AF_CAFTAR" editable="1"/>
+        <field name="AF_DAGLMD" editable="1"/>
+        <field name="AF_HOTEL" editable="1"/>
+        <field name="AF_IJSBAAN" editable="1"/>
+        <field name="AF_KDV" editable="1"/>
+        <field name="AF_OPRITH" editable="1"/>
+        <field name="AF_OVERST" editable="1"/>
+        <field name="AF_RESTAU" editable="1"/>
+        <field name="AF_SAUNA" editable="1"/>
+        <field name="AF_SUPERM" editable="1"/>
+        <field name="AF_TREINST" editable="1"/>
+        <field name="AF_WARENH" editable="1"/>
+        <field name="AF_ZONBNK" editable="1"/>
+        <field name="AF_ZWEMB" editable="1"/>
+        <field name="AO_UIT_TOT" editable="1"/>
+        <field name="AUTO_HH" editable="1"/>
+        <field name="AUTO_LAND" editable="1"/>
+        <field name="AUTO_TOT" editable="1"/>
+        <field name="AV10ATTRAC" editable="1"/>
+        <field name="AV10WARENH" editable="1"/>
+        <field name="AV10_BIOS" editable="1"/>
+        <field name="AV10_HOTEL" editable="1"/>
+        <field name="AV1_ARTSPR" editable="1"/>
+        <field name="AV1_BSO" editable="1"/>
+        <field name="AV1_CAFE" editable="1"/>
+        <field name="AV1_CAFTAR" editable="1"/>
+        <field name="AV1_DAGLMD" editable="1"/>
+        <field name="AV1_KDV" editable="1"/>
+        <field name="AV1_RESTAU" editable="1"/>
+        <field name="AV1_SUPERM" editable="1"/>
+        <field name="AV20ATTRAC" editable="1"/>
+        <field name="AV20WARENH" editable="1"/>
+        <field name="AV20_BIOS" editable="1"/>
+        <field name="AV20_HOTEL" editable="1"/>
+        <field name="AV3_ARTSPR" editable="1"/>
+        <field name="AV3_BSO" editable="1"/>
+        <field name="AV3_CAFE" editable="1"/>
+        <field name="AV3_CAFTAR" editable="1"/>
+        <field name="AV3_DAGLMD" editable="1"/>
+        <field name="AV3_KDV" editable="1"/>
+        <field name="AV3_RESTAU" editable="1"/>
+        <field name="AV3_SUPERM" editable="1"/>
+        <field name="AV50ATTRAC" editable="1"/>
+        <field name="AV5_ARTSPR" editable="1"/>
+        <field name="AV5_BIOS" editable="1"/>
+        <field name="AV5_BSO" editable="1"/>
+        <field name="AV5_CAFE" editable="1"/>
+        <field name="AV5_CAFTAR" editable="1"/>
+        <field name="AV5_DAGLMD" editable="1"/>
+        <field name="AV5_HOTEL" editable="1"/>
+        <field name="AV5_KDV" editable="1"/>
+        <field name="AV5_RESTAU" editable="1"/>
+        <field name="AV5_SUPERM" editable="1"/>
+        <field name="AV5_WARENH" editable="1"/>
+        <field name="A_BEDV" editable="1"/>
+        <field name="A_BED_A" editable="1"/>
+        <field name="A_BED_BF" editable="1"/>
+        <field name="A_BED_GI" editable="1"/>
+        <field name="A_BED_HJ" editable="1"/>
+        <field name="A_BED_KL" editable="1"/>
+        <field name="A_BED_MN" editable="1"/>
+        <field name="A_BED_RU" editable="1"/>
+        <field name="A_BST_B" editable="1"/>
+        <field name="A_BST_NB" editable="1"/>
+        <field name="A_LFTJ6J" editable="1"/>
+        <field name="A_LFTO6J" editable="1"/>
+        <field name="A_SOZ_OW" editable="1"/>
+        <field name="BEDR_AUTO" editable="1"/>
+        <field name="BEV_DICHTH" editable="1"/>
+        <field name="GEBOO_TOT" editable="1"/>
+        <field name="GEM_HH_GR" editable="1"/>
+        <field name="GM_CODE" editable="1"/>
+        <field name="GM_NAAM" editable="1"/>
+        <field name="IND_WBI" editable="1"/>
+        <field name="MOTOR_2W" editable="1"/>
+        <field name="OAD" editable="1"/>
+        <field name="OPP_LAND" editable="1"/>
+        <field name="OPP_TOT" editable="1"/>
+        <field name="OPP_WATER" editable="1"/>
+        <field name="P_00_14_JR" editable="1"/>
+        <field name="P_15_24_JR" editable="1"/>
+        <field name="P_1GEZW" editable="1"/>
+        <field name="P_25_44_JR" editable="1"/>
+        <field name="P_45_64_JR" editable="1"/>
+        <field name="P_65_EO_JR" editable="1"/>
+        <field name="P_ANT_ARU" editable="1"/>
+        <field name="P_EENP_HH" editable="1"/>
+        <field name="P_GEBOO" editable="1"/>
+        <field name="P_GEHUWD" editable="1"/>
+        <field name="P_GESCHEID" editable="1"/>
+        <field name="P_HH_M_K" editable="1"/>
+        <field name="P_HH_Z_K" editable="1"/>
+        <field name="P_MAROKKO" editable="1"/>
+        <field name="P_MGEZW" editable="1"/>
+        <field name="P_N_W_AL" editable="1"/>
+        <field name="P_ONGEHUWD" editable="1"/>
+        <field name="P_OVER_NW" editable="1"/>
+        <field name="P_STERFT" editable="1"/>
+        <field name="P_SURINAM" editable="1"/>
+        <field name="P_TURKIJE" editable="1"/>
+        <field name="P_VERWEDUW" editable="1"/>
+        <field name="P_WEST_AL" editable="1"/>
+        <field name="P_WONT2000" editable="1"/>
+        <field name="P_WONV2000" editable="1"/>
+        <field name="STED" editable="1"/>
+        <field name="STERFT_TOT" editable="1"/>
+        <field name="WATER" editable="1"/>
+        <field name="WK_CODE" editable="1"/>
+        <field name="WK_NAAM" editable="1"/>
+        <field name="WONINGEN" editable="1"/>
+        <field name="WOZ" editable="1"/>
+        <field name="WWB_UITTOT" editable="1"/>
+        <field name="WW_UIT_TOT" editable="1"/>
+        <field name="fid" editable="1"/>
       </editable>
       <labelOnTop>
         <field name="AANTAL_HH" labelOnTop="0"/>
@@ -2635,13 +2560,14 @@ def my_form_open(dialog, layer, feature):
     <WCSLayers type="QStringList"/>
     <WCSUrl type="QString"></WCSUrl>
     <WFSLayers type="QStringList">
+      <value>dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b</value>
       <value>vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73</value>
-      <value>vlak_38fef2ae_80ec_49ad_958a_6dc4d099d3b1</value>
     </WFSLayers>
     <WFSLayersPrecision>
       <Bridges_b5497c98_a12d_4fad_ad02_af42b264aef6 type="int">8</Bridges_b5497c98_a12d_4fad_ad02_af42b264aef6>
       <Buildings_875f32f9_a0d3_402e_984b_ad0061f50c9f type="int">8</Buildings_875f32f9_a0d3_402e_984b_ad0061f50c9f>
       <ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3 type="int">8</ProtectedSite_2c9ec428_031f_495c_908e_2596f8efe8a3>
+      <dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b type="int">8</dutch_addresses_4326_OGRGeoJSON_6e75ca8b_9ed2_4ac7_9250_43179f5c074b>
       <rce_21f09d53_097d_4032_bb21_59bada797bdf type="int">8</rce_21f09d53_097d_4032_bb21_59bada797bdf>
       <rce_vlak_ae7b7bbb_7a0a_414e_a210_49d1ebc60cd5 type="int">8</rce_vlak_ae7b7bbb_7a0a_414e_a210_49d1ebc60cd5>
       <vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73 type="int">8</vlak_3055dd82_7d20_4b79_a7b7_1645cc83dd73>
@@ -2660,7 +2586,7 @@ def my_form_open(dialog, layer, feature):
     <WMSContactOrganization type="QString">dfgs</WMSContactOrganization>
     <WMSContactPerson type="QString">dfgd</WMSContactPerson>
     <WMSContactPhone type="QString">34635645</WMSContactPhone>
-    <WMSContactPosition type="QString">distributor</WMSContactPosition>
+    <WMSContactPosition type="QString">principalInvestigator</WMSContactPosition>
     <WMSDefaultMapUnitsPerMm type="double">1</WMSDefaultMapUnitsPerMm>
     <WMSFeatureInfoUseAttributeFormSettings type="bool">false</WMSFeatureInfoUseAttributeFormSettings>
     <WMSFees type="QString">conditions unknown</WMSFees>
@@ -2703,9 +2629,9 @@ def my_form_open(dialog, layer, feature):
   </properties>
   <dataDefinedServerProperties>
     <Option type="Map">
-      <Option type="QString" name="name" value=""/>
+      <Option name="name" value="" type="QString"/>
       <Option name="properties"/>
-      <Option type="QString" name="type" value="collection"/>
+      <Option name="type" value="collection" type="QString"/>
     </Option>
   </dataDefinedServerProperties>
   <visibility-presets/>
@@ -2792,7 +2718,7 @@ def my_form_open(dialog, layer, feature):
   <Bookmarks/>
   <ProjectViewSettings UseProjectScales="0">
     <Scales/>
-    <DefaultViewExtent ymax="52.38809919917972735" xmax="4.61479339052452531" xmin="4.57655952814392641" ymin="52.36874683780235529">
+    <DefaultViewExtent xmin="4.57655952814392641" ymax="52.38809919917972735" ymin="52.36874683780235529" xmax="4.61479339052452531">
       <spatialrefsys>
         <wkt>GEOGCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["unknown"],AREA["World"],BBOX[-90,-180,90,180]],ID["EPSG",4326]]</wkt>
         <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -2806,18 +2732,18 @@ def my_form_open(dialog, layer, feature):
       </spatialrefsys>
     </DefaultViewExtent>
   </ProjectViewSettings>
-  <ProjectTimeSettings timeStepUnit="h" frameRate="1" timeStep="1" cumulativeTemporalRange="0"/>
+  <ProjectTimeSettings timeStep="1" timeStepUnit="h" cumulativeTemporalRange="0" frameRate="1"/>
   <ProjectDisplaySettings>
     <BearingFormat id="bearing">
       <Option type="Map">
-        <Option type="QChar" name="decimal_separator" value=""/>
-        <Option type="int" name="decimals" value="6"/>
-        <Option type="int" name="direction_format" value="0"/>
-        <Option type="int" name="rounding_type" value="0"/>
-        <Option type="bool" name="show_plus" value="false"/>
-        <Option type="bool" name="show_thousand_separator" value="true"/>
-        <Option type="bool" name="show_trailing_zeros" value="false"/>
-        <Option type="QChar" name="thousand_separator" value=""/>
+        <Option name="decimal_separator" value="" type="QChar"/>
+        <Option name="decimals" value="6" type="int"/>
+        <Option name="direction_format" value="0" type="int"/>
+        <Option name="rounding_type" value="0" type="int"/>
+        <Option name="show_plus" value="false" type="bool"/>
+        <Option name="show_thousand_separator" value="true" type="bool"/>
+        <Option name="show_trailing_zeros" value="false" type="bool"/>
+        <Option name="thousand_separator" value="" type="QChar"/>
       </Option>
     </BearingFormat>
   </ProjectDisplaySettings>
