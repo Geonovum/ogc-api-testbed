@@ -3,8 +3,8 @@
 source ./env.sh
 
 # To prevent permission problems...for now
-chmod 777 data
-chmod 777 data/*
+sudo chmod 777 data
+sudo chmod 777 data/*
 
 ./stop.sh
 docker-compose up -d
