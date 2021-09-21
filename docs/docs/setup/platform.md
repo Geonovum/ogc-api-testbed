@@ -9,6 +9,8 @@ deployment of an OGC API web-service stack using modern "DevOps" tooling.
 
 ![Schematic overview of the platform](../images/schema.png)
 
+See also a [presentation of the platform on OpenGeodag 2021](https://files.justobjects.nl/presentation/opengeodag-2021/opengeodag-2021-just.pdf).
+
 ## Design Principles
 
 The main design principles are:
@@ -44,7 +46,10 @@ Traefik manages the routing of remote requests to relevant containers. Traefik l
 
 ## Services
 
-A number of services has been deployed within the platform, which can act as a template to add additional services. 
+A number of services has been deployed within the platform, which can act as a template to add additional services.
+The image below shows the operational service stack with the [Traefik](https://traefik.io/) frontend.
+
+![Operational Service Stack](../images/services-stack.png)
 
 * [pygeoapi](https://pygeoapi.io/) - a Python server implementation of the OGC API suite of standards.
 * [pycsw](https://pycsw.org/) - a Python server implementation of  OGC API Records.
@@ -74,6 +79,17 @@ from which the **Sandbox** is cloned.
  
 *NB initally [GitHub Protected Branches](https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches) were considered, but*
 *it felt that those would be less transparent and even confusing for selective access and chances of mistakes.*
+
+## Other Instances
+ 
+When other instances are known they are added here. 
+
+### EC JRC
+
+The European Commission Joint Research Centre (EC JRC, Ispra It.) has also used the 
+Template GitHub repo to create a server instance with OGC Data APIs: 
+see their landing page at [jrc.map5.nl](https://jrc.map5.nl) and the GitHub repo at:
+https://github.com/justb4/ogc-api-jrc .
 
 ## Selective Redeploy
 

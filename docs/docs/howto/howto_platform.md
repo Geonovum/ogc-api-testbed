@@ -7,6 +7,8 @@ title: HOWTO Platform
 Describes how to setup your own instance of the OGC API Testbed platform.
 As a real-world example, the OGC API Sandbox (Playground) instance is presented below step-by-step.
 
+See also another example: a [pygeoapi server developed by the EU JRC](https://jrc.map5.nl).
+
 ## 1. Ubuntu Server
 
 Info:
