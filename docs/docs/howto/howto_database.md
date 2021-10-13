@@ -21,7 +21,7 @@ The testbed database exposes its port to the web for conveniance purposes, this 
 | service | |
 | host | apitestbed.geonovum.nl |
 | port | 5432 |
-| database | GIS |
+| database | gis |
 | SSL | allow |
 | user | geopost |
 | pw | xxxxx |
@@ -31,9 +31,9 @@ The testbed database exposes its port to the web for conveniance purposes, this 
 
 ## Connecting GeoServer to the central PostGreSQL
 
-From GeoServer admin you can create a `store` which connects to the central database. After which you can set up feature collections originating from that store. 
+From GeoServer admin you can create a `store` which connects to the central database. After which you can set up feature collections originating from that store.
 
-- On the stores page, create a `store`. Select a store of type PostGIS (not jndi). 
+- On the stores page, create a `store`. Select a store of type PostGIS (not jndi).
 - Fill in the connection details:
 
 | key | value |
@@ -47,7 +47,7 @@ From GeoServer admin you can create a `store` which connects to the central data
 
 - From the layers screen, create a new layer.
 - Select the PostGreSQL store
-- Select the relevant table from the database. 
+- Select the relevant table from the database.
 - Fill in the Layer fields, at minimum calculate the bounds of the layer.
 - Save and preview the layer
 
@@ -57,5 +57,3 @@ As part of the data publication process of QGIS Bridge, you can configure the da
 
 - Bridge will send the data to GeoServer. And GeoServer will insert the data in PostGres.
 - Bridge will connect directly to the remote PostGreSQL and insert the data
-
-

@@ -43,7 +43,7 @@ vi mkdocs.yml  # add to navigation section
 # edit any other files necessary which may want to link to the new page
 git add docs/new-page.md
 git commit -m 'add new page on topic x' docs/new-page.md mkdocs.yml
-git push origin master
+git push origin main
 ```
 
 ### Updating a page
@@ -51,7 +51,7 @@ git push origin master
 ```bash
 vi content/page.md  # update content
 git commit -m 'update page' content/page.md
-git push origin master
+git push origin main
 ```
 
 ## Publishing updates to the live site
