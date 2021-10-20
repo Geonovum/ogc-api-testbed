@@ -22,8 +22,8 @@ logging:
 
 metadata:
     identification:
-        title: GeoNovum OGC API testbed
-        description: An implementation showing use of pygeoapi as INSPICE download service
+        title: Geonovum OGC API Testbed
+        description: An implementation showing use of pygeoapi as INSPIRE download service
         keywords:
             - geospatial
             - data
