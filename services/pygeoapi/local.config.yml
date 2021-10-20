@@ -22,7 +22,7 @@ logging:
 
 metadata:
     identification:
-        title: Geonovum OGC API - Hallo van FOSS4GNL!
+        title: Geonovum OGC API Testbed
         description: An implementation showing use of pygeoapi as INSPIRE download service
         keywords:
             - geospatial
