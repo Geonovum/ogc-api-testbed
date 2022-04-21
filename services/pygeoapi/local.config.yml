@@ -164,7 +164,7 @@ resources:
               id_field: gml_id
               layer: landschapsatlas:Molens
   
-dutch_castles:
+    dutch_castles:
         type: collection
         title: Castles within The Netherlands
         description: Locations of castles within the Netherlands from Rijksdienst voor het Cultureel Erfgoed (RCE) INSPIRE WFS. Uses GeoServer WFS v2 backend via OGRProvider.
