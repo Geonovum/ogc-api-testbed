@@ -3,7 +3,7 @@
 Runs various admin tools/services.
 
 * Portainer (Community Edition)
-* GeoHealthCheck
+* GeoHealthCheck (backed by Postgres DB) - info [geohealthcheck.org](https://geohealthcheck.org)
 
 ## Deployment
 
