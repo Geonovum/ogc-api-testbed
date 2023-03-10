@@ -163,3 +163,416 @@ resources:
 
               id_field: gml_id
               layer: landschapsatlas:Molens
+
+    StatisticalUnits_Gemeente_2018:
+        type: collection
+        title: StatisticalUnits_Gemeente_2018
+        description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Gemeenten uit 2018. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
+        keywords:
+            - statistiek
+            - Gemeenten
+        crs:
+            - EPSG:4326
+        links:
+            - type: text/html
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as iso19139 xml
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Referentie naar het concept statistische eenheden (inspire registry)
+              href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download volledige dataset als GML
+              href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Egemeente.2018%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
+              hreflang: nl
+        extents:
+            spatial:
+                bbox: [3.10, 50.50, 7.60, 53.80]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+            temporal:
+                begin: 2018-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2018-12-31T23:59:59Z  # end datetime in RFC3339
+        providers:
+            - type: feature
+              name: OGR
+              data:
+                  source_type: GPKG
+                  source: data/SU_NL_WGS84.gpkg
+                  source_srs: EPSG:4326
+                  target_srs: EPSG:4326
+                  source_capabilities:
+                      paging: True
+
+                  gdal_ogr_options:
+                      EMPTY_AS_NULL: NO
+                      GDAL_CACHEMAX: 64
+                      # GDAL_HTTP_PROXY: (optional proxy)
+                      # GDAL_PROXY_AUTH: (optional auth for remote WFS)
+                      CPL_DEBUG: NO
+
+              id_field: localid
+              title_field: geographicalname
+              layer: su_gemeente_2018
+
+    StatisticalUnits_Gemeente_2020:
+        type: collection
+        title: StatisticalUnits_Gemeente_2020
+        description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Gemeenten uit 2020. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
+        keywords:
+            - statistiek
+            - Gemeenten
+        crs:
+            - EPSG:4326
+        links:
+            - type: text/html
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as iso19139 xml
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Referentie naar het concept statistische eenheden (inspire registry)
+              href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download volledige dataset als GML
+              href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Egemeente.2020%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
+              hreflang: nl
+        extents:
+            spatial:
+                bbox: [3.10, 50.50, 7.60, 53.80]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+            temporal:
+                begin: 2020-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2020-12-31T23:59:59Z  # end datetime in RFC3339
+        providers:
+            - type: feature
+              name: OGR
+              data:
+                  source_type: GPKG
+                  source: data/SU_NL_WGS84.gpkg
+                  source_srs: EPSG:4326
+                  target_srs: EPSG:4326
+                  source_capabilities:
+                      paging: True
+
+                  gdal_ogr_options:
+                      EMPTY_AS_NULL: NO
+                      GDAL_CACHEMAX: 64
+                      # GDAL_HTTP_PROXY: (optional proxy)
+                      # GDAL_PROXY_AUTH: (optional auth for remote WFS)
+                      CPL_DEBUG: NO
+
+              id_field: localid
+              title_field: geographicalname
+              layer: su_gemeente_2020
+
+    StatisticalUnits_Provincie_2019:
+        type: collection
+        title: StatisticalUnits_Provincie_2019
+        description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Provincies uit 2019. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
+        keywords:
+            - statistiek
+            - Provincies
+        crs:
+            - EPSG:4326
+        links:
+            - type: text/html
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as iso19139 xml
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Referentie naar het concept statistische eenheden (inspire registry)
+              href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download volledige dataset als GML
+              href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Eprovincie.2019%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
+              hreflang: nl
+        extents:
+            spatial:
+                bbox: [3.10, 50.50, 7.60, 53.80]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+            temporal:
+                begin: 2019-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2019-12-31T23:59:59Z  # end datetime in RFC3339
+        providers:
+            - type: feature
+              name: OGR
+              data:
+                  source_type: GPKG
+                  source: data/SU_NL_WGS84.gpkg
+                  source_srs: EPSG:4326
+                  target_srs: EPSG:4326
+                  source_capabilities:
+                      paging: True
+
+                  gdal_ogr_options:
+                      EMPTY_AS_NULL: NO
+                      GDAL_CACHEMAX: 64
+                      # GDAL_HTTP_PROXY: (optional proxy)
+                      # GDAL_PROXY_AUTH: (optional auth for remote WFS)
+                      CPL_DEBUG: NO
+
+              id_field: localid
+              title_field: geographicalname
+              layer: su_provincie_2019
+
+    StatisticalUnits_Provincie_2020:
+        type: collection
+        title: StatisticalUnits_Provincie_2020
+        description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Provincies uit 2020. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
+        keywords:
+            - statistiek
+            - Provincies
+        crs:
+            - EPSG:4326
+        links:
+            - type: text/html
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as iso19139 xml
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Referentie naar het concept statistische eenheden (inspire registry)
+              href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download volledige dataset als GML
+              href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Eprovincie.2020%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
+              hreflang: nl
+        extents:
+            spatial:
+                bbox: [3.10, 50.50, 7.60, 53.80]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+            temporal:
+                begin: 2020-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2020-12-31T23:59:59Z  # end datetime in RFC3339
+        providers:
+            - type: feature
+              name: OGR
+              data:
+                  source_type: GPKG
+                  source: data/SU_NL_WGS84.gpkg
+                  source_srs: EPSG:4326
+                  target_srs: EPSG:4326
+                  source_capabilities:
+                      paging: True
+
+                  gdal_ogr_options:
+                      EMPTY_AS_NULL: NO
+                      GDAL_CACHEMAX: 64
+                      # GDAL_HTTP_PROXY: (optional proxy)
+                      # GDAL_PROXY_AUTH: (optional auth for remote WFS)
+                      CPL_DEBUG: NO
+
+              id_field: localid
+              title_field: geographicalname
+              layer: su_provincie_2020
+
+    StatisticalUnits_NUTS1_2016:
+        type: collection
+        title: StatisticalUnits_NUTS1_2016
+        description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse NUTS1 indelingen gebaseerd op landsdelen uit 2016. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
+        keywords:
+            - statistiek
+            - NUTS
+        crs:
+            - EPSG:4326
+        links:
+            - type: text/html
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as iso19139 xml
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Referentie naar het concept statistische eenheden (inspire registry)
+              href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download volledige dataset als GML
+              href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Enuts1.2016%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
+              hreflang: nl
+        extents:
+            spatial:
+                bbox: [3.10, 50.50, 7.60, 53.80]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+            temporal:
+                begin: 2016-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2016-12-31T23:59:59Z  # end datetime in RFC3339
+        providers:
+            - type: feature
+              name: OGR
+              data:
+                  source_type: GPKG
+                  source: data/SU_NL_WGS84.gpkg
+                  source_srs: EPSG:4326
+                  target_srs: EPSG:4326
+                  source_capabilities:
+                      paging: True
+
+                  gdal_ogr_options:
+                      EMPTY_AS_NULL: NO
+                      GDAL_CACHEMAX: 64
+                      # GDAL_HTTP_PROXY: (optional proxy)
+                      # GDAL_PROXY_AUTH: (optional auth for remote WFS)
+                      CPL_DEBUG: NO
+
+              id_field: localid
+              title_field: geographicalname
+              layer: su_nuts1_2016
+
+    StatisticalUnits_NUTS2_2016:
+        type: collection
+        title: StatisticalUnits_NUTS2_2016
+        description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse NUTS2 indelingen gebaseerd op provincies uit 2016. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
+        keywords:
+            - statistiek
+            - NUTS
+        crs:
+            - EPSG:4326
+        links:
+            - type: text/html
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as iso19139 xml
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Referentie naar het concept statistische eenheden (inspire registry)
+              href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download volledige dataset als GML
+              href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Enuts2.2016%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
+              hreflang: nl
+        extents:
+            spatial:
+                bbox: [3.10, 50.50, 7.60, 53.80]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+            temporal:
+                begin: 2016-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2016-12-31T23:59:59Z  # end datetime in RFC3339
+        providers:
+            - type: feature
+              name: OGR
+              data:
+                  source_type: GPKG
+                  source: data/SU_NL_WGS84.gpkg
+                  source_srs: EPSG:4326
+                  target_srs: EPSG:4326
+                  source_capabilities:
+                      paging: True
+
+                  gdal_ogr_options:
+                      EMPTY_AS_NULL: NO
+                      GDAL_CACHEMAX: 64
+                      # GDAL_HTTP_PROXY: (optional proxy)
+                      # GDAL_PROXY_AUTH: (optional auth for remote WFS)
+                      CPL_DEBUG: NO
+
+              id_field: localid
+              title_field: geographicalname
+              layer: su_nuts2_2016
+
+    StatisticalUnits_NUTS3_2016:
+        type: collection
+        title: StatisticalUnits_NUTS3_2016
+        description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse NUTS3 indelingen gebaseerd op de COROP gebieden uit 2016. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
+        keywords:
+            - statistiek
+            - NUTS
+        crs:
+            - EPSG:4326
+        links:
+            - type: text/html
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as iso19139 xml
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Referentie naar het concept statistische eenheden (inspire registry)
+              href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download volledige dataset als GML
+              href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Enuts3.2016%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
+              hreflang: nl
+        extents:
+            spatial:
+                bbox: [3.10, 50.50, 7.60, 53.80]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+            temporal:
+                begin: 2016-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2016-12-31T23:59:59Z  # end datetime in RFC3339
+        providers:
+            - type: feature
+              name: OGR
+              data:
+                  source_type: GPKG
+                  source: data/SU_NL_WGS84.gpkg
+                  source_srs: EPSG:4326
+                  target_srs: EPSG:4326
+                  source_capabilities:
+                      paging: True
+
+                  gdal_ogr_options:
+                      EMPTY_AS_NULL: NO
+                      GDAL_CACHEMAX: 64
+                      # GDAL_HTTP_PROXY: (optional proxy)
+                      # GDAL_PROXY_AUTH: (optional auth for remote WFS)
+                      CPL_DEBUG: NO
+
+              id_field: localid
+              title_field: geographicalname
+              layer: su_nuts3_2016
