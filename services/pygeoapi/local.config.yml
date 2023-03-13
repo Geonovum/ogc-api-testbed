@@ -107,7 +107,7 @@ resources:
                     # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                     CPL_DEBUG: NO
 
-            id_field: gml_id
+            id_field: fid
             title_field: gml_id
             layer: SimpleAddress
 
