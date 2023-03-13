@@ -84,8 +84,8 @@ resources:
             hreflang: nl
       extents:
           spatial:
-              bbox: [6.85, 53.311, 6.87, 53.322)]
-              crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4258
+              bbox: [6.85, 53.311, 6.87, 53.322]
+              crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
           temporal:
               begin:
               end: null  # or empty
