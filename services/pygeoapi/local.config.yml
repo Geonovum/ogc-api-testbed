@@ -75,7 +75,7 @@ resources:
           - type: text/html
             rel: tag
             title: Reference to the concept Addresses (inspire registry)
-            href: http://inspire.ec.europa.eu/featureconcept/Addresses
+            href: https://inspire.ec.europa.eu/theme/ad
             hreflang: nl
           - type: application/gml+xml
             rel: enclosure
