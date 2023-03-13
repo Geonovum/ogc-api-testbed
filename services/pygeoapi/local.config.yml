@@ -57,7 +57,7 @@ resources:
     AddressesNL:
       type: collection
       title: Dutch INSPIRE Addresses
-      description: INSPIRE harmonized Addresses from Dutch Key Registry BAG. Created with/by WeTransform.
+      description: INSPIRE harmonized Addresses from Dutch Key Registry BAG. Small subset (100 objects), created with/by WeTransform.
       keywords:
           - Addresses
           - INSPIRE
@@ -107,8 +107,8 @@ resources:
                     # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                     CPL_DEBUG: NO
 
-            id_field: fid
-            title_field: text
+            id_field: gml_id
+            title_field: gml_id
             layer: SimpleAddress
 
     ProtectedSites:
