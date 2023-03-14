@@ -3,16 +3,18 @@
 # Build script for branch version of pygeoapi Docker Image
 
 source ./env.sh
+export DOCKER_IMAGE_VERSION="dev"
 
 [[ -z ${PYGEOAPI_BRANCH} ]] && echo "PYGEOAPI_BRANCH var not set - exit" && exit 1
 
+PYGEOAPI_DIR="pygeoapi-${PYGEOAPI_BRANCH}"
+
 /bin/rm ${PYGEOAPI_BRANCH}.zip > /dev/null 2>&1
-/bin/rm -rf ${PYGEOAPI_BRANCH} > /dev/null 2>&1
+/bin/rm -rf ${PYGEOAPI_DIR} > /dev/null 2>&1
 
 wget ${PYGEOAPI_REPO_ZIP}
-unzip -d ${PYGEOAPI_BRANCH} ${PYGEOAPI_BRANCH}.zip
-cd ${PYGEOAPI_BRANCH} || exit
+unzip ${PYGEOAPI_BRANCH}.zip
 
-export DOCKER_IMAGE_VERSION="dev"
-
-docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION} .
+pushd ${PYGEOAPI_DIR} || exit
+  docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION} .
+popd || exit
