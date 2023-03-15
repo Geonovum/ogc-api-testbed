@@ -23,7 +23,7 @@ Open Source products running in this instance. Links to documentation and HOWTOs
 | [/goaf](/goaf?f=html) | Kadaster PDOK | [docs](https://github.com/PDOK/goaf) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_goaf/)  
 | [/pycsw/csw.py](/pycsw/csw.py/collections/metadata:main) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pycsw.org/en/latest/index.html) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pycsw/) 
 
-* see the [pygeoapi Test Page](pygeoapi-test.md) for test of recent added functions: Part 2 CRS support and INSPIRE.
+* see the [pygeoapi Test Page](pygeoapi_test/index.md) for test of recent added functions: Part 2 CRS support and INSPIRE.
 * *"QGIS" is the QGIS Server Application.*
 
 ## Storage Services
