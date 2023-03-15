@@ -4,7 +4,7 @@ LABEL maintainer="Just van den Broecke <justb4@gmail.com>"
 
 RUN pip install mkdocs
 
-COPY ./src/ /docs/
+COPY ./docs/ /docs/
 
 WORKDIR /docs/
 

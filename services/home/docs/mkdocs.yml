@@ -4,8 +4,7 @@ site_author: Geonovum
 copyright: "&copy; 2021-2023 Geonovum"
 site_url: https://apitestbed.geonovum.nl
 repo_url: https://github.com/Geonovum/ogc-api-testbed
-docs_dir: /docs/docs
 nav:
     - Home: index.md
-    - pygeoapi_test: pygeoapi_test/index.md
+    - Test: test.md
     - Code: https://github.com/Geonovum/ogc-api-testbed
