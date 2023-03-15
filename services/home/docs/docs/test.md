@@ -10,6 +10,13 @@ pygeoapi additions made as part of the Tender [OGC-API-Features tooling adjustme
 ## OGC API Features Part 2
 This is basically support for the query parameters `crs` and `crs-bbox`.
 
+### CRS Support
+
+**Show list of CRSs and StorageCRS**
+
+* [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL?f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL?f=json)
+* [related config segment](https://github.com/Geonovum/ogc-api-testbed/blob/main/services/pygeoapi/local.config.yml#L144)
+
 ### CRS BBOX
 
 The AddressesNL is a small (100) set of INSPIRE Harmonized Addresses (AD) situated in the
@@ -39,10 +46,34 @@ BBOX of the Collection is `6.85, 53.311, 6.87, 53.322` (WGS84, lon, lat axis ord
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84)
 * GeoJSON: [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&f=json)
 
-### CRS BBOX
-TBS
+### CRS Support
 
-## INSPIRE Support
+Get Feature(s) in other CRSs.
+
+The AddressesNL is a small (100) set of INSPIRE Harmonized Addresses (AD) situated in the
+North-East of The Netherlands.
+
+Find the [Collection config](https://github.com/Geonovum/ogc-api-testbed/blob/main/services/pygeoapi/local.config.yml#L57) here. 
+BBOX of the Collection is `6.85, 53.311, 6.87, 53.322` (WGS84, lon, lat axis ordering). 
+
+**CRS in Dutch RD (EPSG:28992):**
+
+* [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/28992&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/28992&f=json)
+
+**CRS and BBOX CRS in Dutch RD (EPSG:28992):**
+
+* [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/28992&bbox=13000,400000,400000,700000&bbox-crs=http://www.opengis.net/def/crs/EPSG/0/28992&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/28992&bbox=13000,400000,400000,700000&bbox-crs=http://www.opengis.net/def/crs/EPSG/0/28992&f=json)
+
+**CRS in ETRS89 INSPIRE EPSG:4258 - note the lat, lon axis ordering:**
+
+* [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/4258&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/4258&f=json)
+
+**CRS Unsupported with extended error info:**
+
+* [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/1234&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/1234&f=json)
+
+#
+# INSPIRE Support
 
 ### INSPIRE Download Enclosures
 
