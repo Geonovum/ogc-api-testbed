@@ -184,13 +184,11 @@ resources:
 
     ProtectedSites:
         type: collection
-        title: Werelderfgoed
+        title: Protected Sites - Dutch:Werelderfgoed
         description: In deze dataset zijn de begrenzingen opgenomen van het Nederlandse cultureel erfgoed dat vanwege haar uitzonderlijke universele waarde door het Werelderfgoed comite van UNESCO is geplaatst op de Werelderfgoedlijst. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
             - Werelderfgoed
             - Protected sites
-        crs:
-            - EPSG:4258
         links:
             - type: text/html
               rel: describedby
@@ -215,7 +213,7 @@ resources:
         extents:
             spatial:
                 bbox: [4.40, 51.76, 5.80, 52.85]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4258
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
                 begin:
                 end: null  # or empty
@@ -224,9 +222,9 @@ resources:
               name: OGR
               data:
                   source_type: GPKG
-                  source: data/rce.gpkg
-                  source_srs: EPSG:4258
-                  target_srs: EPSG:4326
+                  source: data/PSNL_WGS84.gpkg
+                  # source_srs: EPSG:4258
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -237,6 +235,13 @@ resources:
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
 
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
               id_field: gml_id
               title_field: text
               layer: rce
@@ -252,8 +257,6 @@ resources:
             - Heritage
             - Holland
             - RD
-        crs:
-            - CRS84
         links:
             - type: text/html
               rel: canonical
@@ -273,8 +276,8 @@ resources:
               data:
                   source_type: WFS
                   source: WFS:https://services.rce.geovoorziening.nl/landschapsatlas/wfs?
-                  source_srs: EPSG:28992
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:28992
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -288,6 +291,14 @@ resources:
                       # GDAL_HTTP_PROXY: (optional proxy)
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
+
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/28992
 
               id_field: gml_id
               layer: landschapsatlas:Molens
@@ -303,8 +314,6 @@ resources:
             - Heritage
             - Holland
             - RD
-        crs:
-            - CRS84
         links:
             - type: text/html
               rel: canonical
@@ -324,8 +333,8 @@ resources:
               data:
                   source_type: WFS
                   source: WFS:https://services.rce.geovoorziening.nl/landschapsatlas/wfs?
-                  source_srs: EPSG:28992
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:28992
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -340,6 +349,14 @@ resources:
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
 
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/28992
+
               id_field: gml_id
               layer: landschapsatlas:kastelen
 
@@ -351,8 +368,6 @@ resources:
         keywords:
             - statistiek
             - Gemeenten
-        crs:
-            - EPSG:4326
         links:
             - type: text/html
               rel: describedby
@@ -377,7 +392,7 @@ resources:
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
                 begin: 2018-01-01T00:00:01Z  # start datetime in RFC3339
                 end: 2018-12-31T23:59:59Z  # end datetime in RFC3339
@@ -387,8 +402,8 @@ resources:
               data:
                   source_type: GPKG
                   source: data/SU_NL_WGS84.gpkg
-                  source_srs: EPSG:4326
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:4326
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -398,6 +413,14 @@ resources:
                       # GDAL_HTTP_PROXY: (optional proxy)
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
+
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 
               id_field: localid
               title_field: geographicalname
@@ -410,8 +433,6 @@ resources:
         keywords:
             - statistiek
             - Gemeenten
-        crs:
-            - EPSG:4326
         links:
             - type: text/html
               rel: describedby
@@ -436,7 +457,7 @@ resources:
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
                 begin: 2020-01-01T00:00:01Z  # start datetime in RFC3339
                 end: 2020-12-31T23:59:59Z  # end datetime in RFC3339
@@ -446,8 +467,8 @@ resources:
               data:
                   source_type: GPKG
                   source: data/SU_NL_WGS84.gpkg
-                  source_srs: EPSG:4326
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:4326
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -457,6 +478,14 @@ resources:
                       # GDAL_HTTP_PROXY: (optional proxy)
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
+
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 
               id_field: localid
               title_field: geographicalname
@@ -469,8 +498,6 @@ resources:
         keywords:
             - statistiek
             - Provincies
-        crs:
-            - EPSG:4326
         links:
             - type: text/html
               rel: describedby
@@ -495,7 +522,7 @@ resources:
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
                 begin: 2019-01-01T00:00:01Z  # start datetime in RFC3339
                 end: 2019-12-31T23:59:59Z  # end datetime in RFC3339
@@ -505,8 +532,8 @@ resources:
               data:
                   source_type: GPKG
                   source: data/SU_NL_WGS84.gpkg
-                  source_srs: EPSG:4326
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:4326
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -516,6 +543,14 @@ resources:
                       # GDAL_HTTP_PROXY: (optional proxy)
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
+
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 
               id_field: localid
               title_field: geographicalname
@@ -528,8 +563,6 @@ resources:
         keywords:
             - statistiek
             - Provincies
-        crs:
-            - EPSG:4326
         links:
             - type: text/html
               rel: describedby
@@ -554,7 +587,7 @@ resources:
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
                 begin: 2020-01-01T00:00:01Z  # start datetime in RFC3339
                 end: 2020-12-31T23:59:59Z  # end datetime in RFC3339
@@ -564,8 +597,8 @@ resources:
               data:
                   source_type: GPKG
                   source: data/SU_NL_WGS84.gpkg
-                  source_srs: EPSG:4326
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:4326
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -575,6 +608,14 @@ resources:
                       # GDAL_HTTP_PROXY: (optional proxy)
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
+
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 
               id_field: localid
               title_field: geographicalname
@@ -587,8 +628,6 @@ resources:
         keywords:
             - statistiek
             - NUTS
-        crs:
-            - EPSG:4326
         links:
             - type: text/html
               rel: describedby
@@ -623,8 +662,8 @@ resources:
               data:
                   source_type: GPKG
                   source: data/SU_NL_WGS84.gpkg
-                  source_srs: EPSG:4326
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:4326
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -634,6 +673,14 @@ resources:
                       # GDAL_HTTP_PROXY: (optional proxy)
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
+
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 
               id_field: localid
               title_field: geographicalname
@@ -646,8 +693,6 @@ resources:
         keywords:
             - statistiek
             - NUTS
-        crs:
-            - EPSG:4326
         links:
             - type: text/html
               rel: describedby
@@ -672,7 +717,7 @@ resources:
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS846
             temporal:
                 begin: 2016-01-01T00:00:01Z  # start datetime in RFC3339
                 end: 2016-12-31T23:59:59Z  # end datetime in RFC3339
@@ -682,8 +727,8 @@ resources:
               data:
                   source_type: GPKG
                   source: data/SU_NL_WGS84.gpkg
-                  source_srs: EPSG:4326
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:4326
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -693,6 +738,14 @@ resources:
                       # GDAL_HTTP_PROXY: (optional proxy)
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
+
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 
               id_field: localid
               title_field: geographicalname
@@ -705,8 +758,6 @@ resources:
         keywords:
             - statistiek
             - NUTS
-        crs:
-            - EPSG:4326
         links:
             - type: text/html
               rel: describedby
@@ -731,7 +782,7 @@ resources:
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
                 begin: 2016-01-01T00:00:01Z  # start datetime in RFC3339
                 end: 2016-12-31T23:59:59Z  # end datetime in RFC3339
@@ -741,8 +792,8 @@ resources:
               data:
                   source_type: GPKG
                   source: data/SU_NL_WGS84.gpkg
-                  source_srs: EPSG:4326
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:4326
+                  # target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -752,6 +803,14 @@ resources:
                       # GDAL_HTTP_PROXY: (optional proxy)
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
+
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 
               id_field: localid
               title_field: geographicalname
@@ -788,7 +847,7 @@ resources:
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
                 begin: 2016-01-01T00:00:01Z  # start datetime in RFC3339                                                                                             f
                 end: 2016-12-31T23:59:59Z  # end datetime in RFC3339
@@ -798,12 +857,21 @@ resources:
               data:
                   source_type: GeoJSON
                   source: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&CQL_FILTER=tessellation_localid=%27gemeente.2016%27&outputFormat=application/json
-                  source_srs: EPSG:4326
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:4326
+                  # target_srs: EPSG:4326
               gdal_ogr_options:
                 EMPTY_AS_NULL: NO
                 GDAL_CACHEMAX: 64
                 CPL_DEBUG: NO
+
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+
               id_field: localid
               title_field: geographicalname
               layer: OGRGeoJSON
@@ -839,7 +907,7 @@ resources:
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
                 begin: 2017-01-01T00:00:01Z  # start datetime in RFC3339                                                                                             f
                 end: 2017-12-31T23:59:59Z  # end datetime in RFC3339
@@ -849,12 +917,20 @@ resources:
               data:
                   source_type: GeoJSON
                   source: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&CQL_FILTER=tessellation_localid=%27gemeente.2017%27&outputFormat=application/json
-                  source_srs: EPSG:4326
-                  target_srs: EPSG:4326
+                  # source_srs: EPSG:4326
+                  # target_srs: EPSG:4326
               gdal_ogr_options:
                 EMPTY_AS_NULL: NO
                 GDAL_CACHEMAX: 64
                 CPL_DEBUG: NO
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+
               id_field: localid
               title_field: geographicalname
               layer: OGRGeoJSON
