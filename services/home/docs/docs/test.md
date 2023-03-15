@@ -39,8 +39,16 @@ BBOX of the Collection is `6.85, 53.311, 6.87, 53.322` (WGS84, lon, lat axis ord
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84)
 * GeoJSON: [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&f=json)
 
+### CRS BBOX
+TBS
+
+## INSPIRE Support
+
 ### INSPIRE Download Enclosures
 
 **See content length added for Addresses GML Download**
 
 * [config segment](https://github.com/Geonovum/ogc-api-testbed/blob/main/services/pygeoapi/local.config.yml#L144) and Collection Description: [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL?f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL?f=json) 
+
+### ADR Support
+TBS
