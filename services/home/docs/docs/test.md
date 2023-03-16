@@ -59,6 +59,7 @@ BBOX of the Collection is `6.85, 53.311, 6.87, 53.322` (WGS84, lon, lat axis ord
 **CRS in Dutch RD (EPSG:28992):**
 
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/28992&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/28992&f=json)
+* [https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/28992](https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/28992)
 
 **CRS and BBOX CRS in Dutch RD (EPSG:28992):**
 
@@ -67,8 +68,9 @@ BBOX of the Collection is `6.85, 53.311, 6.87, 53.322` (WGS84, lon, lat axis ord
 **CRS in ETRS89 INSPIRE EPSG:4258 - note the lat, lon axis ordering:**
 
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/4258&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/4258&f=json)
+* [https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/4258](https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/4258)
 
-**CRS Unsupported with extended error info:**
+* **CRS Unsupported with extended error info:**
 
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/1234&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/1234&f=json)
 
