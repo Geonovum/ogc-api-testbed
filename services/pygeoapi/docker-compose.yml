@@ -59,7 +59,7 @@ services:
 
     volumes:
       # Map data and config into pygeoapi container
-      - ./local.config.yml:/pygeoapi/local.config.adr.yml
+      - ./local.config.adr.yml:/pygeoapi/local.config.yml
       - ./data:/pygeoapi/data
 
     labels:
