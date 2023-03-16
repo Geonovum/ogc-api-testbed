@@ -2,7 +2,7 @@ server:
     bind:
         host: 0.0.0.0
         port: 80
-    url: https://apitestbed.geonovum.nl/pygeoapi
+    url: https://apitestbed.geonovum.nl/adr_pygeoapi
     mimetype: application/json; charset=UTF-8
     encoding: utf-8
     language: en-US
@@ -15,6 +15,11 @@ server:
 #        url: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
 #        attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia maps</a> | Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
     ogc_schemas_location: /schemas.opengis.net
+    api_rules:
+        api_version: 1.0.0
+        strict_slashes: true  # trailing slashes will not be allowed and result in a 404
+        url_prefix: 'v{api_major}'  # adds a /v1 prefix to all URL paths
+        version_header: API-Version  # add a response header of this name with the API version
 
 logging:
     level: ERROR

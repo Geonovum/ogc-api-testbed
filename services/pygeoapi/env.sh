@@ -4,9 +4,11 @@ source ../env.sh
 
 # Change for new service and subpath
 export SERVICE_NAME="pygeoapi"
+export SERVICE_NAME_ADR="adr_pygeoapi"
 
 # Is subpath (becomes SCRIPT_NAME for Python web apps only).
 export SERVICE_PATH="/${SERVICE_NAME}"
+export SERVICE_PATH_ADR="/${SERVICE_NAME_ADR}"
 
 # Can be usually left as is, unless you want to run specific build and/or version.
 export DOCKER_IMAGE_NAME="geopython/pygeoapi"
