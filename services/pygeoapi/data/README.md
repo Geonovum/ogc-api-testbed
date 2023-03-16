@@ -16,3 +16,9 @@ These are INSPIRE-harmonized Addresses, originally from Dutch "BAG" (Addresses a
 ## ProtectedSites
 
 * PSNL_WGS84.gpkg: ProtectedSites Netherlands INSPIRE Harmonized, generated from rce.gpkg, which has no CRS: `ogr2ogr -f GPKG -a_srs EPSG:4326 PSNL_WGS84.gpkg rce.gpkg`
+
+## BGT Picnic Benches
+
+To test CRS from non-OGR non-PostGIS source data.
+
+* bank_picknicktafel_in_brt_natuurgebied.json - made with `ogr2ogr -f GeoJSON -s_srs EPSG:28992 -t_srs EPSG:4326 bank_picknicktafel_in_brt_natuurgebied.json bank_picknicktafel_in_brt_natuurgebied.gpkg`
