@@ -74,8 +74,7 @@ BBOX of the Collection is `6.85, 53.311, 6.87, 53.322` (WGS84, lon, lat axis ord
 
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/1234&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/1234&f=json)
 
-#
-# INSPIRE Support
+## INSPIRE Support
 
 ### INSPIRE Download Enclosures
 
