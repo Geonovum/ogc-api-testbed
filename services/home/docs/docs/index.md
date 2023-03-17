@@ -17,7 +17,7 @@ Open Source products running in this instance. Links to documentation and HOWTOs
 | Endpoint | Author | Docs | HOWTO
 | --- | --- | --- | --- 
 | [/pygeoapi](/pygeoapi) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  
-| [/adr_pygeoapi](/adr_pygeoapi) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  
+| [/adr_pygeoapi/v1](/adr_pygeoapi/v1) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  
 | [/ldproxy](/ldproxy) | Interactive Instruments | [docs](https://interactive-instruments.github.io/ldproxy/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_ldproxy/)  
 | [/geoserver](/geoserver/ogc/features) | GeoServer Community | [docs](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_geoserver/)  
 | [/qgis*](/qgis/wfs3) | QGIS Community | [docs](https://www.qgis.org/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_qgis/)  
@@ -25,6 +25,7 @@ Open Source products running in this instance. Links to documentation and HOWTOs
 | [/pycsw/csw.py](/pycsw/csw.py/collections/metadata:main) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pycsw.org/en/latest/index.html) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pycsw/) 
 
 * see the [pygeoapi Test Page](test.md) for test of recent added functions: Part 2 CRS support and INSPIRE.
+* [/adr_pygeoapi/v1](/adr_pygeoapi/v1) is an instance adhering to Dutch API Design Rules (ADR)
 * *"QGIS" is the QGIS Server Application.*
 
 ## Storage Services
