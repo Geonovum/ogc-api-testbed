@@ -41,7 +41,7 @@ BBOX of the Collection is `6.85, 53.311, 6.87, 53.322` (WGS84, lon, lat axis ord
   
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/EPSG/0/4326](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/EPSG/0/4326)
 
-**BBOX CRS in "OGC WGS84" - note the lon, lat axis ordering):**
+**BBOX CRS in "OGC WGS84" - note the lon, lat axis ordering:**
 
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84)
 * GeoJSON: [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?bbox=6,53,7,54&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&f=json)
