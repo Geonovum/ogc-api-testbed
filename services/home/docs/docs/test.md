@@ -83,5 +83,9 @@ BBOX of the Collection is `6.85, 53.311, 6.87, 53.322` (WGS84, lon, lat axis ord
 
 * [config segment](https://github.com/Geonovum/ogc-api-testbed/blob/main/services/pygeoapi/local.config.yml#L144) and Collection Description: [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL?f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL?f=json) 
 
-### ADR Support
-TBS
+### (Dutch) API Design Rules Support
+ 
+Versioned pygeoapi instance with ADR support.
+
+* [config segment](https://github.com/Geonovum/ogc-api-testbed/blob/main/services/pygeoapi/local.config.adr.yml#L18)
+* [https://apitestbed.geonovum.nl/adr_pygeoapi/v1](https://apitestbed.geonovum.nl/adr_pygeoapi/v1)
