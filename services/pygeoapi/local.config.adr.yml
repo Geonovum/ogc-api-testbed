@@ -14,7 +14,7 @@ server:
         attribution: 'Map data &copy; <a href="https://pdok.nl">PDOK Kadaster</a>'
 #        url: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
 #        attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia maps</a> | Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-    ogc_schemas_location: /schemas.opengis.net
+    # ogc_schemas_location: /schemas.opengis.net
     api_rules:
         api_version: 1.0.0
         strict_slashes: true  # trailing slashes will not be allowed and result in a 404
