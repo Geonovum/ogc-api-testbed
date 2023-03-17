@@ -2,7 +2,7 @@ server:
     bind:
         host: 0.0.0.0
         port: 80
-    url: https://apitestbed.geonovum.nl/adr_pygeoapi/v1
+    url: https://apitestbed.geonovum.nl/adr_pygeoapi
     mimetype: application/json; charset=UTF-8
     encoding: utf-8
     language: en-US
@@ -74,12 +74,12 @@ resources:
             hreflang: nl
           - type: application/xml
             rel: describedby
-            title: Metadata as iso19139 xml
+            title: Metadata as ISO 19139 XML
             href: https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/a5f961e9-ebdd-41e2-b8e8-ab33ed340a83/formatters/xml
             hreflang: nl
           - type: text/html
             rel: tag
-            title: Reference to the concept Addresses (inspire registry)
+            title: Reference to the concept Addresses (INSPIRE registry)
             href: https://inspire.ec.europa.eu/theme/ad
             hreflang: nl
           - type: application/gml+xml
@@ -87,6 +87,11 @@ resources:
             title: Download complete dataset as GML
             href: https://service.pdok.nl/kadaster/ad/atom/downloads/addresses.gml.gz
             hreflang: nl
+          - type: text/html
+            rel: license
+            title: CC0 1.0 Public Domain license
+            href: https://creativecommons.org/publicdomain/zero/1.0/deed.en
+            hreflang: en
       extents:
           spatial:
               bbox: [6.85, 53.311, 6.87, 53.322]
@@ -138,12 +143,12 @@ resources:
             hreflang: nl
           - type: application/xml
             rel: describedby
-            title: Metadata as iso19139 xml
+            title: Metadata as ISO 19139 XML
             href: https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/a5f961e9-ebdd-41e2-b8e8-ab33ed340a83/formatters/xml
             hreflang: nl
           - type: text/html
             rel: tag
-            title: Reference to the concept Addresses (inspire registry)
+            title: Reference to the concept Addresses (INSPIRE registry)
             href: https://inspire.ec.europa.eu/theme/ad
             hreflang: nl
           - type: application/gml+xml
@@ -151,6 +156,11 @@ resources:
             title: Download complete dataset as GML
             href: https://service.pdok.nl/kadaster/ad/atom/downloads/addresses.gml.gz
             hreflang: nl
+          - type: text/html
+            rel: license
+            title: CC0 1.0 Public Domain license
+            href: https://creativecommons.org/publicdomain/zero/1.0/deed.en
+            hreflang: en
       extents:
           spatial:
               bbox: [6.85, 53.311, 6.87, 53.322]
@@ -192,6 +202,7 @@ resources:
         title: Protected Sites - Dutch:Werelderfgoed
         description: In deze dataset zijn de begrenzingen opgenomen van het Nederlandse cultureel erfgoed dat vanwege haar uitzonderlijke universele waarde door het Werelderfgoed comite van UNESCO is geplaatst op de Werelderfgoedlijst. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
+            - World heritage
             - Werelderfgoed
             - Protected sites
         links:
@@ -202,19 +213,24 @@ resources:
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/45eaae76-874a-4fe1-88f4-820517e3de73/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept beschermde gebieden (inspire registry)
+              title: Reference to the concept Protected Site (INSPIRE registry)
               href: http://inspire.ec.europa.eu/featureconcept/ProtectedSite
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset Werelderfgoed als GML
+              title: Download complete dataset as GML
               href: https://service.pdok.nl/rce/ps-ch/wfs/v1_0?request=GetFeature&service=WFS&version=1.1.0&typeName=ps-ch:rce_inspire_polygons&outputFormat=text%2Fxml%3B%20subtype%3Dgml%2F3.1.1
               hreflang: nl
+            - type: text/html
+              rel: license
+              title: CC BY 3.0 NL license
+              href: https://creativecommons.org/licenses/by/3.0/nl/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [4.40, 51.76, 5.80, 52.85]
@@ -259,15 +275,38 @@ resources:
             - Netherlands
             - INSPIRE
             - Windmills
+            - Windmolens
             - Heritage
+            - Erfgoed
             - Holland
             - RD
         links:
             - type: text/html
-              rel: canonical
-              title: information
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e
-              hreflang: nl-NL
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as ISO 19139 XML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Reference to the concept Protected Site (INSPIRE registry)
+              href: http://inspire.ec.europa.eu/featureconcept/ProtectedSite
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download complete dataset as GML
+              href: https://services.rce.geovoorziening.nl/landschapsatlas/wfs?request=GetFeature&typeName=landschapsatlas:Molens
+              hreflang: nl
+              length: 3012614
+            - type: text/html
+              rel: license
+              title: Public Domain Mark 1.0 license
+              href: https://creativecommons.org/publicdomain/mark/1.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.37,50.75,7.21,53.47]
@@ -316,15 +355,37 @@ resources:
             - Netherlands
             - INSPIRE
             - Castles
+            - Kastelen
             - Heritage
             - Holland
             - RD
         links:
             - type: text/html
-              rel: canonical
-              title: information
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e
-              hreflang: nl-NL
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/e1bfb504-78c6-4186-9365-72f42c5fb0ee
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as ISO 19139 XML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/e1bfb504-78c6-4186-9365-72f42c5fb0ee/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Reference to the concept Protected Site (INSPIRE registry)
+              href: http://inspire.ec.europa.eu/featureconcept/ProtectedSite
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download complete dataset as GML
+              href: https://services.rce.geovoorziening.nl/landschapsatlas/wfs?request=GetFeature&typeName=landschapsatlas:kastelen
+              hreflang: nl
+              length: 787977
+            - type: text/html
+              rel: license
+              title: CC0 1.0 Public Domain license
+              href: https://creativecommons.org/publicdomain/zero/1.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.37,50.75,7.21,53.47]
@@ -372,28 +433,35 @@ resources:
         description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Gemeenten uit 2018. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
             - statistiek
+            - statistics
             - Gemeenten
         links:
             - type: text/html
               rel: describedby
               title: Metadata as HTML
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept statistische eenheden (inspire registry)
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
               href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset als GML
+              title: Download complete dataset as GML
               href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Egemeente.2018%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
               hreflang: nl
+              length: 1314056
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
@@ -437,28 +505,35 @@ resources:
         description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Gemeenten uit 2020. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
             - statistiek
+            - statistics
             - Gemeenten
         links:
             - type: text/html
               rel: describedby
               title: Metadata as HTML
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept statistische eenheden (inspire registry)
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
               href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset als GML
+              title: Download complete dataset as GML
               href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Egemeente.2020%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
               hreflang: nl
+              length: 1402381
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
@@ -502,28 +577,35 @@ resources:
         description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Provincies uit 2019. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
             - statistiek
+            - statistics
             - Provincies
         links:
             - type: text/html
               rel: describedby
               title: Metadata as HTML
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept statistische eenheden (inspire registry)
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
               href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset als GML
+              title: Download complete dataset as GML
               href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Eprovincie.2019%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
               hreflang: nl
+              length: 306821
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
@@ -567,28 +649,35 @@ resources:
         description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Provincies uit 2020. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
             - statistiek
+            - statistics
             - Provincies
         links:
             - type: text/html
               rel: describedby
               title: Metadata as HTML
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept statistische eenheden (inspire registry)
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
               href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset als GML
+              title: Download complete dataset as GML
               href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Eprovincie.2020%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
               hreflang: nl
+              length: 309728
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
@@ -632,28 +721,35 @@ resources:
         description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse NUTS1 indelingen gebaseerd op landsdelen uit 2016. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
             - statistiek
+            - statistics
             - NUTS
         links:
             - type: text/html
               rel: describedby
               title: Metadata as HTML
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept statistische eenheden (inspire registry)
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
               href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset als GML
+              title: Download complete dataset as GML
               href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Enuts1.2016%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
               hreflang: nl
+              length: 236376
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
@@ -697,28 +793,35 @@ resources:
         description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse NUTS2 indelingen gebaseerd op provincies uit 2016. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
             - statistiek
+            - statistics
             - NUTS
         links:
             - type: text/html
               rel: describedby
               title: Metadata as HTML
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept statistische eenheden (inspire registry)
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
               href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset als GML
+              title: Download complete dataset as GML
               href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Enuts2.2016%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
               hreflang: nl
+              length: 293553
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
@@ -762,28 +865,35 @@ resources:
         description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse NUTS3 indelingen gebaseerd op de COROP gebieden uit 2016. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
             - statistiek
+            - statistics
             - NUTS
         links:
             - type: text/html
               rel: describedby
               title: Metadata as HTML
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept statistische eenheden (inspire registry)
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
               href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset als GML
+              title: Download complete dataset as GML
               href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Enuts3.2016%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
               hreflang: nl
+              length: 427438
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
@@ -827,28 +937,35 @@ resources:
         description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Gemeenten uit 2016. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd en uit PDOK su-vector WFS.
         keywords:
             - statistiek
+            - statistics
             - Gemeenten
         links:
             - type: text/html
               rel: describedby
               title: Metadata as HTML
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept statistische eenheden (inspire registry)
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
               href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset als GML
+              title: Download complete dataset as GML
               href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&CQL_FILTER=tessellation_localid=%27gemeente.2016%27
               hreflang: nl
+              length: 1321265
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
@@ -887,28 +1004,35 @@ resources:
         description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Gemeenten uit 2017. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd en uit PDOK su-vector WFS.
         keywords:
             - statistiek
+            - statistics
             - Gemeenten
         links:
             - type: text/html
               rel: describedby
               title: Metadata as HTML
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept statistische eenheden (inspire registry)
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
               href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset als GML
+              title: Download complete dataset as GML
               href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&CQL_FILTER=tessellation_localid=%27gemeente.2017%27
               hreflang: nl
+              length: 1338695
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.10, 50.50, 7.60, 53.80]
