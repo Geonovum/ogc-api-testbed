@@ -70,7 +70,17 @@ BBOX of the Collection is `6.85, 53.311, 6.87, 53.322` (WGS84, lon, lat axis ord
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/4258&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/4258&f=json)
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/4258](https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/4258)
 
-* **CRS Unsupported with extended error info:**
+**Using GeoJSON File Backend**
+ 
+Most Collections use the OGR Provider. Here some tests for the GeoJSON Provider which stores in lon/lat WGS84.
+"Picnic Benches from BGT"
+
+* lon, lat [https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items/G0448.8abeacd5439b757600000000a0248e85?crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items/G0448.8abeacd5439b757600000000a0248e85?crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84&f=json)
+* lat, lon [https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items/G0448.8abeacd5439b757600000000a0248e85?crs=http://www.opengis.net/def/crs/EPSG/0/4258&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items/G0448.8abeacd5439b757600000000a0248e85?crs=http://www.opengis.net/def/crs/EPSG/0/4258&f=json)
+* lat, lon [https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items/G0448.8abeacd5439b757600000000a0248e85?crs=http://www.opengis.net/def/crs/EPSG/0/4326&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items/G0448.8abeacd5439b757600000000a0248e85?crs=http://www.opengis.net/def/crs/EPSG/0/4326&f=json)
+* x,y (Dutch RD) [https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items/G0448.8abeacd5439b757600000000a0248e85?crs=http://www.opengis.net/def/crs/EPSG/0/28992&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/bgt_picnic_benches/items/G0448.8abeacd5439b757600000000a0248e85?crs=http://www.opengis.net/def/crs/EPSG/0/28992&f=json)
+
+**CRS Unsupported with extended error info:**
 
 * [https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/1234&f=json](https://apitestbed.geonovum.nl/pygeoapi/collections/AddressesNL/items?crs=http://www.opengis.net/def/crs/EPSG/0/1234&f=json)
 
