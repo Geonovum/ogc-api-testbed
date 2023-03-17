@@ -76,7 +76,7 @@ services:
       - "traefik.http.routers.${SERVICE_NAME_ADR}_https.middlewares=secure-headers@file,openapi"
 
       # Redirect for openapi.json that Dutch ADR validator needs
-      - "traefik.http.middlewares.openapi.redirectregex.regex=^https:\\/\\/(.*)\\/openapi\.json$$"
+      - "traefik.http.middlewares.openapi.redirectregex.regex=^https:\\/\\/(.*)\\/openapi\\.json$$"
       - "traefik.http.middlewares.openapi.redirectregex.replacement=https://$$1/openapi?f=json"
 
       # Define local http router
