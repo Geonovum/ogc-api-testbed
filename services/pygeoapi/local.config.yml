@@ -103,7 +103,7 @@ resources:
                 gdal_ogr_options:
                     EMPTY_AS_NULL: NO
                     GDAL_CACHEMAX: 64
-                    # GDAL_HTTP_PROXY: (optional proxy)
+                    # GDAL_HTTP_PROXY: (optional proxy )
                     # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                     CPL_DEBUG: NO
             crs:
