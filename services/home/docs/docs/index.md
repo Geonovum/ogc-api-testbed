@@ -23,8 +23,10 @@ Open Source products running in this instance. Links to documentation and HOWTOs
 | [/qgis*](/qgis/wfs3) | QGIS Community | [docs](https://www.qgis.org/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_qgis/)  
 | [/goaf](/goaf?f=html) | Kadaster PDOK | [docs](https://github.com/PDOK/goaf) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_goaf/)  
 | [/pycsw/csw.py](/pycsw/csw.py/collections/metadata:main) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pycsw.org/en/latest/index.html) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pycsw/) 
+| [/ogccite](/ogccite) | [OGC CITE](https://hub.docker.com/u/ogccite) | [docs](https://cite.opengeospatial.org/teamengine/about/ogcapi-features-1.0/1.0/site/) | N.A. 
 
 * see the [pygeoapi Test Page](test.md) for test of recent added functions: Part 2 CRS support and INSPIRE.
+* [/ogccite](/ogccite)  is the OGC CITE Tester for OGC API Features Core + Part 2
 * [/adr_pygeoapi/v1](/adr_pygeoapi/v1) is an instance adhering to Dutch API Design Rules (ADR)
 * *"QGIS" is the QGIS Server Application.*
 
