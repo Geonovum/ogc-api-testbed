@@ -7,6 +7,12 @@ title: OGC-API-Testbed - pygeoapi tests
 This page provides some links to URLs on the API Testbed Server in order to test 
 pygeoapi additions made as part of the Tender [OGC-API-Features tooling adjustments to the Dutch API Design Rules and INSPIRE](https://www.geonovum.nl/themas/invitation-to-tender).
 
+## OGC CITE Tests
+The endpoints were tested with the [CITE tester OGC API Features from OGC](https://cite.opengeospatial.org/teamengine/about/ogcapi-features-1.0/1.0/site/)
+in particular for the "Part 2" CRS support. Reports:
+
+* [latest apitestbed-pygeoapi](test-results/230320-cite-apitestbed-pygeoapi.pdf).
+
 ## OGC API Features Part 2
 This is basically support for the query parameters `crs` and `crs-bbox`.
 
