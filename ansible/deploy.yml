@@ -38,9 +38,9 @@
       shell: "cd {{ services_home }}/pygeoapi && ./deploy.sh && docker ps"
       tags: pygeoapi
 
-    - name: "ogccite"
-      shell: "cd {{ services_home }}/ogccite && ./deploy.sh && docker ps"
-      tags: ogccite
+    - name: "teamengine"
+      shell: "cd {{ services_home }}/teamengine && ./deploy.sh && docker ps"
+      tags: teamengine
 
     - name: "pycsw"
       shell: "cd {{ services_home }}/pycsw && ./deploy.sh && docker ps"

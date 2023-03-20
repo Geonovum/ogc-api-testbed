@@ -14,7 +14,7 @@ when committed/pushed.
 A GitHub Action invokes an Ansible Playbook.
 See the following deployment files:
 
-* [GitHub Action](../../.github/workflows/deploy.ogccite.yml)
+* [GitHub Action](../../.github/workflows/deploy.teamengine.yml)
 * [Ansible Playbook](../../ansible/deploy.yml)
 
 The Ansible Playbook can also be invoked directly.

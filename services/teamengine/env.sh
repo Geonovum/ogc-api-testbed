@@ -3,7 +3,7 @@
 source ../env.sh
 
 # Change for new service and subpath
-export SERVICE_NAME="ogccite"
+export SERVICE_NAME="teamengine"
 
 # Is subpath (becomes SCRIPT_NAME for Python web apps only).
 export SERVICE_PATH="/${SERVICE_NAME}"

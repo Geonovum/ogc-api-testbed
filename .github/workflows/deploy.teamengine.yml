@@ -3,13 +3,13 @@
 # Options: https://github.com/dawidd6/action-ansible-playbook/blob/master/main.js
 # Author: Just van den Broecke - 2021
 #
-name: ogccite Deploy ⚙️
+name: teamengine Deploy ⚙️
 
-# Trigger only when services/ogccite subdir changed
+# Trigger only when services/teamengine subdir changed
 on:
   push:
     paths:
-      - 'services/ogccite/**'
+      - 'services/teamengine/**'
 
 jobs:
   main:
@@ -28,5 +28,5 @@ jobs:
         inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
         vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
         options: |
-          --tags ogccite
+          --tags teamengine
           --verbose
