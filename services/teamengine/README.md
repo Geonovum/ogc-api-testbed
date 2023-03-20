@@ -6,6 +6,8 @@ See [CITE tester OGC API Features from OGC](https://cite.opengeospatial.org/team
 
 Docker image used is [ogccite/ets-ogcapi-features10](https://hub.docker.com/r/ogccite/ets-ogcapi-features10).
 
+Runs as http://109.237.212.153:8081/teamengine/ now as cannot run behind https!
+
 ## Deployment
 
 This service is automatically (re)deployed if anything within this directory or its subdirs changes

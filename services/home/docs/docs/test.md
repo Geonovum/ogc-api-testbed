@@ -12,6 +12,7 @@ The endpoints were tested with the [CITE tester OGC API Features from OGC](https
 in particular for the "Part 2" CRS support. Reports:
 
 * [latest apitestbed-pygeoapi](test-results/230320-cite-apitestbed-pygeoapi.pdf).
+* [latest apitestbed-pygeoapi with ADR](test-results/230320-cite-apitestbed-adr_pygeoapi.pdf).
 
 ## OGC API Features Part 2
 This is basically support for the query parameters `crs` and `crs-bbox`.
