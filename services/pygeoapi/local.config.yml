@@ -3,6 +3,7 @@ server:
         host: 0.0.0.0
         port: 80
     url: https://apitestbed.geonovum.nl/pygeoapi
+    # url: http://localhost:8000/pygeoapi
     mimetype: application/json; charset=UTF-8
     encoding: utf-8
     language: en-US
