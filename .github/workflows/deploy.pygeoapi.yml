@@ -10,6 +10,7 @@ on:
   push:
     paths:
       - 'services/pygeoapi/**'
+  workflow_dispatch:
 
 jobs:
   main:
