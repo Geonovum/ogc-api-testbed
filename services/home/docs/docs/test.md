@@ -11,7 +11,7 @@ pygeoapi additions made as part of the Tender [OGC-API-Features tooling adjustme
 The endpoints were tested with the [CITE tester OGC API Features from OGC](https://cite.opengeospatial.org/teamengine/about/ogcapi-features-1.0/1.0/site/)
 in particular for the "Part 2" CRS support. Reports:
 
-* [latest apitestbed-pygeoapi](test-results/230320-cite-apitestbed-pygeoapi.pdf).
+* [latest apitestbed-pygeoapi](test-results/cite-apitestbed-pygeoapi.pdf).
 * [latest apitestbed-pygeoapi with ADR](test-results/230320-cite-apitestbed-adr_pygeoapi.pdf).
 
 ## OGC API Features Part 2
