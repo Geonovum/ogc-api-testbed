@@ -32,7 +32,7 @@ services:
       - --accesslog
       # Enable the Traefik log, for configurations and errors
       - --log
-      - --log.level=DEBUG
+      - --log.level=INFO
       # No Dashboard and API for now
       # - --api
 
