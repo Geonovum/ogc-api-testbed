@@ -17,5 +17,5 @@ export DOCKER_IMAGE_VERSION="dev"
 export DOCKER_IMAGE="${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}"
 
 export PYGEOAPI_REPO="https://github.com/geopython/pygeoapi"
-export PYGEOAPI_BRANCH="crs-features-ogc-adr"
+export PYGEOAPI_BRANCH="crs-features-ogc"
 export PYGEOAPI_REPO_ZIP="${PYGEOAPI_REPO}/archive/refs/heads/${PYGEOAPI_BRANCH}.zip"
