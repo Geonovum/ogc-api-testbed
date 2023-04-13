@@ -12,8 +12,8 @@ export SERVICE_PATH_ADR="/${SERVICE_NAME_ADR}"
 
 # Can be usually left as is, unless you want to run specific build and/or version.
 export DOCKER_IMAGE_NAME="geopython/pygeoapi"
-# export DOCKER_IMAGE_VERSION="latest"
-export DOCKER_IMAGE_VERSION="dev"
+export DOCKER_IMAGE_VERSION="latest"
+# export DOCKER_IMAGE_VERSION="dev"
 export DOCKER_IMAGE="${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}"
 
 export PYGEOAPI_REPO="https://github.com/geopython/pygeoapi"
