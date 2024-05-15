@@ -1,13 +1,15 @@
-FROM python:3.8.10-slim-buster
+# Builder
+FROM python:3.12-slim-bullseye as build-stage
 
 LABEL maintainer="Just van den Broecke <justb4@gmail.com>"
 
-RUN pip install mkdocs
-
 COPY ./docs/ /docs/
 
-WORKDIR /docs/
+RUN cd /docs && pip install mkdocs && mkdir /var/www && mkdocs build -d /var/www
 
-EXPOSE 8000
-
-CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
+# Deployer
+FROM nginx:stable-alpine as production-stage
+LABEL maintainer="Just van den Broecke <justb4@gmail.com>"
+COPY --from=build-stage /var/www /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
