@@ -6,4 +6,4 @@ source ./env.sh
 echo "Looks good! POSTGRES user is: ${PG_USER}"
 
 ./stop.sh
-docker-compose up -d
+docker compose up -d

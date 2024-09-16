@@ -6,4 +6,4 @@ source ../env.sh
 echo "Looks good! GHC_ADMIN_USER_NAME user is: ${GHC_ADMIN_USER_NAME}"
 
 ./stop.sh
-docker-compose up -d
+docker compose up -d

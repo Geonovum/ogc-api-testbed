@@ -22,7 +22,7 @@ services:
       - --providers.file
       - --providers.file.directory=/etc/traefikdyn
       # Create the certificate resolver "le" for Let's Encrypt, uses the environment variable CERT_EMAIL
-      - --certificatesresolvers.le.acme.email=${CERT_EMAIL?Variable not set}
+      - --certificatesresolvers.le.acme.email=${CERT_EMAIL}
       # Store the Let's Encrypt certificates in the mounted volume
       - --certificatesresolvers.le.acme.storage=/certificates/acme.json
       # Use the TLS Challenge for Let's Encrypt

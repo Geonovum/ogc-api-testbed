@@ -3,5 +3,5 @@
 source ../env.sh
 
 ./stop.sh
-docker-compose build
+docker compose build
 ./start.sh
