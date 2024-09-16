@@ -1,4 +1,3 @@
-version: '3.3'
 # See also ansible/vars/vars.yml how settings are configured
 
 services:
@@ -122,5 +121,5 @@ volumes:
 
 networks:
   default:
-    external:
-      name: service-network
+    name: service-network
+    external: true

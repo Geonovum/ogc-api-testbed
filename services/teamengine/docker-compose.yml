@@ -1,5 +1,3 @@
-version: '3.3'
-
 # Run Team Engine CITE Tests OGC API Features
 services:
 
@@ -38,5 +36,5 @@ services:
 
 networks:
   default:
-    external:
-      name: service-network
+    name: service-network
+    external: true

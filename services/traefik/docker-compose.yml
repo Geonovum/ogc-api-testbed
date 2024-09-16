@@ -1,12 +1,10 @@
-version: '3.3'
-
 services:
   proxy:
     image: traefik:v2.11.8
 
     container_name: traefik
     restart: always
-    
+
     command:
       # Create an entrypoint "http" listening on port 80
       - --entrypoints.http.address=:80
@@ -69,5 +67,5 @@ volumes:
 
 networks:
   default:
-    external:
-      name: service-network
+    name: service-network
+    external: true
