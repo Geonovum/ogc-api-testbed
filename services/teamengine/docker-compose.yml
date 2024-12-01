@@ -1,0 +1,40 @@
+# Run Team Engine CITE Tests OGC API Features
+services:
+
+  cite:
+
+    image: ${DOCKER_IMAGE}
+
+    container_name: ${SERVICE_NAME}
+
+    expose:
+      - "8080"
+
+    #    ports:
+    #     - "8081:8080"
+
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      # Define SSL/https router  TODO - does not work as has mixed (form) content
+#      - "traefik.http.routers.${SERVICE_NAME}_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`${SERVICE_PATH}`)"
+#      - "traefik.http.routers.${SERVICE_NAME}_https.entrypoints=https"
+#      - "traefik.http.routers.${SERVICE_NAME}_https.tls=${TRAEFIK_USE_TLS}"
+#      - "traefik.http.routers.${SERVICE_NAME}_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+#      - "traefik.http.routers.${SERVICE_NAME}_https.tls.options=my_default@file"
+#      - "traefik.http.routers.${SERVICE_NAME}_https.middlewares=secure-headers@file"
+
+      # Define local http alt (port 8081) router since Team Engine Cannot run behind https
+      - "traefik.http.routers.${SERVICE_NAME}_http_alt.rule=Host(`109.237.212.153`) && PathPrefix(`${SERVICE_PATH}`)"
+      - "traefik.http.routers.${SERVICE_NAME}_http_alt.entrypoints=http_alt"
+
+      # Define local http router
+      - "traefik.http.routers.${SERVICE_NAME}_http.rule=Host(`localhost`) && PathPrefix(`${SERVICE_PATH}`)"
+      - "traefik.http.routers.${SERVICE_NAME}_http.entrypoints=http"
+
+networks:
+  default:
+    name: service-network
+    external: true

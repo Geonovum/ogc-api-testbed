@@ -1,4 +1,4 @@
-# Docs
+# Home
 
 Runs main website, landing page, using mkdocs.
 

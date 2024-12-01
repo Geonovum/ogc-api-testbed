@@ -1,5 +1,3 @@
-version: "3.3"
-
 services:
 
   goaf:
@@ -42,5 +40,5 @@ services:
 
 networks:
   default:
-    external:
-      name: service-network
+    name: service-network
+    external: true

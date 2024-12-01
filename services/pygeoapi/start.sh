@@ -3,4 +3,4 @@
 source ./env.sh
 
 ./stop.sh
-docker-compose up -d
+docker compose up -d

@@ -3,6 +3,7 @@ server:
         host: 0.0.0.0
         port: 80
     url: https://apitestbed.geonovum.nl/pygeoapi
+    # url: http://localhost:8000/pygeoapi
     mimetype: application/json; charset=UTF-8
     encoding: utf-8
     language: en-US
@@ -17,7 +18,7 @@ server:
     ogc_schemas_location: /schemas.opengis.net
 
 logging:
-    level: ERROR
+    level: WARNING
     #logfile: /tmp/master.log
 
 metadata:
@@ -31,11 +32,11 @@ metadata:
             - Download service
             - api
         keywords_type: theme
-        terms_of_service: https://creativecommons.org/licenses/by/3.0/
+        terms_of_service: https://creativecommons.org/licenses/by/3.0
         url: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/45eaae76-874a-4fe1-88f4-820517e3de73
     license:
         name: CC-BY 3.0 license
-        url: http://creativecommons.org/licenses/by/3.0/nl/
+        url: https://creativecommons.org/licenses/by/3.0/nl
     provider:
         name: Rijksdienst Cultureel Erfgoed
         url: https://www.cultureelerfgoed.nl
@@ -54,15 +55,159 @@ metadata:
         role: pointOfContact
 
 resources:
+    AddressesNL:
+      type: collection
+      title: Dutch INSPIRE Addresses
+      description: INSPIRE harmonized Addresses from Dutch Key Registry BAG. Small subset (100 objects), created with/by WeTransform.
+      keywords:
+          - Addresses
+          - INSPIRE
+      links:
+          - type: text/html
+            rel: describedby
+            title: Metadata as HTML
+            href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/a5f961e9-ebdd-41e2-b8e8-ab33ed340a83
+            hreflang: nl
+          - type: application/xml
+            rel: describedby
+            title: Metadata as ISO 19139 XML
+            href: https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/a5f961e9-ebdd-41e2-b8e8-ab33ed340a83/formatters/xml
+            hreflang: nl
+          - type: text/html
+            rel: about
+            title: Description of the encoding
+            href: https://github.com/INSPIRE-MIF/2017.2/tree/master/GeoJSON/ads
+            hreflang: en
+          - type: text/html
+            rel: tag
+            title: INSPIRE feature concept dictionary for addresses
+            href: https://inspire.ec.europa.eu/featureconcept/Address
+            hreflang: en
+          - type: application/gml+xml
+            rel: enclosure
+            title: Download complete dataset as GML
+            href: https://service.pdok.nl/kadaster/ad/atom/downloads/addresses.gml.gz
+            hreflang: nl
+          - type: text/html
+            rel: license
+            title: CC0 1.0 Public Domain license
+            href: https://creativecommons.org/publicdomain/zero/1.0/deed.en
+            hreflang: en
+      extents:
+          spatial:
+              bbox: [6.85, 53.311, 6.87, 53.322]
+              crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          temporal:
+              begin: 2010-01-01T00:00:01Z  # start datetime in RFC3339
+              end: 2019-12-31T23:59:59Z  # end datetime in RFC3339
+      providers:
+          - type: feature
+            name: OGR
+            data:
+                source_type: GPKG
+                source: data/ADNL_4326.gpkg
+                source_capabilities:
+                    paging: True
+
+                gdal_ogr_options:
+                    EMPTY_AS_NULL: NO
+                    GDAL_CACHEMAX: 64
+                    # GDAL_HTTP_PROXY: (optional proxy )
+                    # GDAL_PROXY_AUTH: (optional auth for remote WFS)
+                    CPL_DEBUG: NO
+            crs:
+              - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+              - http://www.opengis.net/def/crs/EPSG/0/4326
+              - http://www.opengis.net/def/crs/EPSG/0/3857
+              - http://www.opengis.net/def/crs/EPSG/0/4258
+              - http://www.opengis.net/def/crs/EPSG/0/28992
+            storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+
+            id_field: fid
+            title_field: gml_id
+            time_field: beginLifespanVersion
+            layer: SimpleAddress
+
+    AddressesNL_28992:
+      type: collection
+      title: Dutch INSPIRE Addresses - RD
+      description: INSPIRE harmonized Addresses from Dutch Key Registry BAG. Small subset (100 objects), created with/by WeTransform, stored in EPSG:28992.
+      keywords:
+          - Addresses
+          - INSPIRE
+      links:
+          - type: text/html
+            rel: describedby
+            title: Metadata as HTML
+            href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/a5f961e9-ebdd-41e2-b8e8-ab33ed340a83
+            hreflang: nl
+          - type: application/xml
+            rel: describedby
+            title: Metadata as ISO 19139 XML
+            href: https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/a5f961e9-ebdd-41e2-b8e8-ab33ed340a83/formatters/xml
+            hreflang: nl
+          - type: text/html
+            rel: about
+            title: Description of the encoding
+            href: https://github.com/INSPIRE-MIF/2017.2/tree/master/GeoJSON/ads
+            hreflang: en
+          - type: text/html
+            rel: tag
+            title: INSPIRE feature concept dictionary for addresses
+            href: https://inspire.ec.europa.eu/featureconcept/Address
+            hreflang: en
+          - type: application/gml+xml
+            rel: enclosure
+            title: Download complete dataset as GML
+            href: https://service.pdok.nl/kadaster/ad/atom/downloads/addresses.gml.gz
+            hreflang: nl
+          - type: text/html
+            rel: license
+            title: CC0 1.0 Public Domain license
+            href: https://creativecommons.org/publicdomain/zero/1.0/deed.en
+            hreflang: en
+      extents:
+          spatial:
+              bbox: [6.85, 53.311, 6.87, 53.322]
+              crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          temporal:
+              begin: 2010-01-01T00:00:01Z  # start datetime in RFC3339
+              end: 2019-12-31T23:59:59Z  # end datetime in RFC3339
+      providers:
+          - type: feature
+            name: OGR
+            data:
+                source_type: GPKG
+                source: data/ADNL_28992.gpkg
+                source_capabilities:
+                    paging: True
+
+                gdal_ogr_options:
+                    EMPTY_AS_NULL: NO
+                    GDAL_CACHEMAX: 64
+                    # GDAL_HTTP_PROXY: (optional proxy)
+                    # GDAL_PROXY_AUTH: (optional auth for remote WFS)
+                    CPL_DEBUG: NO
+            crs:
+              - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+              - http://www.opengis.net/def/crs/EPSG/0/4326
+              - http://www.opengis.net/def/crs/EPSG/0/3857
+              - http://www.opengis.net/def/crs/EPSG/0/4258
+              - http://www.opengis.net/def/crs/EPSG/0/28992
+            storage_crs: http://www.opengis.net/def/crs/EPSG/0/28992
+
+            id_field: fid
+            title_field: gml_id
+            time_field: beginLifespanVersion
+            layer: SimpleAddress
+
     ProtectedSites:
         type: collection
-        title: Werelderfgoed
+        title: Protected Sites - Dutch:Werelderfgoed
         description: In deze dataset zijn de begrenzingen opgenomen van het Nederlandse cultureel erfgoed dat vanwege haar uitzonderlijke universele waarde door het Werelderfgoed comite van UNESCO is geplaatst op de Werelderfgoedlijst. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
             - Werelderfgoed
             - Protected sites
-        crs:
-            - EPSG:4258
         links:
             - type: text/html
               rel: describedby
@@ -71,34 +216,37 @@ resources:
               hreflang: nl
             - type: application/xml
               rel: describedby
-              title: Metadata as iso19139 xml
+              title: Metadata as ISO 19139 XML
               href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/45eaae76-874a-4fe1-88f4-820517e3de73/formatters/xml
               hreflang: nl
             - type: text/html
               rel: tag
-              title: Referentie naar het concept beschermde gebieden (inspire registry)
-              href: http://inspire.ec.europa.eu/featureconcept/ProtectedSite
+              title: Reference to the concept Protected Site (INSPIRE registry)
+              href: https://inspire.ec.europa.eu/featureconcept/ProtectedSite
               hreflang: nl
             - type: application/gml+xml
               rel: enclosure
-              title: Download volledige dataset Werelderfgoed als GML
+              title: Download complete dataset as GML
               href: https://service.pdok.nl/rce/ps-ch/wfs/v1_0?request=GetFeature&service=WFS&version=1.1.0&typeName=ps-ch:rce_inspire_polygons&outputFormat=text%2Fxml%3B%20subtype%3Dgml%2F3.1.1
               hreflang: nl
+            - type: text/html
+              rel: license
+              title: CC BY 3.0 NL license
+              href: https://creativecommons.org/licenses/by/3.0/nl/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [4.40, 51.76, 5.80, 52.85]
-                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4258
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
-                begin:
-                end: null  # or empty
+                begin: 2010-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2019-12-31T23:59:59Z  # end datetime in RFC3339
         providers:
             - type: feature
               name: OGR
               data:
                   source_type: GPKG
-                  source: data/rce.gpkg
-                  source_srs: EPSG:4258
-                  target_srs: EPSG:4326
+                  source: data/PSNL_WGS84.gpkg
                   source_capabilities:
                       paging: True
 
@@ -109,9 +257,62 @@ resources:
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
 
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
               id_field: gml_id
+              time_field: legalFoundationDate
               title_field: text
               layer: rce
+
+    bgt_picnic_benches:
+        type: collection
+        title: Picknicktafels
+        description: Picknicktafels uit de BGT - subset voor testen
+        keywords:
+            - Picknicktafels
+            - BGT
+        links:
+            - type: text/html
+              rel: canonical
+              title: information
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/2cb4769c-b56e-48fa-8685-c48f61b9a319
+              hreflang: en-US
+            - type: application/xml
+              rel: canonical
+              title: information
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/2cb4769c-b56e-48fa-8685-c48f61b9a319
+              hreflang: en-US
+            - type: text/html
+              rel: canonical
+              title: information
+              href: https://geonovum.nl
+              hreflang: nl-NL
+        extents:
+            spatial:
+                bbox: [3.37, 50.75, 7.21, 53.47]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/EPSG:4326
+            temporal:
+                begin: 2010-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2019-12-31T23:59:59Z  # end datetime in RFC3339
+        providers:
+            - type: feature
+              name: GeoJSON
+              data: data/bank_picknicktafel_in_brt_natuurgebied.json
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+              id_field: lokaalid
+              time_field: lv_publicatiedatum
+              title_field: lokaalid
 
     dutch_windmills:
         type: collection
@@ -124,29 +325,46 @@ resources:
             - Heritage
             - Holland
             - RD
-        crs:
-            - CRS84
         links:
             - type: text/html
-              rel: canonical
-              title: information
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e
-              hreflang: nl-NL
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as ISO 19139 XML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Reference to the concept Protected Site (INSPIRE registry)
+              href: https://inspire.ec.europa.eu/featureconcept/ProtectedSite
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download complete dataset as GML
+              href: https://services.rce.geovoorziening.nl/landschapsatlas/wfs?request=GetFeature&typeName=landschapsatlas:Molens
+              hreflang: nl
+              length: 3012614
+            - type: text/html
+              rel: license
+              title: Public Domain Mark 1.0 license
+              href: https://creativecommons.org/publicdomain/mark/1.0/deed.en
+              hreflang: en
         extents:
             spatial:
                 bbox: [3.37,50.75,7.21,53.47]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
-                begin:
-                end: null  # or empty
+                begin: 2010-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2019-12-31T23:59:59Z  # end datetime in RFC3339
         providers:
             - type: feature
               name: OGR
               data:
                   source_type: WFS
                   source: WFS:https://services.rce.geovoorziening.nl/landschapsatlas/wfs?
-                  source_srs: EPSG:28992
-                  target_srs: EPSG:4326
                   source_capabilities:
                       paging: True
 
@@ -161,49 +379,69 @@ resources:
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
 
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/EPSG/0/28992
+
               id_field: gml_id
+              time_field: BOUWJAAR
               layer: landschapsatlas:Molens
-  
-    dutch_castles:
+
+
+    StatisticalUnits_Gemeente_2018:
         type: collection
-        title: Castles within The Netherlands
-        description: Locations of castles within the Netherlands from Rijksdienst voor het Cultureel Erfgoed (RCE) INSPIRE WFS. Uses GeoServer WFS v2 backend via OGRProvider.
+        title: StatisticalUnits_Gemeente_2018
+        description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Gemeenten uit 2018. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd.
         keywords:
-            - Netherlands
-            - INSPIRE
-            - Castles
-            - Heritage
-            - Holland
-            - RD
-        crs:
-            - CRS84
+            - statistiek
+            - statistics
+            - Gemeenten
         links:
             - type: text/html
-              rel: canonical
-              title: information
-              href: https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e
-              hreflang: nl-NL
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as ISO 19139 XML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
+              href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download complete dataset as GML
+              href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&filter=%3CFilter+xmlns=%22http://www.opengis.net/ogc%22%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Etessellation_localid%3C/PropertyName%3E%3CLiteral%3Egemeente.2018%3C/Literal%3E%3C/PropertyIsEqualTo%3E%3C/Filter%3E
+              hreflang: nl
+              length: 1314056
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
         extents:
             spatial:
-                bbox: [3.37,50.75,7.21,53.47]
+                bbox: [3.10, 50.50, 7.60, 53.80]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
-                begin:
-                end: null  # or empty
+                begin: 2018-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2018-12-31T23:59:59Z  # end datetime in RFC3339
         providers:
             - type: feature
               name: OGR
               data:
-                  source_type: WFS
-                  source: WFS:https://services.rce.geovoorziening.nl/landschapsatlas/wfs?
-                  source_srs: EPSG:28992
-                  target_srs: EPSG:4326
+                  source_type: GPKG
+                  source: data/SU_NL_WGS84.gpkg
                   source_capabilities:
                       paging: True
-
-                  source_options:
-  #                    OGR_WFS_VERSION: 1.1.0
-                      OGR_WFS_LOAD_MULTIPLE_LAYER_DEFN: NO
 
                   gdal_ogr_options:
                       EMPTY_AS_NULL: NO
@@ -212,6 +450,79 @@ resources:
                       # GDAL_PROXY_AUTH: (optional auth for remote WFS)
                       CPL_DEBUG: NO
 
-              id_field: gml_id
-              layer: landschapsatlas:kastelen
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
 
+              id_field: localid
+              title_field: geographicalname
+              time_field: validfrom
+              layer: su_gemeente_2018
+
+    StatisticalUnits_Gemeente_2017_WFS:
+        type: collection
+        title: StatisticalUnits_Gemeente_2017_WFS
+        description: In deze dataset zijn de begrenzingen opgenomen van Nederlandse Gemeenten uit 2017. De gegevens in de dataset zijn conform INSPIRE geharmoniseerd en uit PDOK su-vector WFS.
+        keywords:
+            - statistiek
+            - Gemeenten
+        links:
+            - type: text/html
+              rel: describedby
+              title: Metadata as HTML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb
+              hreflang: nl
+            - type: application/xml
+              rel: describedby
+              title: Metadata as ISO 19139 XML
+              href: https://www.nationaalgeoregister.nl/geonetwork/srv/metadata/10d1153e-778f-4995-9b6c-7c69b196cccb/formatters/xml
+              hreflang: nl
+            - type: text/html
+              rel: tag
+              title: Reference to the concept Statistical Unit (INSPIRE registry)
+              href: https://inspire.ec.europa.eu/featureconcept/VectorStatisticalUnit
+              hreflang: nl
+            - type: application/gml+xml
+              rel: enclosure
+              title: Download complete dataset as GML
+              href: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&CQL_FILTER=tessellation_localid=%27gemeente.2017%27
+              hreflang: nl
+              length: 1338695
+            - type: text/html
+              rel: license
+              title: CC BY 4.0 International license
+              href: https://creativecommons.org/licenses/by/4.0/deed.en
+              hreflang: en
+        extents:
+            spatial:
+                bbox: [3.10, 50.50, 7.60, 53.80]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+            temporal:
+                begin: 2017-01-01T00:00:01Z  # start datetime in RFC3339
+                end: 2017-12-31T23:59:59Z  # end datetime in RFC3339
+        providers:
+            - type: feature
+              name: OGR
+              data:
+                  source_type: GeoJSON
+                  source: https://geodata.nationaalgeoregister.nl/su-vector/wfs?request=GetFeature&version=2.0.0&typeNames=su-vector:SU.VectorStatisticalUnit&CQL_FILTER=tessellation_localid=%27gemeente.2017%27&outputFormat=application/json
+              gdal_ogr_options:
+                EMPTY_AS_NULL: NO
+                GDAL_CACHEMAX: 64
+                CPL_DEBUG: NO
+              crs:
+                - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+                - http://www.opengis.net/def/crs/EPSG/0/4326
+                - http://www.opengis.net/def/crs/EPSG/0/3857
+                - http://www.opengis.net/def/crs/EPSG/0/4258
+                - http://www.opengis.net/def/crs/EPSG/0/28992
+              storage_crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+
+              id_field: localid
+              time_field: validfrom
+              title_field: geographicalname
+              layer: OGRGeoJSON

@@ -1,0 +1,10 @@
+site_name: Geonovum OGC API Testbed
+site_description: "Geonovum OGC API Testbed"
+site_author: Geonovum
+copyright: "&copy; 2021-2023 Geonovum"
+site_url: https://apitestbed.geonovum.nl
+repo_url: https://github.com/Geonovum/ogc-api-testbed
+nav:
+    - Home: index.md
+    - Test: test.md
+    - Code: https://github.com/Geonovum/ogc-api-testbed

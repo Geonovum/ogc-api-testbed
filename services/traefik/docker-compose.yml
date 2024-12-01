@@ -1,16 +1,17 @@
-version: '3.3'
-
 services:
   proxy:
-    image: traefik:v2.4.8
+    image: traefik:v2.11.8
 
     container_name: traefik
+    restart: always
 
     command:
       # Create an entrypoint "http" listening on port 80
       - --entrypoints.http.address=:80
       # Create an entrypoint "https" listening on port 443
       - --entrypoints.https.address=:443
+      # Create an entrypoint "http_alt" listening on port 8081
+      - --entrypoints.http_alt.address=:8081
       # Enable Docker in Traefik, so that it reads labels from Docker services
       - --providers.docker
       # Do not expose all Docker services, only the ones explicitly exposed
@@ -21,7 +22,7 @@ services:
       - --providers.file
       - --providers.file.directory=/etc/traefikdyn
       # Create the certificate resolver "le" for Let's Encrypt, uses the environment variable CERT_EMAIL
-      - --certificatesresolvers.le.acme.email=${CERT_EMAIL?Variable not set}
+      - --certificatesresolvers.le.acme.email=${CERT_EMAIL}
       # Store the Let's Encrypt certificates in the mounted volume
       - --certificatesresolvers.le.acme.storage=/certificates/acme.json
       # Use the TLS Challenge for Let's Encrypt
@@ -30,13 +31,14 @@ services:
       - --accesslog
       # Enable the Traefik log, for configurations and errors
       - --log
-      - --log.level=DEBUG
+      - --log.level=INFO
       # No Dashboard and API for now
       # - --api
 
     ports:
       - "${HTTP_PORT_HOST}:80"
       - "443:443"
+      - "8081:8081"
 
     labels:
       - "traefik.enable=true"
@@ -65,5 +67,5 @@ volumes:
 
 networks:
   default:
-    external:
-      name: service-network
+    name: service-network
+    external: true

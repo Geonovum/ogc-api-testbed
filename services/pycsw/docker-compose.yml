@@ -1,5 +1,3 @@
-version: '3.3'
-
 # See env.sh and ../env.sh for env vars
 services:
 
@@ -43,5 +41,5 @@ services:
 
 networks:
   default:
-    external:
-      name: service-network
+    name: service-network
+    external: true

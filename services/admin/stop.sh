@@ -2,5 +2,5 @@
 
 source ../env.sh
 
-docker-compose stop
-docker-compose rm --force
+docker compose stop
+docker compose rm --force

@@ -1,10 +1,8 @@
-version: '3.3'
-
 # See env.sh and ../env.sh for env vars
 services:
 
   pygeoapi:
-    
+
     image: ${DOCKER_IMAGE}
 
     container_name: ${SERVICE_NAME}
@@ -41,7 +39,49 @@ services:
       - "traefik.http.routers.${SERVICE_NAME}_http.rule=Host(`localhost`) && PathPrefix(`${SERVICE_PATH}`)"
       - "traefik.http.routers.${SERVICE_NAME}_http.entrypoints=http"
 
+  adr_pygeoapi:
+
+    image: ${DOCKER_IMAGE}
+
+    container_name: ${SERVICE_NAME_ADR}
+
+    expose:
+      - "80"
+
+    #    ports:
+    #     - "5000:80"
+
+    environment:
+      # Specific to Flask apps
+      - SCRIPT_NAME=${SERVICE_PATH_ADR}
+
+    volumes:
+      # Map data and config into pygeoapi container
+      - ./local.config.adr.yml:/pygeoapi/local.config.yml
+      - ./data:/pygeoapi/data
+
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      # Define SSL/https router
+      - "traefik.http.routers.${SERVICE_NAME_ADR}_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`${SERVICE_PATH_ADR}`)"
+      - "traefik.http.routers.${SERVICE_NAME_ADR}_https.entrypoints=https"
+      - "traefik.http.routers.${SERVICE_NAME_ADR}_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.${SERVICE_NAME_ADR}_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.${SERVICE_NAME_ADR}_https.tls.options=my_default@file"
+      - "traefik.http.routers.${SERVICE_NAME_ADR}_https.middlewares=secure-headers@file,openapi"
+
+      # Redirect for openapi.json that Dutch ADR validator needs
+      - "traefik.http.middlewares.openapi.redirectregex.regex=^https:\\/\\/(.*)\\/openapi\\.json$$"
+      - "traefik.http.middlewares.openapi.redirectregex.replacement=https://$$1/openapi?f=json"
+
+      # Define local http router
+      - "traefik.http.routers.${SERVICE_NAME_ADR}_http.rule=Host(`localhost`) && PathPrefix(`${SERVICE_PATH_ADR}`)"
+      - "traefik.http.routers.${SERVICE_NAME_ADR}_http.entrypoints=http"
+
 networks:
   default:
-    external:
-      name: service-network
+    name: service-network
+    external: true

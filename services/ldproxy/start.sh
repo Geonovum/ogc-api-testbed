@@ -8,4 +8,4 @@ source ./env.sh
 # sudo rm -rf ${RMFILES} > /dev/null 2>&1
 
 ./stop.sh
-docker-compose up -d
+docker compose up -d
