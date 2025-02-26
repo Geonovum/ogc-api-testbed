@@ -1,0 +1,921 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Geonovum OGC API Testbed">
+      
+      
+        <meta name="author" content="Geonovum">
+      
+      
+        <link rel="canonical" href="https://apitestdocs.geonovum.nl/howto/howto_platform/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>HOWTO Platform - Geonovum OGC API Testbed</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#howto-platform" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Geonovum OGC API Testbed" class="md-header__button md-logo" aria-label="Geonovum OGC API Testbed" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Geonovum OGC API Testbed
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOWTO Platform
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Geonovum/ogc-api-testbed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Geonovum OGC API Testbed" class="md-nav__button md-logo" aria-label="Geonovum OGC API Testbed" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Geonovum OGC API Testbed
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Geonovum/ogc-api-testbed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Howto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../findings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Findings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Credits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/Geonovum/ogc-api-testbed" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ubuntu-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Ubuntu Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-generate-github-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Generate GitHub Repo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-prepare-local-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Prepare Local System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Prepare Local System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Ansible:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-git-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Git client.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-clone-new-github-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Clone New GitHub Repo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-setup-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Setup Ansible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Setup Ansible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ansible-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ansible Modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansible-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ansible Hosts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create SSH Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-authorized_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create authorized_keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adapt-varsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adapt vars.yml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-ansible-vault-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Ansible Vault Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-github-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set GitHub Secrets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encrypt-ansible-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encrypt Ansible Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#globally-replace-apitestbedgeonovumnl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Globally Replace apitestbed.geonovum.nl
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-github-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable GitHub Workflows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-prune-repo-tree-for-unneeded-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Prune Repo Tree for Unneeded Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-bootstrapprovision-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Bootstrap/provision Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-resolve-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 Resolve Issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-enable-github-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Enable GitHub Workflows
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="howto-platform">HOWTO Platform</h1>
+<p>Describes how to setup your own instance of the OGC API Testbed platform.
+As a real-world example, the OGC API Sandbox (Playground) instance is presented below step-by-step.</p>
+<p>See also another example: a <a href="https://jrc.map5.nl">pygeoapi server developed by the EU JRC</a>.</p>
+<h2 id="1-ubuntu-server">1. Ubuntu Server</h2>
+<p>Info:</p>
+<ul>
+<li>setup or acquire a Linux Ubuntu server, minimal Ubuntu 20.4 LTS</li>
+<li>can be a VM/VPS or bare metal server, even a local VirtualBox (with Vagrant) instance</li>
+<li>Sandbox specs: 4CPU, 16RAM, 100GB  but also strongly depends on the services one needs to run</li>
+<li>root access via SSH required</li>
+<li>DNS: create A-record <code>apisandbox.geonovum.nl</code> for IP address <code>109.237.219.249</code></li>
+<li>OPTIONAL: DNS: if you need docs (not for Sandbox) create CNAME and set in <code>git/docs/docs/CNAME</code></li>
+<li>copy your SSH public key to <code>/root/.ssh/authorized_keys</code>, e.g. <code>scp ~/.ssh/id_rsa.pub root@apisandbox.geonovum.nl:.ssh/authorized_keys</code></li>
+<li>test login with SSH key: <code>ssh root@apisandbox.geonovum.nl</code></li>
+<li>upgrade server to latest: <code>apt-get update &amp;&amp; apt-get -y upgrade</code></li>
+</ul>
+<h2 id="2-generate-github-repo">2. Generate GitHub Repo</h2>
+<p>Create a GitHub repository from the Template repo <a href="https://github.com/Geonovum/ogc-api-sandbox">github.com/Geonovum/ogc-api-sandbox</a>.</p>
+<p>Creating a repository from a template is similar to forking a repository, but there are important differences:</p>
+<ul>
+<li>A new fork includes the entire commit history of the parent repository, while a repository created from a template starts with a single commit.</li>
+<li>Commits to a fork don't appear in your contributions graph, while commits to a repository created from a template do appear in your contribution graph.</li>
+<li>A fork can be a temporary way to contribute code to an existing project, while creating a repository from a template starts a new project quickly.</li>
+</ul>
+<p>Steps (see also <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template">here</a>:</p>
+<ul>
+<li>login on GitHub</li>
+<li>go to <a href="https://github.com/Geonovum/ogc-api-testbed">github.com/Geonovum/ogc-api-testbed</a></li>
+<li>above file list press green button "Use this template"</li>
+<li>follow the steps indicated, if you want to serve docs on a separate domain indicate "Include all branches"</li>
+</ul>
+<h2 id="3-prepare-local-system">3. Prepare Local System</h2>
+<p>On your local system:</p>
+<h3 id="install-ansible">Install Ansible:</h3>
+<ul>
+<li>have Python 3 (3.7 or better) installed</li>
+<li>OPTIONAL (but recommended) create a Python Virtualenv (for Ansible)  </li>
+<li>install <a href="https://www.ansible.com/">Ansible</a> with <code>pip install ansible</code> 2.9.* or higher</li>
+<li>test: <code>ansible --version</code> - shows <em>ansible 2.9.19 ...</em></li>
+<li>test: <code>ansible-vault --version</code> shows <em>ansible-vault 2.9.19 ...</em></li>
+</ul>
+<p>More on Ansible below.</p>
+<h3 id="install-git-client">Install <code>Git</code> client.</h3>
+<h2 id="4-clone-new-github-repo">4. Clone New GitHub Repo</h2>
+<ul>
+<li><code>git clone https://github.com/Geonovum/ogc-api-sandbox.git</code></li>
+</ul>
+<p>We will call the root dir of the cloned git repo on your system just <code>git/</code> from here.</p>
+<h2 id="5-setup-ansible">5. Setup Ansible</h2>
+<p>Most of the configuration that is specific to your new server 
+is stored under <code>git/ansible/hosts</code> (Ansible inventories)
+and <code>git/ansible/vars</code> (variables and SSH keys). </p>
+<p>Most files are encrypted with <code>Ansible Vault</code>. You will need to 
+create your own (encrypted) version of these encrypted files. 
+For many files an example file is given. </p>
+<h3 id="ansible-modules">Ansible Modules</h3>
+<p>Called "Roles" these are third-party Ansible components that help with specific tasks.
+Install these as follows:</p>
+<pre><code>cd git/ansible
+ansible-galaxy install --roles-path ./roles -r requirements.yml
+</code></pre>
+<h3 id="ansible-hosts">Ansible Hosts</h3>
+<p>The hostname is crucial to services functioning. Two steps:</p>
+<ul>
+<li>set content of <code>git/ansible/hosts/prod.yml</code> (Inventory) to</li>
+</ul>
+<pre><code>ogcapi:
+  hosts:
+    apisandbox:
+       ansible_port: 22
+       ansible_host: apisandbox.geonovum.nl
+       ansible_user: root
+
+</code></pre>
+<ul>
+<li>set content of <code>git/services/env.sh</code> to:</li>
+</ul>
+<pre><code>#!/bin/bash
+# Sets global env vars based on host-name
+# Needed for various host-dependent configs, especiallly Traefik SSL-certs.
+
+# Export and Defaults
+
+# Assume a local deployment
+export DEPLOY_ENV=&quot;local&quot;
+export TRAEFIK_SSL_ENDPOINT=
+export TRAEFIK_SSL_DOMAIN=&quot;apisandbox.geonovum.nl&quot;
+export TRAEFIK_SSL_CERT_RESOLVER=
+export TRAEFIK_USE_TLS=&quot;false&quot;
+export HOST_UID=$(id -u)
+export HOST_GID=$(id -g)
+export HOST_UID_GID=&quot;${HOST_UID}:${HOST_GID}&quot;
+
+# Set host-dependent vars
+case &quot;${HOSTNAME}&quot; in
+    &quot;apisandbox.geonovum.nl&quot;)
+        DEPLOY_ENV=&quot;prod&quot;
+        ;;
+    &quot;apisandbox&quot;)
+        DEPLOY_ENV=&quot;prod&quot;
+        ;;
+    *)
+        echo &quot;Default Local Host ${HOSTNAME}&quot;
+esac
+
+if [[ ${DEPLOY_ENV} = &quot;prod&quot; ]]
+then
+    source /etc/environment
+    TRAEFIK_SSL_ENDPOINT=&quot;https&quot;
+    TRAEFIK_SSL_CERT_RESOLVER=&quot;le&quot;
+    TRAEFIK_USE_TLS=&quot;true&quot;
+fi
+
+</code></pre>
+<p>So <code>DEPLOY_ENV=prod</code> here is to discern with a deployment on <code>localhost</code> (<code>DEPLOY_ENV=local</code>, where .e.g. no https/SSL is used).</p>
+<h3 id="create-ssh-keys">Create SSH Keys</h3>
+<p>These are used to invoke actions on the server both from GitHub Actions (via GitHub Sercrets) 
+and from your local Ansible setup. Plus a set of authorized_keys for the admin SSH user.</p>
+<ul>
+<li>cd <code>git/ansible/vars</code></li>
+<li>create new SSH keypair (no password): <code>ssh-keygen -t rsa -q -N "" -f gh-key.rsa</code></li>
+</ul>
+<h3 id="create-authorized_keys">Create authorized_keys</h3>
+<p>Create new <code>git/ansible/vars/authorized_keys</code> with your public key and for others you want to give access to the admin SSH account,
+plus <code>gh-key.rsa.pub</code> .</p>
+<pre><code>cat gh-key.rsa.pub &gt; authorized_keys
+cat ~/.ssh/id.rsa.pub &gt;&gt; authorized_keys
+cat id.rsa.pub.of.joe &gt;&gt; authorized_keys   # etc
+
+</code></pre>
+<h3 id="adapt-varsyml">Adapt vars.yml</h3>
+<p>Create new <code>git/ansible/vars/vars.yml</code> from example <code>vars.example.yml</code> in that dir.</p>
+<p>The first part of <code>vars.yml</code> contains generix, less-secret, values. 
+Use variables where possible. Format is Python-Jinja2 template-like:</p>
+<pre><code>my_ssh_pubkey_file: ~/.ssh/id_rsa.pub
+my_email: my@email.nl
+my_admin_user: the_admin_username
+my_admin_home: &quot;/home/{{ my_admin_user }}&quot;
+my_git_home: &quot;{{ my_admin_home }}/git&quot;
+my_github_repo: https://github.com/Geonovum/ogc-api-sandbox.git
+var_dir: /var/ogcapi
+logs_dir: &quot;{{ var_dir }}/log&quot;
+services_home: &quot;{{ my_git_home }}/services&quot;
+platform_home: &quot;{{ my_git_home }}/platform&quot;
+pip_install_packages:
+  - name: docker
+timezone: Europe/Amsterdam
+ufw_open_ports: ['22', '80', '443', '5432']
+</code></pre>
+<p>The second part deals with more secret values, like usernames and passwords for services.
+For most services indicated below with comment after <code>#</code>. <code>GHC_</code> denotes GeoHealthCheck (GHC) vars.
+If you don't use GHC you can skip those.</p>
+<pre><code>etc_environment:
+  PG_DB: the_db  # PostGIS service
+  PG_USER: the_user  # PostGIS service
+  PG_PASSWORD: the_pw  # PostGIS service
+  PGADMIN_EMAIL: the_user@the_user.nl # PGadmin service
+  PGADMIN_PASSWORD: the_pw  # PGadmin service
+  GHC_SQLALCHEMY_DATABASE_URI: postgresql://the_user:the_pw@the_db:5432/the_db  # PGadmin service
+  GHC_ADMIN_USER_NAME: the_user
+  GHC_ADMIN_USER_PASSWORD: the_pw
+  GHC_ADMIN_USER_EMAIL: the_user@the_user.nl
+  GHC_NOTIFICATIONS_EMAIL: the_user@the_user.com
+  GHC_SMTP_EMAIL: the_user@the_user.com
+  GHC_SMTP_SERVER: smtp.gmail.com
+  GHC_SMTP_PORT: 587
+  GHC_SMTP_TLS: True
+  GHC_SMTP_SSL: False
+  GHC_SMTP_USERNAME: the_user@the_user.com
+  GHC_SMTP_PASSWORD: the_pw
+
+</code></pre>
+<h3 id="create-ansible-vault-password">Create Ansible Vault Password</h3>
+<ul>
+<li>global replace <code>~/.ssh/ansible-vault/ogc-api-testbed.txt</code> with <code>~/.ssh/ansible-vault/ogc-api-sandbox.txt</code> in <code>git/ansible/README.md</code></li>
+<li>create strong password  </li>
+<li>store in <code>~/.ssh/ansible-vault/ogc-api-sandbox.txt</code> for convenience</li>
+</ul>
+<h3 id="set-github-secrets">Set GitHub Secrets</h3>
+<p>Three secrets need to be set:</p>
+<p>Go to GH repo Settings|Secrets and create these three secrets</p>
+<ul>
+<li>ANSIBLE_INVENTORY_PROD - with value from <code>git/ansible/hosts/prod.yml</code></li>
+<li>ANSIBLE_SSH_PRIVATE_KEY - with value from <code>git/ansible/vars/gh-key.rsa</code></li>
+<li>ANSIBLE_VAULT_PASSWORD - value from <code>~/.ssh/ansible-vault/ogc-api-sandbox.txt</code> </li>
+</ul>
+<h3 id="encrypt-ansible-files">Encrypt Ansible Files</h3>
+<p>VERY IMPORTANT. UNENCRYPTED FILES SHOULD NEVER BE CHECKED IN!!!</p>
+<p>Using <code>ansible-vault</code> with password encrypt these:</p>
+<pre><code>ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt  vars.yml
+ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt  gh-key.rsa
+ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt  gh-key.rsa.pub 
+ansible-vault encrypt --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt  authorized_keys 
+
+</code></pre>
+<h3 id="globally-replace-apitestbedgeonovumnl">Globally Replace apitestbed.geonovum.nl</h3>
+<p>Under <code>git/services</code> replace all occurrences of <code>apitestbed.geonovum.nl</code> with <code>apisandbox.geonovum.nl</code></p>
+<h3 id="disable-github-workflows">Disable GitHub Workflows</h3>
+<p>We do not want that workflows take effect immediately. 
+So disable them temporary by renaming the dir.</p>
+<pre><code>git mv workflows workflows.not
+git add .
+git commit -m &quot;disable workflows&quot;
+git push
+
+</code></pre>
+<h2 id="6-prune-repo-tree-for-unneeded-services">6 Prune Repo Tree for Unneeded Services</h2>
+<p>At this step you may want to delete services you don't need:</p>
+<ul>
+<li><code>rm -rf git/docs</code> . Documentation is already maintained and available via <a href="https://apitestdocs.geonovum.nl/">https://apitestdocs.geonovum.nl/</a> </li>
+<li>for each service you want to delete, delete these 3 resources, e.g. for service <code>xyz</code><ul>
+<li><code>rm -rf git/services/xyz</code></li>
+<li><code>rm  git/.github/workflows/deploy.xyz.yml</code></li>
+<li>in <code>git/ansible/deploy.yml</code> delete the three Ansible <code>task</code> lines with <code>xyz</code> name and tag.</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-bootstrapprovision-server">7 Bootstrap/provision Server</h2>
+<p>Moment of truth! Bootstrap (provision the server) in single playbook.</p>
+<ul>
+<li><code>ansible-playbook -v --vault-password-file ~/.ssh/ansible-vault/ogc-api-sandbox.txt bootstrap.yml -i hosts/prod.yml</code></li>
+</ul>
+<p>If all goes well, this output should be shown at end:</p>
+<pre><code>PLAY RECAP ***********************************************************************************************************
+apisandbox                 : ok=58   changed=22   unreachable=0    failed=0    skipped=8    rescued=0    ignored=0   
+
+</code></pre>
+<p>Observe output for errors (better is to save output in file via <code>.. &gt; bootstrap.log 2&gt;&amp;1</code>).</p>
+<p>In cases of errors and after fixes, simply rerun the above Playbook.</p>
+<p>Site should be running at: <a href="https://apisandbox.geonovum.nl">https://apisandbox.geonovum.nl</a>
+Check with portainer <a href="https://apisandbox.geonovum.nl/portainer/">https://apisandbox.geonovum.nl/portainer/</a>.</p>
+<h2 id="8-resolve-issues">8 Resolve Issues</h2>
+<p>These are typical issues found and resolved:</p>
+<ul>
+<li><code>/home/oadmin/git</code> is owned by root, change to <code>oadmin</code> </li>
+<li>delete (or change) CNAME <code>git/docs/docs</code></li>
+<li>permissions in services/qgis/data , make datadir writeable for all: <code>chmod 777 services/qgis/data</code></li>
+</ul>
+<h2 id="9-enable-github-workflows">9. Enable GitHub Workflows</h2>
+<p>Enable by renaming:</p>
+<pre><code>git mv workflows.not workflows 
+git add .
+git commit -m &quot;enable workflows&quot;
+git push
+
+</code></pre>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2021 Geonovum
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

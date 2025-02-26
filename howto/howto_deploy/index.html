@@ -1,0 +1,651 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Geonovum OGC API Testbed">
+      
+      
+        <meta name="author" content="Geonovum">
+      
+      
+        <link rel="canonical" href="https://apitestdocs.geonovum.nl/howto/howto_deploy/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>Service Deployment - Geonovum OGC API Testbed</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#service-deployment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Geonovum OGC API Testbed" class="md-header__button md-logo" aria-label="Geonovum OGC API Testbed" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Geonovum OGC API Testbed
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Service Deployment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Geonovum/ogc-api-testbed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Geonovum OGC API Testbed" class="md-nav__button md-logo" aria-label="Geonovum OGC API Testbed" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Geonovum OGC API Testbed
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Geonovum/ogc-api-testbed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Howto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../findings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Findings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Credits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/Geonovum/ogc-api-testbed" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update a service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a new service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-duplicate-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 - Duplicate Folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-adapt-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 - Adapt Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-adapt-service-config-and-data-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 - Adapt Service Config and Data File(s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-adapt-ansible-deploy-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4 - Adapt Ansible Deploy File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-create-a-github-action-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5 - Create a GitHub Action File
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-your-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing your service
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="service-deployment">Service Deployment</h1>
+<p>The API testbed environment uses a configuration mechanism stored in the GitHub repository. 
+Whenever GitHub detects a commit in the repository, 
+a deployment on the remote server of the changed service is triggered automatically. 
+Such an approach is known as <a href="https://en.wikipedia.org/wiki/Continuous_deployment">Continuous Deployment</a> or "CD".</p>
+<p>The API Testbed uses Ansible and GitHub Workflows to enable CD. Effectively, new or changed Docker Containers
+and their configuration are deployed on a remote server (VM/VPS) from within GitHub.</p>
+<p>While a deployment task is running, you can follow its progress 
+on <a href="https://github.com/Geonovum/ogc-api-testbed/actions">GitHub</a>.</p>
+<p>It is possible to directly commit your changes to GitHub, but a better practice is to 
+work from <a href="https://en.wikipedia.org/wiki/Distributed_version_control#Pull_requests">Pull Requests</a> often called a <strong>PR</strong>. 
+Some discussion and an 
+approval process can happen around a Pull Request, before it is merged and deployed.</p>
+<p>For your case, decide if you want to update an existing service or create a new service. 
+All services in the platform are available as paths on a single domain. 
+Each service contains an orchestration of one or more <a href="https://en.wikipedia.org/wiki/Docker_(software)">Docker Containers</a>, 
+which together provide the functionality of the service. Docker containers are based on of-the-shelf 
+product images from DockerHub, combined with a service-specific configuration.</p>
+<h2 id="update-a-service">Update a service</h2>
+<p>Change the required files on an existing service folder. 
+Either directly on GitHub, but preferably by cloning the repository locally and issuing a PR. 
+Make the changes, commit, and push the changes.</p>
+<h2 id="create-a-new-service">Create a new service</h2>
+<p>Firstly determine if you can instead update a service, for example with a new Collection, somewhat
+similar to a Layer.</p>
+<p>For a new service the best approach is to duplicate the entire folder of an existing service and change the required 
+parameters within that folder. NB be sure to also preserve the executable properties of the <code>.sh</code> (Shell) files! 
+Assumed is that the new service is using one of the existing components, thus services for
+GeoServer, pygeoapi, ldproxy etc.</p>
+<p>Creating a new service is basically the following multi-step process:</p>
+<h3 id="step-1-duplicate-folder">Step 1 - Duplicate Folder</h3>
+<p>Duplicate the entire folder of an existing service and name it to the new service, say <code>xyz</code>.
+So it will reside in the folder <code>git/services/xyz/</code>.</p>
+<h3 id="step-2-adapt-variables">Step 2 - Adapt Variables</h3>
+<p>In the best case only a single line in the file <code>git/services/xyz/env.sh</code> needs 
+to be adapted, i.e. the <code>SERVICE_NAME</code> variable. This will then automatically
+propagate the value for the subpath in the full service-URL plus other settings within the <code>docker-compose.yml</code> file.
+In the best case <code>docker-compose.yml</code> requires no changes.</p>
+<h3 id="step-3-adapt-service-config-and-data-files">Step 3 - Adapt Service Config and Data File(s)</h3>
+<p>This step is specific to the service-component. 
+For example <code>pygeoapi</code> has a single <code>local.config.yml</code>
+file. In many cases the full service URL with the subpath needs to be adapted.
+Others, like GOAF, may need var-settings in the <code>docker-compose.yml</code> file.
+Usually you will add data files like GeoPackage-files on a <code>/data/</code> subfolder.</p>
+<h3 id="step-4-adapt-ansible-deploy-file">Step 4 - Adapt Ansible Deploy File</h3>
+<p>Duplicate a service definition in 
+the <a href="https://github.com/Geonovum/ogc-api-testbed/blob/main/ansible/deploy.yml">Ansible Playbook file deploy.yml</a>.
+This file is under <code>git/ansible/deploy.yml</code>.</p>
+<p>Use the service name for the service (folder) like:</p>
+<pre><code>    - name: &quot;xyz&quot;
+      shell: &quot;cd {{ services_home }}/xyz &amp;&amp; ./deploy.sh &amp;&amp; docker ps&quot;
+      tags: xyz
+</code></pre>
+<h3 id="step-5-create-a-github-action-file">Step 5 - Create a GitHub Action File</h3>
+<p>This is a Action/Workflow File always to be placed under
+<a href="https://github.com/Geonovum/ogc-api-testbed/blob/main/.github/workflows">.github/workflows</a> 
+GitHub should execute this file (for our repo)  when two conditions are met: </p>
+<p>1) a commit (direct or via a PR) to the <code>main</code> repository branch and 
+2) when the change is made to the new <code>services/xyz</code> folder (or a subfolder).</p>
+<p>Also here: easiest is to copy any existing service deploy file 
+like <a href="https://github.com/Geonovum/ogc-api-testbed/blob/main/.github/workflows/deploy.pygeoapi.yml">deploy.pygeoapi.yml</a> and make a global
+change e.g. "pygeoapi" to "xyz".</p>
+<p>The file should look like:</p>
+<pre><code>name: xyz Deploy ⚙️
+
+# Trigger only when services/xyz subdir changed
+on:
+  push:
+    paths:
+      - 'services/xyz/**'
+
+jobs:
+  main:
+    runs-on: ubuntu-24.04
+
+    steps:
+    - name: Checkout ✅
+      uses: actions/checkout@v2
+
+    - name: Run playbook ⚙
+      uses: dawidd6/action-ansible-playbook@v2
+      with:
+        playbook: deploy.yml
+        directory: ./ansible
+        key: ${{secrets.ANSIBLE_SSH_PRIVATE_KEY}}
+        inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
+        vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
+        options: |
+          --tags xyz
+          --verbose
+
+</code></pre>
+<p>Basically this file will execute the above Ansible Playbook <code>deploy.yml</code> for the tag <code>xyz</code> whenever a
+change is committed/pushed to the <code>services/xyz/</code> folder.</p>
+<h2 id="testing-your-service">Testing your service</h2>
+<p>You can either directly commit the service configuration in the sandbox and evaluate if it 
+behaves properly. Alternatively you can clone the full repository locally and run the environment locally 
+(installation of docker desktop is required) before committing. Always test your service in the sandbox 
+environment before duplicating it to the production environment.</p>
+<p>Navigate to the <code>git/services/</code> folder in the project and run <code>./start.sh</code></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2021 Geonovum
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

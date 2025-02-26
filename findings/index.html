@@ -1,0 +1,807 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Geonovum OGC API Testbed">
+      
+      
+        <meta name="author" content="Geonovum">
+      
+      
+        <link rel="canonical" href="https://apitestdocs.geonovum.nl/findings/">
+      
+      
+        <link rel="prev" href="../cases/">
+      
+      
+        <link rel="next" href="../credits/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>Installation findings - Geonovum OGC API Testbed</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installation-findings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Geonovum OGC API Testbed" class="md-header__button md-logo" aria-label="Geonovum OGC API Testbed" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Geonovum OGC API Testbed
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation findings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Geonovum/ogc-api-testbed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Geonovum OGC API Testbed" class="md-nav__button md-logo" aria-label="Geonovum OGC API Testbed" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Geonovum OGC API Testbed
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Geonovum/ogc-api-testbed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Howto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Findings
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Findings
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-infra-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run infra locally
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-attached-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use of attached storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load balancing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#include-geoserver-in-the-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Include geoserver in the experiment?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Log handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Availability logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Credits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/Geonovum/ogc-api-testbed" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-infra-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run infra locally
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-attached-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use of attached storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load balancing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#include-geoserver-in-the-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Include geoserver in the experiment?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Log handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Availability logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="installation-findings">Installation findings</h1>
+<p>This document lists some of the experiences during installation and creation of the software, for example:</p>
+<ul>
+<li>what is easy to do, what not?</li>
+<li>what is supported by which software?</li>
+<li>configuration setup</li>
+</ul>
+<h2 id="docker">Docker</h2>
+<p>Docker (and related Cloud-technologies like Kubernetes and Cloud Foundry) are replacing the traditional 
+installation and maintenance of web services, often dubbed as "<a href="https://m.subbu.org/code-the-infra-8c67a869cb89">Box Hugging</a>".
+These Cloud-technologies are following the <a href="https://www.hava.io/blog/cattle-vs-pets-devops-explained">Pets vs Cattle</a> paradigm. 
+Many pro's and con's are documented. 
+We list a number of them which came up during the project.</p>
+<p>Pro's</p>
+<ul>
+<li>For setups of pygeoapi and geoserver with OGR support (used in wfs and geopackage backend) the use of Docker is attractive, due to complexity of managing dedicated dependencies.</li>
+<li>Running the full platform locally doesn't require any effort. Traefik manages the change from https://domain to http://localhost transparently. But docker is the main driver of this capability.</li>
+</ul>
+<p>Con's</p>
+<ul>
+<li>In the field there is a growing awareness that docker also has limitations. Docker images do not receieve similar efforts to keep them updated as the traditional systems. The risk of non patched vulnarabilities is higher when running a docker infrastructue. </li>
+</ul>
+<h2 id="data-management">Data management</h2>
+<p>A typical use case will be that a geonovum employee arrives with some shapefiles to be published. 
+The Shapefile can be deployed as part of the deployment (via github). An alternative route is to import the data into postgres. The data can then be used in various applications. Importing a shapefile into postgres requires direct connection to postgres or use the PGAdmin dump import. GeoServer (via GeoCat Bridge) has an option to upload a shapefile and import it to Postgres. See <a href="../howto/howto_database/">HOWTO data</a> on how to use both approaches.</p>
+<h2 id="run-infra-locally">Run infra locally</h2>
+<p>The current deployment can be run locally on Linux and Mac easily, which is helpful 
+to test a new development before creating the Pull Request. 
+However it may be the case that this does not easily work on Windows. 
+On the other hand, maybe this is not a scenario, because the Geonovum employee 
+might update the configuration in <code>GitHub</code>, and deploy it to the Sandbox environment, 
+and use that as a test prior to moving the configuration to the production system.</p>
+<h2 id="use-of-attached-storage">Use of attached storage</h2>
+<p>Using attached storage is common for larger files with a focus on read access. Can we use it to store grids (tiff) or tile cache to make it accessible for various services? Using attached storage as backend for geopackage or postgres is not optimal on attached storage because of many concurrent requests and file locking. Attached storage is usefull for bulk downloads (inspire stored query). Read access to a tilecache can be usefull, but seeding is problematic, due to the number of write requests.</p>
+<h2 id="load-balancing">Load balancing</h2>
+<p>Current setup does not have scaling (it is possible using traeffik, but currently not set up). It could be relevant to set up load balancing, at some point because it has its own type of challenges.</p>
+<p>Auto scaling as provided by for example Kubernetes, is not in scope for this experiment. Kubernetes generally requires a large hosting farm, such as azure, google.</p>
+<h2 id="include-geoserver-in-the-experiment">Include geoserver in the experiment?</h2>
+<p>We had some discussion if we should include GeoServer in the experiment. GeoServer is known to have challenges in cloud environments (memory usage, stability). But it is not explicitely known which challenges those are, and if their are ways to move around them. That's why it is usefull to include it. Also because the software has a high adoption at Dutch data providers.</p>
+<p>An aspect of GeoServer challenges in cloud is the complexity of its config files. The config files are designed around the web user interface which is commonly used to set them up, and heavily depends on relations identified by complex uuid strings. Running multiple geoservers along side requires to synchronise the config files over the instances. This gets extra challenging in case</p>
+<p>GeoServer has a jdbcconfig community module which allows to store the configuration in a database. But that plugin is not an official status yet (low TRL). Initiatives exist to define a geoserver cloud native strategy, based around an event bus.</p>
+<h2 id="url-configuration">URL configuration</h2>
+<p>Products tend to include a configuration parameter to indicate the outside url in which the service is made available. This url is for example used in a getcapabilities response to indicate the endpoint of the service. In CI/CD environments this parameter is challenging, because it may vary based on how you access the service (via internal or remote). There is actually no need to persist this in a parameter, because the value is also provided by the x-forwarded-for header of the request. Mind that the gateway software should be set up to add the x-forwarded-for header to the request. GeoServer facilitates for example this use case, in the settings you can activate a setting: 'use header for proxy url'.</p>
+<p>Traeffik caused additional challenges for the CSRF token check in geoserver. Seems you have to whitelist the proxy domain or disable csrf check at all (our choice). CSRF support has been added to recent geoserver versions, it offers an additional protection against script attacks.</p>
+<h2 id="log-handling">Log handling</h2>
+<p>To set up a proper mechanism to persist and visualise (error) logs is an important aspect of a successfull SDI implementation. Logs can be evaluated to find the cause of a problem, or more general find aspects to improve on the implementation. 3 types of logs can be identified:</p>
+<ul>
+<li>Error logs (generated by the application)</li>
+<li>Usage logs (typically at the gateway level)</li>
+<li>(un)availability (and hardware monitoring)</li>
+</ul>
+<p>Important aspects to evaluate is to prevent log files to grow to unexpected size and not get destructed at redeployment. Setting up proper log rotation is key. Another aspect to consider is that log files have a GDPR (AVG) aspect. Access logs typically persist ip adresses of endusers.</p>
+<h3 id="error-logs">Error logs</h3>
+<p>Within Docker it is a convention to report errors via stdout, so they are picked up by docker. LDProxy needs a dedicated configuration to set up logging to stdout.</p>
+<p>Tools like logstash are able to persist the logs from docker and visualise it in kibana. We have not implemented a central collection of error logs. Instead we delegate to <a href="/portainer">portainer</a> for viewing logs.</p>
+<h3 id="usage-logs">Usage logs</h3>
+<p>Traeffik needs to be set up to direct access-logs to a channel. A very basic option to persist and vizualise these logs is AWStats. More advanced tools are capable to cluster groups of requests, for example all requests within a certain bounding box or feature type.</p>
+<h3 id="availability-logs">Availability logs</h3>
+<p>Various generic products exist such as pingdom, checkmk, zabbix, nagios. Cloud platforms such as kubernetes have embedded systems. A dedicated product exists for the geospatial world, called GeoHealthCheck. It monitors the availability (and to a degree the complience) of gis layers. (see <a href="../howto/howto_ghc/">HOWTO ghc</a> on how to use it)</p>
+<h2 id="backup">Backup</h2>
+<p>Backup (or synchronisation) should be set up for volatile data, such as databases and log files. These aspects are less relevant to this infrastructure, because we persist all configuration in GitHub and loss of the log files is not very critical. We therefore have not set up any backups or data synchronisation. </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2021 Geonovum
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

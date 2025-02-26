@@ -1,0 +1,770 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Geonovum OGC API Testbed">
+      
+      
+        <meta name="author" content="Geonovum">
+      
+      
+        <link rel="canonical" href="https://apitestdocs.geonovum.nl/setup/platform/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>Platform setup - Geonovum OGC API Testbed</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#platform-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Geonovum OGC API Testbed" class="md-header__button md-logo" aria-label="Geonovum OGC API Testbed" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Geonovum OGC API Testbed
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Platform setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Geonovum/ogc-api-testbed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Geonovum OGC API Testbed" class="md-nav__button md-logo" aria-label="Geonovum OGC API Testbed" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Geonovum OGC API Testbed
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Geonovum/ogc-api-testbed" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Howto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../findings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Findings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Credits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/Geonovum/ogc-api-testbed" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-and-sandbox-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Production and Sandbox Instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Instances
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Instances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ec-jrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      EC JRC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selective-redeploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selective Redeploy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-and-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps and Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps and Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-to-a-servervm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access to a server/VM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-3-and-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python 3 and Ansible
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-template-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone template repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Ansible
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootstrap-the-servervm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bootstrap the server/VM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintain-the-servervm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain the server/VM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="platform-setup">Platform setup</h1>
+<p>The project repository contains contains components to bootstrap, configure ("provision") and maintain a remote
+deployment of an OGC API web-service stack using modern "DevOps" tooling.</p>
+<p><img alt="Schematic overview of the platform" src="../../images/schema.png" /></p>
+<p>See also a <a href="https://files.justobjects.nl/presentation/opengeodag-2021/opengeodag-2021-just.pdf">presentation of the platform on OpenGeodag 2021</a>.</p>
+<h2 id="design-principles">Design Principles</h2>
+<p>The main design principles are:</p>
+<ul>
+<li>starting point is an empty VPS/VM with Ubuntu and root (key) access</li>
+<li>any action on the server/VM host is performed from a client host</li>
+<li>i.e. no direct access/login to/on the server/VM is required, only for problem solving</li>
+<li>remote actions can be performed manually or triggered by GitHub Workflows</li>
+<li>all credentials (passwords, SSH-keys, etc) are secured </li>
+<li>two operational stack instances 1) production, <em>"Stable"</em> and 2) playground, <em>"Sandbox"</em></li>
+</ul>
+<h2 id="components">Components</h2>
+<p>The components used to realize this design are:</p>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a> <em>"...OS-level virtualization to deliver software in packages called containers..."</em> (<a href="https://en.wikipedia.org/wiki/Docker_(software)">Wikipedia</a>)</li>
+<li><a href="https://docs.docker.com/compose">Docker Compose</a> <em>"...a tool for defining and running multi-container Docker applications..."</em></li>
+<li><a href="https://www.ansible.com/">Ansible</a> <em>"...an open-source software provisioning tool"</em> (<a href="https://en.wikipedia.org/wiki/Ansible_(software)">Wikipedia</a>)</li>
+<li><a href="https://docs.github.com/en/actions">GitHub Actions/Workflows</a> <em>"...Automate, customize, and execute software development workflows in a GitHub repository..."</em></li>
+<li><a href="https://traefik.io/">Traefik</a> a frontend proxy/load-balancer and SSL (HTTPS) endpoint.</li>
+</ul>
+<p>The Docker-components are used to run the operational stack, i.e. the OGC API web-services and supporting services like for monitoring. 
+Ansible is used to provision (bootstrap)  both the server OS-software
+and the operational stack. Ansible is executed on a local client/desktop system to invoke operations on a remote server/VM.
+These operations are bundled in so-called Ansible Playbooks, YAML files that describe a desired server state.
+GitHub Actions are used to construct Workflows. These Actions will invoke these Ansible Playbooks, effectively configuring
+and provisioning the operational stack on a remote server/VM. </p>
+<p>Security is guaranteed by the use of <a href="https://docs.ansible.com/ansible/latest/user_guide/vault.html">Ansible-Vault</a> 
+and <a href="https://docs.github.com/en/actions/reference/encrypted-secrets">GitHub Encrypted Secrets</a>.</p>
+<p>Traefik manages the routing of remote requests to relevant containers. Traefik listens to Docker Engine to be aware of available containers. Containers include a dedicated configuration which is picked up by traefik to enable the route. </p>
+<h2 id="services">Services</h2>
+<p>A number of services has been deployed within the platform, which can act as a template to add additional services.
+The image below shows the operational service stack with the <a href="https://traefik.io/">Traefik</a> frontend.</p>
+<p><img alt="Operational Service Stack" src="../../images/services-stack.png" /></p>
+<ul>
+<li><a href="https://pygeoapi.io/">pygeoapi</a> - a Python server implementation of the OGC API suite of standards.</li>
+<li><a href="https://pycsw.org/">pycsw</a> - a Python server implementation of  OGC API Records.</li>
+<li><a href="http://geoserver.org/">GeoServer</a> - a Java server implementation of the OGC API suite of standards.</li>
+<li><a href="https://interactive-instruments.github.io/ldproxy/">ldproxy</a> - a Java server implementation of the OGC API suite of standards.</li>
+<li><a href="https://www.qgis.org/">QGIS Server</a> - server component of QGIS with OGC OAFeat support.</li>
+<li><a href="https://www.github.com/pdok/goaf">GOAF</a> - OAF service developed in Go, maintained by PDOK.</li>
+<li><a href="https://postgis.net">PostgreSQL/PostGIS</a> - geospatial database</li>
+</ul>
+<p>For administration, documentation and monitoring the following components are used:</p>
+<ul>
+<li><a href="https://www.mkdocs.org/">mkdocs</a> for live documentation and landing pages</li>
+<li><a href="https://www.pgadmin.org/">PGAdmin</a> - visual PostgreSQL manager  </li>
+<li><a href="https://geohealthcheck.org">GeoHealthCheck</a> to monitor the availability, compliance and QoS of OGC web services</li>
+<li><a href="https://www.portainer.io/">Portainer</a> visual Docker monitor and manager</li>
+</ul>
+<h2 id="production-and-sandbox-instance">Production and Sandbox Instance</h2>
+<p>Two separate server/CM-instances are managed to provide stable/production and 
+sandbox/playground environments. As to control changes these instances are mapped to two GitHub repositories:</p>
+<ul>
+<li>https://github.com/Geonovum/ogc-api-testbed for the stable/production instance, nicknamed <strong>Stable</strong></li>
+<li>https://github.com/Geonovum/ogc-api-sandbox the playground instance, nicknamed <strong>Sandbox</strong></li>
+</ul>
+<p>The <strong>Stable</strong> repo is a so called <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-template-repository">GitHub Template repo</a> 
+from which the <strong>Sandbox</strong> is cloned.</p>
+<p><em>NB initally <a href="https://docs.github.com/en/github/administering-a-repository/defining-the-mergeability-of-pull-requests/about-protected-branches">GitHub Protected Branches</a> were considered, but</em>
+<em>it felt that those would be less transparent and even confusing for selective access and chances of mistakes.</em></p>
+<h2 id="other-instances">Other Instances</h2>
+<p>When other instances are known they are added here. </p>
+<h3 id="ec-jrc">EC JRC</h3>
+<p>The European Commission Joint Research Centre (EC JRC, Ispra It.) has also used the 
+Template GitHub repo to create a server instance with OGC Data APIs: 
+see their landing page at <a href="https://jrc.map5.nl">jrc.map5.nl</a> and the GitHub repo at:
+https://github.com/justb4/ogc-api-jrc .</p>
+<h2 id="selective-redeploy">Selective Redeploy</h2>
+<p>When changes are pushed to the repo, only the affected services are redeployed.
+This is effected by a combination of GitHub Actions and Ansible Playbooks as follows:</p>
+<ul>
+<li>each Service has a dedicated GitHub Action "deploy" file, e.g. <a href="https://github.com/Geonovum/ogc-api-testbed/tree/main/.github/workflows/deploy.pygeoapi.yml">deploy.pygeoapi.yml</a></li>
+<li>the GitHub Action "deploy" file contains a trigger for a <code>push</code> with a <code>paths</code> constraint, in this example:</li>
+</ul>
+<pre><code>    on:
+      push:
+        paths:
+          - 'services/pygeoapi/**'
+</code></pre>
+<ul>
+<li>the GH Action then calls the Ansible Playbook <a href="https://github.com/Geonovum/ogc-api-testbed/tree/main/ansible/deploy.yml">deploy.yml</a> with a <code>--tags</code> option related to the Service, e.g. <code>--tags pygeoapi</code></li>
+<li>the <a href="https://github.com/Geonovum/ogc-api-testbed/tree/main/ansible/deploy.yml">deploy.yml</a> will always update the GH repo on the server VM via the <code>pre_tasks</code></li>
+<li>the Ansible task indicated by the <code>tags</code> is then executed</li>
+</ul>
+<h2 id="security">Security</h2>
+<p>Maintaining a public repository and providing secured access to services can be a challenge.
+Complex solutions exist in the Docker space using Docker Secrets, <code>/etcd</code> service etc
+We tried to keep it simpler, using <a href="https://docs.ansible.com/ansible/latest/user_guide/vault.html">Ansible Vault</a> 
+and <a href="https://dev.to/n3wt0n/how-secrets-work-in-github-and-how-to-manage-them-p4o">GitHub Secrets</a> are the two main
+mechanisms used for bootstrap and deploy.</p>
+<p>The <a href="https://github.com/Geonovum/ogc-api-testbed/blob/main/ansible/bootstrap.yml">bootstrap.yml</a> also applies various Linux hardening components like
+IP-blacklisting on multiple login attempt, key-only logine etc.</p>
+<h2 id="steps-and-workflows">Steps and Workflows</h2>
+<p>Below is a shortened version how 
+to setup and maintain a testbed server instance from zero.
+In a <a href="/howto/howto_platform/">dedicated HOWTO</a> 
+all steps are expanded/described in very great detail.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>This is what you need to have available first.</p>
+<h4 id="access-to-a-servervm">Access to a server/VM</h4>
+<p>This implies acquiring a server/VM instance from a hosting provider.
+Main requirements are that server/VM runs an LTS Ubuntu (20.4 or better) and that SSL-keys are available for root access 
+(or an admin user account with sudo-rights).</p>
+<h4 id="python-3-and-ansible">Python 3 and Ansible</h4>
+<p>You need a Python 3 installation and install Ansible and <code>git</code> (client).</p>
+<h3 id="clone-template-repo">Clone template repo</h3>
+<p>Clone from the template repo: https://github.com/Geonovum/ogc-api-testbed.git.
+See <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template">how to do this</a>.</p>
+<h3 id="setup-ansible">Setup Ansible</h3>
+<p>Adapt the files under <code>git/ansible/vars</code>, following the README there.</p>
+<p>Adapt the inventory file under <code>git/ansible/hosts</code>, following the README there.</p>
+<h3 id="bootstrap-the-servervm">Bootstrap the server/VM</h3>
+<p>"Bootstrap" here implies the complete provisioning of a remote server/VM that runs the operational service stack.
+This is a one-time manual action, but can be executed at any time as Ansible actions are idempotent.
+By its nature, Ansible tasks will only change the system if there is something to do.</p>
+<p>Startpoint is a fresh Ubuntu-server or VM with root access via SSH-keys (no passwords).
+The Ansible playbook <a href="https://github.com/Geonovum/ogc-api-testbed/tree/main/ansible/bootstrap.yml">bootstrap.yml</a> installs the neccessary software, and hardens
+the server security, e.g. using <a href="https://www.fail2ban.org/">fail2ban</a>.
+In this step Docker and Docker Compose are installed and a Linux <a href="https://en.wikipedia.org/wiki/Systemd">systemd</a> service is run
+that automatically starts/stops the operational stack, also on reboots.
+The software for the operational stack, i.e. from this repo, is cloned on the server as well.</p>
+<h3 id="maintain-the-servervm">Maintain the server/VM</h3>
+<p>This step is the daily operational maintenance. 
+The basic substeps are:</p>
+<ul>
+<li>make a change, e.g. add a data Collection to an OGC API OAFeat service</li>
+<li>commit/push the change to GitHub</li>
+<li>watch the triggered GitHub Actions, check for any errors</li>
+<li>observe changes via website</li>
+</ul>
+<p>As indicated, a <a href="/howto/howto_platform/">dedicated HOWTO</a> describes the above steps in very great detail.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2021 Geonovum
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
