@@ -1,25 +1,3 @@
-- name: "Bootstrap Python if needed"
-  hosts: all
-  become: yes
-  gather_facts: no
-
-  tasks:
-    - name: Test Python 3.9+ availability
-      raw: python3 -c "import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)"
-      register: python_test
-      changed_when: false
-      failed_when: false
-
-    - name: Install Python 3.10 if Python 3.9+ not available
-      raw: |
-        set -e
-        apt-get update
-        apt-get install -y software-properties-common
-        add-apt-repository -y ppa:deadsnakes/ppa
-        apt-get update
-        apt-get install -y python3.10 python3.10-distutils python3.10-venv
-      when: python_test.rc != 0
-
 - name: "Update and (Re)Deploy Services"
   hosts: all
   gather_facts: yes
