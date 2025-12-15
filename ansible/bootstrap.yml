@@ -87,3 +87,41 @@
     
     - name: "Service | Start ogcapi"
       service: name=ogcapi.service state=started enabled=yes
+
+    # Update Python (minimum required is 3.9)
+    - name: Check if Python 3.10 exists
+      raw: test -f /usr/bin/python3.10
+      register: python310_exists
+      changed_when: false
+      failed_when: false
+
+    - name: Install Python 3.10 from deadsnakes PPA
+      raw: |
+        apt-get update
+        apt-get install -y software-properties-common
+        add-apt-repository -y ppa:deadsnakes/ppa
+        apt-get update
+        apt-get install -y python3.10 python3.10-distutils python3.10-venv
+      when: python310_exists.rc != 0
+      changed_when: true
+
+    - name: Install pip for Python 3.10
+      raw: |
+        curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
+      when: python310_exists.rc != 0
+      changed_when: true
+
+    - name: Create symbolic link for python3
+      raw: |
+        update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+      when: python310_exists.rc != 0
+      changed_when: true
+
+    - name: Verify Python 3.10 installation
+      raw: python3.10 --version
+      register: verify_python
+      changed_when: false
+
+    - name: Display Python version
+      debug:
+        msg: "{{ verify_python.stdout }}"
