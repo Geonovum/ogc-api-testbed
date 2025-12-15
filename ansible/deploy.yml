@@ -20,6 +20,22 @@
         line: "{{ item.key }}={{ item.value}}"
       with_dict: "{{ etc_environment }}"
 
+    - name: "Test Python 3.9+ availability"
+      raw: python3 -c "import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)"
+      register: python_test
+      changed_when: false
+      failed_when: false
+
+    - name: "Install Python 3.10 if Python 3.9+ not available"
+      raw: |
+        set -e
+        apt-get update
+        apt-get install -y software-properties-common
+        add-apt-repository -y ppa:deadsnakes/ppa
+        apt-get update
+        apt-get install -y python3.10 python3.10-distutils python3.10-venv
+      when: python_test.rc != 0
+
     - name: "PRE-TASK - Clone or Update Git Repo"
       git: "repo={{ my_github_repo }} dest={{ my_git_home }} version=main clone=yes force=yes accept_hostkey=True"
       tags: always
