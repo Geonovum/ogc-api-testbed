@@ -81,6 +81,45 @@ services:
       - "traefik.http.routers.${SERVICE_NAME_ADR}_http.rule=Host(`localhost`) && PathPrefix(`${SERVICE_PATH_ADR}`)"
       - "traefik.http.routers.${SERVICE_NAME_ADR}_http.entrypoints=http"
 
+  joins_pygeoapi:
+
+    build:
+      context: ./pygeoapi-${PYGEOAPI_JOINS_BRANCH}
+      dockerfile: Dockerfile
+
+    image: pygeoapi-joins:latest
+
+    container_name: ${SERVICE_NAME_JOINS}
+
+    expose:
+      - "80"
+
+    environment:
+      # Specific to Flask apps
+      - SCRIPT_NAME=${SERVICE_PATH_JOINS}
+
+    volumes:
+      # Map data and config into pygeoapi container
+      - ./local.config.joins.yml:/pygeoapi/local.config.yml
+      - ./data:/pygeoapi/data
+
+    labels:
+      # Enable Traefik routing on overlay service network
+      - "traefik.enable=true"
+      - "traefik.docker.network=service-network"
+
+      # Define SSL/https router
+      - "traefik.http.routers.${SERVICE_NAME_JOINS}_https.rule=Host(`${TRAEFIK_SSL_DOMAIN}`) && PathPrefix(`${SERVICE_PATH_JOINS}`)"
+      - "traefik.http.routers.${SERVICE_NAME_JOINS}_https.entrypoints=https"
+      - "traefik.http.routers.${SERVICE_NAME_JOINS}_https.tls=${TRAEFIK_USE_TLS}"
+      - "traefik.http.routers.${SERVICE_NAME_JOINS}_https.tls.certresolver=${TRAEFIK_SSL_CERT_RESOLVER}"
+      - "traefik.http.routers.${SERVICE_NAME_JOINS}_https.tls.options=my_default@file"
+      - "traefik.http.routers.${SERVICE_NAME_JOINS}_https.middlewares=secure-headers@file"
+
+      # Define local http router
+      - "traefik.http.routers.${SERVICE_NAME_JOINS}_http.rule=Host(`localhost`) && PathPrefix(`${SERVICE_PATH_JOINS}`)"
+      - "traefik.http.routers.${SERVICE_NAME_JOINS}_http.entrypoints=http"
+
 networks:
   default:
     name: service-network

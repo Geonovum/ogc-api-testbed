@@ -20,6 +20,12 @@ jobs:
     - name: Checkout ✅
       uses: actions/checkout@v2
 
+    - name: Prepare pygeoapi Joins build
+      run: |
+        cd services/pygeoapi
+        chmod +x clone_joins.sh
+        ./clone_joins.sh
+
     - name: Run playbook ⚙
       uses: dawidd6/action-ansible-playbook@v2
       with:
