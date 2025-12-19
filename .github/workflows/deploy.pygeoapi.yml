@@ -26,6 +26,17 @@ jobs:
         chmod +x clone_joins.sh
         ./clone_joins.sh
 
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install Ansible 12.0.0
+      run: pip install ansible==12.0.0
+
+    - name: Verify version
+      run: ansible --version
+
     - name: Run playbook ⚙
       uses: dawidd6/action-ansible-playbook@v2
       with:
