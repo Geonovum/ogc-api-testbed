@@ -12,17 +12,23 @@ PYGEOAPI_DIR="pygeoapi-${PYGEOAPI_BRANCH}"
 
 echo "Preparing pygeoapi from GitHub branch: ${PYGEOAPI_BRANCH}"
 
-# Clean up existing directory
+## Clean up existing directory
+#/bin/rm -rf ${PYGEOAPI_DIR} > /dev/null 2>&1
+
+/bin/rm ${PYGEOAPI_BRANCH}.zip > /dev/null 2>&1
 /bin/rm -rf ${PYGEOAPI_DIR} > /dev/null 2>&1
 
-# Clone the repository
-git clone --depth 1 --branch ${PYGEOAPI_BRANCH} ${PYGEOAPI_REPO} ${PYGEOAPI_DIR}
+wget ${PYGEOAPI_REPO_ZIP}
+unzip ${PYGEOAPI_BRANCH}.zip
 
-if [ $? -eq 0 ]; then
-    echo "Successfully cloned ${PYGEOAPI_REPO} branch ${PYGEOAPI_BRANCH}"
-else
-    echo "Failed to clone repository"
-    exit 1
-fi
+## Clone the repository
+#git clone --depth 1 --branch ${PYGEOAPI_BRANCH} ${PYGEOAPI_REPO} ${PYGEOAPI_DIR}
+#
+#if [ $? -eq 0 ]; then
+#    echo "Successfully cloned ${PYGEOAPI_REPO} branch ${PYGEOAPI_BRANCH}"
+#else
+#    echo "Failed to clone repository"
+#    exit 1
+#fi
 
 echo "Preparation complete. Ready for docker-compose build."
