@@ -1,0 +1,44 @@
+# Ansible workflow for single service deployment.
+# Uses: https://github.com/dawidd6/action-ansible-playbook
+# Options: https://github.com/dawidd6/action-ansible-playbook/blob/master/main.js
+# Author: Sander Schaminee 2025
+#
+name: pygeoapi dev Deploy ⚙️
+
+# Trigger only when services/pygeoapi_dev subdir changed
+on:
+  push:
+    paths:
+      - 'services/pygeoapi_dev/**'
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-24.04
+
+    steps:
+    - name: Checkout ✅
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install Ansible 12.0.0
+      run: pip install ansible==12.0.0
+
+    - name: Verify version
+      run: ansible --version
+
+    - name: Run playbook ⚙
+      uses: dawidd6/action-ansible-playbook@v2
+      with:
+        playbook: deploy.yml
+        directory: ./ansible
+        key: ${{secrets.ANSIBLE_SSH_PRIVATE_KEY}}
+        inventory: ${{secrets.ANSIBLE_INVENTORY_PROD}}
+        vault_password: ${{secrets.ANSIBLE_VAULT_PASSWORD}}
+        options: |
+          --tags pygeoapi
+          --verbose

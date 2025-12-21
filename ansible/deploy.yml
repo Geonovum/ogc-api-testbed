@@ -38,6 +38,10 @@
       shell: "cd {{ services_home }}/pygeoapi && ./deploy.sh && docker ps"
       tags: pygeoapi
 
+    - name: "pygeoapi_dev"
+      shell: "cd {{ services_home }}/pygeoapi_dev && ./deploy.sh && docker ps"
+      tags: pygeoapi
+
     - name: "teamengine"
       shell: "cd {{ services_home }}/teamengine && ./deploy.sh && docker ps"
       tags: teamengine
