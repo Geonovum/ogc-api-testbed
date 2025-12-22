@@ -10,4 +10,3 @@ export SERVICE_PATH="/${SERVICE_NAME}"
 
 export PYGEOAPI_REPO="https://github.com/GeoSander/pygeoapi"
 export PYGEOAPI_BRANCH="ogc-api-joins"
-export PYGEOAPI_REPO_ZIP="${PYGEOAPI_REPO}/archive/refs/heads/${PYGEOAPI_BRANCH}.zip"

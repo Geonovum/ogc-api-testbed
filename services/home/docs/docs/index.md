@@ -4,30 +4,32 @@ title: OGC-API-Testbed - STABLE
 
 # OGC-API-Testbed - STABLE - Home
 
-Landing page for this server instance. 
+Welcome to the Geonovum OGC API Testbed server.
 Main website and documentation: [apitestdocs.geonovum.nl](https://apitestdocs.geonovum.nl).
  
-Below the (web-) services running on this domain. Click links to view and interact.
+Listed below are the (web-)services running on this domain. Click links to view and interact.
 
 ## OGC API Features
 
 Access the interactive endpoints of [OGC API Features](https://ogcapi.ogc.org/features/) 
 Open Source products running in this instance. Links to documentation and HOWTOs included:
 
-| Endpoint | Author | Docs | HOWTO
-| --- | --- | --- | --- 
-| [/pygeoapi](/pygeoapi) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  
-| [/adr_pygeoapi/v1](/adr_pygeoapi/v1) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  
-| [/ldproxy](/ldproxy) | Interactive Instruments | [docs](https://interactive-instruments.github.io/ldproxy/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_ldproxy/)  
-| [/geoserver](/geoserver/ogc/features) | GeoServer Community | [docs](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_geoserver/)  
-| [/qgis*](/qgis/wfs3) | QGIS Community | [docs](https://www.qgis.org/) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_qgis/)  
-| [/goaf](/goaf?f=html) | Kadaster PDOK | [docs](https://github.com/PDOK/goaf) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_goaf/)  
-| [/pycsw/csw.py](/pycsw/csw.py/collections/metadata:main) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pycsw.org/en/latest/index.html) | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pycsw/) 
-| [/teamengine](http://109.237.212.153:8081/teamengine/) | [OGC CITE](https://hub.docker.com/u/ogccite) | [docs](https://cite.opengeospatial.org/teamengine/about/ogcapi-features-1.0/1.0/site/) | N.A. 
+| Endpoint                     | Author                    | Docs         | HOWTO   |
+|------------------------------|---------------------------|--------------|---------|
+| [/pygeoapi](/pygeoapi)                                   | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/)                                            | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  |
+| [/adr_pygeoapi/v1](/adr_pygeoapi/v1)                     | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/)                                            | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  |
+| [/joins_pygeoapi/v1](/joins_pygeoapi)                    | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/)                                            | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  |
+| [/ldproxy](/ldproxy)                                     | Interactive Instruments                             | [docs](https://interactive-instruments.github.io/ldproxy/)                             | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_ldproxy/)   |
+| [/geoserver](/geoserver/ogc/features)                    | GeoServer Community                                 | [docs](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html)         | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_geoserver/) |
+| [/qgis*](/qgis/wfs3)                                     | QGIS Community                                      | [docs](https://www.qgis.org/)                                                          | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_qgis/)      |
+| [/goaf](/goaf?f=html)                                    | Kadaster PDOK                                       | [docs](https://github.com/PDOK/goaf)                                                   | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_goaf/)      |
+| [/pycsw/csw.py](/pycsw/csw.py/collections/metadata:main) | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pycsw.org/en/latest/index.html)                                    | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pycsw/)     |
+| [/teamengine](http://109.237.212.153:8081/teamengine/)   | [OGC CITE](https://hub.docker.com/u/ogccite)        | [docs](https://cite.opengeospatial.org/teamengine/about/ogcapi-features-1.0/1.0/site/) | N.A.                                                            |
 
 * see the [pygeoapi Test Page](test.md) for test of recent added functions: Part 2 CRS support and INSPIRE.
 * [/teamengine](http://109.237.212.153:8081/teamengine/)  is the OGC CITE Tester for OGC API Features Core + Part 2
 * [/adr_pygeoapi/v1](/adr_pygeoapi/v1) is an instance adhering to Dutch API Design Rules (ADR)
+* [/joins_pygeoapi](/joins_pygeoapi) is an **experimental** instance for [OGC API - Joins](https://github.com/opengeospatial/ogcapi-joins)
 * *"QGIS" is the QGIS Server Application.*
 
 ## Storage Services
