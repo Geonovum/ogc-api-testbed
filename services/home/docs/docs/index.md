@@ -5,7 +5,7 @@ title: OGC-API-Testbed - STABLE
 # OGC-API-Testbed - STABLE - Home
 
 Welcome to the Geonovum OGC API Testbed server.
-Main website and documentation: [apitestdocs.geonovum.nl](https://apitestdocs.geonovum.nl).
+Main website and documentation can be found at [apitestdocs.geonovum.nl](https://apitestdocs.geonovum.nl).
  
 Listed below are the (web-)services running on this domain. Click links to view and interact.
 
