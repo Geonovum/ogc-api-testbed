@@ -1,6 +1,6 @@
 services:
   proxy:
-    image: traefik:v3.3.3
+    image: traefik:v3.6.5
 
     container_name: traefik
     restart: always
