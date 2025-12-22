@@ -14,11 +14,11 @@ Listed below are the (web-)services running on this domain. Click links to view 
 Access the interactive endpoints of [OGC API Features](https://ogcapi.ogc.org/features/) 
 Open Source products running in this instance. Links to documentation and HOWTOs included:
 
-| Endpoint                     | Author                    | Docs         | HOWTO   |
-|------------------------------|---------------------------|--------------|---------|
+| Endpoint                                                 | Author                                              | Docs                                                                                   | HOWTO                                                           |
+|----------------------------------------------------------|-----------------------------------------------------|----------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | [/pygeoapi](/pygeoapi)                                   | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/)                                            | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  |
 | [/adr_pygeoapi/v1](/adr_pygeoapi/v1)                     | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/)                                            | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  |
-| [/joins_pygeoapi/v1](/joins_pygeoapi)                    | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/)                                            | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  |
+| [/joins_pygeoapi](/joins_pygeoapi)                       | [GeoPython Community](https://geopython.github.io/) | [docs](https://docs.pygeoapi.io/en/latest/)                                            | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_pygeoapi/)  |
 | [/ldproxy](/ldproxy)                                     | Interactive Instruments                             | [docs](https://interactive-instruments.github.io/ldproxy/)                             | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_ldproxy/)   |
 | [/geoserver](/geoserver/ogc/features)                    | GeoServer Community                                 | [docs](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html)         | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_geoserver/) |
 | [/qgis*](/qgis/wfs3)                                     | QGIS Community                                      | [docs](https://www.qgis.org/)                                                          | [HOWTO](https://apitestdocs.geonovum.nl/howto/howto_qgis/)      |
