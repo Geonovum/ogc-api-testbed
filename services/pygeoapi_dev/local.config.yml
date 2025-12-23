@@ -75,7 +75,7 @@ resources:
               href: https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/geografische-data/cbs-gebiedsindelingen
         extents:
             spatial:
-                bbox: [-1.657292, 48.040502, 12.431727, 56.110590]
+                bbox: [2.5, 50.5, 7.5, 53.75]
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
             temporal:
                 begin: 2025-01-01T00:00:00Z
