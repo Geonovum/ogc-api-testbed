@@ -91,3 +91,36 @@ resources:
                 - name: statcode
                   default: true
                 - name: jrstatcode
+    nl-provinces:
+        type: collection
+        title: Dutch Provinces
+        description: CBS Provinces of The Netherlands, 2025 (generalized)
+        keywords:
+          - Netherlands
+          - CBS
+          - Provinces
+          - Regions
+          - Statistical Areas
+        links:
+            - type: text/html
+              rel: canonical
+              title: information
+              href: https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/geografische-data/cbs-gebiedsindelingen
+        extents:
+            spatial:
+                bbox: [2.5, 50.5, 7.5, 53.75]
+                crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+            temporal:
+                begin: 2025-01-01T00:00:00Z
+                end: null
+        providers:
+            - type: feature
+              name: GeoJSON
+              data: data/pdok_cbs_provinces_nl_2025.json
+              id_field: id
+              title_field: statnaam
+              key_fields:
+                - name: jaarcode
+                - name: statcode
+                  default: true
+                - name: jrstatcode
