@@ -4,7 +4,7 @@ title: API Strategie Findings
 
 # API Strategie Findings
 
-The knowledge Platform API's has published a normative document on [REST-API design rules](https://publicatie.centrumvoorstandaarden.nl/api/adr/). This document explains how you can set up an OGC API service respecting these rules.
+The knowledge Platform API's has published a normative document on [REST-API design rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/). This document explains how you can set up an OGC API service respecting these rules.
 
 | ID | Aspect | Comment |
 | --- | --- | --- |
