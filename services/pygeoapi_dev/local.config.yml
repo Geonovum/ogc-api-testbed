@@ -12,7 +12,7 @@ server:
     admin: false
     limits:
         default_items: 10
-        max_items: 50
+        max_items: 500
     # templates: /path/to/templates
     map:
         url: https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:3857/{z}/{x}/{y}.png
